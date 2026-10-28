@@ -1,0 +1,29 @@
+id: c01_s03
+title: Route lock
+location: lantern_street
+time: night
+present: [ren, mira]
+outfits: {}
+rating: sfw
+steps:
+  - narr: "Three nights later you know the street by its smells."
+  - say: ren
+    expr: neutral
+    text: "You coming or not? Ladder's not gonna hold itself."
+  - say: mira
+    expr: smile
+    delivery: soft
+    text: "The stools are new. I did not say anything else."
+  - choice:
+      prompt: "Whose night."
+      options:
+        - text: "Hold the ladder."
+          requires: "affection.ren >= 1"
+          goto: c02_ren_s01
+        - text: "Take the stool."
+          requires: "affection.mira >= 1"
+          goto: c02_mira_s01
+        - text: "Go home."
+          steps:
+            - narr: "You go home. The street is there the next night, and the next, and you do not go down. In spring you leave."
+next: null

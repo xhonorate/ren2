@@ -1,0 +1,6 @@
+- scene: c01_s01
+  summary: "Kai leaves his last lecture, sees a lit street halfway down the hill that was dark that morning, and goes to look (either at once or late that night)."
+  characters: {}
+  flags_set: {}
+  affection_delta: {}
+  threads: ["why can only Kai see the lit street"]

@@ -1,0 +1,84 @@
+# The finite vocabularies the writer chooses from. Every id here maps to a
+# tested render setting. Add entries freely, but every new entry needs its
+# mapping, and `vn validate` rejects any id that is not listed here.
+
+expressions:
+  neutral:      "neutral expression, closed mouth"
+  smile:        "smile"
+  grin:         "grin, open mouth"
+  shy_smile:    "shy, smile, blush"
+  blush:        "blush, averted eyes"
+  laugh:        "laughing, closed eyes, open mouth"
+  surprised:    "surprised, wide eyes, open mouth"
+  worried:      "worried, furrowed brow"
+  sad:          "sad, downcast eyes"
+  tearful:      "tears, crying"
+  angry:        "angry, furrowed brow, frown"
+  pout:         "pout, puffed cheeks"
+  smug:         "smug, half-closed eyes, smirk"
+  serious:      "serious, closed mouth"
+  thinking:     "looking away, hand on chin"
+  sleepy:       "sleepy, half-closed eyes"
+  embarrassed:  "embarrassed, blush, sweatdrop"
+  flirty:       "half-closed eyes, smile, looking at viewer"
+
+poses:          # sprite poses; full body, plain background, facing the viewer
+  idle:          {tags: "standing, arms at sides"}
+  arms_crossed:  {tags: "standing, crossed arms"}
+  hands_hips:    {tags: "standing, hands on hips"}
+  hand_wave:     {tags: "standing, waving"}
+  hands_clasped: {tags: "standing, own hands together, hands clasped"}
+  hand_chin:     {tags: "standing, hand on own chin"}
+  hands_behind:  {tags: "standing, arms behind back"}
+  pointing:      {tags: "standing, pointing at viewer"}
+  shy_fidget:    {tags: "standing, fidgeting, hands together, looking down"}
+  lean_forward:  {tags: "standing, leaning forward, hands on own knees"}
+  turned_away:   {tags: "standing, from behind, looking back"}
+
+cg_poses:       # CG body poses, framed for first-person POV; ref = ControlNet image (added by /vn-art)
+  standing_facing:         {tags: "standing, facing viewer"}
+  standing_close:          {tags: "standing, close to viewer, looking up at viewer"}
+  sitting_chair:           {tags: "sitting, chair, facing viewer"}
+  sitting_bed:             {tags: "sitting, on bed, facing viewer"}
+  sitting_bed_leaning_in:  {tags: "sitting, on bed, leaning forward, looking at viewer"}
+  lying_bed_side:          {tags: "lying, on side, on bed, looking at viewer"}
+  reaching_viewer:         {tags: "reaching towards viewer, outstretched arm"}
+  hug_viewer:              {tags: "incoming hug, arms outstretched, looking at viewer"}
+  walking_ahead:           {tags: "walking, from behind, looking back at viewer"}
+  leaning_rail:            {tags: "leaning on railing, looking at viewer"}
+  holding_hand:            {tags: "holding hands, pov hands, looking at viewer"}
+  head_on_shoulder:        {tags: "head on another's shoulder, pov, close-up"}
+
+shots:
+  pov_close:     "pov, close-up, face focus, looking at viewer"
+  pov_medium:    "pov, upper body, looking at viewer"
+  pov_wide:      "pov, full body, wide shot"
+  over_shoulder: "from behind, over shoulder"
+  establishing:  "scenery, wide shot, no humans"
+
+lighting:
+  day_soft:      "soft lighting, daylight"
+  day_bright:    "bright, sunlight, lens flare"
+  golden_hour:   "golden hour, warm lighting, sunset"
+  overcast:      "overcast, diffuse lighting"
+  lamp_warm:     "warm lighting, lamp light, night, indoors"
+  moonlight:     "moonlight, blue tones, night"
+  neon:          "neon lights, night, city lights"
+  candle:        "candlelight, dim lighting"
+
+deliveries:     # TTS delivery tags. emotion_ref: whether synthesis uses a per-character emotion reference clip
+  neutral:   {description: "even, conversational", speed: 1.0, emotion_ref: false}
+  soft:      {description: "quiet, gentle, close to the mic", speed: 0.95, emotion_ref: true}
+  whisper:   {description: "whispered, breathy", speed: 0.9, emotion_ref: true}
+  excited:   {description: "bright, fast, pitched up", speed: 1.1, emotion_ref: true}
+  shout:     {description: "loud, projected", speed: 1.05, emotion_ref: true}
+  tearful:   {description: "unsteady, holding back tears", speed: 0.9, emotion_ref: true}
+  laughing:  {description: "through laughter", speed: 1.0, emotion_ref: true}
+  angry:     {description: "clipped, hard", speed: 1.05, emotion_ref: true}
+  sigh:      {description: "resigned, exhaled", speed: 0.9, emotion_ref: true}
+  teasing:   {description: "playful, sing-song", speed: 1.0, emotion_ref: true}
+  sleepy:    {description: "slow, slurred, low", speed: 0.85, emotion_ref: true}
+
+times: [morning, afternoon, evening, night]
+transitions: [dissolve, fade, none]
+positions: [left, center, right]

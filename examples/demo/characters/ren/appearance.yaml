@@ -1,0 +1,12 @@
+id: ren
+display_name: Ren
+age: 22
+base_tags: "1girl, short black hair, amber eyes, athletic, tan skin"
+marks:
+  - {what: "burn scar", where: "back of the right hand", tags: "scar on hand"}
+outfits:
+  work: {tags: "rolled sleeves, work gloves at belt, overalls", description: "overalls, tool belt"}
+default_outfit: work
+style_tags: "anime screencap, flat color"
+lora: null
+color: "#ffc27a"

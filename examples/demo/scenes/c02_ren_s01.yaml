@@ -1,0 +1,18 @@
+id: c02_ren_s01
+title: Warm ones
+location: lantern_street
+time: night
+present: [ren]
+outfits: {}
+rating: sfw
+steps:
+  - say: ren
+    expr: serious
+    pose: pointing
+    text: "Warm ones hum. Put your hand near. Not on. Near."
+  - say: ren
+    expr: embarrassed
+    delivery: sigh
+    text: "I-I didn't— look, it's fine. It was years ago."
+  - narr: "(to be continued)"
+next: null

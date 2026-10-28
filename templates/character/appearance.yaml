@@ -1,0 +1,11 @@
+id: <id>
+display_name: <Name>
+age: 18
+base_tags: ""
+marks: []
+outfits:
+  casual: {tags: "", description: ""}
+default_outfit: casual
+style_tags: ""
+negative_tags: ""
+lora: null

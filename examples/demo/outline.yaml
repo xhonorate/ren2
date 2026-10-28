@@ -1,0 +1,63 @@
+branching: routes
+start: c01_s01
+flags:
+  asked_about_street: false
+scenes:
+  - id: c01_s01
+    title: The gate
+    act: 1
+    route: common
+    location: campus_gate
+    time: evening
+    present: []
+    rating: sfw
+    goal: "Establish Kai and the hill; he notices lanterns that should not be lit."
+    beats: ["last lecture of the day", "the view", "lanterns below, in a street that was dark this morning"]
+    next: c01_s02
+  - id: c01_s02
+    title: Lantern Street
+    act: 1
+    route: common
+    location: lantern_street
+    time: night
+    present: [ren, mira]
+    rating: sfw
+    goal: "Meet Ren (hostile-curious) and Mira (curious-warm); first affection choice."
+    beats: ["Ren fixing a lantern, warns him off", "Mira's stall at the end", "choice: who he helps"]
+    next: c01_s03
+    cg: ["pov_medium: Mira holding out a cup across the counter"]
+  - id: c01_s03
+    title: Route lock
+    act: 1
+    route: common
+    location: lantern_street
+    time: night
+    present: [ren, mira]
+    rating: sfw
+    goal: "Kai decides whose nights he spends; lock the route."
+    beats: ["both ask, in their way", "choice gated by affection"]
+    next: null
+  - id: c02_mira_s01
+    title: The jars
+    act: 2
+    route: mira
+    location: mira_stall
+    time: night
+    present: [mira]
+    rating: suggestive
+    goal: "Mira lets him behind the counter."
+    beats: ["the unlabelled jars", "he asks the question", "she answers with tea"]
+    requires: "affection.mira >= 1"
+    next: null
+  - id: c02_ren_s01
+    title: Warm ones
+    act: 2
+    route: ren
+    location: lantern_street
+    time: night
+    present: [ren]
+    rating: sfw
+    goal: "Ren teaches him which lanterns are warm."
+    beats: ["the ladder", "the burn scar", "the sea"]
+    requires: "affection.ren >= 1"
+    next: null

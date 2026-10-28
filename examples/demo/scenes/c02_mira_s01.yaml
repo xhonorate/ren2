@@ -1,0 +1,21 @@
+id: c02_mira_s01
+title: The jars
+location: mira_stall
+time: night
+present: [mira]
+outfits: {mira: casual}
+rating: suggestive
+steps:
+  - narr: "The apron is on its hook. You have never seen her without it."
+  - say: mira
+    expr: shy_smile
+    pose: shy_fidget
+    delivery: soft
+    text: "You may come behind the counter. Mind the jars."
+  - enter: {char: mira, pose: lean_forward, expr: flirty, at: center}
+  - say: mira
+    delivery: whisper
+    text: "This one is for forgetting. This one is for the opposite."
+  - exit: mira
+  - narr: "(to be continued)"
+next: null

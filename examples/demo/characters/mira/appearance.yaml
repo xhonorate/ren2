@@ -1,0 +1,14 @@
+id: mira
+display_name: Mira
+age: 24
+base_tags: "1girl, long silver hair, blue eyes, slender, pale skin"
+marks:
+  - {what: "small scar", where: "through the left eyebrow", tags: "scar across eyebrow"}
+outfits:
+  stall: {tags: "dark apron, long sleeves, hair tied back", description: "work apron, hair up"}
+  casual: {tags: "white blouse, long dark skirt, hair down", description: "off the stall"}
+default_outfit: stall
+style_tags: "anime screencap, flat color"
+negative_tags: ""
+lora: null
+color: "#9fc8ff"

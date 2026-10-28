@@ -1,0 +1,24 @@
+id: c01_s01
+title: The gate
+location: campus_gate
+time: evening
+present: []
+outfits: {}
+rating: sfw
+steps:
+  - narr: "The last lecture lets out into a cold that wasn't there at lunch."
+  - narr: "You stop at the gate because everyone stops at the gate. The town goes down the hill in steps, roofs and roofs and roofs."
+  - say: player
+    text: "Huh."
+  - narr: "A street halfway down is lit. Lanterns, dozens of them, in a street that was shuttered this morning."
+  - narr: "Nobody else at the gate looks down."
+  - choice:
+      prompt: "The hill is steep and it's getting dark."
+      options:
+        - text: "Go look."
+          steps:
+            - narr: "You go look."
+        - text: "Go home. Look tomorrow."
+          steps:
+            - narr: "You go home. You do not sleep. At eleven you put your coat back on."
+next: c01_s02

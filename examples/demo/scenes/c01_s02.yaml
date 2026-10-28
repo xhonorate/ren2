@@ -1,0 +1,59 @@
+id: c01_s02
+title: Lantern Street
+location: lantern_street
+time: night
+present: [ren]
+outfits: {}
+rating: sfw
+steps:
+  - narr: "The street is covered, narrow, and full. Steam from somewhere. A radio from somewhere else."
+  - narr: "A woman on a ladder is doing something to a lantern with a pair of pliers."
+  - say: ren
+    expr: serious
+    pose: arms_crossed
+    text: "Yeah, no. Don't stand there, that one's warm."
+  - say: player
+    text: "Warm?"
+  - say: ren
+    expr: smug
+    delivery: teasing
+    text: "You ask a lot of questions for a guy who just got here."
+  - narr: "She goes back to the lantern. The conversation is apparently over."
+  - stage: {location: mira_stall, present: [mira], transition: dissolve}
+  - narr: "The stall at the end of the street has two stools and a wall of jars with nothing written on them."
+  - say: mira
+    expr: smile
+    pose: hands_clasped
+    delivery: soft
+    text: "You found the street. Most people walk past it twice."
+  - cg:
+      id: c01_s02_cg1
+      shot: pov_medium
+      lighting: lamp_warm
+      characters:
+        - {id: mira, pose: standing_close, expr: shy_smile, outfit: stall, gaze: at_viewer}
+      note: "She holds the cup out across the counter; the scar through her eyebrow is visible."
+  - say: mira
+    delivery: soft
+    text: "Drink that before you ask me anything. It helps with the asking."
+  - cg_end: {}
+  - choice:
+      prompt: "The tea is hot. The question is right there."
+      options:
+        - text: "Ask about the street."
+          effects: {affection: {mira: +1}, set: {asked_about_street: true}}
+          steps:
+            - say: mira
+              expr: thinking
+              text: "Not tonight, transfer student. Finish your tea."
+        - text: "Ask about the woman on the ladder."
+          effects: {affection: {ren: +1}}
+          steps:
+            - say: mira
+              expr: smug
+              delivery: teasing
+              text: "Ren. She will pretend she did not see you. She saw you."
+  - if: "flags.asked_about_street"
+    then:
+      - narr: "She refills the cup without asking. That seems to be an answer too."
+next: c01_s03
