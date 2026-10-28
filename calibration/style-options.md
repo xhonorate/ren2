@@ -1,5 +1,10 @@
 # Style calibration
 
+**House picks (recorded 2026-10-28):** 1-A, 2-B with less purple prose
+(sensory and emotional detail stays), 3-B, 4-A, 5-C with a little B. No
+chapter titles; narration never describes the player's body; no honorifics;
+180-character line limit. These live in `templates/project/style.md`.
+
 `/vn-style` writes a project's `style.md` from the human's picks. This file
 defines the axes and carries a standing set of samples so the human can pick
 by reading rather than by describing. Samples below share one beat: the

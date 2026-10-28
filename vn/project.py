@@ -9,7 +9,7 @@ from typing import Any, Optional
 import yaml
 from pydantic import ValidationError
 
-from .schema import (CG, Affection, Appearance, CGEnd, Choice, Enter, Exit, If, Jump, Nsfw, Outline, Say,
+from .schema import (CG, Affection, Appearance, CGEnd, Choice, Enter, Exit, If, Jump, Narr, Nsfw, Outline, Say,
                      Scene, SceneError, SetFlags, Stage, Step, compile_condition, condition_refs, parse_steps, walk)
 from .vocab import Vocab
 
@@ -295,6 +295,8 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
         if p.outline.branching == "linear" and o.requires:
             errs.append(f"outline {o.id}: 'requires' is not allowed in a linear project")
 
+    max_chars = _style_limit(p.style)
+
     # scenes
     try:
         scenes = {sid: p.load_scene(sid) for sid in (scene_ids or p.scene_ids_written())}
@@ -334,6 +336,11 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
                     errs.append(f"{w}: delivery {s.delivery} not in vocab")
                 if not s.text.strip():
                     errs.append(f"{w}: empty line")
+                if max_chars and len(s.text) > max_chars:
+                    errs.append(f"{w}: line is {len(s.text)} chars, style.md allows {max_chars}")
+            elif isinstance(s, Narr):
+                if max_chars and len(s.text) > max_chars:
+                    errs.append(f"{w}: narration is {len(s.text)} chars, style.md allows {max_chars}")
             elif isinstance(s, Stage):
                 if s.location and s.location not in p.locations:
                     errs.append(f"{w}: location {s.location} not in world.md")
@@ -444,6 +451,11 @@ def _flat_with_nsfw(p: Project, steps: list[Step], errs: list[str], where: str):
             continue
         yield s
 
+
+
+def _style_limit(style: str) -> int:
+    m = re.search(r"Max characters per line:\s*(\d+)", style)
+    return int(m.group(1)) if m else 0
 
 
 def _check_outfit(p: Project, cid: str, outfit: str, where: str) -> list[str]:

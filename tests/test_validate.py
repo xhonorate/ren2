@@ -145,3 +145,17 @@ def test_step_key_order_does_not_matter():
     steps = parse_steps([{"text": "hi", "delivery": "soft", "say": "mira"}, {"then": [{"narr": "x"}], "if": "flags.a"}])
     assert isinstance(steps[0], Say) and steps[0].speaker == "mira"
     assert isinstance(steps[1], If) and steps[1].cond == "flags.a"
+
+
+def test_line_length_limit_from_style(tmp_path):
+    root = copy_demo(tmp_path)
+    write_scene(root, "c01_s01", f"""
+id: c01_s01
+location: campus_gate
+time: evening
+present: []
+steps:
+  - narr: "{'x' * 181}"
+next: c01_s02
+""")
+    assert any("181 chars, style.md allows 180" in e for e in errors(root, "c01_s01"))

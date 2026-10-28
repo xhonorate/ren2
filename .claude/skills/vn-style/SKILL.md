@@ -1,28 +1,28 @@
 ---
 name: vn-style
-description: Calibrate the prose style for a vn project by having the human pick among generated sample passages, then write style.md. Run after /vn-new-project.
+description: Confirm or adjust the house prose style for a vn project and write style.md. Run after /vn-new-project.
 ---
 
 # /vn-style <project>
 
-Read `premise.md` and `calibration/style-options.md` (the axes and the
-standing sample set).
+`templates/project/style.md` is the **house style**, calibrated once with the
+human (picks recorded at the top of `calibration/style-options.md`). A new
+project already has a copy. This skill confirms it fits the premise and
+adjusts it; it does not start from zero.
 
-1. Write one short scene beat (~120 words, one character + the player, the
-   premise's tone) **five ways**, each isolating one axis from
-   `calibration/style-options.md` (person/tense, rhythm, interiority,
-   dialogue ratio, humour). Label them A–E. Keep the content identical so only
-   the style differs. Present them in one artifact or message.
-2. Ask the human to pick per axis, and to mark any *lines* they dislike in any
-   sample ("too purple", "he wouldn't say that"). Line-level notes matter more
-   than the picks; ask for them explicitly.
-3. Write `projects/<slug>/style.md` using the template headings. Every rule
-   must be checkable by reading a scene ("one thought per beat", "no line over
-   180 characters"), not a mood word.
-4. Write one more ~150-word sample in the resulting style; ask for a final
-   yes/no and line notes. Fold them in.
+1. Read `premise.md` and the project's `style.md`.
+2. Write one ~150-word sample in the house style, on a beat from this
+   premise (one love interest + the player). Obey every rule in `style.md`.
+3. Ask the human: keep the house style as is, or adjust for this project?
+   Ask explicitly for *line-level* notes on the sample ("too purple", "he
+   wouldn't say that"); those matter more than a verdict.
+4. If adjusting: edit only the rules the notes touch, keep every rule
+   checkable by reading a scene, and write a second sample. One round.
+5. If the human wants a different style altogether, run the full pick from
+   `calibration/style-options.md` (five axes, A/B/C each, line notes), then
+   write `style.md` from the template headings.
 
 Revisit once after `/vn-review-scene` on the first real scene: the human's
 edits to that scene are the best style data there is; turn them into rules.
 
-Output: `style.md`. Checkpoint: the picks and the final sample.
+Output: `style.md`.
