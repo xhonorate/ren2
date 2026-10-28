@@ -1,0 +1,11 @@
+data/
+data_demo*/
+demo_renpy/
+backend/.venv/
+backend/__pycache__/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+frontend/node_modules/
+frontend/dist/
+sd-scripts/
