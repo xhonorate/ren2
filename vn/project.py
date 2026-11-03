@@ -208,7 +208,7 @@ class Project:
                 has_name = "[player_name]" in s.text
                 # the player's name is entered at runtime, so TTS renders the line without it
                 tts_text = re.sub(r",?\s*\[player_name\]\s*(?=[,.!?])|\s*\[player_name\]\s*", " ", s.text)
-                tts_text = re.sub(r"\s+([,.!?])", r"\1", re.sub(r"\s{2,}", " ", tts_text)).strip()
+                tts_text = re.sub(r"\s+([,.!?])", r"\1", re.sub(r"\s{2,}", " ", tts_text)).strip().lstrip(",.!? ")
                 out.append({"scene": scene.id, "n": n, "speaker": s.speaker, "text": s.text,
                             "tts_text": tts_text, "has_player_name": has_name,
                             "delivery": s.delivery or "neutral",
@@ -279,7 +279,7 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
     ids = [s.id for s in p.outline.scenes]
     for dup in {i for i in ids if ids.count(i) > 1}:
         errs.append(f"outline: duplicate scene id {dup}")
-    if p.outline.start not in by_id:
+    if p.outline.scenes and p.outline.start not in by_id:
         errs.append(f"outline: start scene {p.outline.start} not in scenes")
     for o in p.outline.scenes:
         if o.location not in p.locations:
