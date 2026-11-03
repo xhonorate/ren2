@@ -205,7 +205,12 @@ class Project:
         for s in self._expanded(scene.steps):
             if isinstance(s, Say) and s.speaker not in SPECIAL_SPEAKERS:
                 n += 1
+                has_name = "[player_name]" in s.text
+                # the player's name is entered at runtime, so TTS renders the line without it
+                tts_text = re.sub(r",?\s*\[player_name\]\s*(?=[,.!?])|\s*\[player_name\]\s*", " ", s.text)
+                tts_text = re.sub(r"\s+([,.!?])", r"\1", re.sub(r"\s{2,}", " ", tts_text)).strip()
                 out.append({"scene": scene.id, "n": n, "speaker": s.speaker, "text": s.text,
+                            "tts_text": tts_text, "has_player_name": has_name,
                             "delivery": s.delivery or "neutral",
                             "file": f"audio/voice/{scene.id}/{n:03d}.ogg"})
         return out

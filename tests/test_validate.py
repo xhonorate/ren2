@@ -159,3 +159,26 @@ steps:
 next: c01_s02
 """)
     assert any("181 chars, style.md allows 180" in e for e in errors(root, "c01_s01"))
+
+
+def test_player_name_entry_and_tts_strip(tmp_path):
+    root = copy_demo(tmp_path)
+    prem = root / "premise.md"
+    prem.write_text(prem.read_text().replace("Kai, 21, a transfer student.", "Name: player-entered, default Kai. A transfer student."))
+    write_scene(root, "c01_s01", """
+id: c01_s01
+location: campus_gate
+time: evening
+present: [mira]
+steps:
+  - say: mira
+    expr: smile
+    text: "Hello, [player_name]. You came."
+next: c01_s02
+""")
+    p = Project.load(root)
+    assert validate(p) == []
+    build(p, tmp_path / "o")
+    assert 'renpy.input("What is your name?", default="Kai"' in (tmp_path / "o" / "game" / "script.rpy").read_text()
+    line = p.lines(p.load_scene("c01_s01"))[0]
+    assert line["has_player_name"] and line["tts_text"] == "Hello. You came."

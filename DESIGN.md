@@ -242,6 +242,13 @@ character; conditions reference declared flags or `affection.<id>`; every
 all characters have `age >= 18`; CG ids are unique project-wide; a `cg`
 without `cg_end` before the scene ends is an error.
 
+The player's name: if `premise.md`'s `## The player` says the name is
+*player-entered*, the build asks for it at start (with the stated default)
+and `[player_name]` in any text is substituted at runtime. Voiced lines
+should avoid it (pet names, "you"); where unavoidable, `vn lines` exports
+`tts_text` with the token removed and sets `has_player_name` so the runner
+can leave a beat of silence.
+
 Line text is the final on-screen text. Stutters ("H-hi"), trailing
 cut-offs ("I just—") and interjections are written in the text; the TTS
 layer normalises them per engine (docs/tts.md).
