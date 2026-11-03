@@ -1,16 +1,18 @@
-# Come Home
+# CYM
+
+(Working title. "CYM" is the project name; the on-screen title is still to be chosen.)
 
 ## Logline
 
-Four years after he left Halden without a word, a man comes back to finish his degree on a scholarship nobody will admit to funding, and finds that every woman who remembers him has decided, warmly and without asking, what he needs.
+He wakes up in a hospital bed with no memory of how he got there, no family left that is safe to go home to, and five women who have each, in her own way, decided she is going to look after him now.
 
 ## Genre & tone
 
-Slice-of-life romance in a small college town. Warm, intimate, a little wry. The romance is gentle femdom: the women lead, with care rather than cruelty; being looked after is the fantasy, and the terms of it are the drama. A low hum of mystery underneath: why he left, who brought him back, what each of them knows.
+Slice-of-life romance in a small town around a college. Warm, intimate, a little wry; a hurt-and-comfort story where the comfort is the point. The romance is gentle femdom / mommy-domme: the women lead, with care rather than cruelty; being looked after is the fantasy, and what each woman asks for in return is the drama. Underneath, a quiet mystery: what happened the night of the "accident", the step-mother nobody will name in front of him, and the mother he cannot remember.
 
 ## Audience
 
-Adult romance and dating-sim players who want the relationships to be the whole point and are comfortable with explicit content. Players who like the mommy-domme / gentle femdom archetype done with affection and specificity instead of as a joke.
+Adult romance and dating-sim players comfortable with explicit content, who want the mommy-domme / gentle femdom archetype done with affection and specificity rather than as a joke.
 
 ## Content rating
 
@@ -22,22 +24,22 @@ Adult romance and dating-sim players who want the relationships to be the whole 
 
 ## The player
 
-Name: player-entered, default Eli. He is 25. Four years ago, two terms short of his degree, he left Halden overnight and did not come back or say why; he has spent the time since in a city job he was competent at and never mentioned. This autumn a letter arrived: his place is held, his fees are paid by "the Halden Fund", and a room is waiting. He does not know who the Fund is. He speaks politely and a little carefully, asks before he acts, and is dry once he feels safe. He is receptive, not spineless: he says what he wants when he is asked, and the women ask.
+Name: player-entered, default Eli. He is 19 and a legal adult throughout; the number is never stated on screen, and nothing on screen may suggest otherwise (no high school, no minors' services, he signs his own discharge). He was separated from his biological mother when he was very small and remembers almost nothing of her. His father died about a year ago, leaving him in his father's house with his step-mother, who is implied, never shown, to have been abusive. The story opens as he wakes in hospital with partial memory loss: he does not know what put him there, and he does not blame her, but the state he arrived in triggered an assault investigation and he is not going back to that house. He is assigned a hospital social worker (Diana, who takes charge of his discharge and his life), a therapist (Claire) and a ward nurse (Natalie). Diana moves him into a small apartment next door to Alice, under landlady Bella, and enrols him at the local college, where Yuki, a former client of Diana's, is in his class, and Vanessa is the teacher he sees most. He speaks politely and a little carefully, asks before he acts, and is dry once he feels safe. He is receptive, not spineless: when he is asked what he wants, he says, and the women ask.
 
 ## Setting
 
-Halden, a college town in the hills: one main street along the river, the college on the slope above it, a diner that opens too early, a boarding house with a landlady who keeps the only key, and a bar that is the same bar it was four years ago. Everyone remembers him; he is not sure he remembers everyone.
+A small town built around a college: the hospital on the edge of it, a three-storey apartment building with thin walls and a landlady on the ground floor, the college's old teaching block, a main street with a diner and a laundrette, and a river path he starts walking when he cannot sleep. Autumn into winter.
 
 ## What makes this one different
 
-Every love interest is more settled in herself than he is, and each decides early that she is going to take care of him; the romance is in how, on what terms, and what he admits to wanting. Each of them holds one piece of why he left and who the Fund is, and none will hand it over for free. The mystery is paid for in intimacy, not in puzzles.
+Every love interest meets him in a role that is already about taking care of him (social worker, therapist, nurse, neighbour, landlady, classmate, teacher), and each one steps out of that role toward him on her own terms. The archetype is the engine: what he wants, and has never had, is to be mothered, and the women know it before he does. The mystery is paid for in intimacy rather than puzzles: each route turns over one piece of the night he cannot remember, or of the mother he cannot either.
 
 ## Things to avoid
 
 (Filled in by Claude from the archetype; delete anything you disagree with.)
 - No humiliation played as cruelty; teasing is affectionate and he is never the butt of the joke to the audience.
-- No non-consent and no coercion dressed as dominance; the women ask, and he answers.
-- No "fixing" the women: they do not have a wound he heals. He is the one who comes home.
-- No rivalry between love interests that turns nasty; they know each other and are, at most, dry about it.
-- No tragic dead-parent backstory for the player; the reason he left is smaller and more human than that.
-- No amnesia. He knows why he left; he has never said it out loud.
+- No non-consent and no coercion dressed as dominance: the women ask, and he answers. The professional roles (social worker, therapist, nurse, teacher) are crossed knowingly by the women, as a choice they make with eyes open; it is drama, never ignored.
+- The step-mother is an antagonist and never a love interest. The abuse is implied and remembered, never shown on screen.
+- No "fixing" the women: they do not have a wound he heals.
+- No rivalry between love interests that turns nasty; they know of each other and are, at most, dry about it.
+- The memory loss is partial and specific to the accident; he is never written as confused about who he is.
