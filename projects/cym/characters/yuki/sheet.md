@@ -21,7 +21,7 @@ She sat next to him on his first day because the seat was empty, and has been wo
   3. "Could we walk the long way? I don't mind. If you don't."
 
 ## Backstory
-Aged out of foster care at eighteen; Diana was the one who got her the room in Bella's building and the college place, and still checks on her. First year went by with excellent marks and no one to tell. Cosplays at conventions where nobody knows her, which is the point.
+Aged out of foster care at eighteen; Diana was the one who got her the room in Bella's building and the college place, and still checks on her. The first year went by with excellent marks and no one to tell. Cosplays at conventions where nobody knows her, which is the point.
 
 ## Relationship to the player at start
 Classmate in Victoria's seminar; lives in 3C, upstairs. One of the first people he met at college; they walk to class together, study together, and she has a crush she thinks is invisible.
