@@ -1,0 +1,159 @@
+id: yuki_s03
+title: The long way
+location: river_path
+time: evening
+present: [yuki]
+outfits: {yuki: casual}
+rating: suggestive
+intimacy: 1
+steps:
+  - narr: "The short way ends at the step, the way it did the first time. She does not go up it. She goes round the side of the building, where the gravel starts, and waits for you to notice."
+  - say: yuki
+    expr: shy_smile
+    pose: hands_behind
+    delivery: soft
+    text: "Could we walk the long way? I don't mind. If you don't."
+  - say: player
+    text: "You said that on the first day."
+  - say: yuki
+    expr: blush
+    delivery: soft
+    text: "I know. It worked. Sorry. I don't have a second one."
+  - say: player
+    text: "The long way, then."
+  - narr: "The long way is the river. The path is gravel and the water is loud beside it, and the streetlights are all still off, every one."
+  - narr: "She walks with her hands up inside her sleeves. She does not talk for the first stretch, and it is not the easy kind of not talking."
+  - say: yuki
+    expr: neutral
+    pose: idle
+    delivery: soft
+    text: "It's loud. The river. I like it loud. You can't hear yourself think, and I think too much."
+  - say: player
+    text: "I come down here. When I can't sleep."
+  - say: yuki
+    expr: neutral
+    delivery: soft
+    text: "I know."
+  - say: yuki
+    expr: embarrassed
+    pose: shy_fidget
+    delivery: soft
+    text: "The back door. It sticks, and then it bangs. I hear it. I'm not— I'm not listening for it. I just hear it. Sorry."
+  - say: player
+    text: "I'll close it quieter."
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "Don't. Then I won't know you're all right."
+  - narr: "The bench, then the bridge. She stops in the middle of it, where the river is loudest, and takes her hands out of her sleeves and puts them back."
+  - say: yuki
+    expr: worried
+    pose: hands_clasped
+    delivery: soft
+    text: "I-I have to say something. Before the lights come on. If they come on first, I won't. That's the rule. I just made it."
+  - say: player
+    text: "Okay. I'm listening."
+  - narr: "She looks at the first streetlight. It is not on. She looks at you, and then not at you, and then it comes, all of it, in one breath."
+  - say: yuki
+    expr: blush
+    pose: idle
+    text: "I-I like you. I've liked you since the pen. Before the pen. You came in and sat down and I thought, oh, and then I couldn't say anything for a whole hour—"
+  - say: yuki
+    expr: blush
+    text: "—and I couldn't in the corridor, and the seat was so you'd sit there, and the tea was so you'd come up, and this is the long way so I could say it, and I've said it."
+  - say: yuki
+    expr: embarrassed
+    pose: shy_fidget
+    delivery: soft
+    text: "I've said it. Sorry. I'm sorry. You don't have to— you can go. That's okay. I'll stay here. I'll stay on the bridge."
+  - narr: "And then she is gone. Not up the path: into the cardigan. The collar comes up over her mouth, her nose, up to the eyes, and the sleeves hold it there."
+  - cg:
+      id: yuki_s03_cg1
+      shot: pov_close
+      lighting: golden_hour
+      characters:
+        - {id: yuki, pose: standing_close, expr: blush, outfit: casual, gaze: at_viewer}
+      note: "The middle of the bridge, the river behind her and the streetlights still off: Yuki with the cardigan collar pulled up over her nose and both sleeves holding it there, only her eyes showing, and they are on him; she has just said it."
+  - narr: "Above the collar, her eyes. They are on you, and they are waiting for the thing that always comes next, the one that corrects the mistake."
+  - cg_end: {transition: dissolve}
+  - choice:
+      prompt: "She is in there. The first light has not come on."
+      options:
+        - text: "Stay in there. I'll talk."
+          effects: {affection: {yuki: +1}}
+          steps:
+            - say: player
+              text: "Okay. My turn. You don't have to come out for it."
+            - say: player
+              text: "I like you too. Since the pen. I didn't know what it was called until the seat."
+            - narr: "The collar does not come down. Above it the eyes close, and open, and are wet, and are not sad."
+            - say: yuki
+              expr: tearful
+              delivery: whisper
+              text: "S-say it again. Sorry. Once more. I didn't hear it properly. I did. Say it again."
+            - say: player
+              text: "I like you too."
+            - say: yuki
+              expr: blush
+              delivery: whisper
+              text: "Okay. Okay. I'm staying in here a bit. Sorry."
+        - text: "Yuki. Look at me."
+          effects: {affection: {yuki: +2}}
+          steps:
+            - narr: "You do not say it loudly. You do not reach for the collar. You wait."
+            - narr: "It takes a while. Then one sleeve lets go, and the collar comes down to her chin, and she looks at you with nothing in the way."
+            - say: yuki
+              expr: worried
+              pose: idle
+              delivery: soft
+              text: "I'm looking. I'm— okay. I'm looking."
+            - say: player
+              text: "I like you too. Since the pen. I didn't know what it was called until the seat."
+            - narr: "She does not go back in. Her face does everything at once and she lets you see all of it, which is more than the words."
+            - say: yuki
+              expr: tearful
+              delivery: soft
+              text: "Oh. That's— oh. Okay. I'm not hiding. Look, I'm not. S-sorry. I'm not."
+  - narr: "The first streetlight comes on. She looks at it as if it has broken her rule, and then at you, and then she holds out a sleeve."
+  - say: yuki
+    expr: shy_smile
+    pose: idle
+    delivery: soft
+    text: "I-if you want. All the way back. You don't have to."
+  - narr: "You take the sleeve. There is a hand in it, somewhere. By the second light the sleeve has gone back up her arm and it is the hand."
+  - say: player
+    text: "Is this okay?"
+  - say: yuki
+    expr: blush
+    delivery: soft
+    text: "It's— yes. Yes. Don't ask again, I'll— just yes."
+  - narr: "The lights come on one at a time ahead of you, the way they do, and the river gets quieter the further you get from the bridge, or you stop hearing it."
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "I had it in order. What I'd say. I did it in the wrong order and I forgot the middle."
+  - say: player
+    text: "What was in the middle?"
+  - say: yuki
+    expr: blush
+    delivery: soft
+    text: "That you don't have to say it back. That was the middle. It's— it's late for it now."
+  - say: player
+    text: "It is."
+  - narr: "Her hand tightens, once, and does not apologise."
+  - narr: "The back door, which sticks. She goes up the step so that she is level with you, and does not let go, and looks, and the moment is there and both of you can see it."
+  - say: yuki
+    expr: blush
+    pose: hands_clasped
+    delivery: soft
+    text: "I'm going to go up now. Before I— I'm going up. Sorry. Not sorry. I'm going up."
+  - say: player
+    text: "Go up."
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "G-good night. I said it. I'm not taking it back. I thought you should know that too."
+  - exit: yuki
+  - narr: "The door sticks, and then bangs, and the stairs go up two at a time. You stand on the gravel with a hand that still thinks it is holding something."
+  - set: {yuki_step: 3}
+next: null
