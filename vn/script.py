@@ -34,6 +34,8 @@ def _steps(p: Project, steps: list[Step], out: list[str], depth: int) -> None:
             bits = [f"{k}={v}" for k, v in (("location", s.location), ("time", s.time)) if v]
             if s.present is not None:
                 bits.append("present=" + ",".join(s.present))
+            if s.outfits:
+                bits.append("outfits=" + ",".join(f"{k}:{v}" for k, v in s.outfits.items()))
             out.append(f"{ind}`[stage: {' '.join(bits)}]`"); out.append("")
         elif isinstance(s, Enter):
             out.append(f"{ind}`[enter {s.char}]`"); out.append("")
