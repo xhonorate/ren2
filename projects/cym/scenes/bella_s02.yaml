@@ -9,8 +9,7 @@ intimacy: 2
 steps:
   - narr: "'Six,' she said, on the stairs, going down. Not six-ish. Not a question."
   - narr: "The town at six is the diner's light and nothing else. The gym is a door between two shutters, and it is already unlocked."
-  - narr: "Rubber floor, mirrors, one man on the rowing machine at the far end. And her, on the mat, already there, already warm."
-  - narr: "White sports bra, black shorts, hair up. Under the hem of the shorts, the edge of a tattoo you did not know about."
+  - narr: "Rubber floor, mirrors, a man on the rowing machine at the far end. And her, on the mat, already there: sports bra, black shorts, hair up, the edge of a tattoo under the hem."
   - say: bella
     expr: neutral
     pose: idle
@@ -33,7 +32,6 @@ steps:
     expr: serious
     pose: hands_hips
     text: "No rent in here. No radiator. In here there's the mat and there's me."
-  - narr: "The man on the rowing machine looks over once and goes back to his river. The mirror has the whole room in it, and her, twice."
   - say: bella
     expr: serious
     pose: idle
@@ -122,14 +120,14 @@ steps:
               text: "Yes. That took a while. Fine."
   - say: bella
     expr: serious
-    text: "Here's how it goes. I tell you, you do it."
+    text: "Rules. Same as the lease. I tell you, you do it."
   - say: bella
     expr: serious
     text: "You don't want something, you say so. Once. I stop. That's the only back-talk you get."
   - say: bella
     expr: neutral
     text: "And you don't thank me. Ever. Thanking's for people who did you a favour."
-  - narr: "A locker shuts. Something soft lands on the bench inside the door. The door is still open the width of her, and she has not lowered her voice."
+  - narr: "A locker shuts. Something soft lands on the bench inside the door. The door is still open, wider than a hand now, and she has not lowered her voice."
   - say: bella
     expr: neutral
     text: "Tomorrow, six. The day after, six. You're mine at six, kid. The rest of the day I don't care what you do."
@@ -156,7 +154,7 @@ steps:
               text: "No."
             - say: bella
               expr: neutral
-              text: "I know. I'd have known. The door's open for a reason, kid. Think about the reason."
+              text: "I know. I'd have known. The door's open for a reason. Think about the reason."
   - stage: {outfits: {bella: casual}, transition: dissolve}
   - narr: "She comes out in the tank top and the skirt with her hair still up, and stands over the bench where you are sitting."
   - say: bella

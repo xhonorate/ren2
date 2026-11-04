@@ -7,7 +7,7 @@ outfits: {diana: cocktail}
 rating: suggestive
 intimacy: 2
 steps:
-  - narr: "Diana is in the corner booth in a black dress, and the suit is nowhere. You have not seen her without the suit. The salt and pepper have been moved three times."
+  - narr: "Diana is in the corner booth in a black dress. Not the suit; not the cardigan. The salt and pepper have been moved three times."
   - say: diana
     expr: smile
     pose: hand_wave
@@ -28,7 +28,7 @@ steps:
     expr: smile
     delivery: soft
     text: "A lease you renew. So, that's the toast, and then we eat, and then I've got something to say and I'm going to need the pudding to have arrived first."
-  - narr: "The food comes. She eats a third of hers and watches the whole of yours. The man behind the counter calls her by name and looks at the dress twice."
+  - narr: "The food comes. She eats a third of hers, holds a coffee she does not drink, and watches all of yours. The man at the counter calls her by name and looks at the dress twice."
   - say: diana
     expr: neutral
     pose: idle
@@ -100,7 +100,7 @@ steps:
     delivery: whisper
     text: "Good. Stand still."
   - narr: "She kisses you slowly. There is no hurry in it anywhere. Her hand finds the back of your neck and stays, and this time nobody is counting."
-  - narr: "The landing light goes out on its timer. Neither of you reaches for it. She tastes of the coffee she held all evening and, this once, drank."
+  - narr: "The landing light goes out on its timer. Neither of you reaches for it. She tastes of coffee, which means she drank it at some point, and you missed it."
   - narr: "When she stops, she does not go far. Her forehead against yours; the radiator knocks twice, and she laughs into it, quietly."
   - say: diana
     expr: shy_smile
@@ -121,11 +121,11 @@ steps:
               expr: smile
               delivery: whisper
               text: "When I stay, honey, I'm staying. You'll know the difference. Not tonight."
-            - narr: "She kisses you again, once, quicker, the way you sign something. Then she finds the light switch without looking, because she made this landing too."
+            - narr: "She kisses you again, once, quicker, the way you sign something. Then she finds the light switch without looking, because she knows this landing better than you do."
             - say: diana
               expr: smile
               delivery: soft
-              text: "Look at you. Asking. Lock this behind me."
+              text: "Lock this behind me. And honey. Thank you for asking."
         - text: "Go home. Text me when you're in."
           effects: {affection: {diana: +1}}
           steps:
@@ -139,7 +139,7 @@ steps:
               expr: laugh
               delivery: laughing
               text: "I did. Okay. I'll text from the car and from the door, and you'll be asleep by the second one."
-            - narr: "She finds the light switch without looking. Then two fingers in your collar, which is fine, and this time her hand does not stay. She lets go on purpose, and you both watch her do it."
+            - narr: "She finds the light switch without looking. Then two fingers in your collar, which is fine, and this time her hand does not stay. She lets go on purpose, and you both see it."
             - say: diana
               expr: smile
               delivery: soft

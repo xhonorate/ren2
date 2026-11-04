@@ -132,7 +132,7 @@ steps:
   - say: yuki
     expr: neutral
     delivery: soft
-    text: "Diana wasn't. She found this room. She found the college. She still comes up. Not often. Often enough. She's not supposed to."
+    text: "D-Diana wasn't. She found this room. She found the college. She still comes up. Not often. Often enough. She's not supposed to."
   - say: yuki
     expr: worried
     pose: shy_fidget
@@ -151,11 +151,11 @@ steps:
     expr: blush
     pose: turned_away
     delivery: soft
-    text: "She doesn't check on anyone. Once they're out. Except— except you."
+    text: "So she doesn't keep anyone. Except me. I thought it was just me. Except— except you."
   - say: yuki
     expr: neutral
     delivery: soft
-    text: "She told me someone was coming. She never tells me things. She told me that. And the chapter, she said. Nobody gets the chapter."
+    text: "She told me someone was coming. She never tells me things. She told me that. And after the boxes she was in your room a long time. I heard her. Through the floor."
   - say: player
     text: "Why me?"
   - say: yuki
