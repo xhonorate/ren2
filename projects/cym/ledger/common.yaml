@@ -97,3 +97,9 @@
   flags_set: {}
   affection_delta: {yuki: +1, alice: +1}
   threads: ["yuki +1 only if he said 'Okay. Door, then.'; alice +1 only if he said he would knock when the plate was empty (default path: both)", "a plate under a tea towel, a one-person pie, warm; he has not eaten it yet; the note says knock", "Alice's no-lifting note on the ground-floor board: Bella takes it down, Alice puts it back", "Alice does the whole floor on Fridays; Yuki gets a pie too", "the end of the second week: smells known (laundrette, diner at six, river), sounds known (radiator twice, Bella's door, Yuki's three notes through the ceiling); he has slept parts of several nights, never a whole one", "the first free evening; nothing is required; ends into hub_w03 (whose evening)", "Alice's door left not quite shut, the hum through it; 2B's paintings still face the wall"]
+- scene: hub_w03
+  summary: "Week three, the first cold night: his breath shows for the first time and the river is loud after rain. From the path he counts the building's windows (the office lit with the radio on, 2B lit with a shadow crossing twice, 2A dark, the fairy lights on the third floor, one window lit on the college's top corridor) and the first free evening of the calendar is his to spend."
+  characters: {}
+  flags_set: {}
+  affection_delta: {}
+  threads: ["the calendar starts here; every hub ends on the shared 'Whose evening?' choice and assumes nothing about which routes have begun", "the back door and the river path are habit now; the first streetlight comes on as he reaches it", "the building seen from the path: who is in is readable from the windows"]

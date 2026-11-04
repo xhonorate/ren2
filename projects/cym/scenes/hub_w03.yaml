@@ -1,0 +1,20 @@
+id: hub_w03
+title: First cold night
+location: river_path
+time: evening
+present: []
+outfits: {}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week three. You take the back door out of habit now, and the cold is waiting on the other side of it."
+  - narr: "Your breath shows. First time this year. You stand on the gravel and watch it go."
+  - narr: "It rained all afternoon. The river is louder for it, brown and quick, carrying leaves past faster than you could walk."
+  - narr: "From the path the building is a shape with windows in it. You count them the way you count the stairs: without meaning to."
+  - narr: "Ground floor, the office: lit, the radio going. Second floor, 2B: lit, and a shadow crossing it twice. 2A: dark. That one is yours."
+  - narr: "Third floor, a string of small lights that are not for seeing by. Above the roof, the aerial, and a sky with no cloud left in it."
+  - narr: "Up the hill the college has one window lit on the top corridor. Somebody is working late, or has forgotten a lamp."
+  - narr: "The first streetlight comes on. You have not walked far enough for the second. It is not loneliness, this. You check, and it is not."
+  - narr: "Wet leaves, cold gravel, your breath going. The whole week has been pointed at this evening, and nobody has told you what to do with it."
+  - include: hub_choice
+next: hub_w04
