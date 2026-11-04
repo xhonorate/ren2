@@ -1,0 +1,83 @@
+id: c01_s02
+title: Here's what's going to happen
+location: hospital_corridor
+time: afternoon
+present: [diana]
+outfits: {diana: office}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Two o'clock is a woman in a charcoal suit who has already talked to the nurses, the doctor, and, by the sound of it, the man who runs the car park."
+  - say: diana
+    expr: smile
+    pose: hand_wave
+    text: "Up. The physio said walk, so we walk. I'm Diana. Lean on me if the floor does anything funny."
+  - narr: "She has a thin scar under one eye and the kind of grip that has carried people before. The corridor squeaks under both of you."
+  - say: diana
+    expr: neutral
+    pose: idle
+    delivery: soft
+    text: "Okay, sweetie. Here's what's going to happen, and you don't have to do any of it alone."
+  - say: diana
+    expr: serious
+    text: "The police have opened a file. Your step-mother can't contact you while it's open, and she's been told that in writing. You're not going back to that house."
+  - say: player
+    text: "I didn't say—"
+  - say: diana
+    expr: serious
+    text: "You didn't have to. The doctor did. Keep walking, honey, you're doing great."
+  - narr: "A porter goes past with a trolley and nods at her like she works here. Maybe she does, this week."
+  - say: diana
+    expr: smile
+    text: "There's a room. Second floor of a building by the river, ten minutes from the college. The college has your place held and your fees sorted. I did that this morning."
+  - say: player
+    text: "This morning."
+  - say: diana
+    expr: smile
+    delivery: teasing
+    text: "I don't sleep much either. Did you eat?"
+  - say: player
+    text: "Yeah."
+  - say: diana
+    expr: serious
+    pose: hands_hips
+    text: "Don't 'yeah' me. What did you eat."
+  - say: player
+    text: "Toast. Half."
+  - say: diana
+    expr: thinking
+    delivery: sigh
+    text: "Half. Okay. We'll fix that."
+  - choice:
+      prompt: "Two questions. One corridor."
+      options:
+        - text: "Ask about her."
+          effects: {affection: {diana: +1}}
+          steps:
+            - say: diana
+              expr: serious
+              pose: idle
+              text: "She'll say it was an accident. She has said it. What the hospital says is different, and that's what the file is about."
+            - say: diana
+              expr: neutral
+              delivery: soft
+              text: "That's all you need about her today. And the room has a window onto the river. I checked."
+        - text: "Ask about the room."
+          effects: {affection: {diana: +1}}
+          steps:
+            - say: diana
+              expr: smile
+              pose: idle
+              text: "Second floor, 2A. There's a neighbour who's asked me twice already whether you like soup. The landlady is a character. You'll be fine."
+            - say: diana
+              expr: serious
+              delivery: soft
+              text: "And her: she can't come near you. That's the only thing about her you need today."
+  - narr: "At the end of the corridor she turns you round like it's nothing, one hand flat between your shoulders."
+  - say: diana
+    expr: smile
+    delivery: soft
+    text: "Two more lengths, then I'll let you sit. Then I'm going to the canteen and you're going to eat something that isn't half of something."
+  - narr: "You don't argue. You notice that you don't."
+  - narr: "She talks the whole way back. You don't remember a word of it, and for the first time in two days you are warm."
+next: c01_s03

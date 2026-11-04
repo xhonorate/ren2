@@ -1,0 +1,84 @@
+id: c01_s01
+title: Waking
+location: hospital_room
+time: morning
+present: [natalie]
+outfits: {natalie: nurse}
+rating: sfw
+intimacy: 0
+steps:
+  - cg:
+      id: c01_s01_cg1
+      shot: establishing
+      lighting: day_soft
+      characters: []
+      note: "The ward room at morning before he opens his eyes: bed rails, the window onto the car park, the chair too far from the bed."
+  - narr: "Light first. Then a ceiling, and a water stain on it shaped like nothing."
+  - narr: "Something is holding your arm. It lets go, and takes the other one."
+  - cg_end: {}
+  - say: natalie
+    expr: neutral
+    pose: idle
+    text: "Arm. Other arm. Thank you."
+  - narr: "A woman in white with a cuff and a watch. She does not look at your face until she has written a number down."
+  - say: player
+    text: "Where—"
+  - say: natalie
+    expr: neutral
+    text: "Hospital. You're on the ward. Don't sit up yet."
+  - narr: "You sit up. The room tilts and settles. She watches it do that and lets it."
+  - say: natalie
+    expr: sleepy
+    delivery: sigh
+    text: "Okay. Now you know."
+  - say: player
+    text: "What happened?"
+  - say: natalie
+    expr: neutral
+    pose: arms_crossed
+    text: "A fall. Concussion, two cracked ribs, a cut we closed. You came in two days ago."
+  - say: natalie
+    expr: neutral
+    text: "That's what I can tell you."
+  - narr: "There is a shape to that sentence, like a door with something behind it. You are not awake enough to push on it."
+  - say: player
+    text: "Two days."
+  - say: natalie
+    expr: neutral
+    text: "Two days. You're healing fine. The police want a word when you're up to it, and there's a social worker coming at two to sort the rest."
+  - say: player
+    text: "The rest of what?"
+  - say: natalie
+    expr: serious
+    text: "Where you go from here. Not my department."
+  - narr: "She checks the watch. Not for the time; for the amount of it."
+  - say: natalie
+    expr: neutral
+    text: "I've got eleven minutes. Drink the water. All of it."
+  - choice:
+      prompt: "The water is warm. The question is not."
+      options:
+        - text: "What do you think happened?"
+          effects: {affection: {natalie: +1}}
+          steps:
+            - narr: "She looks at you properly for the first time. Tired eyes, and nothing lazy behind them."
+            - say: natalie
+              expr: serious
+              delivery: soft
+              text: "I think you should drink the water."
+            - say: natalie
+              expr: neutral
+              text: "Ask me again when you've slept. Properly, I mean."
+        - text: "When can I leave?"
+          steps:
+            - say: natalie
+              expr: neutral
+              text: "When I say. Drink the water."
+            - narr: "It is not unkind. It is just the next thing on a list."
+  - narr: "She takes the cup when it's empty, writes another number, and goes. The door does not quite close."
+  - exit: natalie
+  - narr: "Alone, you try to remember."
+  - narr: "Your father's study. Dust on the shelves. A box at the back of a cupboard, and your name on every envelope inside it, in handwriting you did not know."
+  - narr: "Then nothing. Not a gap; a wall. You put your hand on it and it does not move."
+  - narr: "The water stain on the ceiling is still shaped like nothing. You watch it until two o'clock."
+next: c01_s02

@@ -29,6 +29,7 @@ python -m vn new-character projects/<slug> <id>
 python -m vn status projects/<slug>
 python -m vn validate projects/<slug> [scene ...]
 python -m vn pack projects/<slug> <scene>
+python -m vn script projects/<slug> <scene ...>    # readable script for review
 python -m vn lines projects/<slug> [scene ...]     # TTS job list
 python -m vn cgs projects/<slug> [scene ...]       # CG job list
 python -m vn build projects/<slug> [--template <renpy project>]

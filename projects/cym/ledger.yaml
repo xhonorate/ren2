@@ -1,1 +1,26 @@
-[]
+- scene: c01_s01
+  summary: "He wakes on the ward two days after the fall with Natalie taking his blood pressure. She tells him what she can (a fall, concussion, two cracked ribs, a cut, two days) and pointedly not what she thinks; the police want a word, a social worker is coming at two. Alone, he remembers the box of letters in his father's study and nothing after it."
+  characters:
+    natalie:
+      knows: ["he has no memory of how he got here", "he has not been sleeping (she has not said so yet)"]
+      hiding: ["that she flagged his injuries as hours old when he arrived; that she is the one who called it in"]
+      address: "no name; 'you'; clipped instructions"
+      relationship: "his ward nurse; professional, dry; gave him an extra look when he asked what she thought"
+      outfit: nurse
+      last_seen: hospital_room
+  flags_set: {}
+  affection_delta: {}
+  threads: ["natalie +1 only if he asked what she thinks happened", "the box of letters with his name on every envelope, in handwriting he did not know; the wall after it", "Natalie: 'That's what I can tell you.' (she knows more)"]
+- scene: c01_s02
+  summary: "Diana walks him down the corridor at two and lays out what will happen: a police file is open, the step-mother is barred from contact in writing, he is not going back to the house; there is a room (2A, second floor, by the river) and the college place and fees are sorted, all done that morning. She interrogates what he ate (half a toast) and promises to fix it."
+  characters:
+    diana:
+      knows: ["he ate half a toast", "he does not remember the fall", "which question he asked first (her, or the room)"]
+      hiding: ["that she has already done far more than the job requires", "the contents of his belongings box (the letters)"]
+      address: "'sweetie', 'honey' from the first minute; narrates what will happen next"
+      relationship: "assigned social worker; already warm and in charge; he noticed he did not argue with her"
+      outfit: office
+      last_seen: hospital_corridor
+  flags_set: {}
+  affection_delta: {diana: +1}
+  threads: ["the step-mother's version is 'an accident'; the hospital's is different; the file is about the difference", "2A: a neighbour who asked about soup (Alice), a landlady who is 'a character' (Bella), a window onto the river", "she is going to the canteen to feed him", "the scar under her eye, noticed, not asked about"]
