@@ -328,7 +328,9 @@ writes `nsfw/<scene>.<n>.md` containing:
   outline entry as `direction:`.
 - **Skeleton**: the beats, the CG specs the section must land on, and the
   tagged line format the fill must use.
-- **Prompt**: the full prompt for the local model, assembled from the above.
+- **Prompt**: the full prompt for the local model, assembled from the above,
+  ending with `Append: characters/<id>/nsfw.txt`; the runner attaches that
+  file at fill time, so the brief never copies it.
 - **Fill**: pasted or generated output, in scene-step YAML, under a
   `## Fill` heading. The build inlines it; the validator checks it like any
   other steps.
