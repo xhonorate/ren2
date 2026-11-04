@@ -11,7 +11,6 @@ steps:
   - narr: "The noticeboards have grown a second layer. Somebody's cat. A room to let. Her reading list, with next week's chapter underlined, and you have not started it."
   - narr: "You stand in front of it the way you stand in front of the fridge. The chapter does not get shorter."
   - narr: "Heels on stone. You know the sound before you turn, and you turn anyway."
-  - enter: {char: victoria, pose: idle, expr: neutral, at: center}
   - narr: "An armful of books, her coat buttoned to the throat. She does not slow down. She looks at you, and then at the board, and then at you."
   - say: victoria
     expr: neutral

@@ -7,10 +7,8 @@ outfits: {victoria: professor, yuki: casual}
 rating: sfw
 intimacy: 0
 steps:
-  - narr: "Week ten. The last day of term, and the corridor is emptying the way a bath does: slowly, and then all at once, with a noise."
-  - narr: "Bags on shoulders. Someone has taken half the noticeboard down and left the pins in. Low winter sun lies along the stone and goes nowhere."
-  - narr: "Victoria's office door is open at the end of the corridor, and she is in it. Not leaving. Watching the term go past her."
-  - enter: {char: victoria, pose: idle, expr: neutral, at: left}
+  - narr: "Week ten. The last day of term, and the corridor is emptying the way a bath does: slowly, then all at once, with a noise. Low winter sun lies along the stone."
+  - narr: "Bags on shoulders, half the noticeboard down with the pins left in. Victoria's office door is open at the end, and she is in it, not leaving, watching the term go past."
   - say: victoria
     expr: smug
     text: "Two weeks, boy. The college will survive it. I make no such promise for the reading."
@@ -20,12 +18,11 @@ steps:
     expr: smile
     delivery: soft
     text: "How quaint. Yes. And to you."
-  - narr: "She goes back in. The door stays open, which it did not have to."
   - exit: victoria
-  - narr: "Yuki is at the top of the stairs with her coat on and both hands behind her back. Something wrapped, the paper creased from being held too long."
-  - enter: {char: yuki, pose: hands_behind, expr: worried, at: right}
+  - narr: "She goes back in, and the door stays open. Yuki is at the top of the stairs with her coat on and both hands behind her back: something wrapped, the paper creased from holding."
   - say: yuki
     expr: worried
+    pose: hands_behind
     delivery: soft
     text: "H-hi. You're— yes. Last day. Sorry. Happy holidays. If you— yes."
   - say: player
@@ -34,8 +31,7 @@ steps:
     expr: embarrassed
     pose: shy_fidget
     text: "Nothing. A thing. It's for— someone. Later. Sorry. I'll see you at the building. You'll be at the building."
-  - narr: "She goes down the stairs with it still behind her back, and does not give it to you, and you decide not to know what it is."
+  - narr: "She goes down with it still behind her back and does not give it to you, and you decide not to know what it is. Two weeks with nowhere you have to be, and tonight is yours."
   - exit: yuki
-  - narr: "The corridor goes quiet. Two weeks ahead with nowhere you have to be. Tonight is the last evening of term and the first one of the break, and both of them are yours."
   - include: hub_choice
 next: c02_break

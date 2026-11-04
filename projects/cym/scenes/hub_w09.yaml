@@ -7,12 +7,11 @@ outfits: {yuki: casual}
 rating: sfw
 intimacy: 0
 steps:
-  - narr: "Week nine. Exams. The library at night is a whole floor holding its breath, and the green lamps make everyone look like they have been here since the building was built."
-  - narr: "Carrels, pencils, somebody's cough held in. The radiators here are warm for once. It smells of paper, and of the coffee nobody is allowed to have."
+  - narr: "Week nine. Exams. The library at night is a whole floor holding its breath under the green lamps, and it smells of paper, and of the coffee nobody is allowed to have."
   - narr: "The window seat at the end has Yuki in it, folded small, a timetable spread on her knees. Every hour of the week is a colour. Most of the colours are done."
-  - enter: {char: yuki, pose: sitting, expr: thinking, at: right}
   - say: yuki
     expr: surprised
+    pose: sitting
     delivery: soft
     text: "Oh. H-hi. Sorry. I'm not in your— this isn't anyone's seat. Sorry."
   - say: player

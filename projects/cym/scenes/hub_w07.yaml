@@ -7,10 +7,8 @@ outfits: {bella: casual}
 rating: sfw
 intimacy: 0
 steps:
-  - narr: "Week seven. Snow. Not much, and not staying, but the landing window has gone white at the edges and the light in the stairwell has gone blue."
-  - narr: "The radiator knocks twice and stops, and the cold does not notice. Wet boot prints on the stairs, three sets, none of them yours yet."
-  - narr: "Bella is on the landing. A piece of paper in one hand. A space heater under the other arm, held as if it owes her money."
-  - enter: {char: bella, pose: idle, expr: serious, at: center}
+  - narr: "Week seven. Snow, not much and not staying, but the landing window has gone white at the edges and the stairwell light has gone blue."
+  - narr: "The radiator knocks twice and stops. Bella is on the landing: the heating bill in one hand, a space heater under the other arm, held as if it owes her money."
   - say: bella
     expr: serious
     text: "2A. This is the heating bill. Look at it, kid. No. Look at it."

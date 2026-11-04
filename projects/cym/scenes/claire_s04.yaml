@@ -1,0 +1,206 @@
+id: claire_s04
+title: The letters
+location: claire_office
+time: afternoon
+present: [claire]
+outfits: {claire: goth}
+rating: suggestive
+intimacy: 2
+steps:
+  - narr: "The chairs have not moved. The plant has a new leaf, and the blind is where it always is, and the tissue box is full."
+  - enter: {char: claire, pose: sitting, expr: neutral, at: center}
+  - say: claire
+    expr: neutral
+    text: "Good afternoon. Today I would like to try something, if that is acceptable to you."
+  - say: claire
+    expr: neutral
+    text: "We go back to the cupboard. This time I come with you. My voice does. You can stop at any word."
+  - say: player
+    text: "Which word?"
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "Any word. 'Stop' is traditional. 'Plant' would also work. I would know what you meant."
+  - narr: "Her hands are on the notebook. Her voice is lower than it is for the rest of the hour, and slower, and it does not ask anything twice."
+  - say: claire
+    expr: neutral
+    text: "Close your eyes if you like, or look at the plant. The plant has been very useful. The study. Tell me the door."
+  - say: player
+    text: "It sticks."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "It sticks, and you pull it twice. Go on."
+  - say: player
+    text: "The shoebox. I've got it. I'm on the floor with it."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "You are on the floor with the box. What is in your hands."
+  - say: player
+    text: "The top one. Opened. My name on it."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "Leave the letter where it is. You do not have to read it today. Where do you go."
+  - say: player
+    text: "My room. I've got the bag out."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "You have the bag out. Say the things that go into it."
+  - say: player
+    text: "Clothes. The charger. The box. The box goes in last. It doesn't fit flat."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "It does not fit flat, and you put it in anyway. You were taking them with you. Keep going, if you can."
+  - say: player
+    text: "The zip. It sticks."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "It sticks, and you pull it."
+  - say: player
+    text: "And then there's a hand on the strap."
+  - narr: "The plant goes very still. So does the room. She does not move, and her voice does not change at all."
+  - say: claire
+    expr: serious
+    delivery: soft
+    text: "Whose hand."
+  - say: player
+    text: "Hers. My step-mother's."
+  - say: claire
+    expr: serious
+    delivery: soft
+    text: "Her hand on the strap. Not yours. You had the bag and you were going, and her hand is on it. That is where we stop."
+  - say: player
+    text: "She's saying something. I can nearly—"
+  - choice:
+      prompt: "The hand is on the strap. The rest is behind it."
+      options:
+        - text: "I could go further."
+          steps:
+            - say: claire
+              expr: serious
+              text: "I know that you could. That is why we stop. We stop while you still can, and not when you cannot."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "The rest is not going anywhere, and neither am I. Come back now."
+        - text: "Okay."
+          effects: {affection: {claire: +1}}
+          steps:
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "Okay. Thank you. That is the bravest word you have said in this room, and you have said some. Come back now."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "Tell me where you are."
+  - say: player
+    text: "Your office."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "Tell me what is on the sill."
+  - say: player
+    text: "The plant."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "The plant. It is still there. So am I."
+  - narr: "You are in the chair. Your hands are not. They will not stay on the arms of it, and the plant has gone soft at the edges."
+  - narr: "The tissue box is right there. She does not push it toward you. She gets out of her chair instead."
+  - cg:
+      id: claire_s04_cg1
+      shot: pov_close
+      lighting: day_soft
+      characters:
+        - {id: claire, pose: hug_viewer, expr: serious, outfit: goth, gaze: away}
+      note: "She is out of her chair and has him against her shoulder, one hand at the back of his head, the lace collar and the braid against his cheek; her eyes are open over his shoulder, on the blind, on nothing. The first time she has held anyone in this room."
+  - narr: "She has never been out of her chair while you were in yours. She is now. Her shoulder, the lace at the collar, and under it, her. Her hand comes up behind you and stays."
+  - say: claire
+    expr: serious
+    delivery: whisper
+    text: "You had the bag. You were going. I have you. Nothing else is in the room."
+  - narr: "She does not close her eyes. You cannot see that. You know it anyway."
+  - say: claire
+    expr: serious
+    delivery: whisper
+    text: "I am not letting go until your hands do."
+  - narr: "It takes a while. She says the time when she needs to end something. She does not say it now."
+  - cg_end: {transition: dissolve}
+  - narr: "She lets go in stages. Then she is in her chair again, hands on the notebook, the notebook shut, and nothing about her has moved except everything."
+  - say: claire
+    expr: neutral
+    text: "I should not have done that."
+  - say: claire
+    expr: neutral
+    text: "I know which rule it is. I could cite it to you with the paragraph number. I have been reciting it on the walk home since the laundrette."
+  - say: player
+    text: "You don't have to—"
+  - say: claire
+    expr: serious
+    text: "I am not finished. I should not have, and I am going to do it again. I would like you to know that before you decide anything about me."
+  - narr: "She stands. She crosses the distance between the chairs, which was never very far."
+  - narr: "Her mouth on yours, once. No longer than the sentence took. The lip ring is cold, and then it is not."
+  - say: claire
+    expr: neutral
+    pose: idle
+    delivery: soft
+    text: "That was to prove it. I am not in the habit of saying things I cannot prove."
+  - say: player
+    text: "You proved it."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "Then it is proved. You may sit with that for as long as you like. I will be sitting with it for considerably longer."
+  - narr: "She does not sit. She stays where she is, a step from your chair, with her hands at her sides where you can see them. Calm. That is the word, and it is hers, not yours."
+  - choice:
+      prompt: "She is waiting. She would wait all afternoon."
+      options:
+        - text: "What happens if someone finds out?"
+          effects: {affection: {claire: +1}}
+          steps:
+            - say: claire
+              expr: neutral
+              text: "The job first. Then the licence. Then the thing that happens to people who have only ever been one thing."
+            - say: claire
+              expr: serious
+              text: "I have had the walk home to think about it. Several walks. I have decided it is mine to carry. You are not to pick it up."
+            - say: player
+              text: "That's not fair."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "No. It is mine, though. Fair is a different conversation, and we will have it, and not today."
+        - text: "I won't tell anyone."
+          steps:
+            - say: claire
+              expr: neutral
+              text: "I know you will not. That is not the part that worries me."
+            - say: player
+              text: "What is?"
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "That I am not worried. I have checked several times. It is still not there."
+  - say: claire
+    expr: neutral
+    pose: hands_clasped
+    text: "That is the hour. It was a good deal more than the hour."
+  - say: claire
+    expr: neutral
+    text: "Same chairs."
+  - say: player
+    text: "They won't have moved."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "No. Neither of them. I have checked that as well."
+  - exit: claire
+  - narr: "On the way out you look at the tissue box. Still full. It was never going to be the tissues."
+  - set: {claire_step: 4}
+next: null
