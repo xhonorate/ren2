@@ -265,3 +265,15 @@ def test_include_step_expands(tmp_path):
     assert p.lines(p.load_scene("c01_s02"))[-1]["text"] == "Included."
     (root / "includes" / "tail.yaml").unlink()
     assert any("include tail has no includes/tail.yaml" in e for e in errors(root))
+
+
+def test_ledger_dir_and_act_rule(tmp_path):
+    root = copy_demo(tmp_path)
+    (root / "ledger").mkdir()
+    (root / "ledger" / "mira.yaml").write_text("- scene: c02_mira_s01\n  summary: 'jars'\n")
+    (root / "ledger" / "common.yaml").write_text("- scene: c01_s02\n  summary: 'street'\n")
+    p = Project.load(root)
+    ids = {e["scene"] for e in p.ledger}
+    assert {"c01_s01", "c01_s02", "c02_mira_s01"} <= ids
+    # mira's route scene (act 2) sees act-1 common scenes, not ren's
+    assert [e["scene"] for e in p.ledger_for("c02_mira_s01")] == ["c01_s01", "c01_s02"]

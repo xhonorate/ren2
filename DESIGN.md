@@ -286,9 +286,12 @@ story order, recording end-of-scene state so the next writer sees it.
   threads: ["the scar question is still open"]   # unresolved hooks
 ```
 
-The pack for a scene includes the entries of every scene that precedes it
-in outline order and is common or on the same route; other routes' scenes
-are path-dependent and never assumed. Spokes therefore must not depend on
+The pack for a common scene includes every common entry that precedes it
+in outline order. The pack for a route scene includes the common entries
+of earlier acts (never the hubs of its own act, since it may play in any
+week) and its own route's earlier entries; other routes' scenes are
+path-dependent and never assumed. Entries may live in `ledger.yaml` or in
+`ledger/<route>.yaml`; all are loaded. Parallel writers each own one file. Spokes therefore must not depend on
 another route's events. For `branching` projects (§8) entries may carry
 `branch:` and the pack follows the path that reaches the scene.
 

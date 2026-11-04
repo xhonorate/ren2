@@ -69,6 +69,11 @@ class Project:
         if (root / "ledger.yaml").exists():
             with open(root / "ledger.yaml", encoding="utf-8") as f:
                 ledger = yaml.safe_load(f) or []
+        # per-route ledger files let several writers work in parallel (DESIGN.md §6)
+        if (root / "ledger").is_dir():
+            for lp in sorted((root / "ledger").glob("*.yaml")):
+                with open(lp, encoding="utf-8") as f:
+                    ledger += yaml.safe_load(f) or []
         characters: dict[str, Character] = {}
         cdir = root / "characters"
         if cdir.exists():
@@ -175,12 +180,19 @@ class Project:
         by_id = self.outline.by_id()
         target = by_id.get(scene_id)
         route = target.route if target else "common"
+        act = target.act if target else 99
         order: list[str] = []
         for o in self.outline.scenes:
             if o.id == scene_id:
                 break
-            if o.route == "common" or o.route == route:
-                order.append(o.id)
+            if route == "common":
+                if o.route == "common":
+                    order.append(o.id)
+            else:
+                # a route scene can be played in any week of its act, so it may
+                # rely on common scenes of earlier acts and on its own route only
+                if (o.route == "common" and o.act < act) or o.route == route:
+                    order.append(o.id)
         entries = {e["scene"]: e for e in self.ledger if isinstance(e, dict) and "scene" in e}
         return [entries[s] for s in order if s in entries]
 

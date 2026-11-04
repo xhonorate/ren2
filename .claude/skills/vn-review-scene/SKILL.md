@@ -19,7 +19,9 @@ entry (`python -m vn pack` shows it). If there is an nsfw fill, read it too.
 4. For nsfw fills: check continuity and voice only (DESIGN.md §7). Do not
    rewrite the explicit prose; if it breaks a fact, note the exact problem in
    `nsfw/<ref>.md` under `## Review` and in `NOTES.md` for the human.
-5. Append the ledger entry (format in DESIGN.md §6): plot summary in 3–5
+5. Append the ledger entry (format in DESIGN.md §6) to
+   `ledger/<route>.yaml` (`ledger/common.yaml` for common scenes); create
+   the file as a YAML list if missing: plot summary in 3–5
    sentences, then per character `knows / hiding / address / relationship /
    outfit / last_seen`, `flags_set`, `affection_delta` (sum of the scene's
    deltas on the default path; note branch-dependent ones in `threads`), and

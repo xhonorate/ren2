@@ -78,8 +78,9 @@ def cmd_cgs(a):
 def cmd_script(a):
     from .script import render
     p = Project.load(a.project)
-    for sid in a.scene:
-        print(render(p, p.load_scene(sid)))
+    written = set(p.scene_ids_written())
+    ids = a.scene or [o.id for o in p.outline.scenes if o.id in written]
+    print("\n\n".join(render(p, p.load_scene(sid)) for sid in ids))
 
 
 def cmd_build(a):
@@ -105,7 +106,7 @@ def main(argv=None):
     s = sub.add_parser("status"); s.add_argument("project"); s.set_defaults(f=cmd_status)
     s = sub.add_parser("lines", help="voiced lines as JSON (TTS job list)"); s.add_argument("project"); s.add_argument("scene", nargs="*"); s.set_defaults(f=cmd_lines)
     s = sub.add_parser("cgs", help="CG shot specs as JSON (image job list)"); s.add_argument("project"); s.add_argument("scene", nargs="*"); s.set_defaults(f=cmd_cgs)
-    s = sub.add_parser("script", help="render scenes as a readable markdown script"); s.add_argument("project"); s.add_argument("scene", nargs="+"); s.set_defaults(f=cmd_script)
+    s = sub.add_parser("script", help="render scenes as a readable markdown script"); s.add_argument("project"); s.add_argument("scene", nargs="*"); s.set_defaults(f=cmd_script)
     s = sub.add_parser("build", help="compile to a Ren'Py game/ directory"); s.add_argument("project"); s.add_argument("--out"); s.add_argument("--template", help="a launcher-made Ren'Py project to take gui/screens from"); s.set_defaults(f=cmd_build)
     a = ap.parse_args(argv)
     a.f(a)
