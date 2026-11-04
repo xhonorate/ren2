@@ -1,0 +1,34 @@
+id: hub_w15
+title: The river high
+location: river_path
+time: evening
+present: [bella]
+outfits: {bella: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week fifteen. Rain for four days, and the river has come up to meet the path. It is at the top of the bank and thinking about the gravel."
+  - narr: "Somebody has put sandbags along the back wall of the building, a row of them, wet and heavy, placed by someone who did it alone and did not ask."
+  - narr: "A torch, coming along the wall. It finds the sandbags one by one, then the wall, then you."
+  - say: bella
+    expr: serious
+    pose: pointing
+    text: "2A. What are you doing out here."
+  - say: player
+    text: "Looking at the river."
+  - say: bella
+    expr: serious
+    pose: idle
+    text: "The river doesn't need looking at. The wall does. I'm checking the wall. That's all this is. The wall."
+  - narr: "She is in her own coat with the torch and no hat, and the rain is in her hair. She checks the wall. She has checked it already; the light goes over the same bricks twice."
+  - say: player
+    text: "Did you put the sandbags down?"
+  - say: bella
+    expr: neutral
+    pose: turned_away
+    text: "Somebody did. Go in, kid. It's cold."
+  - narr: "As if that were an order she could give the river. It is not. It is one she can give you, and you find that you take it."
+  - exit: bella
+  - narr: "The torch goes back along the wall behind you, slow, over the same bricks. The water is loud all the way up the stairs, and the evening is still waiting at the top of them."
+  - include: hub_choice
+next: hub_w16

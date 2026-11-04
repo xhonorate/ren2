@@ -1,0 +1,36 @@
+id: hub_w13
+title: The thaw
+location: river_path
+time: afternoon
+present: [diana]
+outfits: {diana: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week thirteen. The thaw came in the night and took the ice with it, and now there is water everywhere: off the roofs, down the path, under the gravel where it should not be."
+  - narr: "The river is loud and brown and up to the second step of the bank. The bridge is back, dripping. The afternoon smells of mud, and of something green that is not here yet."
+  - narr: "On the bench, two coffees in paper cups, and Diana between them in the coat she wears when she is not working, looking at the river as if it were her case too."
+  - say: diana
+    expr: smile
+    pose: sitting
+    text: "There he is. Sit, sweetie. That one's yours. It's still hot, I only just— sit."
+  - say: player
+    text: "What are you doing here?"
+  - say: diana
+    expr: smile
+    delivery: soft
+    text: "I was passing."
+  - narr: "She lives on the other side of town. The river is not on the way from anywhere she goes to anywhere else she goes. You take the coffee."
+  - say: diana
+    expr: smug
+    delivery: teasing
+    text: "Drink that. You're wearing the hood, good. What did you eat today. Don't make a face. What."
+  - narr: "You tell her. She listens to the whole of it and nods at the end, and the river goes on being loud."
+  - say: diana
+    expr: smile
+    delivery: soft
+    text: "Okay. That's all I wanted. I'm going, honey, I've got a thing. I was passing."
+  - exit: diana
+  - narr: "She goes the long way, the only way to the other side of town from here. The coffee is warm in both hands, and the afternoon has an evening behind it that nobody has claimed."
+  - include: hub_choice
+next: hub_w14

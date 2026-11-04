@@ -1,0 +1,158 @@
+id: c02_break
+title: Christmas in the building
+location: alice_apartment
+time: evening
+present: [alice, bella, yuki, diana]
+outfits: {alice: housewife, bella: casual, yuki: casual, diana: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Christmas, or near enough that Alice has decided it is. 2B has its door open onto the landing and its heat coming out of it, and the whole floor smells of roasting."
+  - narr: "She has cooked for twelve. Two tables under one cloth, candles in jars, the paintings still facing the wall with tinsel on their backs. One chair has a coat over it, waiting."
+  - enter: {char: alice, pose: hands_clasped, expr: grin, at: left}
+  - say: alice
+    expr: grin
+    delivery: excited
+    text: "In, in, in. Sweetheart, sit, that's your chair, it's got the cushion. Don't carry anything, I've got hands, I've got so many hands tonight."
+  - enter: {char: bella, pose: arms_crossed, expr: neutral, at: center}
+  - say: bella
+    expr: neutral
+    text: "Kid. Wine's on the side. Don't ask where it's from. Pour it, don't read it."
+  - enter: {char: yuki, pose: hands_behind, expr: worried, at: right}
+  - say: yuki
+    expr: worried
+    delivery: soft
+    text: "H-hello. Happy— yes. I brought a cake. It's on the side, next to the wine. It's a bit— you'll see. Sorry."
+  - narr: "On the side, next to the wine, a cake. On the cake, a snowman with a long straight fringe and two long straight sides of hair, in icing, and a face that is trying very hard."
+  - choice:
+      prompt: "The snowman has a hime cut and a face."
+      options:
+        - text: "I can't cut that."
+          effects: {affection: {yuki: +1}}
+          steps:
+            - say: yuki
+              expr: blush
+              pose: shy_fidget
+              delivery: soft
+              text: "You don't have to. It's for looking. There's a plain one underneath. The snowman's on a lid. Sorry."
+            - say: bella
+              expr: smug
+              text: "Course it's on a lid."
+        - text: "Head first?"
+          steps:
+            - say: bella
+              expr: grin
+              text: "Head first."
+            - say: yuki
+              expr: surprised
+              delivery: soft
+              text: "Oh. O-okay. Yes. Head first. It comes off. It's on a lid. Sorry."
+            - say: alice
+              expr: laugh
+              delivery: laughing
+              text: "Nobody is beheading anybody before dinner. After. Mm."
+  - narr: "Dinner is a lot of dishes with lids, and Alice taking the lids off one at a time as if each one is a separate present."
+  - say: alice
+    expr: smile
+    pose: pointing
+    text: "Potatoes, the crispy ones. The other potatoes. The thing with the chestnuts, you'll like it, honey, you will. Gravy. There's a second gravy."
+  - say: alice
+    expr: pout
+    text: "The second one's thinner. Some people like it thinner. Bella likes it thinner. Eat."
+  - narr: "On the mantelpiece, between a candle and a snow globe, a card. Black, with a silver tree on it."
+  - say: alice
+    expr: smile
+    delivery: soft
+    text: "The witch sent that. From the laundrette. Isn't that the sweetest thing, honey. She signed it with a letter. Just a C."
+  - narr: "Thank you for the invitation. I hope the building is warm. C. The handwriting is small and even. You put it back exactly where it was."
+  - say: alice
+    expr: smile
+    text: "The nurse is working. I caught her on the stairs and gave her a tin for the ward. She said it wasn't her department and took it anyway. Mm."
+  - say: yuki
+    expr: embarrassed
+    pose: shy_fidget
+    delivery: soft
+    text: "And the professor's abroad. There was a postcard. To the seminar. To me, for the seminar. It says abroad. It doesn't say where."
+  - say: yuki
+    expr: blush
+    delivery: soft
+    text: "I can't— it's for the seminar. Sorry."
+  - narr: "The postcard goes into a pocket. Bella looks at the ceiling. Alice looks at the chair with the coat on it, and then the stairs creak, and she is up before the knock."
+  - enter: {char: diana, pose: idle, expr: smile, at: center}
+  - say: diana
+    expr: smile
+    delivery: soft
+    text: "I know, I know, I'm late. Sweetie. Hi. Did you eat? Don't 'yeah' me. What did you eat."
+  - say: player
+    text: "Everything with a lid."
+  - say: alice
+    expr: grin
+    text: "Twice. I counted."
+  - say: diana
+    expr: smile
+    text: "You counted. Okay. Then I like you, and I don't say that to people who've only fed him soup."
+  - say: bella
+    expr: neutral
+    pose: arms_crossed
+    text: "The deposit woman."
+  - say: diana
+    expr: smug
+    text: "The landlady. Merry Christmas, Bella. That's a nice wine. Don't tell me where it's from."
+  - narr: "Diana sits in the chair with the coat on it, which turns out to have been hers all along, and does not eat. She watches you eat, which is apparently the same thing."
+  - narr: "Yuki says hello to her very quietly. Diana says it back, asks what she's had, hears the potatoes, both kinds, says good, and goes back to watching you."
+  - cg:
+      id: c02_break_cg1
+      shot: pov_wide
+      lighting: candle
+      characters:
+        - {id: alice, pose: sitting_table, expr: grin, outfit: housewife, gaze: at_viewer}
+        - {id: bella, pose: sitting_table, expr: smug, outfit: casual, gaze: away}
+        - {id: yuki, pose: sitting_table, expr: shy_smile, outfit: casual, gaze: down}
+        - {id: diana, pose: sitting_table, expr: smile, outfit: casual, gaze: at_viewer}
+      note: "Alice's table from his seat: two tables under one cloth, candles in jars, dishes with the lids off, four women around it and the snowman cake at the end; the building as a family for one evening."
+  - narr: "From your chair the table is a whole room of people. Candles in jars, lids off, the second gravy going round. Nobody is talking to you and everybody is looking at you."
+  - narr: "Four people, and every one of them has looked at your plate tonight to see what was on it. It is not a thing you knew how to want. It is warm, and it sits where the cold used to."
+  - cg_end: {transition: dissolve}
+  - narr: "Diana puts a parcel on your plate the second it is empty. Soft, long, folded. The paper does not hide what it is, and she has not tried to make it."
+  - choice:
+      prompt: "It is clearly a coat."
+      options:
+        - text: "Is it a coat?"
+          effects: {affection: {diana: +1}}
+          steps:
+            - say: diana
+              expr: smile
+              text: "It's a coat. You've been going about in a jacket since October. Put it on. Say thank you."
+            - say: player
+              text: "Thank you."
+            - say: diana
+              expr: smile
+              delivery: soft
+              text: "Good. It's got a hood. Use the hood."
+        - text: "You didn't have to."
+          steps:
+            - say: diana
+              expr: serious
+              text: "Here's what's going to happen, honey. You're going to open it, and put it on, and we're going to stop saying I didn't have to."
+            - narr: "You open it. You put it on. It fits, which means she looked at you long enough to know."
+  - say: bella
+    expr: smug
+    text: "It's a coat. We can all see it's a coat."
+  - say: alice
+    expr: blush
+    pose: hands_clasped
+    delivery: soft
+    text: "Oh, look at him. Look at him in it. Honey. Keep it on, you'll be warm on the stairs. Mm."
+  - narr: "The snowman is beheaded after all, by Alice, with ceremony. Yuki lifts the lid off it first so nobody has to. The plain cake underneath is better than it needed to be."
+  - say: diana
+    expr: smile
+    text: "Okay. Bed, sweetie. Not because I said. Because you're swaying."
+  - say: bella
+    expr: neutral
+    text: "Go upstairs, kid. It's two doors. Even you can manage it."
+  - stage: {location: player_apartment, time: night, present: [], transition: fade}
+  - narr: "The coat goes on the chair. The heater ticks. Next door, through the brick, the washing up, and voices, and under them a hum."
+  - narr: "You lie down. You do not walk to the bridge. You do not count the stairs. The ceiling has no stain; you checked, weeks ago."
+  - stage: {time: morning, transition: fade}
+  - narr: "It is light when you open your eyes. Light, and the river going past, and the building already making its morning noises. The whole night. All of it, in one piece."
+next: hub_w11

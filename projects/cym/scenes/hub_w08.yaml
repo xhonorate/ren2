@@ -9,11 +9,10 @@ intimacy: 0
 steps:
   - narr: "Week eight. A Tuesday, after nine. The laundrette is the warmest public room in town and smells of it: powder, hot cotton, the back of a dryer."
   - narr: "Four machines going, the light humming over all of them, the window steamed to the top. Your bag is small. You have learned to wash things before you run out of them."
-  - narr: "On the plastic chairs, a basket of black things and the person folding them. She does not look up. She folds the way she talks: all the way through, and then the next one."
-  - enter: {char: claire, pose: sitting, expr: neutral, at: right}
-  - narr: "Then she does look up."
+  - narr: "On the plastic chairs, a basket of black things and the person folding them. She folds the way she talks: all the way through, and then the next one. Then she looks up."
   - say: claire
     expr: neutral
+    pose: sitting
     text: "Good evening. The machine on the end runs hot. I would use the second one."
   - say: player
     text: "Thank you. Is it always this warm in here?"

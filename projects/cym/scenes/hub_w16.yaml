@@ -1,0 +1,35 @@
+id: hub_w16
+title: Week sixteen
+location: college_library
+time: evening
+present: [yuki]
+outfits: {yuki: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week sixteen. Rain on the library glass, the whole length of it, and the green lamps doubled in the window so the room looks twice as full as it is."
+  - narr: "The window seat at the end is a bench for two that is usually a bench for one. Yuki is on the half nearest the glass, reading, humming the three notes."
+  - narr: "Her bag is on the other half. She moves it to the floor without looking up. That is the whole of the invitation, and it is enough."
+  - say: player
+    text: "Is this seat taken?"
+  - say: yuki
+    expr: shy_smile
+    pose: sitting
+    delivery: soft
+    text: "N-no. It's— I moved it. The bag. So, no. If you want. If you don't, that's— sorry."
+  - narr: "You sit. The rain keeps on at the glass. She goes back to her page and says nothing for a quarter of an hour, and neither do you, and it is the best quarter of an hour of the week."
+  - say: yuki
+    expr: embarrassed
+    delivery: soft
+    text: "I saved it. The seat. I didn't— the bag was just there. But I saved it. Sorry. You can know that."
+  - say: player
+    text: "I'm glad you did."
+  - say: yuki
+    expr: blush
+    pose: shy_fidget
+    delivery: soft
+    text: "Okay. Okay. I'm going to read now. Sorry."
+  - narr: "She reads. The three notes come back after a page. When the rain lets up you leave her the window and go down the hill toward the building, and the evening waiting in it."
+  - exit: yuki
+  - include: hub_choice
+next: hub_w17

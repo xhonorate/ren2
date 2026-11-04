@@ -114,7 +114,7 @@
       outfit: housewife
       last_seen: building_hall
     claire:
-      knows: ["Alice invites everyone and did not ask who she was", "he said the hat suited her"]
+      knows: ["Alice invites everyone and did not ask who she was"]
       hiding: ["from Alice and the building: that she is his therapist"]
       address: "no name; 'you'; full even sentences"
       relationship: "off duty for one evening and letting it show; let Alice steer her with a hand on her back"
