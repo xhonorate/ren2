@@ -1,0 +1,37 @@
+id: c03_alone
+title: Spring
+location: river_path
+time: morning
+present: []
+outfits: {}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Morning. You have not seen the path in the morning. You have seen it at one, and at eleven, and in fog, and under ice, and once with the water at the top of the bank. Not this."
+  - narr: "The back door sticks the way it sticks. The gravel is the same gravel. Everything else has been changed while you were not looking."
+  - cg:
+      id: c03_alone_cg1
+      shot: establishing
+      lighting: day_bright
+      characters: []
+      note: "The river path at morning for the first time: gravel, the bench dry, the bridge ahead in full sun, every streetlight off, the water low and bright; nobody on it."
+  - narr: "The streetlights are off. All of them at once, which they have never been. The bench is dry."
+  - narr: "The bridge is a bridge, with sun on it, and the river under it is low and quick and the colour of tea with the milk in."
+  - cg_end: {transition: dissolve}
+  - narr: "You slept. That is the first thing. Not the whole night every night, but most of them now, and the ones you do not, you know why, and the why is smaller than it was."
+  - narr: "The second thing: there is a key in your pocket that is yours, to a door that is yours, in a building where the stairs know your weight."
+  - narr: "There is a seat in a seminar room that was empty for a week and has not been empty since. There is a window seat that is half yours on the nights you want it."
+  - narr: "There is a plate on your mat some nights, under a tea towel, and a note under the plate, and the plate is never still there in the morning."
+  - narr: "There is a heater that was not a gift. A coat with a hood. A timetable with your letter on it. A card on a mantelpiece that is not yours, signed with one letter."
+  - narr: "There is a woman who sleeps upright in a diner and would, if you did not come home one night, know by Tuesday. There are six others who would know by morning."
+  - narr: "None of them is the one. Not yet. You did not choose, and the not-choosing was not nothing; it was a thing you did, with both hands, on purpose."
+  - narr: "It does not feel like losing. You check, the way you checked for loneliness on the first cold night, and it is not that either. It feels like having time."
+  - narr: "The summer exists. That is the thing nobody told you in the ward, and nobody could have: that there would be a summer, and that it would be yours to be bored in."
+  - narr: "You walk. The bench, which you do not sit on. The place where the fog took the bridge, and the bridge still there."
+  - narr: "At the bridge you stop, because this is where you have always stopped. You walk to the bridge, and you walk back. That is the shape of every night since the first one."
+  - narr: "The sun is on the far side of it. The path goes on past the bridge; you have never once looked to see where."
+  - narr: "You keep going."
+  - narr: "The far bank has a path too, it turns out, and trees, and a town past the trees with a church in it you have seen from your window and never from here."
+  - narr: "Behind you the building has all its windows. In an hour someone in it will notice the time and look at the stairs. That is not a thing you have to carry. It is a thing you have."
+  - narr: "The door is not closed; you left it on the latch, which is what doors in that building are for. You go on along the river in the sun, and the summer starts about here."
+next: null

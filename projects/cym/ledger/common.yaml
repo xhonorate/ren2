@@ -208,3 +208,165 @@
   flags_set: {}
   affection_delta: {}
   threads: ["Yuki's wrapped present from the last day of term was not given; nothing in the common route resolves it (her route may)", "two weeks of winter break; Victoria's office door left open; the reading is still expected", "the noticeboards half stripped, pins left in"]
+- scene: c02_break
+  summary: "Christmas dinner at Alice's with the door open onto the landing: she has cooked for twelve (two tables under one cloth, candles in jars, a second gravy), Bella brought wine and will not say where from, Yuki brought a cake with a hime-cut snowman on a lid over a plain cake. A black card with a silver tree from Claire ('the witch from the laundrette', signed C) stands on the mantelpiece; Natalie is working and took Alice's tin for the ward; Victoria is 'abroad' per a postcard to the seminar that Yuki keeps in her pocket. Diana arrives late, sits in the chair that had a coat over it, watches him eat instead of eating, trades 'the deposit woman' / 'the landlady' with Bella, and puts a parcel that is clearly a coat on his empty plate; he puts it on. Sent to bed by Diana and Bella, he lies down in 2A with the washing up through the brick and sleeps the whole night for the first time."
+  characters:
+    alice:
+      knows: ["he ate everything with a lid, twice; she counted and told Diana", "Diana is his social worker and likes her for the counting", "Claire is 'the witch from the laundrette' who sent a card; not what she does"]
+      hiding: ["that she was listening for the stairs all evening (up before the knock)"]
+      address: "'sweetheart', 'honey'; hums; 'look at him in it'"
+      relationship: "hosted the building; sat him in the chair with the cushion; the coat, the stairs, the open door"
+      outfit: housewife
+      last_seen: alice_apartment
+    bella:
+      knows: ["Diana was at the table; they have a name for each other now", "the snowman is on a lid; the coat is a coat"]
+      hiding: ["where the wine is from (a tenant, not this building)"]
+      address: "'kid'; one-line verdicts; sent him upstairs"
+      relationship: "landlady; came, drank, was dry about everyone, and told him it was two doors and even he could manage it"
+      outfit: casual
+      last_seen: alice_apartment
+    yuki:
+      knows: ["whether he refused to cut the snowman (default) or said 'head first'", "Diana asked her what she had eaten and she answered"]
+      hiding: ["Victoria's postcard (addressed to the seminar, 'abroad', no place) which she will not show", "that she greeted Diana as someone who knows her well"]
+      address: "'you'; 'sorry'; 'it's for the seminar'"
+      relationship: "upstairs neighbour; brought the cake; lifted the lid off the snowman so nobody had to"
+      outfit: casual
+      last_seen: alice_apartment
+    diana:
+      knows: ["he ate twice of everything, per Alice", "the coat fits; he put it on and said thank you (default) or 'you didn't have to'", "Alice counts what he eats; Bella brought wine from somewhere"]
+      hiding: ["that she looked at him long enough to know his size", "how late she stayed at the office to be this late"]
+      address: "'sweetie', 'honey'; 'Here's what's going to happen'; 'don't yeah me'"
+      relationship: "social worker and more; watched him eat instead of eating; gave him a coat with a hood and sent him to bed 'because you're swaying'"
+      outfit: casual
+      last_seen: alice_apartment
+  flags_set: {}
+  affection_delta: {yuki: +1, diana: +1}
+  threads: ["yuki +1 only on 'I can't cut that'; diana +1 only on 'Is it a coat?' (default path: both)", "he has a coat with a hood from Diana; 'use the hood'", "Claire's card on Alice's mantelpiece, signed C; Alice still knows her only as the witch from the laundrette", "Natalie took Alice's tin for the ward ('not my department') and was working on Christmas", "Victoria's postcard to the seminar says 'abroad' and no place; Yuki keeps it in her pocket and will not show it", "Diana and Bella: 'the deposit woman' / 'the landlady'; Diana told Alice she likes her", "Diana and Yuki greeted each other as people who know each other; the reason is still Yuki's route's to tell", "he slept the whole night for the first time, in 2A, after the dinner", "the paintings in 2B still face the wall, now with tinsel on their backs"]
+- scene: hub_w11
+  summary: "Week eleven, January: ice on the path where the puddles were, the river frozen at the edges, the bench frosted, the college lit from end to end up the hill for tomorrow. He wears the hood of the coat; term starts tomorrow and tonight is nobody's yet."
+  characters: {}
+  flags_set: {}
+  affection_delta: {}
+  threads: ["spring term starts the next day; the calendar begins again", "he uses the hood of the coat; it is in every hub from here"]
+- scene: hub_w12
+  summary: "Week twelve, the diner on a weeknight with the clock wrong by hours: Natalie is asleep upright in the second booth from the back, in uniform, hands flat on the table, a coffee gone to a skin in front of her, there since eight. He does not wake her, and neither does the man at the counter; she says 'Tuesday. Don't lift.' without opening her eyes, and he leaves money for both coffees and leaves her the booth."
+  characters:
+    natalie:
+      knows: []
+      hiding: ["that she sleeps in the diner after shifts because nobody is awake at the hour she finishes"]
+      address: "(asleep) 'Tuesday. Don't lift.'"
+      relationship: "his nurse, seen asleep and left asleep; he paid for her coffee and she does not know"
+      outfit: nurse
+      last_seen: diner
+  flags_set: {}
+  affection_delta: {}
+  threads: ["Natalie sleeps upright in the diner after shifts; the counter man knows and does not wake her; he paid for her coffee without her knowing", "the diner clock still says a quarter past four"]
+- scene: hub_w13
+  summary: "Week thirteen, the thaw: water everywhere, the river brown and up to the second step of the bank, the bridge back and dripping, the afternoon smelling of mud. Diana is on the bench with two coffees because she 'was passing' (she lives on the other side of town), checks the hood and what he ate today, listens to the whole list, and goes the long way back with 'I was passing.'"
+  characters:
+    diana:
+      knows: ["everything he ate today, in order", "he wears the hood"]
+      hiding: ["that she was not passing: the river is on the way from nowhere she goes; she came to see him"]
+      address: "'sweetie', 'honey'; 'don't make a face'; 'I was passing'"
+      relationship: "social worker and more; brought two coffees to a bench across town and left once she had her answer"
+      outfit: casual
+      last_seen: river_path
+  flags_set: {}
+  affection_delta: {}
+  threads: ["Diana 'was passing' the river path with two coffees; she lives on the other side of town", "the thaw: the ice gone, the bridge back, the river high on the bank (it rises further in week fifteen)"]
+- scene: hub_w14
+  summary: "Week fourteen: the stairwell freshly painted pale (Alice did it herself, three coats, after Bella threatened to get a man in), the landing radiator fixed and silent for the first time, a plant from the market on the windowsill turned to face the stairs. Alice waits in the hand's-width gap of her door pretending not to, and he notices the paint, the radiator and the plant out loud."
+  characters:
+    alice:
+      knows: ["he noticed the paint, the radiator and the plant, and said so"]
+      hiding: ["that she waited in the gap of her door for him to come home and notice", "that the plant wanted a window the way she wanted him to stop on the landing"]
+      address: "'sweetheart', 'honey'; 'I'm just here'; hums"
+      relationship: "neighbour who repainted the stairwell and got the radiator fixed through Bella; paint on one knuckle"
+      outfit: housewife
+      last_seen: building_hall
+  flags_set: {}
+  affection_delta: {}
+  threads: ["from week fourteen the landing radiator is fixed and no longer knocks; later hubs must not use the knock", "the stairwell is freshly painted, pale, tape still on the skirting; a plant on the landing windowsill", "Alice painted it herself (three coats); Bella supplied the tin"]
+- scene: hub_w15
+  summary: "Week fifteen, the river in flood after four days of rain, at the top of the bank; a row of wet sandbags along the building's back wall that somebody put down alone. Bella comes along the wall with a torch, says she is checking the wall (she checks the same bricks twice), will not say who laid the sandbags ('Somebody did'), and sends him in: 'Go in, kid. It's cold.'"
+  characters:
+    bella:
+      knows: ["he was out on the path in the flood, looking at the river", "he asked whether she put the sandbags down"]
+      hiding: ["that she laid the sandbags alone", "that she came out with the torch for him, not the wall"]
+      address: "'2A', 'kid'; 'Go in. It's cold.'"
+      relationship: "landlady; checked the wall twice and sent him in, and he went"
+      outfit: casual
+      last_seen: river_path
+  flags_set: {}
+  affection_delta: {}
+  threads: ["the river at the top of the bank; sandbags along the back wall, laid by Bella alone, which nobody says", "'Go in, kid. It's cold.': an order she could not give the river and could give him"]
+- scene: hub_w16
+  summary: "Week sixteen, rain on the library glass and the green lamps doubled in it. Yuki has the window seat and moves her bag off the other half without looking up; he sits, they read side by side for a quarter of an hour without a word, she admits she saved the seat ('You can know that'), and he says he is glad."
+  characters:
+    yuki:
+      knows: ["he asked if the seat was taken and sat; he said he was glad she saved it"]
+      hiding: ["that the bag was on the seat to keep it for him from the start"]
+      address: "'you'; 'sorry'; 'you can know that'"
+      relationship: "window-seat company; a quarter of an hour of reading side by side; she said she was going to read now and did"
+      outfit: casual
+      last_seen: college_library
+  flags_set: {}
+  affection_delta: {}
+  threads: ["the window seat is a bench for two; she saved the other half and said so", "the three notes come back after a page"]
+- scene: hub_w17
+  summary: "Week seventeen, blossom: the corridor doors propped at both ends, petals along the stone, warm air with cut grass in it, the noticeboards already advertising summer. Victoria stops, which in winter she did not, with her coat open for the first time this year: 'Spring. How tiresome.' and a look that says the opposite; she dislikes what spring does to attention, hers included, and goes on with a petal on one shoulder."
+  characters:
+    victoria:
+      knows: ["he asked whether she disliked spring; she admitted her own attention is the tiresome part"]
+      hiding: ["that the admission was about him"]
+      address: "'boy'"
+      relationship: "his seminar professor; stopped in the corridor for the first time; coat open"
+      outfit: professor
+      last_seen: college_corridor
+  flags_set: {}
+  affection_delta: {}
+  threads: ["Victoria's coat is open from week seventeen; a petal on her shoulder she will find later", "the noticeboards carry summer notices now"]
+- scene: hub_w18
+  summary: "Week eighteen, the laundrette at night with two machines running for nobody; Claire is in the chair that faces the door with a book and no basket, the book finished an hour ago. 'I don't have any washing' is, for her, a declaration; the reason she would give if asked is the warmth, and if not asked, 'Then I was waiting,' and no more than that tonight, in a laundrette."
+  characters:
+    claire:
+      knows: ["he noticed the missing basket and asked what she would say if she were not asked"]
+      hiding: ["everything past 'I was waiting'; she said she would prefer not to say more tonight"]
+      address: "no name; 'you'; 'Good evening'; even sentences"
+      relationship: "waited for him in the laundrette and said so, once, and went back to the last page"
+      outfit: casual
+      last_seen: laundrette
+  flags_set: {}
+  affection_delta: {}
+  threads: ["Claire waited in the laundrette without washing and admitted it in one sentence; nothing further was said and nothing is set", "the chair by the laundrette window faces the door"]
+- scene: hub_w19
+  summary: "Week nineteen, spring exams: the library open and full all night, every carrel taken, paper cups everywhere, the window black with the room in it. Yuki is in the window seat on her last colour; most squares are ticked, some green ones too, and the square with his letter is left as it was, neither ticked nor crossed; 'one week of term, and then it's summer, and the timetable's finished'; she tells him to do the green ones."
+  characters:
+    yuki:
+      knows: ["he came to the library the night before her last exam colour", "one week of the calendar is left and she said so"]
+      hiding: ["that she has left his square untouched on purpose", "that she has not made the next timetable because she does not know what is on it"]
+      address: "'you'; 'sorry'; 'night'"
+      relationship: "window-seat company at exam time; sent him to sleep"
+      outfit: casual
+      last_seen: college_library
+  flags_set: {}
+  affection_delta: {}
+  threads: ["his square on Yuki's timetable is still there, half rubbed out, not ticked and not crossed", "one week of the calendar left; the next timetable is not made"]
+- scene: hub_w20
+  summary: "Week twenty, the last day of spring term: doors open on empty rooms, chairs on tables, the noticeboards stripped to cork and pins with a pale rectangle where the reading list was, the sun reaching the far wall of the corridor for the first time all year. Tomorrow is the summer; tonight is the last evening of the calendar, and he goes down the hill into it."
+  characters: {}
+  flags_set: {}
+  affection_delta: {}
+  threads: ["the last hub; the calendar ends here and c03_lock follows", "the blossom on the steps is gone; the stone is warm"]
+- scene: c03_lock
+  summary: "The landing on the last evening of term with the window open for the first time (it took both hands) and the river coming in; the paint has lost its smell, a second plant sits beside the first, the radiator is only a radiator, and the building is quiet the way it is when everyone in it is listening. He has slept whole nights, enough to know the difference; the summer is the first time since the ward nobody has arranged for him. One choice: each woman whose route is complete, by name, or 'No one. Not yet.' into the alone ending."
+  characters: {}
+  flags_set: {}
+  affection_delta: {}
+  threads: ["the lock: options gated on flags.<id>_step == 9 go to <id>_finale; 'No one. Not yet.' goes to c03_alone; next is null", "the landing window opens now; a second plant on the sill"]
+- scene: c03_alone
+  summary: "The alone ending: the river path in the morning for the first time, every streetlight off, the bench dry, the bridge in sun and the river low. He takes stock: he sleeps most nights and knows why when he does not; a key, a seat, a half-shared window seat, a plate on the mat some nights, a heater, a coat with a hood, a timetable square, a card signed with one letter, seven people who would notice. He did not choose, and the not-choosing was a thing he did on purpose; it feels like having time. He walks to the bridge, where he has always turned back, and keeps going; the door is on the latch, and the summer starts about there."
+  characters: {}
+  flags_set: {}
+  affection_delta: {}
+  threads: ["ending; next is null; the door is not closed", "the first morning on the river path; the far bank has a path too"]

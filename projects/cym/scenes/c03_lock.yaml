@@ -1,0 +1,47 @@
+id: c03_lock
+title: The summer
+location: building_hall
+time: evening
+present: []
+outfits: {}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "The landing on the last evening of term. The window is open. It has never been open; it took both hands, and then it opened, and the river came in."
+  - narr: "The paint has lost the smell of paint. The tape is off the skirting. The plant on the sill has a second plant beside it now, and the radiator is only a radiator."
+  - narr: "Downstairs, the office door shut and the radio off. Next door, no hum. Upstairs, no three notes. The building is quiet the way it is only quiet when everyone in it is listening."
+  - narr: "You know the stairs without counting them. You know which board on the half-landing speaks and which does not. You know the laundrette from here, and the diner at six."
+  - narr: "You have slept whole nights. Not every night. Enough of them to know the difference, and to know it is not the walking that did it."
+  - narr: "Tomorrow the college shuts for the summer, and the summer is the first piece of time since the ward that nobody has arranged for you."
+  - narr: "You stand on the landing with the window open and the river loud, and it comes to you that the summer is a question, and that the question has a name in it, or does not."
+  - narr: "Behind every door you can reach from here there is a woman who has fed you, or fixed you, or waited, or walked past you in the fog and said one word."
+  - narr: "Some of those doors are open. You know which. Nobody has asked you anything. They have all, in their own way, been waiting for you to ask yourself."
+  - narr: "The first streetlight comes on over the river, one, and then the next. The evening is the last of the calendar, and the summer is on the other side of it."
+  - narr: "Where you spend the summer is the only question left, and it is yours."
+  - choice:
+      prompt: "The summer."
+      options:
+        - text: "Diana."
+          requires: "flags.diana_step == 9"
+          goto: diana_finale
+        - text: "Claire."
+          requires: "flags.claire_step == 9"
+          goto: claire_finale
+        - text: "Natalie."
+          requires: "flags.natalie_step == 9"
+          goto: natalie_finale
+        - text: "Alice."
+          requires: "flags.alice_step == 9"
+          goto: alice_finale
+        - text: "Bella."
+          requires: "flags.bella_step == 9"
+          goto: bella_finale
+        - text: "Yuki."
+          requires: "flags.yuki_step == 9"
+          goto: yuki_finale
+        - text: "Victoria."
+          requires: "flags.victoria_step == 9"
+          goto: victoria_finale
+        - text: "No one. Not yet."
+          goto: c03_alone
+next: null

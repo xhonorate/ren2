@@ -1,0 +1,18 @@
+id: hub_w20
+title: The last day
+location: college_corridor
+time: afternoon
+present: []
+outfits: {}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week twenty. The last day. The corridor has its doors open on empty rooms, chairs up on tables, a whiteboard with one word on it that somebody did not wipe."
+  - narr: "The noticeboards are stripped to the cork and the pins. Where the reading list was there is a pale rectangle, cleaner than the rest, the shape of a term."
+  - narr: "No heels on stone. No three notes. Nobody waiting by the boards for anybody. The sun comes the whole way down the corridor and reaches the far wall for the first time all year."
+  - narr: "You walk it end to end because you can. Then you stand on the steps, where the blossom was, and it is gone, and the stone is warm."
+  - narr: "Tomorrow is the summer. Nobody has told you what to do with it, and nobody has told you what to do with tonight either, which is the last evening of the calendar."
+  - narr: "Down the hill: the building, the river, the laundrette's light not on yet, the diner's clock wrong. Every one of them is a door you have opened at least once."
+  - narr: "The evening is yours. It is the last one that is only yours. You go down the hill into it."
+  - include: hub_choice
+next: c03_lock

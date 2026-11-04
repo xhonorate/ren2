@@ -1,0 +1,31 @@
+id: hub_w17
+title: Blossom
+location: college_corridor
+time: afternoon
+present: [victoria]
+outfits: {victoria: professor}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week seventeen. The doors at both ends of the corridor are propped, and the blossom from the steps has come in on the wind and lies along the stone in a line nobody will sweep."
+  - narr: "Warm air, for the first time this year, with cut grass in it from the quad. The noticeboards have a summer on them already: a fête, a reading, a room to let."
+  - narr: "Heels on stone, slower than in winter. Her coat is open. That is the whole of the change, and it is enormous. She stops. In winter she did not stop."
+  - say: victoria
+    expr: neutral
+    text: "Spring. How tiresome."
+  - narr: "The look that goes with it says the opposite, and she knows it does, and lets it."
+  - say: player
+    text: "You don't like spring?"
+  - say: victoria
+    expr: smug
+    delivery: teasing
+    text: "I dislike what it does to attention, boy. Doors propped, windows open, half the room gazing at a tree."
+  - say: victoria
+    expr: smile
+    delivery: soft
+    text: "Mine included. That is the tiresome part."
+  - narr: "She goes on down the corridor with the coat open and a petal on one shoulder that she will find later and not know what to do with."
+  - exit: victoria
+  - narr: "The blossom keeps coming in. The afternoon is warm enough to stand in and long enough to have an evening at the end of it, and the evening is the one thing not yet decided."
+  - include: hub_choice
+next: hub_w18

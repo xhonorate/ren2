@@ -1,0 +1,36 @@
+id: hub_w18
+title: Week eighteen
+location: laundrette
+time: night
+present: [claire]
+outfits: {claire: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week eighteen. The laundrette at night. Two machines are running and nobody is waiting on them; the room is keeping itself warm for whoever comes in."
+  - narr: "Somebody has. The plastic chair by the window, the one that faces the door, and in it Claire, with a book and no basket. The book is closed on her finger."
+  - say: claire
+    expr: neutral
+    pose: sitting
+    text: "Good evening."
+  - say: player
+    text: "No basket tonight?"
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "I don't have any washing."
+  - narr: "For her, that is a declaration. It sits in the warm room between you with nothing to do, and she lets it."
+  - say: claire
+    expr: shy_smile
+    delivery: soft
+    text: "I finished the book an hour ago. I stayed because the room was warm. That is the reason I would give, if I were asked."
+  - say: player
+    text: "And if you weren't asked?"
+  - say: claire
+    expr: blush
+    delivery: soft
+    text: "Then I was waiting. I would prefer not to say more than that tonight, in a laundrette."
+  - narr: "She opens the book at the last page and reads it as if it were the first. The machines run for nobody. Outside, the street is black and empty, and the evening is yours to spend."
+  - exit: claire
+  - include: hub_choice
+next: hub_w19

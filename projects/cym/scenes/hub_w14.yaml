@@ -1,0 +1,38 @@
+id: hub_w14
+title: Week fourteen
+location: building_hall
+time: evening
+present: [alice]
+outfits: {alice: housewife}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week fourteen. The stairwell smells of paint. The walls that were the colour of weak tea are pale and clean now, the colour of nothing yet. Tape is still on the skirting."
+  - narr: "The radiator does not knock. You stop on the landing and wait for it. On the windowsill, a plant that was not there on Friday, turned so its best side faces the stairs."
+  - narr: "2B's door is open the width of a hand, and nobody is in the gap, very carefully."
+  - say: alice
+    expr: smile
+    pose: hands_behind
+    text: "Oh! Sweetheart. Hi. Are you— you're home. Good. Good. Mm."
+  - narr: "She looks at the wall. She looks at you. She looks at the wall again, which is the opposite of not waiting."
+  - say: player
+    text: "You painted the stairs."
+  - say: alice
+    expr: grin
+    delivery: excited
+    text: "I did! Bella said she'd get a man in and I said what man, honey, and she said a man, and I said give me the tin. Three coats. Three! Mm."
+  - say: player
+    text: "And the radiator?"
+  - say: alice
+    expr: shy_smile
+    delivery: soft
+    text: "I had a word with it. And with Bella. Mostly Bella. It's a teeny bit warm now, isn't it? It's warm. You can stand there."
+  - say: alice
+    expr: blush
+    pose: shy_fidget
+    delivery: soft
+    text: "The plant's from the market. It wanted a window. Don't let me keep you, sweetheart, I'm just— I'm just here."
+  - narr: "She is just there, in the gap, with paint on one knuckle she has not noticed. The landing is warm, which it has never once been, and the evening is yours to take somewhere."
+  - exit: alice
+  - include: hub_choice
+next: hub_w15

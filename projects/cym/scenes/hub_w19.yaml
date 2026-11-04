@@ -1,0 +1,31 @@
+id: hub_w19
+title: Spring exams
+location: college_library
+time: night
+present: [yuki]
+outfits: {yuki: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week nineteen. Spring exams, and the library is open all night and full all night: every carrel taken, coats on the backs of chairs, a paper cup on every flat surface."
+  - narr: "The window at the end is black with the room in it, lamps and heads and the window seat, and Yuki in the window seat with the timetable."
+  - narr: "Most of the squares are ticked now. Some of the green ones, even. The square with your letter in it is still there, half rubbed out, not ticked and not crossed. She has left it."
+  - say: yuki
+    expr: sleepy
+    pose: sitting
+    delivery: soft
+    text: "H-hi. Sorry. It's late. I know it's late. I'm nearly— one more. One more colour."
+  - say: player
+    text: "Which one?"
+  - say: yuki
+    expr: thinking
+    text: "The last one. Then there's one week. One week of term, and then— then it's summer, and the timetable's finished. I haven't made the next one. Sorry."
+  - narr: "One week. She says it as a fact about the timetable and it lands as a fact about everything else, and she hears it land, and looks at her pencil."
+  - say: yuki
+    expr: blush
+    delivery: soft
+    text: "You should sleep. The green ones. You should do the green ones. If you— yes. Sorry. Night."
+  - narr: "She goes back to the last colour. The room breathes paper and coffee. Down the stairs the night is warm and one week wide, and this evening is the first of the last of them."
+  - exit: yuki
+  - include: hub_choice
+next: hub_w20

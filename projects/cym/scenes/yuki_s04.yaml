@@ -1,0 +1,178 @@
+id: yuki_s04
+title: The convention
+location: building_hall
+time: evening
+present: [yuki]
+outfits: {yuki: casual}
+rating: suggestive
+intimacy: 2
+steps:
+  - narr: "The landing, and Yuki on the stairs above it with one hand on the rail, which is where she has been standing for a while, by the look of the hand."
+  - say: yuki
+    expr: worried
+    pose: shy_fidget
+    delivery: soft
+    text: "D-do you— there's a— never mind. Sorry. Good night."
+  - say: player
+    text: "Yuki."
+  - say: yuki
+    expr: embarrassed
+    delivery: soft
+    text: "I'm going to a thing. There's a thing. I go to it. I was going to ask if— no. Sorry. That's the second try. You saw."
+  - say: player
+    text: "Say it slower."
+  - say: yuki
+    expr: blush
+    pose: hands_clasped
+    delivery: soft
+    text: "W-would you come. With me. To a— there's a hall, and people go as— and I'd be— I can't say this part. I'm going up. I'm sorry."
+  - narr: "She goes up. The door, and the floorboard, and nothing. You get as far as your own door."
+  - exit: yuki
+  - narr: "The text comes before your key is in it. It says: There's a hall. A convention. I'll be in the suit. Nobody there knows me. You would. I'd like that, this once. You don't have to."
+  - narr: "Then, a minute later: Please come. You send one word, and the floorboard above you goes twice, quickly. Someone had been standing on it."
+  - stage: {location: convention_hall, time: afternoon, outfits: {yuki: bunny}, transition: fade}
+  - narr: "The hall is loud in a way the river is not. Banners, tables, a queue for something, and nobody in it dressed as themselves."
+  - narr: "You do not find her. She finds you. The ears first, above the crowd. Then the suit from under the sheet, finished, and her in it, in heels that put her level with you."
+  - enter: {char: yuki, pose: idle, expr: smile, at: center}
+  - say: yuki
+    expr: smile
+    text: "Hi. You came."
+  - narr: "No stutter. You wait for the sorry, and it does not come either, and she sees you waiting for it."
+  - say: yuki
+    expr: smug
+    text: "You're staring. That's allowed. Here it's allowed. It's the point of the ears."
+  - say: player
+    text: "Where did Yuki go?"
+  - say: yuki
+    expr: smile
+    pose: hands_hips
+    text: "She's in the bag with my cardigan. She'll be back at five. This one doesn't say sorry. Watch."
+  - narr: "A man with a camera and a lanyard asks. She says of course, and stands the way she has practised, and he thanks her, and she tells him he is welcome."
+  - say: yuki
+    expr: grin
+    pose: idle
+    text: "Fourteen. That's fourteen people who've looked at me today and I haven't said it once. I've been counting."
+  - choice:
+      prompt: "The suit, and the girl in it, and the one in the bag."
+      options:
+        - text: "You're not saying sorry."
+          effects: {affection: {yuki: +1}}
+          steps:
+            - say: yuki
+              expr: smile
+              text: "No. You noticed. It's the ears. You can't apologise in the ears, it doesn't— it doesn't work. I've tried."
+            - say: yuki
+              expr: shy_smile
+              delivery: soft
+              text: "That was nearly one. You made it nearly one. Stop looking at me like that or she'll come back early."
+        - text: "You're taller."
+          steps:
+            - say: yuki
+              expr: grin
+              text: "Heels. I can't walk in them. I can stand in them. Don't make me walk anywhere, I'll go over."
+            - narr: "She does not go over. She stands, and people look, and she lets them, which is the thing that has changed."
+        - text: "It's finished, then."
+          steps:
+            - say: yuki
+              expr: smile
+              text: "I finished it. After the bridge. I couldn't sleep either, so I sewed. The tail took all night."
+            - narr: "She turns, once, so you can see that it did, and turns back before you can say anything about it."
+  - say: player
+    text: "What's it like? Being her."
+  - say: yuki
+    expr: thinking
+    text: "I'll tell you behind the curtain. There's a place. Come on. Slowly. The heels."
+  - narr: "Behind the stage there is a curtained-off nothing: a stack of chairs, a cable, the hall a glow through the cloth. She lets it fall shut behind you."
+  - say: yuki
+    expr: neutral
+    pose: idle
+    delivery: soft
+    text: "This is where I wait. When it's too much. Nobody comes back here unless they're on next, and I'm never on next."
+  - say: player
+    text: "Does it get too much?"
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "Every time. And then I go back out. That's the whole trick. You go back out."
+  - say: player
+    text: "You were going to tell me. What it's like."
+  - say: yuki
+    expr: smile
+    pose: lean_forward
+    text: "It's like being allowed. All afternoon, nobody's going to say I've got it wrong. It's like—"
+  - narr: "She does not finish it. She kisses you instead, quick and off-centre and with the ears in the way, before either of you has thought about it."
+  - narr: "Then she thinks about it. You watch it happen. Both hands come up over her mouth, cuffs and all."
+  - cg:
+      id: yuki_s04_cg1
+      shot: pov_medium
+      lighting: day_soft
+      characters:
+        - {id: yuki, pose: standing_close, expr: surprised, outfit: bunny, gaze: at_viewer}
+      note: "Behind the stage curtain, the hall a glow through the cloth: Yuki in the finished bunny suit, ears crooked, both hands pressed over her mouth, eyes wide and on him; the second after she kissed him and the first second of thinking about it."
+  - say: yuki
+    expr: surprised
+    delivery: whisper
+    text: "I— I— that was— I didn't—"
+  - say: yuki
+    expr: embarrassed
+    delivery: soft
+    text: "S-sorry. There. She's back. She's early. Sorry, I didn't think, I always think, I didn't—"
+  - say: yuki
+    expr: blush
+    delivery: soft
+    text: "I did mean to. Not yet. I meant to later, when I'd— I had it planned, and she doesn't plan, and I'm— I'm both. Sorry. I'm both."
+  - narr: "The hands have not come down. Above them, the look from the bridge: the one that waits to be corrected."
+  - cg_end: {transition: dissolve}
+  - choice:
+      prompt: "She is waiting for the mistake to be pointed out."
+      options:
+        - text: "You were right to."
+          effects: {affection: {yuki: +1}}
+          steps:
+            - say: yuki
+              expr: surprised
+              delivery: whisper
+              text: "I was?"
+            - say: player
+              text: "You were."
+            - narr: "The hands come down. She looks at them, as if they belong to one of her and not the other."
+            - say: yuki
+              expr: shy_smile
+              pose: idle
+              delivery: soft
+              text: "I was. O-okay. Then I'm going to do it again, and this time I'll have thought about it first. So it counts."
+            - narr: "She does. Slower, and straighter, and the ears still get in the way, and she laughs into it, which is a thing you did not know she could do."
+        - text: "Give me your hand."
+          steps:
+            - narr: "One hand comes down off her mouth and finds yours, cuff and all. The other stays where it is a moment longer, and then gives up."
+            - say: yuki
+              expr: worried
+              pose: idle
+              delivery: soft
+              text: "You're not— you're not going to say anything?"
+            - say: player
+              text: "Not unless you want me to."
+            - say: yuki
+              expr: blush
+              delivery: soft
+              text: "I want you to. No. I want— this. Keep this. This is enough for one afternoon, I think. I think it is."
+            - narr: "She leans in, carefully, until her forehead is against your shoulder, ears and all, and stays there while the hall goes on without her."
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "I'm going to go and change. Back into me. And then you can look at her the way you looked at this one. If you want. So it's fair."
+  - say: player
+    text: "I'll be here."
+  - say: yuki
+    expr: blush
+    delivery: soft
+    text: "Wait here. Please— please wait here. I'll be five minutes. She's quicker at buttons than I am."
+  - narr: "At the curtain she stops, and does not look back, and then does."
+  - say: yuki
+    expr: smile
+    delivery: soft
+    text: "Fifteen. You don't count. You're the one who knows both. That was the point this time."
+  - exit: yuki
+  - narr: "The curtain falls shut. The hall is loud on the other side of it, and you stand among the stacked chairs and wait, which is the thing she asked for, and it is easy."
+  - set: {yuki_step: 4}
+next: null
