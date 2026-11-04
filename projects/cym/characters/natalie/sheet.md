@@ -30,7 +30,7 @@ His ward nurse while he is admitted, then the one who does his follow-up visits 
 Wants to get through the day, and then something easy and real at the end of it. Fears losing the job, failing a patient, never having an evening free.
 
 ## Route arc hooks
-Hub-calendar route, 5 spokes + ending (arcs.md). Her piece: she called it in; the injuries were hours old. The arc is from clipboard to no clipboard.
+Hub-calendar route, 9 spokes + ending (arcs.md). Pace fast and clinical: first intimate scene at spoke 2, level 4 by spoke 4. Her piece: she called it in; the injuries were hours old. The arc is from clipboard to no clipboard.
 
 ## Boundaries
 Never cruel; her teasing is dry, not degrading. Rating notes: matter-of-fact, domineering femdom in the clinical register; explicit content per `nsfw.txt`; consensual, she states what will happen and asks if that's acceptable.

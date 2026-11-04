@@ -15,6 +15,15 @@ from .vocab import Vocab
 
 SPECIAL_SPEAKERS = {"narrator", "player"}
 
+INTIMACY_LEVELS = {
+    0: "None. No physical charge in the scene.",
+    1: "Charged. A touch, a look, a moment that stops short. Nothing explicit; the scene is about the almost.",
+    2: "First intimate scene. Kissing, hands, closeness; clothes mostly stay on; the explicit part, if any, is short and the brief says so. More PG than what follows.",
+    3: "A short explicit moment inside a story scene (about a quarter of the scene), arising from what is happening.",
+    4: "A substantial explicit section (about half the scene) with story on either side; the register is fully hers by now.",
+    5: "Culmination. The explicit section carries the scene; the story beat is what it means.",
+}
+
 
 @dataclass
 class Character:
@@ -167,6 +176,7 @@ class Project:
                          f"Outfits: {outfits or '(none)'}; default `{a.default_outfit}`.\n"
                          + (f"Marks: " + "; ".join(f"{m.what} on {m.where}" for m in a.marks) + "\n" if a.marks else ""))
         parts.append("## Route arc\n" + self._arc_section(o.route) + "\n")
+        parts.append(f"## Intimacy level: {o.intimacy}\n" + INTIMACY_LEVELS[o.intimacy] + "\n")
         parts.append("## This scene (outline entry)\n```yaml\n"
                      + yaml.safe_dump(o.model_dump(exclude_none=True), sort_keys=False, allow_unicode=True) + "```\n")
         state = self.affection_state(scene_id)
@@ -298,6 +308,7 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
             errs.append(f"outline {o.id}: route {o.route} is not a character")
         if o.rating == "explicit" and p.rating() != "explicit":
             errs.append(f"outline {o.id}: explicit scene in a {p.rating()} project")
+        errs += _check_intimacy(o.intimacy, o.rating, f"outline {o.id}")
         if o.requires:
             errs += _check_cond(p, o.requires, f"outline {o.id}.requires")
         if p.outline.branching == "linear" and o.requires:
@@ -443,6 +454,9 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
             errs.append(f"{where}: next {sc.next} does not exist")
         if sc.rating == "explicit" and p.rating() != "explicit":
             errs.append(f"{where}: explicit scene in a {p.rating()} project")
+        errs += _check_intimacy(sc.intimacy, sc.rating, where)
+        if sid in by_id and by_id[sid].intimacy != sc.intimacy:
+            errs.append(f"{where}: intimacy {sc.intimacy} differs from the outline's {by_id[sid].intimacy}")
 
     # reachability over the outline + written scenes
     reach = _reachable(p, scenes)
@@ -466,6 +480,15 @@ def _flat_with_nsfw(p: Project, steps: list[Step], errs: list[str], where: str):
             continue
         yield s
 
+
+
+def _check_intimacy(level: int, rating: str, where: str) -> list[str]:
+    """0-1 any rating; 2 needs suggestive or explicit; 3-5 need explicit."""
+    if level >= 3 and rating != "explicit":
+        return [f"{where}: intimacy {level} needs rating explicit, not {rating}"]
+    if level == 2 and rating == "sfw":
+        return [f"{where}: intimacy 2 needs rating suggestive or explicit"]
+    return []
 
 
 def _style_limit(style: str) -> int:

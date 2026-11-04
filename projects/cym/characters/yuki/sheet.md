@@ -30,7 +30,7 @@ Classmate in Victoria's seminar; lives in 3C, upstairs. One of the first people 
 Wants to get closer to him, to say what she means, to be loved; someday a house and children. Fears rejection, public speaking, being awkward, being judged for what she wants.
 
 ## Route arc hooks
-Hub-calendar route, 5 spokes + ending (arcs.md). Her piece: what Diana did for her. The arc is the second sentence, from the library to the seminar platform.
+Hub-calendar route, 9 spokes + ending (arcs.md). Pace slowest to start: first intimate scene at spoke 4, then surprising. Her piece: what Diana did for her. The arc is the list, from the first item read aloud to the whole of it.
 
 ## Boundaries
 Never cruel. Rating notes: loving, inexperienced femdom that needs reassurance; explicit content per `nsfw.txt`; anything rough or non-consent-flavoured in her list is negotiated roleplay between the two of them, and the brief says so.

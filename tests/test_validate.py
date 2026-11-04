@@ -232,3 +232,21 @@ def test_ledger_follows_outline_order_and_route():
     # mira's route scene sees the common scenes, not ren's
     ids = [e["scene"] for e in p.ledger_for("c02_mira_s01")]
     assert ids == ["c01_s01"]
+
+
+def test_intimacy_level_vs_rating(tmp_path):
+    root = copy_demo(tmp_path)
+    o = yaml.safe_load((root / "outline.yaml").read_text())
+    for sc in o["scenes"]:
+        if sc["id"] == "c02_mira_s01":
+            sc["intimacy"] = 3                      # suggestive scene cannot be level 3
+        if sc["id"] == "c01_s01":
+            sc["intimacy"] = 2                      # sfw scene cannot be level 2
+    (root / "outline.yaml").write_text(yaml.safe_dump(o, sort_keys=False))
+    errs = "\n".join(validate(Project.load(root)))
+    assert "intimacy 3 needs rating explicit" in errs
+    assert "intimacy 2 needs rating suggestive or explicit" in errs
+    # scene file must agree with the outline
+    assert "differs from the outline's 3" in errs
+    p = Project.load(root)
+    assert "## Intimacy level: 3" in p.context_pack("c02_mira_s01")

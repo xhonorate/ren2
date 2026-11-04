@@ -30,7 +30,7 @@ His landlady. Diana negotiated the lease; Bella signed it with visible reluctanc
 Wants money, quiet tenants, control, someone to order around who likes it. Fears being poor, dying alone, never having children.
 
 ## Route arc hooks
-Hub-calendar route, 5 spokes + ending (arcs.md). Her piece: throwing the step-mother out of her building. The arc is from 'kid' to not saying it.
+Hub-calendar route, 9 spokes + ending (arcs.md). Pace fast and hard: first intimate scene at spoke 2. Her piece: throwing the step-mother out of her building (spoke 7). The arc is from 'kid' to not saying it; the degradation dynamic is hers alone.
 
 ## Boundaries
 The one love interest whose dynamic is degrading: she mocks him, orders him, and he chooses it on her route. The narration never joins in, and off her route she is sharp, not cruel. Rating notes: hard domme, humiliation play per `nsfw.txt`, always consensual and chosen by him.

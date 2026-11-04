@@ -30,7 +30,7 @@ Next-door neighbour, 2B to his 2A. Met the day he moved in; has reached out ever
 Wants to be close to him, to look after him in every way, for him to move in, for him to treat her as the mother he never had. Fears loneliness, getting old, being unattractive, being rejected.
 
 ## Route arc hooks
-Hub-calendar route, 5 spokes + ending (arcs.md). Her piece: the photograph in the boxes. The arc is the wall: dinner through it, knocking on it, boxes through it.
+Hub-calendar route, 9 spokes + ending (arcs.md). Pace warm and quick once started: first intimate scene at spoke 3. Her piece: the photograph in the boxes. The arc is the wall: dinner through it, knocking on it, boxes through it.
 
 ## Boundaries
 Never mocking; her teasing is baby-talk, never barbs. Rating notes: gentle femdom / mommy-domme with infantilising pet names and his pleasure first; explicit content per `nsfw.txt`; she asks, sweetly, and he answers.

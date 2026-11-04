@@ -73,6 +73,14 @@ class OutlineScene(BaseModel):
     next: Optional[str] = None
     cg: list[str] = Field(default_factory=list)
     direction: Optional[str] = None      # human's direction for explicit sections
+    intimacy: int = 0                    # 0 none .. 5 culmination (DESIGN.md §7)
+
+    @field_validator("intimacy")
+    @classmethod
+    def _intimacy(cls, v: int) -> int:
+        if not 0 <= v <= 5:
+            raise ValueError("intimacy must be 0..5")
+        return v
 
     @field_validator("rating")
     @classmethod
@@ -380,18 +388,23 @@ class Scene:
     rating: str
     steps: list[Step]
     next: Optional[str]
+    intimacy: int = 0
 
     @classmethod
     def from_dict(cls, d: dict[str, Any]) -> "Scene":
         for k in ("id", "location", "time", "steps"):
             if k not in d:
                 raise SceneError(f"scene needs '{k}'")
-        extra = set(d) - {"id", "title", "location", "time", "present", "outfits", "rating", "steps", "next"}
+        extra = set(d) - {"id", "title", "location", "time", "present", "outfits", "rating", "steps", "next", "intimacy"}
         if extra:
             raise SceneError(f"scene {d['id']}: unknown keys {sorted(extra)}")
+        intimacy = int(d.get("intimacy", 0))
+        if not 0 <= intimacy <= 5:
+            raise SceneError(f"scene {d['id']}: intimacy must be 0..5")
         return cls(id=d["id"], title=d.get("title", ""), location=d["location"], time=d["time"],
                    present=list(d.get("present") or []), outfits=dict(d.get("outfits") or {}),
-                   rating=d.get("rating", "sfw"), steps=parse_steps(d["steps"]), next=d.get("next"))
+                   rating=d.get("rating", "sfw"), steps=parse_steps(d["steps"]), next=d.get("next"),
+                   intimacy=intimacy)
 
     @classmethod
     def load(cls, path) -> "Scene":

@@ -150,6 +150,7 @@ scenes:
     time: morning
     present: [mira]
     rating: sfw             # sfw | suggestive | explicit
+    intimacy: 0             # 0..5, see §7
     goal: "Establish the player, meet Mira, plant the scar question."
     beats: ["...", "...", "..."]
     requires: null          # condition expression, or null
@@ -288,6 +289,25 @@ another route's events. For `branching` projects (§8) entries may carry
 `branch:` and the pack follows the path that reaches the scene.
 
 ## 7. Explicit scenes
+
+Every scene carries an `intimacy` level, 0–5, set in the outline and
+repeated in the scene file (the validator checks they agree and that the
+rating allows the level: 2 needs `suggestive`+, 3–5 need `explicit`):
+
+| level | meaning |
+|---|---|
+| 0 | none |
+| 1 | charged: a touch, a look, the almost |
+| 2 | the first intimate scene: kissing, closeness, more PG than what follows |
+| 3 | a short explicit moment (~¼ of the scene) arising from the story beat |
+| 4 | a substantial explicit section (~½) with story either side |
+| 5 | culmination: the explicit section carries the scene |
+
+After a route's first intimate scene, every later scene on that route is
+level 3 or higher: story progresses, and the scene also has its explicit
+moment, situational (what is happening makes it happen) rather than
+appended. Levels only rise along a route; the rate differs per character
+and is set in `arcs.md`. The brief sizes the fill by the level.
 
 `rating: explicit` scenes use the split. In the scene file the explicit
 section is a single `nsfw: {ref: <scene>.<n>}` step. `/vn-write-scene`

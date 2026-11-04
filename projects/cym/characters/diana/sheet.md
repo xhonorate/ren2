@@ -30,7 +30,7 @@ The social worker assigned to his case when the hospital reported it. She explai
 Wants him safe, fed, happy, and hers to look after. Fears him being hurt again, or alone, or finding out how much of this was never in her remit.
 
 ## Route arc hooks
-Hub-calendar route, 5 spokes + ending (arcs.md). Her pieces: the father's withdrawn complaint, the letters from evidence, and the step-mother at the door. The maternal register begins when he asks (spoke 4).
+Hub-calendar route, 9 spokes + ending (arcs.md). Pace slow: first intimate scene at spoke 4, register accepted at 5. Her pieces: the father's withdrawn complaint, the letters from evidence, the step-mother at the door (spoke 7).
 
 ## Boundaries
 Never cruel, never mocking. Rating notes: mommy-domme in the maternal register; explicit content per `nsfw.txt`; everything consensual and initiated by her asking.
