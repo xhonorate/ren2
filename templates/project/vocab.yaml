@@ -84,6 +84,7 @@ deliveries:     # TTS delivery tags. emotion_ref: whether synthesis uses a per-c
   teasing:   {description: "playful, sing-song", speed: 1.0, emotion_ref: true}
   sleepy:    {description: "slow, slurred, low", speed: 0.85, emotion_ref: true}
 
+gazes: [at_viewer, away, down, closed, up]
 times: [morning, afternoon, evening, night]
 transitions: [dissolve, fade, none]
 positions: [left, center, right]

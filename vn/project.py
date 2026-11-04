@@ -254,6 +254,7 @@ class Project:
                      f"- shots: {', '.join(v.shots)}\n"
                      f"- lighting: {', '.join(v.lighting)}\n"
                      f"- deliveries: {', '.join(v.deliveries)}\n"
+                     f"- gazes: {', '.join(v.gazes)}\n"
                      f"- times: {', '.join(v.times)}\n"
                      f"- flags declared: {', '.join(self.outline.flags) or '(none)'}\n")
         return "\n".join(parts)
@@ -464,6 +465,8 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
                         errs.append(f"{w}: cg pose {c.pose} not in vocab.cg_poses")
                     if c.expr not in v.expressions:
                         errs.append(f"{w}: cg expression {c.expr} not in vocab")
+                    if c.gaze not in v.gazes:
+                        errs.append(f"{w}: cg gaze {c.gaze} not in vocab.gazes")
                     if c.outfit:
                         errs += _check_outfit(p, c.id, c.outfit, w)
             elif isinstance(s, CGEnd):

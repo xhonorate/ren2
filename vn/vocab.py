@@ -18,6 +18,7 @@ class Vocab:
         self.lighting: dict[str, str] = dict(data.get("lighting") or {})
         self.deliveries: dict[str, dict] = dict(data.get("deliveries") or {})
         self.times: list[str] = list(data.get("times") or [])
+        self.gazes: list[str] = list(data.get("gazes") or ["at_viewer", "away", "down", "closed", "up"])
         self.transitions: list[str] = list(data.get("transitions") or ["dissolve", "fade", "none"])
         self.positions: list[str] = list(data.get("positions") or ["left", "center", "right"])
 
