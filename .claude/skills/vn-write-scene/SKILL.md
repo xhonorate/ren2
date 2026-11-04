@@ -42,8 +42,9 @@ file or the pack, not the scene.
    (3: about a quarter of the scene; 4: about half; 5: most of it). Write
    `nsfw/<scene>.<n>.md` with the sections from DESIGN.md §7: Brief,
    Direction, Skeleton (beats + the CG specs it must hit + the step format),
-   Prompt (complete, self-contained, for the local model, ending with the
-   character's `nsfw.txt` contents under a "Her notes" heading). Direction
+   Prompt (complete and self-contained for the local model, ending with
+   the line `Append: characters/<id>/nsfw.txt` so the runner attaches the
+   human's own notes at fill time; never copy that file's contents). Direction
    comes from the outline entry's `direction:` when present; otherwise
    derive it from the beats and leave one placeholder line under
    `## Direction` ("(none given; add here before the fill runs)") and do
