@@ -53,6 +53,7 @@ projects/<slug>/
   outline.yaml            §3.8  scene list (the story graph)
   scenes/<id>.yaml        §5    scripts
   nsfw/<scene>.<n>.md     §7    briefs for, and fills from, the local model
+  includes/<name>.yaml    §5    shared step blocks spliced by `include:` (hub ladders)
   ledger.yaml             §6    continuity state at the end of each scene
   audio/voice/<scene>/<n>.ogg
   images/bg/<loc>_<time>.png, images/cg/<id>.png
@@ -156,6 +157,8 @@ scenes:
     requires: null          # condition expression, or null
     next: c01_s02           # default continuation; choices can override
     cg: ["pov_medium: Mira at the gate, wind in hair"]   # intent only; spec lives in the scene
+    links: []               # targets the scene will jump/call/goto to; used for reachability until it is written
+    uses: []                # includes it will splice (their edges count too), e.g. [hub_choice]
 ```
 
 ## 4. vocab.yaml
@@ -240,6 +243,7 @@ steps:
   - nsfw: {ref: c01_s03.1}       # §7: expands to the fill file's steps at build time
   - jump: c01_s04
   - call: alice_s02      # run another scene and come back; it must have next: null
+  - include: hub_choice  # splice includes/hub_choice.yaml (a list of steps) here
 next: c01_s04
 ```
 

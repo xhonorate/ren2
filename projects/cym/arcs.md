@@ -141,9 +141,10 @@ stairs at 7); the letter to his mother.
    casual goth, not the dress, and talks about herself for the first time:
    the bullying, the long grey year, why psychology. She folds his shirts
    without asking and their hands keep meeting in the basket.
-3. **Halloween** (1). The witch costume at the building's party (Alice's
-   idea); she is off duty and lets it show. They walk back along the river
-   and she takes his arm; at his door, the almost.
+3. **The river** (1). One in the morning on the river path, where it
+   turns out she walks too, most nights. She takes his arm without
+   comment and walks him back; at his door, the almost. (The witch
+   costume belongs to the Halloween hub, week 4.)
 4. **The letters** (2, first intimate). Memory work in her office. The box
    comes back, the bag, his step-mother's hand. Not the stairs. She holds
    him; afterwards she says, flat and precise, that she should not have,

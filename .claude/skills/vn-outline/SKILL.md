@@ -13,9 +13,22 @@ Read `DESIGN.md` §3.8 and §8, `arcs.md`, `world.md`, the sheets, `premise.md`.
    Scenes with CG moments list them under `cg` as intent only.
 2. Branch structure by level:
    - `linear`: a single `next` chain. No `requires`.
-   - `routes`: common chain → one route-lock scene whose choice `goto`s each
-     route's first scene (gated by `affection.<id> >= N` from `arcs.md`) →
+   - `routes`, exclusive: common chain → one route-lock scene whose choice
+     `goto`s each route's first scene (gated by affection from `arcs.md`) →
      per-route chains. Declare any flags in `flags:`.
+   - `routes`, hub calendar: common chain → hub scenes chained by `next`,
+     each with `uses: [hub_choice]`; spokes `<id>_sNN` with `next: null`;
+     finales `<id>_finale`; a fallback lock with `links:` to every finale
+     and the alone ending. Generate `includes/hub_choice.yaml` (the
+     descending step ladder per route and the true-route question; see
+     `projects/cym/includes/hub_choice.yaml` as the model) and declare
+     `<id>_step: 0` and `<id>_true: false` per route in `flags:`.
+   Every scene carries `intimacy:` (0–5) consistent with the route's ladder
+   in `arcs.md`; the rating follows the level (0 sfw, 1–2 suggestive, 3–5
+   explicit). Unwritten scenes declare their outgoing edges with `links:` /
+   `uses:` so `vn validate` can check reachability before writing.
+   For a long outline, generate `outline.yaml` from a script that holds the
+   data (keep it out of the repo); hand-edit the YAML afterwards.
    - `branching`: `requires`/`goto` anywhere, but every divergence rejoins
      within 3 scenes or ends. Report the path count before writing.
 3. Explicit scenes: only in an `explicit` project; mark `rating: explicit`

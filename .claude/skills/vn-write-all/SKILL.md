@@ -11,8 +11,8 @@ description: Write and review every unwritten scene of a vn project in story ord
    abbreviate their steps). Always start a scene by running `vn pack` fresh.
 3. Stop and show the human after the first two scenes of a new project.
    Otherwise do not stop; leave notes in `NOTES.md`.
-4. Explicit scenes: write the brief and prompt, leave the fill for the GPU
-   machine, continue. The ledger entry for such a scene records the state the
+4. Explicit scenes: write the brief and prompt from the beats (never stop
+   to ask for direction), leave the fill for the GPU machine, continue. The ledger entry for such a scene records the state the
    brief specifies.
 5. When done: `python -m vn validate`, then `python -m vn build`, then a
    summary: scenes written, voice fixes made, open threads, nsfw briefs

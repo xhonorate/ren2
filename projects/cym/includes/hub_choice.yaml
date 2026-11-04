@@ -1,0 +1,297 @@
+# The hub's choice block, spliced into every hub scene with `- include: hub_choice`.
+# Each option runs that route's next spoke (descending step checks so a spoke that
+# just ran does not chain into the next), then asks the true-route question when
+# her ninth scene has just returned. Generated once; edit by hand if the cast changes.
+- choice:
+    prompt: Whose evening?
+    options:
+    - text: Knock on 2B.
+      requires: flags.alice_step < 9
+      steps:
+      - if: flags.alice_step == 8
+        then:
+        - call: alice_s09
+      - if: flags.alice_step == 7
+        then:
+        - call: alice_s08
+      - if: flags.alice_step == 6
+        then:
+        - call: alice_s07
+      - if: flags.alice_step == 5
+        then:
+        - call: alice_s06
+      - if: flags.alice_step == 4
+        then:
+        - call: alice_s05
+      - if: flags.alice_step == 3
+        then:
+        - call: alice_s04
+      - if: flags.alice_step == 2
+        then:
+        - call: alice_s03
+      - if: flags.alice_step == 1
+        then:
+        - call: alice_s02
+      - if: flags.alice_step == 0
+        then:
+        - call: alice_s01
+      - if: flags.alice_step == 9 and not flags.alice_true
+        then:
+        - choice:
+            prompt: Is Alice the one?
+            options:
+            - text: Yes. Alice.
+              effects:
+                set:
+                  alice_true: true
+              goto: alice_finale
+            - text: Not yet.
+    - text: Go down to the office.
+      requires: flags.bella_step < 9
+      steps:
+      - if: flags.bella_step == 8
+        then:
+        - call: bella_s09
+      - if: flags.bella_step == 7
+        then:
+        - call: bella_s08
+      - if: flags.bella_step == 6
+        then:
+        - call: bella_s07
+      - if: flags.bella_step == 5
+        then:
+        - call: bella_s06
+      - if: flags.bella_step == 4
+        then:
+        - call: bella_s05
+      - if: flags.bella_step == 3
+        then:
+        - call: bella_s04
+      - if: flags.bella_step == 2
+        then:
+        - call: bella_s03
+      - if: flags.bella_step == 1
+        then:
+        - call: bella_s02
+      - if: flags.bella_step == 0
+        then:
+        - call: bella_s01
+      - if: flags.bella_step == 9 and not flags.bella_true
+        then:
+        - choice:
+            prompt: Is Bella the one?
+            options:
+            - text: Yes. Bella.
+              effects:
+                set:
+                  bella_true: true
+              goto: bella_finale
+            - text: Not yet.
+    - text: See Claire.
+      requires: flags.claire_step < 9
+      steps:
+      - if: flags.claire_step == 8
+        then:
+        - call: claire_s09
+      - if: flags.claire_step == 7
+        then:
+        - call: claire_s08
+      - if: flags.claire_step == 6
+        then:
+        - call: claire_s07
+      - if: flags.claire_step == 5
+        then:
+        - call: claire_s06
+      - if: flags.claire_step == 4
+        then:
+        - call: claire_s05
+      - if: flags.claire_step == 3
+        then:
+        - call: claire_s04
+      - if: flags.claire_step == 2
+        then:
+        - call: claire_s03
+      - if: flags.claire_step == 1
+        then:
+        - call: claire_s02
+      - if: flags.claire_step == 0
+        then:
+        - call: claire_s01
+      - if: flags.claire_step == 9 and not flags.claire_true
+        then:
+        - choice:
+            prompt: Is Claire the one?
+            options:
+            - text: Yes. Claire.
+              effects:
+                set:
+                  claire_true: true
+              goto: claire_finale
+            - text: Not yet.
+    - text: Call Diana back.
+      requires: flags.diana_step < 9
+      steps:
+      - if: flags.diana_step == 8
+        then:
+        - call: diana_s09
+      - if: flags.diana_step == 7
+        then:
+        - call: diana_s08
+      - if: flags.diana_step == 6
+        then:
+        - call: diana_s07
+      - if: flags.diana_step == 5
+        then:
+        - call: diana_s06
+      - if: flags.diana_step == 4
+        then:
+        - call: diana_s05
+      - if: flags.diana_step == 3
+        then:
+        - call: diana_s04
+      - if: flags.diana_step == 2
+        then:
+        - call: diana_s03
+      - if: flags.diana_step == 1
+        then:
+        - call: diana_s02
+      - if: flags.diana_step == 0
+        then:
+        - call: diana_s01
+      - if: flags.diana_step == 9 and not flags.diana_true
+        then:
+        - choice:
+            prompt: Is Diana the one?
+            options:
+            - text: Yes. Diana.
+              effects:
+                set:
+                  diana_true: true
+              goto: diana_finale
+            - text: Not yet.
+    - text: Wait for Natalie's visit.
+      requires: flags.natalie_step < 9
+      steps:
+      - if: flags.natalie_step == 8
+        then:
+        - call: natalie_s09
+      - if: flags.natalie_step == 7
+        then:
+        - call: natalie_s08
+      - if: flags.natalie_step == 6
+        then:
+        - call: natalie_s07
+      - if: flags.natalie_step == 5
+        then:
+        - call: natalie_s06
+      - if: flags.natalie_step == 4
+        then:
+        - call: natalie_s05
+      - if: flags.natalie_step == 3
+        then:
+        - call: natalie_s04
+      - if: flags.natalie_step == 2
+        then:
+        - call: natalie_s03
+      - if: flags.natalie_step == 1
+        then:
+        - call: natalie_s02
+      - if: flags.natalie_step == 0
+        then:
+        - call: natalie_s01
+      - if: flags.natalie_step == 9 and not flags.natalie_true
+        then:
+        - choice:
+            prompt: Is Natalie the one?
+            options:
+            - text: Yes. Natalie.
+              effects:
+                set:
+                  natalie_true: true
+              goto: natalie_finale
+            - text: Not yet.
+    - text: Go up to 3C.
+      requires: flags.yuki_step < 9
+      steps:
+      - if: flags.yuki_step == 8
+        then:
+        - call: yuki_s09
+      - if: flags.yuki_step == 7
+        then:
+        - call: yuki_s08
+      - if: flags.yuki_step == 6
+        then:
+        - call: yuki_s07
+      - if: flags.yuki_step == 5
+        then:
+        - call: yuki_s06
+      - if: flags.yuki_step == 4
+        then:
+        - call: yuki_s05
+      - if: flags.yuki_step == 3
+        then:
+        - call: yuki_s04
+      - if: flags.yuki_step == 2
+        then:
+        - call: yuki_s03
+      - if: flags.yuki_step == 1
+        then:
+        - call: yuki_s02
+      - if: flags.yuki_step == 0
+        then:
+        - call: yuki_s01
+      - if: flags.yuki_step == 9 and not flags.yuki_true
+        then:
+        - choice:
+            prompt: Is Yuki the one?
+            options:
+            - text: Yes. Yuki.
+              effects:
+                set:
+                  yuki_true: true
+              goto: yuki_finale
+            - text: Not yet.
+    - text: Office hours.
+      requires: flags.victoria_step < 9
+      steps:
+      - if: flags.victoria_step == 8
+        then:
+        - call: victoria_s09
+      - if: flags.victoria_step == 7
+        then:
+        - call: victoria_s08
+      - if: flags.victoria_step == 6
+        then:
+        - call: victoria_s07
+      - if: flags.victoria_step == 5
+        then:
+        - call: victoria_s06
+      - if: flags.victoria_step == 4
+        then:
+        - call: victoria_s05
+      - if: flags.victoria_step == 3
+        then:
+        - call: victoria_s04
+      - if: flags.victoria_step == 2
+        then:
+        - call: victoria_s03
+      - if: flags.victoria_step == 1
+        then:
+        - call: victoria_s02
+      - if: flags.victoria_step == 0
+        then:
+        - call: victoria_s01
+      - if: flags.victoria_step == 9 and not flags.victoria_true
+        then:
+        - choice:
+            prompt: Is Victoria the one?
+            options:
+            - text: Yes. Victoria.
+              effects:
+                set:
+                  victoria_true: true
+              goto: victoria_finale
+            - text: Not yet.
+    - text: Stay in tonight.
+      steps:
+      - narr: You stay in. The building makes its evening noises around you.

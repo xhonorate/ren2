@@ -85,3 +85,58 @@ The town gym at six in the morning: rubber floor, mirrors, one other person.
 Rows of machines, plastic chairs, a humming light; the only warm public room after nine.
 - times: [evening, night]
 - bg_prompt: "scenery, laundromat, washing machines, plastic chairs, fluorescent light, indoors"
+
+### diana_office
+A council office with a window onto a car park; two chairs, a kettle, files she is not supposed to leave on the desk.
+- times: [morning, afternoon, evening]
+- bg_prompt: "scenery, small office, desk, filing cabinets, window, kettle, indoors"
+
+### diana_apartment
+A tidy flat that has never had anyone else in it: one good chair, a kitchen she actually uses, a bathroom with a deep tub.
+- times: [morning, afternoon, evening, night]
+- bg_prompt: "scenery, tidy apartment, living room, kitchen, armchair, warm lighting, indoors"
+
+### police_carpark
+The car park behind the police station: Diana's car, a wire fence, a strip of grass.
+- times: [morning, afternoon]
+- bg_prompt: "scenery, car park, parked car, wire fence, overcast sky, outdoors"
+
+### claire_apartment
+Books, black furniture, a record player, plants that are doing better than expected; a bed with too many blankets.
+- times: [afternoon, evening, night]
+- bg_prompt: "scenery, gothic apartment, bookshelves, record player, black furniture, candles, indoors"
+
+### natalie_apartment
+A small flat where everything is where it is for a reason; blackout curtains; four photographs on the fridge.
+- times: [morning, afternoon, evening, night]
+- bg_prompt: "scenery, small apartment, kitchen, fridge with photos, blackout curtains, indoors"
+
+### roof
+The building's flat roof: the aerial, a ladder, gravel, the whole town below.
+- times: [afternoon, evening]
+- bg_prompt: "scenery, rooftop, flat roof, antenna, ladder, town below, sky, outdoors"
+
+### bella_flat
+The ground-floor flat behind the office, kept as her grandparents left it: a sofa under a sheet, a clock that still runs.
+- times: [evening, night, morning]
+- bg_prompt: "scenery, old-fashioned apartment, covered furniture, clock, net curtains, indoors"
+
+### convention_hall
+A hall full of people in costume, trade tables, a curtained area behind the stage.
+- times: [afternoon]
+- bg_prompt: "scenery, convention hall, crowd, booths, banners, bright lights, indoors"
+
+### hotel_room
+A cheap hotel room in another city: two lamps, one bed, the city outside.
+- times: [evening, night]
+- bg_prompt: "scenery, hotel room, bed, lamps, window, city lights, indoors"
+
+### victoria_home
+A tall narrow house that is mostly shelves; a reading chair, a decanter, a lamp that is always on.
+- times: [afternoon, evening, night]
+- bg_prompt: "scenery, house interior, floor-to-ceiling bookshelves, reading chair, decanter, lamp, indoors"
+
+### lake_cabin
+A cabin on a lake two hours away: a deck, a jetty, water, nobody.
+- times: [morning, afternoon, evening, night]
+- bg_prompt: "scenery, lake cabin, wooden deck, jetty, lake, forest, outdoors"

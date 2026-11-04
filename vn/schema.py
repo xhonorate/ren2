@@ -74,6 +74,8 @@ class OutlineScene(BaseModel):
     cg: list[str] = Field(default_factory=list)
     direction: Optional[str] = None      # human's direction for explicit sections
     intimacy: int = 0                    # 0 none .. 5 culmination (DESIGN.md §7)
+    links: list[str] = Field(default_factory=list)   # targets this scene will jump/call/goto to, before it is written
+    uses: list[str] = Field(default_factory=list)    # includes whose edges this scene will have (e.g. hub_choice)
 
     @field_validator("intimacy")
     @classmethod
@@ -216,6 +218,13 @@ class Jump:
 
 
 @dataclass
+class Include:
+    """Splice the steps of includes/<name>.yaml here (shared blocks such as a
+    hub's choice ladder). Expanded before validation and compilation."""
+    name: str
+
+
+@dataclass
 class Call:
     """Run another scene and come back (Ren'Py `call`). The called scene must
     end without `next`, so its `return` lands here. Hub calendars use this."""
@@ -227,7 +236,7 @@ class Pause:
     seconds: float = 0.5
 
 
-Step = Union[Narr, Say, Stage, Enter, Exit, SetFlags, Affection, CG, CGEnd, Choice, If, Nsfw, Jump, Call, Pause]
+Step = Union[Narr, Say, Stage, Enter, Exit, SetFlags, Affection, CG, CGEnd, Choice, If, Nsfw, Jump, Call, Include, Pause]
 
 
 class SceneError(ValueError):
@@ -235,7 +244,7 @@ class SceneError(ValueError):
 
 
 STEP_KINDS = {"narr", "say", "stage", "enter", "exit", "set", "affection", "cg", "cg_end",
-              "choice", "if", "nsfw", "jump", "call", "pause"}
+              "choice", "if", "nsfw", "jump", "call", "include", "pause"}
 
 
 def _delta(v: Any) -> int:
@@ -371,6 +380,9 @@ def parse_step(d: Any, where: str) -> Step:
     if kind == "call":
         only(set())
         return Call(target=str(v))
+    if kind == "include":
+        only(set())
+        return Include(name=str(v))
     if kind == "pause":
         only(set())
         return Pause(seconds=float(v or 0.5))

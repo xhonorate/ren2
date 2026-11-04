@@ -250,3 +250,18 @@ def test_intimacy_level_vs_rating(tmp_path):
     assert "differs from the outline's 3" in errs
     p = Project.load(root)
     assert "## Intimacy level: 3" in p.context_pack("c02_mira_s01")
+
+
+def test_include_step_expands(tmp_path):
+    root = copy_demo(tmp_path)
+    (root / "includes").mkdir()
+    (root / "includes" / "tail.yaml").write_text("- narr: \"The lanterns hum.\"\n- say: mira\n  expr: smile\n  text: \"Included.\"\n")
+    write_scene(root, "c01_s02", (root / "scenes" / "c01_s02.yaml").read_text().replace("next: c01_s03", "  - include: tail\nnext: c01_s03"))
+    assert errors(root) == []
+    p = Project.load(root)
+    build(p, tmp_path / "o")
+    rpy = (tmp_path / "o" / "game" / "scenes" / "c01_s02.rpy").read_text()
+    assert 'mira "Included."' in rpy and "The lanterns hum." in rpy
+    assert p.lines(p.load_scene("c01_s02"))[-1]["text"] == "Included."
+    (root / "includes" / "tail.yaml").unlink()
+    assert any("include tail has no includes/tail.yaml" in e for e in errors(root))

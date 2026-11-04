@@ -184,7 +184,7 @@ class Compiler:
         self._emit_bg(body, st, "fade")
         for cid in sc.present:
             self._show(body, st, cid, "idle", "neutral", self._default_pos(sc.present, cid))
-        self._emit_steps(body, st, sc.steps, sc)
+        self._emit_steps(body, st, self.p.expand(sc.steps), sc)
         if sc.next:
             body.append(f"jump scene_{ident(sc.next)}")
         else:
@@ -309,11 +309,8 @@ class Compiler:
             if then_state.sprites != st.sprites or else_state.sprites != st.sprites:
                 self._resync(out, st)
         elif isinstance(s, Nsfw):
-            fill = self.p.nsfw_fill(s.ref)
-            if fill is None:
-                out.append(rpy_str(f"[explicit section {s.ref} is not filled in yet]"))
-            else:
-                self._emit_steps(out, st, fill, sc)
+            # expand() already spliced fills in; only an unfilled ref reaches here
+            out.append(rpy_str(f"[explicit section {s.ref} is not filled in yet]"))
         elif isinstance(s, Jump):
             out.append(f"jump scene_{ident(s.target)}")
         elif isinstance(s, Call):

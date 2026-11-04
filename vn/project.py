@@ -9,7 +9,7 @@ from typing import Any, Optional
 import yaml
 from pydantic import ValidationError
 
-from .schema import (CG, Affection, Appearance, Call, CGEnd, Choice, Enter, Exit, If, Jump, Narr, Nsfw, Outline, Say,
+from .schema import (CG, Affection, Appearance, Call, CGEnd, Choice, Enter, Exit, If, Include, Jump, Narr, Nsfw, Option, Outline, Say,
                      Scene, SceneError, SetFlags, Stage, Step, compile_condition, condition_refs, parse_steps, walk)
 from .vocab import Vocab
 
@@ -120,6 +120,48 @@ class Project:
             data = data["steps"]
         return parse_steps(data, f"nsfw/{ref}.md fill")
 
+    def include_steps(self, name: str) -> Optional[list[Step]]:
+        p = self.root / "includes" / f"{name}.yaml"
+        if not p.exists():
+            return None
+        with open(p, encoding="utf-8") as f:
+            return parse_steps(yaml.safe_load(f) or [], f"includes/{name}.yaml")
+
+    def expand(self, steps: list[Step], errs: Optional[list[str]] = None, where: str = "",
+               _depth: int = 0) -> list[Step]:
+        """Steps with includes and nsfw fills spliced in, nesting preserved.
+        A missing fill stays as its Nsfw step (the compiler emits a placeholder);
+        a missing include or brief is reported into errs."""
+        if _depth > 8:
+            raise SceneError(f"{where}: includes nested too deep (cycle?)")
+        out: list[Step] = []
+        for s in steps:
+            if isinstance(s, Include):
+                inc = self.include_steps(s.name)
+                if inc is None:
+                    if errs is not None:
+                        errs.append(f"{where}: include {s.name} has no includes/{s.name}.yaml")
+                    continue
+                out.extend(self.expand(inc, errs, where, _depth + 1))
+            elif isinstance(s, Nsfw):
+                fill = self.nsfw_fill(s.ref)
+                if fill is None:
+                    if errs is not None and not (self.root / "nsfw" / f"{s.ref}.md").exists():
+                        errs.append(f"{where}: nsfw ref {s.ref} has no nsfw/{s.ref}.md")
+                    out.append(s)
+                else:
+                    out.extend(self.expand(fill, errs, where, _depth + 1))
+            elif isinstance(s, Choice):
+                out.append(Choice(prompt=s.prompt, options=[
+                    Option(text=o.text, effects=o.effects, goto=o.goto, requires=o.requires,
+                           steps=self.expand(o.steps, errs, where, _depth)) for o in s.options]))
+            elif isinstance(s, If):
+                out.append(If(cond=s.cond, then=self.expand(s.then, errs, where, _depth),
+                              else_=self.expand(s.else_, errs, where, _depth)))
+            else:
+                out.append(s)
+        return out
+
     # ---- derived ----------------------------------------------------------
 
     def rating(self) -> str:
@@ -215,7 +257,7 @@ class Project:
         """Every voiced line in the scene, numbered the way the compiler numbers them."""
         out = []
         n = 0
-        for s in self._expanded(scene.steps):
+        for s in walk(self.expand(scene.steps)):
             if isinstance(s, Say) and s.speaker not in SPECIAL_SPEAKERS:
                 n += 1
                 has_name = "[player_name]" in s.text
@@ -233,7 +275,7 @@ class Project:
         location, time = scene.location, scene.time
         outfits = {cid: self.characters[cid].appearance.default_outfit for cid in self.characters}
         outfits.update(scene.outfits)
-        for s in self._expanded(scene.steps):
+        for s in walk(self.expand(scene.steps)):
             if isinstance(s, Stage):
                 location, time = s.location or location, s.time or time
                 outfits.update(s.outfits or {})
@@ -244,21 +286,6 @@ class Project:
                             "characters": chars, "note": s.note, "file": f"images/cg/{s.id}.png"})
         return out
 
-    def _expanded(self, steps: list[Step]):
-        """walk() with nsfw refs replaced by their fills when present."""
-        for s in steps:
-            if isinstance(s, Nsfw):
-                fill = self.nsfw_fill(s.ref)
-                if fill:
-                    yield from self._expanded(fill)
-                continue
-            yield s
-            if isinstance(s, Choice):
-                for o in s.options:
-                    yield from self._expanded(o.steps)
-            elif isinstance(s, If):
-                yield from self._expanded(s.then)
-                yield from self._expanded(s.else_)
 
 
 def parse_locations(world: str) -> dict[str, Location]:
@@ -311,6 +338,12 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
         errs += _check_intimacy(o.intimacy, o.rating, f"outline {o.id}")
         if o.requires:
             errs += _check_cond(p, o.requires, f"outline {o.id}.requires")
+        for t in o.links:
+            if t not in by_id:
+                errs.append(f"outline {o.id}: links target {t} does not exist")
+        for inc in o.uses:
+            if p.include_steps(inc) is None:
+                errs.append(f"outline {o.id}: uses include {inc} which has no includes/{inc}.yaml")
         if p.outline.branching == "linear" and o.requires:
             errs.append(f"outline {o.id}: 'requires' is not allowed in a linear project")
 
@@ -339,7 +372,7 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
             errs += _check_outfit(p, cid, outfit, f"{where}.outfits")
         present = set(sc.present)
         open_cg = False
-        for i, s in enumerate(_flat_with_nsfw(p, sc.steps, errs, where)):
+        for i, s in enumerate(walk(p.expand(sc.steps, errs, where))):
             w = f"{where} step {i} ({type(s).__name__})"
             if isinstance(s, Say):
                 if s.speaker not in SPECIAL_SPEAKERS:
@@ -467,19 +500,6 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
 
 
 
-def _flat_with_nsfw(p: Project, steps: list[Step], errs: list[str], where: str):
-    """Depth-first steps with nsfw refs expanded."""
-    for s in walk(steps):
-        if isinstance(s, Nsfw):
-            fill = p.nsfw_fill(s.ref)
-            if fill is None:
-                if not (p.root / "nsfw" / f"{s.ref}.md").exists():
-                    errs.append(f"{where}: nsfw ref {s.ref} has no nsfw/{s.ref}.md")
-                continue
-            yield from walk(fill)
-            continue
-        yield s
-
 
 
 def _check_intimacy(level: int, rating: str, where: str) -> list[str]:
@@ -535,9 +555,22 @@ def _reachable(p: Project, scenes: dict[str, Scene]) -> set[str]:
         if sc:
             if sc.next:
                 stack.append(sc.next)
-            for s in walk(sc.steps):
-                if isinstance(s, (Jump, Call)):
-                    stack.append(s.target)
-                elif isinstance(s, Choice):
-                    stack += [o.goto for o in s.options if o.goto]
+            stack += _edges(p.expand(sc.steps))
+        else:
+            # not written yet: trust the outline's declared edges
+            stack += o.links
+            for inc in o.uses:
+                steps = p.include_steps(inc)
+                if steps:
+                    stack += _edges(p.expand(steps))
     return seen
+
+
+def _edges(steps: list[Step]) -> list[str]:
+    out: list[str] = []
+    for s in walk(steps):
+        if isinstance(s, (Jump, Call)):
+            out.append(s.target)
+        elif isinstance(s, Choice):
+            out += [o.goto for o in s.options if o.goto]
+    return out

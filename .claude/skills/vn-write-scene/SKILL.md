@@ -36,16 +36,31 @@ file or the pack, not the scene.
      `cg_poses`, `expr`, `outfit`, `gaze`) plus a one-line `note` that says
      what the moment *is*, for the reviewer. Always `cg_end`.
    - End with `next:` matching the outline unless the scene branches.
-3. For `rating: explicit` scenes: write the lead-in and the aftermath as
-   normal steps; put a single `nsfw: {ref: <scene>.<n>}` step where the
-   explicit section goes. Then ask the human for their direction for that
-   section (unless the outline entry has `direction:`), and write
+3. For `rating: explicit` scenes (intimacy 3–5): write the lead-in and the
+   aftermath as normal steps; put a single `nsfw: {ref: <scene>.<n>}` step
+   where the explicit section goes, sized by the intimacy level in the pack
+   (3: about a quarter of the scene; 4: about half; 5: most of it). Write
    `nsfw/<scene>.<n>.md` with the sections from DESIGN.md §7: Brief,
    Direction, Skeleton (beats + the CG specs it must hit + the step format),
-   Prompt (complete, self-contained, for the local model). Leave `## Fill`
-   absent; the human or `/vn-direct` adds it. Do not write explicit prose.
-4. `python -m vn validate projects/<slug> <scene id>` must be clean.
-5. Self-review before finishing: read the scene as the player would; cut any
+   Prompt (complete, self-contained, for the local model, ending with the
+   character's `nsfw.txt` contents under a "Her notes" heading). Direction
+   comes from the outline entry's `direction:` when present; otherwise
+   derive it from the beats and leave one placeholder line under
+   `## Direction` ("(none given; add here before the fill runs)") and do
+   not stop to ask. Leave `## Fill` absent; the human or `/vn-direct` adds
+   it. Do not write explicit prose.
+   Levels 1–2 are written in full here: charged, then the first intimate
+   scene (kissing, closeness, more PG than what follows); nothing explicit.
+4. Hub-calendar projects (DESIGN.md §8):
+   - A **hub** scene is the seasonal beat (3–8 steps) and then
+     `- include: hub_choice`; nothing after the include; `next:` as in the
+     outline.
+   - A **spoke** scene (route scene called from the hub) sets its step flag
+     as its last step (`- set: {<id>_step: <n>}`), has `next: null`, and
+     never refers to the week, the weather or another route's events.
+   - A **finale** has `next: null` and is the last scene of the game.
+5. `python -m vn validate projects/<slug> <scene id>` must be clean.
+6. Self-review before finishing: read the scene as the player would; cut any
    line that only restates a previous one; check each character's lines
    against their "never says"; check the line count is within ±30% of the
    outline's neighbours.
