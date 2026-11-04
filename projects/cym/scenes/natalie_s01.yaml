@@ -1,0 +1,154 @@
+id: natalie_s01
+title: Twelve minutes
+location: player_apartment
+time: evening
+present: [natalie]
+outfits: {natalie: nurse}
+rating: suggestive
+intimacy: 1
+steps:
+  - narr: "Two knocks. This time you are at the door before the second one lands."
+  - enter: {char: natalie, pose: idle, expr: sleepy, at: center}
+  - say: natalie
+    expr: sleepy
+    delivery: sleepy
+    text: "Eleven minutes. Sit."
+  - say: natalie
+    expr: neutral
+    text: "Arm."
+  - narr: "The cuff, the squeeze, the number. She writes it without looking at the page."
+  - say: natalie
+    expr: neutral
+    text: "Thank you. Ribs. Breathe in."
+  - narr: "You breathe in. Something catches at the top of it, and she hears it catch."
+  - say: natalie
+    expr: serious
+    text: "Costal fractures take the time they take. Don't lift. Nine minutes."
+  - say: natalie
+    expr: neutral
+    text: "Headache?"
+  - say: player
+    text: "Less."
+  - say: natalie
+    expr: neutral
+    text: "Photophobia?"
+  - say: player
+    text: "No."
+  - say: natalie
+    expr: neutral
+    text: "Nausea?"
+  - say: player
+    text: "No."
+  - narr: "The fourth question. She does not ask it. She looks at the bed instead."
+  - narr: "The duvet is out of its bag at last. It lies where it was pushed off, and the pillow is on the floor."
+  - say: natalie
+    expr: sleepy
+    pose: arms_crossed
+    text: "Two hours. Maybe three, in pieces."
+  - say: player
+    text: "How—"
+  - say: natalie
+    expr: neutral
+    text: "Pillow's on the floor. You don't throw a pillow asleep. You throw it awake."
+  - say: natalie
+    expr: neutral
+    text: "You're healing fine. You're sleeping like garbage. One of those I can fix."
+  - say: natalie
+    expr: neutral
+    pose: idle
+    text: "Pupils. Look at me."
+  - narr: "A penlight from her pocket. She bends to your level, and her gloved hand comes up to hold you still. It is not cold this time."
+  - cg:
+      id: natalie_s01_cg1
+      shot: pov_close
+      lighting: lamp_warm
+      characters:
+        - {id: natalie, pose: standing_close, expr: sleepy, outfit: nurse, gaze: at_viewer}
+      note: "Her face very close, the penlight between you, sleepy eyes focused: the pupil check that runs a second past what the job needs."
+  - say: natalie
+    expr: sleepy
+    delivery: soft
+    text: "Left."
+  - narr: "The light, and the dark after it. Her eyes do not move off yours."
+  - say: natalie
+    expr: sleepy
+    delivery: soft
+    text: "Right."
+  - narr: "Equal, and reacting; you watch her see it. The light clicks off. She does not step back."
+  - narr: "One second. Then another one. You can hear her breathing, and the hand does not let go. You hold still; not because she asked."
+  - say: natalie
+    expr: neutral
+    delivery: soft
+    text: "Fine. Both of them."
+  - cg_end: {transition: dissolve}
+  - narr: "She straightens. The penlight goes back in the pocket, and the second goes wherever she keeps those."
+  - say: natalie
+    expr: serious
+    text: "Insomnia after a head injury is a symptom. I treat symptoms. Walking."
+  - say: player
+    text: "Walking."
+  - say: natalie
+    expr: neutral
+    text: "Twenty minutes out. Twenty back. Then bed, in it, light off. Every night until I say."
+  - narr: "She writes it down. It is the first thing she has written since the number."
+  - choice:
+      prompt: "A prescription, in biro, on a clipboard."
+      options:
+        - text: "Walking isn't a treatment."
+          effects: {affection: {natalie: +1}}
+          steps:
+            - say: natalie
+              expr: serious
+              delivery: sigh
+              text: "Sedatives on a concussion, no. Legs, yes. That's the whole argument."
+            - say: natalie
+              expr: neutral
+              text: "Argue with me when you've slept. You'll be worse at it."
+            - narr: "She looks at the watch. It is not a threat; it is just where her eyes go."
+            - say: natalie
+              expr: sleepy
+              text: "Six minutes."
+        - text: "Okay. I'll walk."
+          effects: {affection: {natalie: +2}}
+          steps:
+            - say: natalie
+              expr: neutral
+              text: "Tonight."
+            - say: player
+              text: "Tonight."
+            - narr: "She looks at you the way she looked at the pupils. Checking the answer is real."
+            - say: natalie
+              expr: sleepy
+              delivery: soft
+              text: "Good. Six minutes."
+  - narr: "She uses them on the window. The path is down there, the river past it, the first streetlight not yet on."
+  - say: natalie
+    expr: neutral
+    text: "There's a path. Use that one. Flat, lit, and it comes back to your door."
+  - say: player
+    text: "I know it. I've walked it."
+  - say: natalie
+    expr: neutral
+    text: "Since when."
+  - say: player
+    text: "The night of your first visit. I slept."
+  - narr: "She writes nothing down. For a moment she looks pleased, which on her is almost nothing, and then it is gone."
+  - say: natalie
+    expr: neutral
+    text: "Then it works. Three minutes. Questions."
+  - say: player
+    text: "Do you sleep?"
+  - narr: "The pen stops. It is the first time you have seen it stop for her."
+  - say: natalie
+    expr: sleepy
+    delivery: sigh
+    text: "Five hours. In one piece. It's not on your list. Two minutes."
+  - narr: "At the door she checks the watch. Twelve minutes, again. She looks at it, and this time she does not frown."
+  - say: natalie
+    expr: neutral
+    text: "Walk."
+  - exit: natalie
+  - narr: "Below the window, the first streetlight comes on, as if it had heard her."
+  - narr: "You get your coat. Twenty out, twenty back, and this time somebody has written it down."
+  - set: {natalie_step: 1}
+next: null

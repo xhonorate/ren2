@@ -1,0 +1,155 @@
+id: natalie_s02
+title: Insomnia
+location: player_apartment
+time: night
+present: [natalie]
+outfits: {natalie: nurse}
+rating: suggestive
+intimacy: 2
+steps:
+  - narr: "Two knocks, late. Later than knocks happen. You have the door open on the second one anyway."
+  - enter: {char: natalie, pose: idle, expr: sleepy, at: center}
+  - narr: "The uniform, and no clipboard in her hand. The bag on her shoulder has the whole shift in it."
+  - say: natalie
+    expr: sleepy
+    delivery: sleepy
+    text: "Twelve hours. Your light was on from the path."
+  - say: player
+    text: "You walk the path?"
+  - say: natalie
+    expr: neutral
+    text: "It's the way home. Did you walk."
+  - say: player
+    text: "Every night."
+  - say: natalie
+    expr: neutral
+    text: "And."
+  - say: player
+    text: "Three hours. Four, once."
+  - say: natalie
+    expr: sleepy
+    text: "In pieces."
+  - say: player
+    text: "In pieces."
+  - narr: "She puts the bag down. Not on the table, where the clipboard would go; on the floor, by the bed."
+  - say: natalie
+    expr: neutral
+    pose: arms_crossed
+    text: "I'm not here for the list. This is what I'm going to do."
+  - say: natalie
+    expr: neutral
+    text: "You lie down. I sit there. Hands: mine. Yours stay where I put them."
+  - say: natalie
+    expr: neutral
+    text: "You count down from a hundred. You don't get to the bottom."
+  - say: natalie
+    expr: sleepy
+    delivery: sleepy
+    text: "This is the most efficient way to make you sleep. Is that acceptable."
+  - narr: "She says it the way she says photophobia. Bored, nearly. Her eyes are not bored."
+  - choice:
+      prompt: "She waits. She has not waited for anything before."
+      options:
+        - text: "Yes."
+          effects: {affection: {natalie: +1}}
+          steps:
+            - say: natalie
+              expr: neutral
+              text: "Good."
+            - narr: "No speech about it. She said what it was and you said yes, and she does not make you say it twice."
+        - text: "Is this the job?"
+          steps:
+            - say: natalie
+              expr: serious
+              text: "No. The job ended an hour ago. This is me, after it, and the question stands."
+            - say: player
+              text: "Yes."
+            - say: natalie
+              expr: neutral
+              text: "Good."
+  - say: natalie
+    expr: neutral
+    text: "Lie down."
+  - narr: "You lie down. She stands over the bed and takes the gloves off, one and then the other, and that is a sound you did not know you had been waiting for."
+  - cg:
+      id: natalie_s02_cg1
+      shot: pov_medium
+      lighting: lamp_warm
+      characters:
+        - {id: natalie, pose: standing_facing, expr: sleepy, outfit: nurse, gaze: at_viewer}
+      note: "From the bed: Natalie standing over him in the uniform, the gloves just off and held in one hand, unimpressed; the second before she sits."
+  - say: natalie
+    expr: sleepy
+    text: "Hands at your sides. Eyes closed. If you open them, I start again from the top."
+  - narr: "You put them there. It turns out that is a thing you can do, and that it is a relief."
+  - say: natalie
+    expr: neutral
+    delivery: soft
+    text: "Good."
+  - cg_end: {transition: dissolve}
+  - narr: "The bed takes her weight at the edge. Her hand finds your wrist, and her hands are warm. You had assumed otherwise, every time."
+  - say: natalie
+    expr: neutral
+    text: "Pulse is ninety. Breathing's twenty a minute. We want twelve."
+  - say: natalie
+    expr: sleepy
+    text: "I'll go when you're under. You won't hear the door."
+  - choice:
+      prompt: "Eyes closed. The lamp is only a colour now."
+      options:
+        - text: "Stay until I'm asleep."
+          effects: {affection: {natalie: +1}}
+          steps:
+            - say: natalie
+              expr: neutral
+              delivery: soft
+              text: "I said. You don't have to ask for what's already decided."
+            - narr: "The hand on your wrist does not move. That is the answer; the sentence was extra."
+        - text: "You've done twelve hours. Go home."
+          steps:
+            - say: natalie
+              expr: neutral
+              text: "I know what I've done. I've got until you're under. However long that is."
+            - narr: "It is the first time she has not had a number for it."
+  - say: natalie
+    expr: neutral
+    text: "A hundred. Out loud. Down."
+  - say: player
+    text: "A hundred."
+  - say: natalie
+    expr: sleepy
+    delivery: soft
+    text: "Slower."
+  - say: player
+    text: "Ninety-nine."
+  - narr: "The other hand is doing something she has not explained. She does not explain things twice. This she has not explained once."
+  - say: player
+    text: "Ninety—"
+  - say: natalie
+    expr: neutral
+    delivery: whisper
+    text: "Eight."
+  - say: player
+    text: "Ninety-eight."
+  - narr: "It is clinical. It is also not. Both of those are true at once, and your breathing is at sixteen, and she is counting it."
+  - say: natalie
+    expr: sleepy
+    delivery: whisper
+    text: "Fourteen. Keep going."
+  - say: player
+    text: "Ninety-one. Ninety."
+  - say: natalie
+    expr: neutral
+    delivery: whisper
+    text: "Twelve. There you are."
+  - say: player
+    text: "Eighty-nine. Eighty—"
+  - narr: "Somewhere in the eighties the numbers stop being yours."
+  - narr: "You surface once. The lamp is off. The weight is still on the edge of the bed, and a hand is still where she put it. Then nothing, which is what sleep is."
+  - exit: natalie
+  - stage: {time: morning, transition: fade}
+  - narr: "Morning. The whole night, in one piece. You lie there and have it."
+  - narr: "On the table, the clipboard she was not here for. Under 'Sleeping?', for the first time, something is written: a time, and in brackets, eight minutes."
+  - narr: "Under that, one word, in her hand. Sleep. The one she did not say at the door, the first time."
+  - set: {natalie_step: 2}
+next: null
