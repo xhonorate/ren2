@@ -1,0 +1,183 @@
+id: claire_s01
+title: The hour
+location: claire_office
+time: afternoon
+present: [claire]
+outfits: {claire: goth}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Two chairs, angled toward each other. A plant on the sill. The blind is half down, and it was half down last time, and the time before."
+  - narr: "Between the chairs, on a low table, a box of tissues. Full."
+  - enter: {char: claire, pose: idle, expr: neutral, at: center}
+  - say: claire
+    expr: neutral
+    text: "Good afternoon. Please sit wherever you like."
+  - narr: "There are two chairs and one of them is hers. She says this every time. You are still not sure it is a joke."
+  - say: claire
+    expr: neutral
+    pose: sitting
+    text: "Thank you for coming. I know the hour is not always convenient."
+  - narr: "The notebook is on her knee and shut before you have finished sitting down. She waits. She is good at it."
+  - say: player
+    text: "The plant's new."
+  - say: claire
+    expr: neutral
+    text: "It is the same plant. It has been watered."
+  - say: player
+    text: "It looks different."
+  - say: claire
+    expr: thinking
+    text: "You look at it when you are not looking at me. It has had a great deal of attention. I think it is responding."
+  - say: player
+    text: "I'm not doing it on purpose."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "No. You are doing it instead of something. That is allowed in here."
+  - narr: "A bus goes past outside and slows and does not stop. The quiet after it is easy. You did not expect that."
+  - say: player
+    text: "I keep thinking about the cupboard."
+  - say: claire
+    expr: neutral
+    text: "The cupboard."
+  - say: player
+    text: "Not what was in it. The cupboard. The door stuck. I had to pull it twice."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "The door stuck, and you pulled it twice. You went back for the second pull. Most people would take the first one as an answer."
+  - narr: "You are not sure that is a compliment. It lands like one."
+  - say: player
+    text: "The box was a shoebox. The lid had gone soft at the corners."
+  - say: claire
+    expr: neutral
+    text: "A shoebox, soft at the corners. It had been somewhere a long time before it was yours."
+  - say: player
+    text: "They were in order. Someone kept them in order."
+  - say: claire
+    expr: serious
+    text: "Someone kept them in order, and you noticed the order before you noticed anything else. That is how carefully you look at things."
+  - cg:
+      id: claire_s01_cg1
+      shot: pov_medium
+      lighting: day_soft
+      characters:
+        - {id: claire, pose: sitting_chair, expr: neutral, outfit: goth, gaze: at_viewer}
+      note: "Her chair, the braid forward over one shoulder, hands folded on the shut notebook; the blind half down and the plant behind her, the tissue box untouched between you. She is waiting, and it is not a technique."
+  - narr: "Her hands stay folded on the notebook. The notebook stays shut. The afternoon has got as far as her boots and stopped there."
+  - say: player
+    text: "The handwriting changed. Not to someone else's. The same hand, getting older."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "The same hand, getting older. You read them closely enough to see that."
+  - say: player
+    text: "I read the envelopes. The envelopes are easy."
+  - say: claire
+    expr: neutral
+    text: "The envelopes are easy. The insides are the part you are walking around. You may walk around them for as long as you like in here."
+  - cg_end: {transition: dissolve}
+  - say: player
+    text: "They'd been opened. Before me. Every one."
+  - say: claire
+    expr: serious
+    pose: lean_forward
+    text: "Every one, opened before you. That is a thing that was done to you. I want to be clear about which way round it goes."
+  - narr: "The tissue box sits where it sits. Your hands stay on the arms of the chair. She does not move it closer."
+  - say: player
+    text: "I'm not going to cry."
+  - say: claire
+    expr: neutral
+    text: "No. I did not think you were. The box is for people who need somewhere to look. You have the plant."
+  - say: player
+    text: "You could put it away."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "I could. Then you would have nothing to refuse. I think the refusing is doing something for you, and I would not take it from you."
+  - narr: "That is the nearest she has come to a smile. It is in the sentence, not on her face."
+  - say: player
+    text: "I packed a bag. I remember that. I remember the zip."
+  - say: claire
+    expr: neutral
+    text: "The zip."
+  - say: player
+    text: "It stuck halfway. Like the cupboard. Everything in that house stuck."
+  - say: claire
+    expr: thinking
+    text: "Everything stuck, and you kept pulling. I am going to keep that. You can have it back whenever you want it."
+  - say: player
+    text: "And then the wall."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "And then the wall. You had the bag. You were going. That is the part I would hold on to, not the wall. The wall can keep for as long as it needs."
+  - narr: "Something lets go a notch. Relief, or near it. The bus comes back the other way."
+  - narr: "The light has moved off her boots and onto the floor. The clock on the shelf behind her says the hour went by a while ago."
+  - narr: "She has not looked at it. On the ward she stood at seven exactly. Here she does not stand."
+  - choice:
+      prompt: "The hour is over. She has not said so."
+      options:
+        - text: "Why don't you ever write anything down?"
+          effects: {affection: {claire: +1}}
+          steps:
+            - say: claire
+              expr: neutral
+              text: "Because then I would be looking at the page."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "People watch the pen. They start saying things that are worth writing down. I would rather you said the other things."
+            - say: player
+              text: "So you don't keep any of it."
+            - say: claire
+              expr: neutral
+              text: "I write it at home, afterwards. All of it. I have a very good memory for what you say, and I am not sure that is a professional quality."
+        - text: "It's past the hour."
+          steps:
+            - say: claire
+              expr: neutral
+              text: "Yes."
+            - narr: "That is all. She does not look at the clock and she does not stand up."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "I know what time it is. I always know what time it is. I would like to stay in the chair a little longer, if that is acceptable to you."
+            - say: player
+              text: "It's acceptable."
+        - text: "Let it run."
+          steps:
+            - narr: "You say nothing. She says nothing. The plant does not mind."
+            - say: claire
+              expr: neutral
+              text: "You are watching the clock and not saying so. That is polite of you. You do not have to be polite in here."
+            - say: player
+              text: "Habit."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "Habit. We can leave it on the table with the tissues. It will be there when you want it."
+  - narr: "Another ten minutes go to the plant, and the blind, and the sound of the kettle in the room next door that nobody comes to switch off."
+  - say: claire
+    expr: neutral
+    pose: idle
+    text: "That is the hour."
+  - say: player
+    text: "It wasn't, though."
+  - say: claire
+    expr: neutral
+    text: "It was the hour I meant. Same chairs. They will not have moved."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "I am not supposed to say I'm glad you came."
+  - say: player
+    text: "You keep saying things you're not supposed to."
+  - say: claire
+    expr: neutral
+    text: "Yes. I have noticed that too."
+  - exit: claire
+  - narr: "The blind is still half down when you go. The invoice will say fifty minutes. It will not say which fifty."
+  - set: {claire_step: 1}
+next: null

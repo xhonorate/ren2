@@ -1,0 +1,170 @@
+id: claire_s03
+title: The river
+location: river_path
+time: night
+present: [claire]
+outfits: {claire: casual}
+rating: suggestive
+intimacy: 1
+steps:
+  - narr: "One in the morning. The lights have come on as far as the bridge, one at a time, the way they do, and you have walked to the last of them."
+  - narr: "Gravel, behind you, in no hurry. You know who it is before you turn round, and you could not say how."
+  - enter: {char: claire, pose: idle, expr: neutral, at: center}
+  - say: claire
+    expr: neutral
+    text: "Good evening. Or good morning. I have never settled which to say at this hour."
+  - say: player
+    text: "You walk."
+  - say: claire
+    expr: neutral
+    text: "I walk. Most nights. The path goes past the end of my street, and I follow it until I am tired, and then I follow it back."
+  - say: player
+    text: "Since when?"
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "Since before the grey year. It is the one thing from then that I kept. The rest I gave back."
+  - narr: "The river is loud under the bridge and quiet everywhere else. She stands beside you and looks at it the way she looked at the dryer."
+  - say: claire
+    expr: neutral
+    text: "You are not sleeping either."
+  - choice:
+      prompt: "She has not asked. She has said it."
+      options:
+        - text: "Some."
+          steps:
+            - say: claire
+              expr: neutral
+              text: "Some. That is a kind word for it, and you are not usually kind to yourself. I will let you have it tonight."
+            - say: player
+              text: "Thanks."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "You are welcome. I did not believe it, but I can see what it is for."
+        - text: "No. Not really."
+          effects: {affection: {claire: +1}}
+          steps:
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "Not really. Thank you for not saying 'some'. Most people say 'some'."
+            - say: player
+              text: "Do you?"
+            - say: claire
+              expr: neutral
+              text: "I say 'I walk'. It is the same word with more steps in it."
+  - say: player
+    text: "Does it help? The walking."
+  - say: claire
+    expr: thinking
+    text: "It helps the way the tissues help. It gives you somewhere to put yourself. Tonight it has put me here, and I did not expect that."
+  - narr: "Her arm goes through yours. She does not say anything about it, and she does not look at you while she does it."
+  - narr: "Then she walks, and you walk, because that is the direction your arm is going."
+  - cg:
+      id: claire_s03_cg1
+      shot: pov_medium
+      lighting: moonlight
+      characters:
+        - {id: claire, pose: standing_close, expr: neutral, outfit: casual, gaze: at_viewer}
+      note: "On the river path at one in the morning with your arm through hers, the streetlights behind her one after another back to the bridge; she is looking at you with nothing to comment on, and there is."
+  - say: claire
+    expr: neutral
+    text: "You may lean. I am sturdier than I look."
+  - say: player
+    text: "You look fairly sturdy."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "Then lean fairly."
+  - narr: "The lights go past the other way now. Her arm is bare and warm against your sleeve, and the gravel is the only thing either of you says for a while."
+  - say: player
+    text: "Do you do this with everyone you pass at one in the morning?"
+  - say: claire
+    expr: neutral
+    text: "I have never passed anyone at one in the morning. That is rather the point of one in the morning."
+  - say: player
+    text: "What do you think about? When you walk."
+  - say: claire
+    expr: neutral
+    text: "The day. Each thing in it, in order, until it is filed. Then I turn round."
+  - say: player
+    text: "And tonight?"
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "Tonight I got as far as the laundrette and stopped filing. I have been at the laundrette for some time."
+  - say: player
+    text: "Is this on the invoice?"
+  - say: claire
+    expr: neutral
+    text: "No. The invoice stops at the office door."
+  - say: claire
+    expr: serious
+    text: "I have been thinking about where the rest of it stops. I have not decided. I would like you to know that I am thinking about it, and that deciding is mine to do."
+  - say: player
+    text: "Okay."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "Okay. You say that the way other people say thank you. I have started listening for it."
+  - cg_end: {transition: dissolve}
+  - narr: "The back door. The stairs, which she takes at your pace and not hers."
+  - stage: {location: building_hall, time: night, transition: dissolve}
+  - narr: "The landing. Two doors, the window, the radiator. Her arm comes out of yours at your door and nothing replaces it."
+  - say: claire
+    expr: neutral
+    pose: hands_clasped
+    text: "This is you."
+  - say: player
+    text: "This is me."
+  - narr: "You have the key out and you have not used it. She is close. Closer than the chairs."
+  - narr: "She does not step back, and she does not step in, and the radiator knocks twice and stops."
+  - say: claire
+    expr: neutral
+    pose: lean_forward
+    delivery: soft
+    text: "It is twenty past one."
+  - narr: "That is how she ends it. By saying the time, and by meaning it. Her hand is on the door frame beside you, and nobody has moved."
+  - choice:
+      prompt: "Twenty past one. Her hand is still on the frame."
+      options:
+        - text: "Do you want to come in?"
+          effects: {affection: {claire: +1}}
+          steps:
+            - say: claire
+              expr: neutral
+              text: "Yes."
+            - narr: "She lets that sit. She is good at that."
+            - say: claire
+              expr: serious
+              delivery: soft
+              text: "That is the answer to what you asked. It is not the answer to whether I will. That answer is no, and it is no because the first one is yes."
+            - say: player
+              text: "That's backwards."
+            - say: claire
+              expr: neutral
+              pose: idle
+              delivery: soft
+              text: "It is exactly the right way round. Goodnight. I am saying it from here, because if I said it any closer I would not say it."
+        - text: "Goodnight, Claire."
+          steps:
+            - say: claire
+              expr: surprised
+              text: "Goodnight."
+            - narr: "Her hand comes off the frame. She does not go yet."
+            - say: claire
+              expr: neutral
+              pose: idle
+              delivery: soft
+              text: "You said my name. You have not done that before. I am going to walk home thinking about it, and it is a long walk, and I am glad of that."
+            - say: player
+              text: "It's twenty minutes the other way."
+            - say: claire
+              expr: neutral
+              text: "I know how far it is. Tonight it will feel shorter, and I could not tell you why. Goodnight."
+  - exit: claire
+  - narr: "Her boots on the stairs, at her own pace now. The street door. The radiator does not knock again."
+  - narr: "You sleep. Not the whole night, but more of it than usual, and the sleeve she held is the one you do not take off."
+  - set: {claire_step: 3}
+next: null

@@ -1,0 +1,37 @@
+id: hub_w07
+title: First snow
+location: building_hall
+time: evening
+present: [bella]
+outfits: {bella: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week seven. Snow. Not much, and not staying, but the landing window has gone white at the edges and the light in the stairwell has gone blue."
+  - narr: "The radiator knocks twice and stops, and the cold does not notice. Wet boot prints on the stairs, three sets, none of them yours yet."
+  - narr: "Bella is on the landing. A piece of paper in one hand. A space heater under the other arm, held as if it owes her money."
+  - enter: {char: bella, pose: idle, expr: serious, at: center}
+  - say: bella
+    expr: serious
+    text: "2A. This is the heating bill. Look at it, kid. No. Look at it."
+  - say: player
+    text: "That's for the whole building."
+  - say: bella
+    expr: serious
+    text: "It's for the whole building. The whole building's got one radiator that works, and it's not yours."
+  - say: bella
+    expr: pout
+    pose: pointing
+    text: "This is a heater. It's not a gift. It's so you stop running my boiler. Keep it off the carpet. Keep it off the curtains."
+  - narr: "She puts it down on your mat, not in your hands. Nothing about ribs is said. The snow ticks on the window."
+  - say: player
+    text: "Thank you."
+  - say: bella
+    expr: neutral
+    pose: turned_away
+    text: "Don't get used to it."
+  - narr: "The heater, or the snow, or you. She is on the stairs before you can ask which, and the thing you feel about that is not gratitude. It is warmer, and more embarrassing."
+  - exit: bella
+  - narr: "The heater has a cord and a smell of hot dust when you plug it in. Outside, the snow is giving up. Downstairs, a door, and the radio. The evening is cold enough now to need a plan."
+  - include: hub_choice
+next: hub_w08

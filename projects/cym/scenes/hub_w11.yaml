@@ -1,0 +1,19 @@
+id: hub_w11
+title: January ice
+location: river_path
+time: evening
+present: []
+outfits: {}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "January. Week eleven, by the calendar the college keeps, and the path has ice on it where the puddles were. It cracks when you stand on it and holds when you do not."
+  - narr: "The river has frozen at the edges, a white hem on each side, and moves slower in the middle, as if it were thinking about it."
+  - narr: "The bench is frosted. You do not sit. The cold is the kind that gets into the breath and stays there."
+  - narr: "Up the hill the college is lit from end to end, every window, somebody walking the corridors turning things on for tomorrow."
+  - narr: "The coat has a hood. You use the hood. Behind you the building has its windows back: the office, 2B, the small lights on the third floor. 2A is dark because you are here."
+  - narr: "Term starts tomorrow. The timetable will be on the board again, the reading list under it, the chapter you did over the break and the one you did not."
+  - narr: "The first streetlight comes on over the ice and lights it white. Tonight is nobody's yet."
+  - narr: "You stand with the river on your left and the whole of spring term on your right, and the evening between them, waiting to be given to somebody."
+  - include: hub_choice
+next: hub_w12

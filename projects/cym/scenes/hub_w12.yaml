@@ -1,0 +1,25 @@
+id: hub_w12
+title: Week twelve
+location: diner
+time: evening
+present: [natalie]
+outfits: {natalie: nurse}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week twelve. The diner on a weeknight, open too late for anybody with a reason to be in it. The clock over the counter says a quarter past four. It is lying by hours, as usual."
+  - narr: "You order a coffee you do not need and sit where you can see the door. The booth's vinyl is cold through the coat, and then, slowly, is not."
+  - narr: "There is one other customer. Second booth from the back, in uniform, upright, a coffee in front of her with its skin gone to a wrinkle. Natalie. Asleep."
+  - enter: {char: natalie, pose: sitting, expr: sleepy, at: right}
+  - narr: "She sleeps the way she does everything, in order: hands flat on the table, shoulders square, the watch turned in on her wrist. The light on her face does not move her."
+  - narr: "The man at the counter brings you yours, looks at hers, and says she has been there since eight. He does not wake her either. There are rules in this place about who gets woken."
+  - narr: "You drink the coffee you did not need. The clock stays wrong. Somewhere past the halfway point of the cup she says something without opening her eyes."
+  - say: natalie
+    expr: sleepy
+    delivery: sleepy
+    text: "Tuesday. Don't lift."
+  - narr: "Her eyes do not open. The next thing on her list does not come. You leave money under your cup for both coffees, and leave her the booth."
+  - exit: natalie
+  - narr: "Outside, the cold has the neon in it. Through the window she is still asleep, still upright, still in order. The evening is early yet, whatever the clock says."
+  - include: hub_choice
+next: hub_w13

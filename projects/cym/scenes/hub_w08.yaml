@@ -1,0 +1,35 @@
+id: hub_w08
+title: Week eight
+location: laundrette
+time: evening
+present: [claire]
+outfits: {claire: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week eight. A Tuesday, after nine. The laundrette is the warmest public room in town and smells of it: powder, hot cotton, the back of a dryer."
+  - narr: "Four machines going, the light humming over all of them, the window steamed to the top. Your bag is small. You have learned to wash things before you run out of them."
+  - narr: "On the plastic chairs, a basket of black things and the person folding them. She does not look up. She folds the way she talks: all the way through, and then the next one."
+  - enter: {char: claire, pose: sitting, expr: neutral, at: right}
+  - narr: "Then she does look up."
+  - say: claire
+    expr: neutral
+    text: "Good evening. The machine on the end runs hot. I would use the second one."
+  - say: player
+    text: "Thank you. Is it always this warm in here?"
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "After nine, yes. I come for the warmth as much as the washing. I am not sure that is a thing I should admit."
+  - say: player
+    text: "I won't tell anyone."
+  - say: claire
+    expr: shy_smile
+    delivery: soft
+    text: "It was not a secret. It is a Tuesday, and the room is warm, and I am in it. That is all it is."
+  - narr: "She goes back to the basket. The hum, the machines, the window. She does not look up again, and it is company anyway. You had not expected that from a laundrette."
+  - narr: "Her machine finishes first. She folds the last of it, nods to you once, and goes out into the cold with the basket on her hip."
+  - exit: claire
+  - narr: "Yours has twelve minutes left. The light hums. Outside, the street is black and the building is three turns away, and the evening has not been spent on anything yet."
+  - include: hub_choice
+next: hub_w09

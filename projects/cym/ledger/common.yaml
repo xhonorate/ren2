@@ -103,3 +103,108 @@
   flags_set: {}
   affection_delta: {}
   threads: ["the calendar starts here; every hub ends on the shared 'Whose evening?' choice and assumes nothing about which routes have begun", "the back door and the river path are habit now; the first streetlight comes on as he reaches it", "the building seen from the path: who is in is readable from the windows"]
+- scene: hub_w04
+  summary: "Week four, Halloween: Alice has made the landing a party (a lit pumpkin on every third stair, paper bats on the radiator, her apron over a costume with a tail) and Bella has come as the landlady, Yuki as something in a cloak nobody recognises. Claire is there off duty in a witch hat, invited by Alice from the laundrette without being asked who she is; Alice does not know what Claire does, and Claire would like to keep it that way."
+  characters:
+    alice:
+      knows: ["he came to her party and held the cup she gave him", "Claire is 'the witch by the window', a woman from the laundrette; not what she does"]
+      hiding: []
+      address: "'sweetheart', 'honey'; hums"
+      relationship: "hostess of the landing; feeds and steers everyone, him first"
+      outfit: housewife
+      last_seen: building_hall
+    claire:
+      knows: ["Alice invites everyone and did not ask who she was", "he said the hat suited her"]
+      hiding: ["from Alice and the building: that she is his therapist"]
+      address: "no name; 'you'; full even sentences"
+      relationship: "off duty for one evening and letting it show; let Alice steer her with a hand on her back"
+      outfit: witch
+      last_seen: building_hall
+  flags_set: {}
+  affection_delta: {}
+  threads: ["Alice knows Claire by sight from the laundrette, not as his therapist; Claire wants it kept that way", "Bella 'came as the landlady'; Yuki's cloak with the sewn crest went unrecognised three times", "Claire owns a witch hat and used it; she let someone steer her, which he noted"]
+- scene: hub_w05
+  summary: "Week five, the old block at dusk with the radiators ticking as they cool; her reading list is on the noticeboard with next week's chapter underlined and he has not started it. Victoria passes with an armful of books and her coat buttoned to the throat, says 'Boy.' and nothing else until, not stopping, 'Page sixty. Before the seminar. I shall know.'"
+  characters:
+    victoria:
+      knows: ["he was standing in front of her reading list at dusk, not having started it"]
+      hiding: []
+      address: "'boy', as a title; he answered 'Professor'"
+      relationship: "his seminar professor; one word in passing is a whole sentence; did not stop"
+      outfit: professor
+      last_seen: college_corridor
+  flags_set: {}
+  affection_delta: {}
+  threads: ["page sixty before the seminar; the chapter is still underlined on the board", "the laundrette's light is visible from the college steps; the building's windows down the hill"]
+- scene: hub_w06
+  summary: "Week six, river fog so thick the bridge is gone and the streetlights are haloes that do not reach the ground. Natalie passes the other way in a coat, off shift, hands in her pockets, and does not stop: 'Sleep.' and then 'Off shift. This isn't a visit. Fog, walk, bed. In that order.'"
+  characters:
+    natalie:
+      knows: ["he walks the river path in the evenings, in fog"]
+      hiding: []
+      address: "no name; one-word instructions; 'this isn't a visit'"
+      relationship: "his nurse, seen off duty for the first time in the common route; filed him and kept walking"
+      outfit: casual
+      last_seen: river_path
+  flags_set: {}
+  affection_delta: {}
+  threads: ["Natalie walks the river path after shifts; she has now seen him there", "the fog took the bridge; the building showed two lit windows and a third coming on"]
+- scene: hub_w07
+  summary: "Week seven, the first snow: not much and not staying, the stairwell light gone blue, the radiator knocking and the cold not noticing. Bella is on the landing with the heating bill and a space heater she puts on his mat, not in his hands ('It's not a gift. It's so you stop running my boiler.'), says nothing about ribs, and leaves with 'Don't get used to it.'"
+  characters:
+    bella:
+      knows: ["he has the building's heating bill figures; he said it was for the whole building", "he thanked her"]
+      hiding: ["that the heater is for him, not the boiler; that she put it on the mat so he would not lift it"]
+      address: "'2A', 'kid'; orders; leaves before a question can be asked"
+      relationship: "landlady; brought him a heater and called it a bill; 'don't get used to it' (the heater, the snow, or him)"
+      outfit: casual
+      last_seen: building_hall
+  flags_set: {}
+  affection_delta: {}
+  threads: ["a space heater in 2A now, with a cord and a hot-dust smell; off the carpet, off the curtains", "the building has one working radiator and it is not his (the landing radiator still knocks twice)", "the first snow did not stay"]
+- scene: hub_w08
+  summary: "Week eight, a Tuesday after nine in the laundrette, the warmest public room in town: powder, hot cotton, the window steamed to the top. Claire is on the plastic chairs folding black things and does not look up until she does; the end machine runs hot, she comes for the warmth as much as the washing, and she finishes first and goes out with the basket on her hip."
+  characters:
+    claire:
+      knows: ["he does his own washing now, on a Tuesday after nine", "he said he would not tell anyone she comes for the warmth"]
+      hiding: []
+      address: "no name; 'you'; 'Good evening'; full even sentences"
+      relationship: "company without conversation; nodded once and left first"
+      outfit: casual
+      last_seen: laundrette
+  flags_set: {}
+  affection_delta: {}
+  threads: ["Claire uses the laundrette on Tuesday nights after nine, for the warmth; the end machine runs hot", "he has learned to wash things before he runs out of them"]
+- scene: hub_w09
+  summary: "Week nine, exams: the library at night with the green lamps, a whole floor holding its breath, the radiators warm for once. Yuki has the window seat and a revision timetable with every hour a colour (green is sleeping, and there is not much green); one square near the bottom holds his initial in pencil, half rubbed out, 'a space, in case'; she hums three notes at the list and he leaves her the window."
+  characters:
+    yuki:
+      knows: ["he saw the square with his initial and asked what colour he would be ('not green')"]
+      hiding: ["that the square was for him from the start; she pressed hard and then rubbed it half out"]
+      address: "'you', barely; 'sorry' for the seat, the space, the colour"
+      relationship: "seat-neighbour and upstairs neighbour; offered him a space on her timetable and an exit from it in the same breath"
+      outfit: casual
+      last_seen: college_library
+  flags_set: {}
+  affection_delta: {}
+  threads: ["Yuki's timetable: one colour per subject, green for sleeping, a pencilled square with his initial 'in case'", "the window seat at the end of the quiet floor is hers", "exam week; the library warm for once"]
+- scene: hub_w10
+  summary: "Week ten, the last day of autumn term: the corridor empties, half the noticeboard is down with the pins left in, low sun along the stone. Victoria stands in her open office door watching the term go past ('Two weeks, boy. I make no such promise for the reading.' and 'How quaint. And to you.' to his Happy Christmas). Yuki waits at the top of the stairs with a wrapped present behind her back, says it is 'for someone, later', and goes down without giving it to him; two weeks ahead with nowhere he has to be."
+  characters:
+    victoria:
+      knows: ["he wished her a happy Christmas; she called it quaint and returned it"]
+      hiding: []
+      address: "'boy'; he says 'Professor'"
+      relationship: "his seminar professor; left her door open, which she did not have to"
+      outfit: professor
+      last_seen: college_corridor
+    yuki:
+      knows: ["he asked what was behind her back; he let it go"]
+      hiding: ["the wrapped present (creased from being held) is for him and she could not give it"]
+      address: "'you'; 'sorry'; 'you'll be at the building'"
+      relationship: "seat-neighbour and upstairs neighbour; a present not given; will see him at the building over the break"
+      outfit: casual
+      last_seen: college_corridor
+  flags_set: {}
+  affection_delta: {}
+  threads: ["Yuki's wrapped present from the last day of term was not given; nothing in the common route resolves it (her route may)", "two weeks of winter break; Victoria's office door left open; the reading is still expected", "the noticeboards half stripped, pins left in"]

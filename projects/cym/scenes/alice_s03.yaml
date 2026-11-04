@@ -1,0 +1,157 @@
+id: alice_s03
+title: The wall
+location: alice_apartment
+time: night
+present: [alice]
+outfits: {alice: pajamas}
+rating: suggestive
+intimacy: 2
+steps:
+  - stage: {location: player_apartment, transition: none}
+  - narr: "Midnight, or near it. The floor has been going for an hour. You stop it, and stand with your hand on the wall, and the wall is one brick thick."
+  - narr: "Twice. You knock twice, and then there is nothing to do but find your shoes."
+  - narr: "You get one on. Her door, the landing, your door; it opens, because you have not locked it since the boxes."
+  - enter: {char: alice, pose: hands_clasped, expr: smile, at: center}
+  - say: alice
+    expr: smile
+    delivery: excited
+    text: "You knocked. You knocked, hi, honey, hi— shoes, don't, what are you doing, you don't need shoes. It's four steps. Come on."
+  - narr: "Pajamas. A loose top, shorts, slippers with fur on them. Her hair is down and there is a crease on her cheek from a cushion."
+  - say: player
+    text: "Did I wake you?"
+  - say: alice
+    expr: shy_smile
+    delivery: soft
+    text: "Sweetheart. I told you. Leave the shoe. Leave it, I don't mind, come on."
+  - stage: {location: alice_apartment, transition: dissolve}
+  - narr: "2B at midnight is one lamp and the sofa. The sofa is mostly cushions. She starts moving them, changes her mind, and moves them back."
+  - say: alice
+    expr: smile
+    pose: pointing
+    text: "Okay. Here. Sit— here. Mind the— that one's the good one, put that behind you. There. Now."
+  - narr: "Now is her sitting down next to you, and then nearer than that, and then her arm along the back of the sofa, and then not along the back of anything."
+  - say: alice
+    expr: shy_smile
+    pose: sitting_lean
+    delivery: whisper
+    text: "Is this okay? Say if it's not. I'm going to— I'm just going to put you here. Lean. Lean, honey, I'm soft, that's what it's for."
+  - say: player
+    text: "That's—"
+  - say: alice
+    expr: smile
+    delivery: whisper
+    text: "Shh. It's a cuddle. People have them. Head goes— there. Arm goes— there. See? See how that is. Mm."
+  - cg:
+      id: alice_s03_cg1
+      shot: pov_close
+      lighting: lamp_warm
+      characters:
+        - {id: alice, pose: head_on_shoulder, expr: shy_smile, outfit: pajamas, gaze: at_viewer}
+      note: "Alice on the sofa in pajamas at midnight, in a nest of too many cushions, his head against her, her hand in his hair; the first time."
+  - narr: "Her hand finds your hair and stays in it. She is warm all the way through. Against your ear something is going fast, and it is her."
+  - say: alice
+    expr: smile
+    delivery: whisper
+    text: "There. That's it. That's all it is. That's all I wanted, I just— mm. You're warm. You're a warm one."
+  - say: alice
+    expr: shy_smile
+    delivery: whisper
+    text: "I'm narrating. I know I'm narrating. I'll stop. I just like saying it while it's happening, so it's happened."
+  - cg_end: {transition: dissolve}
+  - say: player
+    text: "You can keep going."
+  - say: alice
+    expr: blush
+    delivery: soft
+    text: "Oh. Okay. Then I'm going to do your hair for a bit. Just this. Like that. And you're going to close your eyes and not think about the floor."
+  - narr: "You close your eyes. It is easier than you expected. Something in you that has been standing up since the ward sits down."
+  - say: alice
+    expr: smile
+    delivery: soft
+    text: "Can I ask a thing? A little thing. You don't have to answer it."
+  - say: player
+    text: "Go on."
+  - say: alice
+    expr: shy_smile
+    delivery: soft
+    text: "What do you call me? In your head. Over there, at two in the morning, when you're being quiet at me through the wall. What am I?"
+  - say: player
+    text: "Alice."
+  - say: alice
+    expr: smile
+    delivery: soft
+    text: "Mm. Alice. That's fine. That's my name, that's a good name."
+  - say: alice
+    expr: blush
+    delivery: whisper
+    text: "You can call me whatever you like, honey. Anything. Whatever's in there. I won't mind. I'll— I won't mind."
+  - narr: "There is a word. It has been in the room since the mug of soup, and nobody has picked it up. You find out you are going to."
+  - say: player
+    text: "M— Mommy?"
+  - narr: "She stops breathing. Then she starts again, and it is not the same breathing."
+  - say: alice
+    expr: tearful
+    delivery: whisper
+    text: "Oh. Oh, baby."
+  - narr: "She comes down to you and kisses you. Once, on the mouth, soft and not quick; and then again, because the first one was finished."
+  - say: alice
+    expr: blush
+    delivery: soft
+    text: "Good boy. There. I'm not taking that one back."
+  - say: alice
+    expr: shy_smile
+    delivery: soft
+    text: "Say it again. Only if you want. You don't have to. Say it again."
+  - say: player
+    text: "Mommy."
+  - say: alice
+    expr: laugh
+    delivery: laughing
+    text: "Oh, that's— okay. Okay, that does something, I'm not going to pretend it doesn't, I've gone all— mm."
+  - narr: "She is red to the collar and she does not hide it. She pulls you back down into the cushions and holds on, and her hand goes back to your hair as if it had never left."
+  - say: alice
+    expr: smile
+    delivery: whisper
+    text: "It should be strange. Is it strange? You can say."
+  - say: player
+    text: "It should be. It's not."
+  - say: alice
+    expr: shy_smile
+    delivery: whisper
+    text: "It's not. Mm. Okay. Then that's what we're doing. That's a thing we're doing now, baby, and nobody has to know but the wall."
+  - narr: "The lamp. Her breathing going slow. You name the feeling, to see if it holds: safe. It holds."
+  - say: alice
+    expr: sleepy
+    delivery: sleepy
+    text: "You're going. I can feel you going. Okay. Okay, decision time, sweetheart, and I'm not making it for you."
+  - choice:
+      prompt: "The sofa, or four steps and one brick."
+      options:
+        - text: "Can I stay here?"
+          effects: {affection: {alice: +1}}
+          steps:
+            - say: alice
+              expr: smile
+              delivery: soft
+              text: "You can stay here. You can always stay here, baby. Oh, I'm— okay. Blanket. Hold on. Don't move. Don't move an inch."
+            - narr: "A blanket from somewhere, and then another. She tucks the edge under you, and then the other edge, and then checks both, twice."
+            - say: alice
+              expr: shy_smile
+              delivery: whisper
+              text: "I'm just through there. Door open. If the floor goes, it's four steps and no shoes. Goodnight, baby."
+            - narr: "She kisses the top of your head, quick, and the lamp goes off, and there are the cushions. Mostly the cushions. You sleep in them until it is light."
+        - text: "I should go back to mine."
+          steps:
+            - say: alice
+              expr: smile
+              delivery: soft
+              text: "Okay. Okay, that's allowed, honey. Up. Up you get. I'm walking you. It's four steps and I'm walking you."
+            - stage: {location: player_apartment, transition: dissolve}
+            - narr: "She walks you. She turns the duvet back and gets you under it and tucks the edge in, and then the other edge, and then checks both, twice."
+            - say: alice
+              expr: shy_smile
+              delivery: whisper
+              text: "Two knocks means goodnight. I'll do mine first. Goodnight, baby."
+            - narr: "The door. Her slippers on the landing, and her door, and then through the wall, low down, two knocks. You give her two back, and you sleep until it is light."
+  - set: {alice_step: 3}
+next: null

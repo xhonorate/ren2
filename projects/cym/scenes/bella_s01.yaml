@@ -1,0 +1,157 @@
+id: bella_s01
+title: The first
+location: building_hall
+time: afternoon
+present: [bella]
+outfits: {bella: casual}
+rating: suggestive
+intimacy: 1
+steps:
+  - narr: "The first. The envelope has been on the table since last night, and you have counted it three times."
+  - narr: "You get the door open and no further. She is on the landing already, one hand out, and she has not knocked."
+  - say: bella
+    expr: neutral
+    pose: idle
+    text: "The first. Good. Cash?"
+  - say: player
+    text: "Cash. It's all there. I counted."
+  - say: bella
+    expr: serious
+    text: "I'll count."
+  - narr: "She counts it on the windowsill with her thumb, fast. Then she squares the notes and counts it again."
+  - say: player
+    text: "Twice?"
+  - say: bella
+    expr: neutral
+    text: "Twice. That's not you, that's everyone. Everyone gets twice."
+  - say: bella
+    expr: smug
+    text: "All there. Look at that. A tenant who can count."
+  - say: bella
+    expr: serious
+    pose: arms_crossed
+    text: "Now. The hot tap. Two in the morning, three in the morning. I hear the pipes, kid. The whole building hears the pipes."
+  - say: player
+    text: "Sorry. The radiator doesn't—"
+  - say: bella
+    expr: angry
+    delivery: angry
+    text: "I know what the radiator doesn't. It's a radiator. Hot water's my bill. Mine."
+  - narr: "Then she looks at the window instead of at you. The next line takes her a second longer than the others."
+  - say: bella
+    expr: neutral
+    text: "There's a heater on the turn of the stairs. Electric. Electric's your meter. So you stop running up my bill."
+  - say: player
+    text: "A heater. For me?"
+  - say: bella
+    expr: serious
+    pose: pointing
+    text: "For the bill. Go and get it. Both hands."
+  - say: player
+    text: "Is it heavy?"
+  - say: bella
+    expr: smug
+    text: "It's a heater. 2B's note on my board says you don't lift. I took it down. Twice. Go."
+  - narr: "The turn of the stairs. It is not in a box. The cord is wound round it twice, there is dust on the grille, and it is not new."
+  - cg:
+      id: bella_s01_cg1
+      shot: pov_medium
+      lighting: day_soft
+      characters:
+        - {id: bella, pose: standing_facing, expr: smug, outfit: casual, gaze: at_viewer}
+      note: "Bella on the landing at the top of the flight, arms crossed, the window behind her, watching him come up the stairs with the heater and not moving to help."
+  - narr: "You lift it. It is heavier than it looks, and she is at the top of the stairs with her arms crossed, watching."
+  - narr: "The third step is where it costs. You do not put it down."
+  - say: bella
+    expr: serious
+    text: "Don't put it down."
+  - say: player
+    text: "I wasn't going to."
+  - say: bella
+    expr: smug
+    delivery: teasing
+    text: "You thought about it. Keep coming. Slow's fine. I've got all afternoon."
+  - narr: "She does not help. She does not look away, not for one step of it. You find you do not want her to."
+  - say: bella
+    expr: neutral
+    text: "Top. There. Breathe. I'm not carrying you as well."
+  - cg_end: {transition: dissolve}
+  - narr: "At the top she does not move out of the way. She looks at you, and at the heater, and at you again."
+  - say: bella
+    expr: thinking
+    text: "Hm. Still standing."
+  - say: bella
+    expr: serious
+    pose: idle
+    text: "In. Mind the floor."
+  - stage: {location: player_apartment, transition: dissolve}
+  - say: bella
+    expr: angry
+    pose: pointing
+    text: "No. Not under the window, the window's a sieve. By the bed. The bed."
+  - narr: "You put it where she points. She stands in the middle of your one room with her arms crossed and looks at all of it."
+  - say: bella
+    expr: neutral
+    pose: arms_crossed
+    text: "Plug it in."
+  - narr: "The socket is behind the bed. The heater ticks once and starts to smell of warm dust."
+  - say: bella
+    expr: serious
+    pose: idle
+    text: "Hand."
+  - say: player
+    text: "Sorry?"
+  - say: bella
+    expr: serious
+    text: "Your hand. Give me your hand."
+  - narr: "She takes you by the wrist and holds your hand to the grille until the heat is a fact. Her fingers are cool from the stairs."
+  - say: bella
+    expr: neutral
+    delivery: soft
+    text: "Feel that? That's yours. That's on your meter now. Yours."
+  - narr: "The point is made. Her hand stays on your wrist a second past it, and then another. Then she lets go, and looks at the heater, not at you."
+  - say: bella
+    expr: serious
+    pose: arms_crossed
+    text: "Off when you go out. Off when you sleep. You don't sleep, I know, I hear the pipes. Off anyway."
+  - say: player
+    text: "Okay."
+  - say: bella
+    expr: smug
+    text: "Okay. He says okay. Tap stays off, kid. The tap."
+  - narr: "She is at the door with her hand on it. The heater ticks. She is waiting for something and will not say what."
+  - choice:
+      prompt: "Her hand is on the door."
+      options:
+        - text: "Thank you."
+          steps:
+            - say: bella
+              expr: angry
+              text: "Don't. Thanks is free. Nothing in this building is free, you'll learn that."
+            - say: bella
+              expr: neutral
+              text: "First of the month. Not the second."
+            - say: player
+              text: "The first."
+        - text: "What's this going to cost me?"
+          effects: {affection: {bella: +1}}
+          steps:
+            - say: bella
+              expr: smug
+              delivery: teasing
+              text: "Now that's a question. That's the right question."
+            - say: bella
+              expr: flirty
+              text: "Nothing. Yet. I'll let you know when. You'll know."
+            - say: player
+              text: "I'll wait, then."
+            - say: bella
+              expr: smug
+              text: "You will."
+  - narr: "She is on the stairs before the door has shut. You hear her all the way down, and then her own door, hard."
+  - exit: bella
+  - narr: "The heater ticks. By the time the radiator knocks twice and stops, the room is warmer than it has been since you moved in."
+  - stage: {time: night, transition: dissolve}
+  - narr: "At two in the morning the tap stays off. You lie in front of the heater, and downstairs, for once, the pipes have nothing to tell her."
+  - set: {bella_step: 1}
+next: null

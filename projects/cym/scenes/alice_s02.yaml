@@ -1,0 +1,184 @@
+id: alice_s02
+title: The boxes
+location: player_apartment
+time: afternoon
+present: [alice]
+outfits: {alice: maid}
+rating: suggestive
+intimacy: 1
+steps:
+  - stage: {location: building_hall, transition: none}
+  - narr: "You knock on 2B and nothing happens. Behind you, from the stairs, a bucket, a mop, and a voice."
+  - enter: {char: alice, pose: hand_wave, expr: grin, at: center}
+  - say: alice
+    expr: grin
+    delivery: excited
+    text: "Wrong door, honey! You're the door. You're on the list, you've been on the list, Bella does a list and I do the list."
+  - narr: "Black dress to the knee, white apron, a frill pinned in her hair. White stockings. She sees you see it."
+  - say: alice
+    expr: embarrassed
+    pose: shy_fidget
+    text: "It's the uniform. Bella likes a uniform. Don't look at me, sweetheart, I know, I know what it is, it's a lot of frill."
+  - say: player
+    text: "It suits you."
+  - say: alice
+    expr: blush
+    delivery: soft
+    text: "Oh. Oh, hush. Open your door."
+  - stage: {location: player_apartment, transition: dissolve}
+  - narr: "The bucket goes down in the middle of the floor. Then she looks at the boxes."
+  - say: alice
+    expr: sad
+    pose: idle
+    text: "Oh, honey. These poor boxes. They've still got their tape on."
+  - say: player
+    text: "Some of them."
+  - say: alice
+    expr: worried
+    pose: hands_clasped
+    text: "Can I? Can I open them? Say the word and I won't touch a thing, I'll do the floor and go. But can I?"
+  - choice:
+      prompt: "The boxes, and her hands already near them."
+      options:
+        - text: "Okay. Open them."
+          effects: {affection: {alice: +1}}
+          steps:
+            - say: alice
+              expr: smile
+              delivery: excited
+              text: "Okay! Okay. Sit. Sit there, on the bed, you're not lifting, you've got ribs. I lift. I'm stronger than I look."
+            - say: alice
+              expr: grin
+              delivery: teasing
+              text: "I look strong. Don't answer that."
+        - text: "I'll do it. You do the floor."
+          steps:
+            - say: alice
+              expr: smile
+              pose: hands_hips
+              text: "You'll sit. I'll do it. Your ribs, honey. There's a note downstairs with a drawing on it and I drew it."
+            - say: alice
+              expr: shy_smile
+              delivery: soft
+              text: "You can hand me things. Handing's allowed. Sit."
+  - narr: "You sit on the bed. She kneels at the first box and the tape comes off in one pull."
+  - narr: "The kettle finds the counter. Two plates find a cupboard. Clothes come out with the tags on, and she bites the tags off one by one."
+  - say: alice
+    expr: smile
+    text: "Who leaves the tags on. Honestly. Tags."
+  - say: player
+    text: "They came like that."
+  - say: alice
+    expr: smile
+    delivery: soft
+    text: "Well. Now they don't. Mm."
+  - narr: "Three boxes down. The room looks like somebody lives in it, which is a strange thing to notice about your own room."
+  - say: alice
+    expr: smile
+    text: "Last one. Last one, and then the floor, and then I'll make you a little something, and then—"
+  - narr: "She stops. Her hand is flat in the bottom of the box, under the last of the clothes, and it comes out with a photograph in it."
+  - narr: "She looks at it. Then at you. Then at it, for longer."
+  - say: alice
+    expr: surprised
+    delivery: soft
+    text: "Honey. Who's this?"
+  - narr: "A woman in a doorway with a baby on her hip, squinting at the sun. The baby has a fist in her hair. You have never seen her face."
+  - say: player
+    text: "My mother. That's— I think that's my mother."
+  - say: player
+    text: "I didn't know that was in there."
+  - narr: "You wait for it to do something to you. It is a long way off, whatever it is, and it does not come."
+  - say: alice
+    expr: tearful
+    delivery: tearful
+    text: "Oh. Oh, look at her. Look how she's got you. Look at her hands, honey, she's— she's holding on with both."
+  - narr: "She is crying. Not the way people do in films; the way a tap goes when it has been left a little on."
+  - say: player
+    text: "Alice—"
+  - say: alice
+    expr: tearful
+    delivery: tearful
+    text: "I'm fine. I'm fine, I'm— give me a teeny minute. It's not you. It's a little bit you. Mm."
+  - cg:
+      id: alice_s02_cg1
+      shot: pov_close
+      lighting: day_soft
+      characters:
+        - {id: alice, pose: sitting_bed, expr: tearful, outfit: maid, gaze: at_viewer}
+      note: "Alice on the floorboards of 2A between the open boxes, in the uniform, the photograph held in both hands, eyes wet, looking up at him; the floor, not a bed."
+  - say: alice
+    expr: tearful
+    delivery: soft
+    text: "I wanted this. That. Exactly that, a baby on my hip in a doorway, and a kitchen, and somebody coming home to it."
+  - say: alice
+    expr: sad
+    delivery: soft
+    text: "I had names. I'm not telling you the names. I had the names for years before there was anyone to— mm."
+  - say: alice
+    expr: sad
+    delivery: tearful
+    text: "And then it's a thing that isn't going to happen. Nobody tells you the day. Nobody rings a bell. You look up one day and the window's shut and you never heard it go."
+  - cg_end: {transition: dissolve}
+  - say: player
+    text: "I'm sorry."
+  - say: alice
+    expr: shy_smile
+    delivery: soft
+    text: "Oh, sweetheart. Don't be. It's old. It's a very old thing and I keep it in a drawer, and then you've got a photo in a box and out it comes."
+  - narr: "She wipes her face with the apron. You do not cry. You check, and it is not going to happen, and she sees you check."
+  - say: alice
+    expr: worried
+    delivery: soft
+    text: "Honey? Where've you gone?"
+  - say: player
+    text: "I'm fine."
+  - say: alice
+    expr: smile
+    delivery: tearful
+    text: "You're fine. Okay. There's a pie next door, I could— hush. Hush, me. Come here."
+  - narr: "She does not wait for you to. She is on the floor and then so are you, and the photograph is somewhere safe, face up, on the box."
+  - narr: "Her arms go round and her chin goes on top, and the frill of her cap is in your ear, and she rocks, a little. She does not seem to know she is doing it."
+  - say: alice
+    expr: smile
+    delivery: whisper
+    text: "There. There we are. You don't have to do anything. You don't have to feel it yet. I've got it. I'll hold it for you until you want it."
+  - say: alice
+    expr: shy_smile
+    delivery: whisper
+    text: "Is this okay? It's a cuddle on a floor. It's the floor I was going to mop. Say if it's not."
+  - say: player
+    text: "It's okay."
+  - narr: "It goes on. Downstairs a door, upstairs a cupboard, and the light moving across the boxes. It goes on for a long time, and neither of you counts it."
+  - narr: "When she lets go she keeps one hand on you, and gets up round it."
+  - say: alice
+    expr: embarrassed
+    pose: shy_fidget
+    delivery: laughing
+    text: "Well. Look at me. Maid comes in, cries on your floor, sits on it. I'll do the floor now. Properly."
+  - choice:
+      prompt: "The photograph, face up on the box."
+      options:
+        - text: "Put it where I can see it."
+          effects: {affection: {alice: +1}}
+          steps:
+            - say: alice
+              expr: smile
+              delivery: soft
+              text: "Where you can— okay. Okay, honey. Here. Here, by the window, so she gets the river."
+            - narr: "She stands it on the sill against the glass, and moves it an inch, and moves it back."
+        - text: "Put it back. For now."
+          steps:
+            - say: alice
+              expr: smile
+              delivery: soft
+              text: "For now. Okay. Top of the box, sweetheart, in a tea towel, so it's the first thing. For when you want it."
+            - narr: "She folds it in with both hands and does not close the box."
+  - narr: "She mops. She hums while she does it, and the floor comes up a colour it has not been since you arrived."
+  - say: alice
+    expr: smile
+    pose: hand_wave
+    text: "There. Done. I'm next door. I'm— well. You know where I am. Knock, honey."
+  - exit: alice
+  - narr: "The door, and her shoes on the landing, and her door. Through the wall, a tap running, and the hum, and then just the hum."
+  - set: {alice_step: 2}
+next: null

@@ -1,0 +1,178 @@
+id: alice_s01
+title: Soup
+location: alice_apartment
+time: evening
+present: [alice]
+outfits: {alice: housewife}
+rating: suggestive
+intimacy: 1
+steps:
+  - narr: "You knock on 2B. The door opens before the second knock has finished."
+  - enter: {char: alice, pose: hands_clasped, expr: surprised, at: center}
+  - say: alice
+    expr: surprised
+    delivery: excited
+    text: "You knocked. Oh, you— you actually knocked. Hi. Hello. In, in, in, it's ready, it's been ready, mind the mat."
+  - narr: "Flour on the apron, a spoon in one hand. She touches your arm with the other hand anyway."
+  - narr: "The table is laid. Two mats, two spoons, a cloth. The second mat still has its fold lines in it."
+  - say: alice
+    expr: smile
+    pose: pointing
+    text: "Sit. That one. That's your one. I'll— soup. It's soup, it's always soup, I know, I'm sorry, honey."
+  - say: player
+    text: "I like the soup."
+  - say: alice
+    expr: blush
+    delivery: soft
+    text: "Oh. Well. Then it's soup."
+  - narr: "She goes to the stove. The paintings face the wall, three in a row, like people waiting for a bus."
+  - say: player
+    text: "What's with the paintings?"
+  - say: alice
+    expr: embarrassed
+    pose: turned_away
+    text: "Oh, those. Those are nothing, sweetheart. They're resting. Sit."
+  - cg:
+      id: alice_s01_cg1
+      shot: pov_medium
+      lighting: lamp_warm
+      characters:
+        - {id: alice, pose: sitting_table, expr: smile, outfit: housewife, gaze: at_viewer}
+      note: "Alice at her table in the house dress and apron, both hands pushing a full bowl across the cloth to him; the second place mat beside it is new and still creased."
+  - narr: "A bowl. A real one, this time. Both hands round it, pushed across the cloth until it is nearer you than her."
+  - say: alice
+    expr: smile
+    delivery: soft
+    text: "There. Careful, honey, it's a teeny bit hot. Blow on it. Go on, I'm not looking."
+  - say: alice
+    expr: grin
+    delivery: teasing
+    text: "I'm looking a little."
+  - cg_end: {transition: dissolve}
+  - narr: "Chicken, the little noodles, bread still warm. She has not sat down."
+  - say: player
+    text: "Aren't you eating?"
+  - say: alice
+    expr: embarrassed
+    pose: shy_fidget
+    text: "I am. I will. I'm just— I like watching you do it. That's strange. I know it's strange. Mm."
+  - narr: "She sits. Her spoon goes in and comes out empty twice before she notices."
+  - say: alice
+    expr: smile
+    pose: sitting_lean
+    text: "So. Tell me a thing. Any thing. How's the college? Are they feeding you up there?"
+  - say: player
+    text: "There's a machine. It does crisps."
+  - say: alice
+    expr: worried
+    text: "A machine. Honey."
+  - say: player
+    text: "It's not that bad."
+  - say: alice
+    expr: smile
+    pose: sitting
+    text: "It's a machine, sweetheart. That's fixable. That's just a box. I'll do you a box."
+  - say: player
+    text: "You don't have to."
+  - say: alice
+    expr: smile
+    delivery: teasing
+    text: "Mm-hm. Eat."
+  - say: alice
+    expr: smile
+    text: "Second one. Hush. There's a whole pot and it's only me."
+  - say: player
+    text: "I'm fine, really. That was—"
+  - say: alice
+    expr: smile
+    text: "You're fine. Good. There's bread."
+  - narr: "You eat the bread. She watches, and you find you do not mind being watched. That's new."
+  - say: alice
+    expr: shy_smile
+    delivery: soft
+    text: "Can I say a thing? It's a little thing."
+  - say: player
+    text: "Go on."
+  - say: alice
+    expr: sad
+    delivery: soft
+    text: "I hear you. Through the wall. Not— not anything, honey, I don't listen, I just. The floor goes. At two. At three, sometimes."
+  - narr: "The wall is one brick thick. You knew that. You did not know it worked in both directions."
+  - say: player
+    text: "Sorry."
+  - say: alice
+    expr: worried
+    pose: hands_clasped
+    text: "Oh, hush, that's not— I'm not telling you off, sweetheart. I'd never. I'm saying I'm up. When the floor goes, I'm up too."
+  - say: alice
+    expr: smile
+    delivery: soft
+    text: "You can knock on that wall any time, honey. I mean it. Any time."
+  - say: player
+    text: "You said that before."
+  - say: alice
+    expr: shy_smile
+    text: "I know. I'm saying it twice. Some things want saying twice. Mm."
+  - narr: "A plate goes under a tea towel for later, because of course it does."
+  - say: player
+    text: "Thank you. For dinner."
+  - say: alice
+    expr: smile
+    pose: idle
+    text: "Oh, hush. It's soup."
+  - say: player
+    text: "For the table, then."
+  - say: alice
+    expr: blush
+    delivery: soft
+    text: "Mm. Oh, hush, you. Door's this way."
+  - narr: "The door. The landing is dim after her kitchen, and yours is four steps away and looks it."
+  - say: alice
+    expr: smile
+    pose: hand_wave
+    text: "Okay. Okay, go on. Go on, before I— okay."
+  - narr: "She hugs you. It starts as the kind people do at doors and goes on past that, and past that. Her hand is flat on your back and stays."
+  - narr: "Bread and soap. Downstairs a radio is going, and it goes on, and so does she."
+  - say: alice
+    expr: embarrassed
+    delivery: whisper
+    text: "Sorry. Sorry, honey, that was— that went on. I don't know what that was. Ignore it. I'm— mm."
+  - narr: "She lets go in stages. The last stage is her hand."
+  - say: alice
+    expr: blush
+    pose: shy_fidget
+    delivery: soft
+    text: "Go on. Four steps. I'll hear the door."
+  - choice:
+      prompt: "Four steps, and one brick."
+      options:
+        - text: "I'll knock tonight."
+          effects: {affection: {alice: +2}}
+          steps:
+            - say: alice
+              expr: surprised
+              delivery: excited
+              text: "Tonight? To— okay. Okay! Good boy. Oh. Oh, that— ignore that, that just comes out of me."
+            - say: alice
+              expr: smile
+              delivery: soft
+              text: "I'll be up. I'm always up. Knock, and I'll put the kettle on, and that's all, that's all it is. Mm."
+            - stage: {location: player_apartment, time: night, transition: dissolve}
+            - narr: "Midnight, or after it. The floor goes, the way she said. You stop it going and put your knuckles to the wall instead. Twice."
+            - narr: "A pause long enough to count. Then two back, lower down, and the kettle, and the hum."
+            - narr: "She does not come round. She said that was all it was. You lie down with your hand still on the wall, and the hum goes on until you do not hear it stop."
+        - text: "Not tonight. Soon."
+          effects: {affection: {alice: +1}}
+          steps:
+            - say: alice
+              expr: smile
+              delivery: soft
+              text: "Soon. Okay. Soon's good, sweetheart. Soon's a real word. I'll take soon."
+            - say: alice
+              expr: shy_smile
+              text: "The plate's for tomorrow. Warm, I said. Go on."
+            - stage: {location: player_apartment, time: night, transition: dissolve}
+            - narr: "Midnight, or after it. The floor goes, and you make it stop, and sit on the bed with your hand flat on the wall."
+            - narr: "You do not knock. On the other side, low down, something is humming anyway."
+  - set: {alice_step: 1}
+next: null

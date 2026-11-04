@@ -1,0 +1,3 @@
+# Bella route — scene notes
+
+- bella_s01 — 53 steps (60 incl. branch steps), 26 voiced lines; 0 voice fixes, 2 self-review trims (a duplicated 'Both hands' order cut; two heater narrations merged, for length against the 41-step neighbour). Human: the outline's CG wants her arms crossed, but cg_poses has no arms-crossed pose, so the CG uses standing_facing and the note carries the arms. She makes him lift the heater one flight despite the no-lifting rule (2B's note from c01_s08); that is the beat, and the watching is the care. The heater is used (dust, cord wound round it) and world.md gives her office a space heater; the scene never says it is hers, so a later spoke can.

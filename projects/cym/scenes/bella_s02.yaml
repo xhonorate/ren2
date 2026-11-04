@@ -1,0 +1,183 @@
+id: bella_s02
+title: Six a.m.
+location: gym
+time: morning
+present: [bella]
+outfits: {bella: gym}
+rating: suggestive
+intimacy: 2
+steps:
+  - narr: "'Six,' she said, on the stairs, going down. Not six-ish. Not a question."
+  - narr: "The town at six is the diner's light and nothing else. The gym is a door between two shutters, and it is already unlocked."
+  - narr: "Rubber floor, mirrors, one man on the rowing machine at the far end. And her, on the mat, already there, already warm."
+  - narr: "White sports bra, black shorts, hair up. Under the hem of the shorts, the edge of a tattoo you did not know about."
+  - say: bella
+    expr: neutral
+    pose: idle
+    text: "You're late."
+  - say: player
+    text: "It's six."
+  - say: bella
+    expr: serious
+    text: "One past. I said six. I didn't ask six. Six."
+  - say: bella
+    expr: neutral
+    pose: pointing
+    text: "Shoes. Those ones. Water?"
+  - say: player
+    text: "I brought it."
+  - say: bella
+    expr: neutral
+    text: "Good. On the mat. You're not lifting. I know, I know, the note. You're stretching. Stretching's not lifting."
+  - say: bella
+    expr: serious
+    pose: hands_hips
+    text: "No rent in here. No radiator. In here there's the mat and there's me."
+  - narr: "The man on the rowing machine looks over once and goes back to his river. The mirror has the whole room in it, and her, twice."
+  - say: bella
+    expr: serious
+    pose: idle
+    text: "Arms up. Higher. Higher than that, you're not surrendering, you're stretching."
+  - narr: "Her hands close round your wrists and take them up the last inch. She does not let go when she has them there."
+  - say: bella
+    expr: neutral
+    delivery: soft
+    text: "Hold. Breathe. You're holding it, I can hear you holding it. Breathe."
+  - say: bella
+    expr: smug
+    text: "Down. Fold. Hands to the floor, or as far as you get. Go."
+  - narr: "Her palm lands flat between your shoulders and pushes, an inch, and then another inch. The floor smells of rubber and bleach."
+  - say: bella
+    expr: serious
+    text: "Further. No. That's you stopping, not me. Hurt says stop, and I stop. Is it hurt?"
+  - say: player
+    text: "No."
+  - say: bella
+    expr: smug
+    delivery: teasing
+    text: "Then it's you. Count. Out loud. Ten."
+  - narr: "You count, out loud, with her hand on your back. By seven you have stopped thinking about the man on the rowing machine. At ten her hand comes off."
+  - say: bella
+    expr: neutral
+    text: "Up. Slow. Now face the mirror. Hips. Square. Square is this."
+  - narr: "She squares you with both hands on your hips, not gently, the way she squared the notes on the windowsill."
+  - say: bella
+    expr: smug
+    delivery: soft
+    text: "Look at you."
+  - say: player
+    text: "What?"
+  - say: bella
+    expr: smug
+    delivery: teasing
+    text: "I said look. At you. In the mirror. Eyes up, kid."
+  - cg:
+      id: bella_s02_cg1
+      shot: pov_medium
+      lighting: day_soft
+      characters:
+        - {id: bella, pose: standing_facing, expr: smug, outfit: gym, gaze: at_viewer}
+      note: "The gym mirror at six: Bella at his shoulder in the sports bra and bike shorts, hands on his hips, looking at him in the reflection and not at herself; he is implied in the foreground, out of frame."
+  - narr: "You look. She is behind you in the glass, and she is not looking at herself. She is looking at you looking."
+  - say: bella
+    expr: flirty
+    delivery: soft
+    text: "There. That's what doing as you're told looks like. Remember it."
+  - cg_end: {transition: dissolve}
+  - narr: "At the far end the rowing machine stops. The man takes his towel and goes, and the door takes a long time to close behind him."
+  - say: bella
+    expr: neutral
+    pose: idle
+    text: "That's us. Sit. Drink your water. All of it."
+  - narr: "She goes through the door marked changing and does not shut it. Her voice comes out of it at the same volume as before."
+  - say: bella
+    expr: neutral
+    text: "Rent's paid. Tap's off. You liked the stairs. You liked the mat. You like being told, kid."
+  - narr: "A locker bangs. The door is open the width of a hand, and then wider, and you look at the floor."
+  - say: bella
+    expr: serious
+    text: "That's not a question. But I want an answer. Out loud, like the counting."
+  - choice:
+      prompt: "The door is open. She is waiting."
+      options:
+        - text: "Yes. I like it."
+          effects: {affection: {bella: +1}}
+          steps:
+            - say: bella
+              expr: smug
+              delivery: soft
+              text: "Yes. He says yes. Good."
+            - say: bella
+              expr: neutral
+              text: "That wasn't hard. None of it's hard. That's the point."
+        - text: "I think so."
+          steps:
+            - say: bella
+              expr: angry
+              text: "Think. Thinking's not an answer. Again."
+            - say: player
+              text: "Yes."
+            - say: bella
+              expr: smug
+              text: "Yes. That took a while. Fine."
+  - say: bella
+    expr: serious
+    text: "Here's how it goes. I tell you, you do it."
+  - say: bella
+    expr: serious
+    text: "You don't want something, you say so. Once. I stop. That's the only back-talk you get."
+  - say: bella
+    expr: neutral
+    text: "And you don't thank me. Ever. Thanking's for people who did you a favour."
+  - narr: "A locker shuts. Something soft lands on the bench inside the door. The door is still open the width of her, and she has not lowered her voice."
+  - say: bella
+    expr: neutral
+    text: "Tomorrow, six. The day after, six. You're mine at six, kid. The rest of the day I don't care what you do."
+  - choice:
+      prompt: "The door is open. She knows it is."
+      options:
+        - text: "Look up."
+          effects: {affection: {bella: +1}}
+          steps:
+            - narr: "You look up. Not for long. Long enough."
+            - say: bella
+              expr: smug
+              delivery: teasing
+              text: "There he is. Took you long enough."
+            - say: bella
+              expr: flirty
+              text: "Eyes front now. You've had yours."
+        - text: "Keep looking at the floor."
+          steps:
+            - say: bella
+              expr: smug
+              text: "You didn't look."
+            - say: player
+              text: "No."
+            - say: bella
+              expr: neutral
+              text: "I know. I'd have known. The door's open for a reason, kid. Think about the reason."
+  - stage: {outfits: {bella: casual}, transition: dissolve}
+  - narr: "She comes out in the tank top and the skirt with her hair still up, and stands over the bench where you are sitting."
+  - say: bella
+    expr: serious
+    pose: idle
+    text: "Up."
+  - narr: "You stand. She takes your chin in one hand and looks at you for the length of a count of three."
+  - say: bella
+    expr: thinking
+    delivery: soft
+    text: "Hm. You'll do."
+  - narr: "Then she kisses you. Once, hard, not long, and she is the one who stops it. Your water bottle goes over on the bench and neither of you picks it up."
+  - say: bella
+    expr: smug
+    delivery: teasing
+    text: "That's the first. Not the second. The first."
+  - say: bella
+    expr: neutral
+    text: "Six, tomorrow. Not one past."
+  - exit: bella
+  - narr: "She is gone before the door has finished, and the gym is a room with a rowing machine in it and a bottle on its side."
+  - narr: "You pick the bottle up. You drink all of it, because she said to, and you notice that is why."
+  - set: {bella_step: 2}
+next: null

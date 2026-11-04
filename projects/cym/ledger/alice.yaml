@@ -1,0 +1,39 @@
+- scene: alice_s01
+  summary: "Evening at 2B. He knocks and she has the table laid for two (the second mat still creased; she does not say it is the first time in nine years). Soup in a bowl this time, a second bowl and bread when he says he is fine, and the paintings facing the wall 'are resting'. She tells him she hears the floor go through the wall at two and three, that she is up too, and says 'knock on that wall any time' a second time on purpose. The hug at the door lasts too long and she apologises for it. He says he will knock tonight (he does; she knocks twice back, puts the kettle on and does not come round) or 'soon' (he sits with his hand on the wall and does not knock)."
+  characters:
+    alice:
+      knows: ["he does not sleep: she hears the floor go at two and three through the wall", "he likes the soup; the college feeds him from a crisps machine (she will 'do him a box')", "he noticed the second place at the table and thanked her for it", "whether he said he would knock tonight or soon"]
+      hiding: ["that the table had not been laid for two in nine years (the second mat was new)", "what the paintings facing the wall are ('they're resting')", "that 'good boy' slipped out again and she asked him to ignore it (knock-tonight branch)", "that the hug was not an accident ('I don't know what that was')"]
+      address: "'honey', 'sweetheart'; 'Oh, hush'; diminutives ('a teeny bit', 'a little thing'); trails into a hum"
+      relationship: "neighbour who now feeds him at her table, not through the door; she has said 'knock any time' twice; the hug at the door went on too long and both know it; he has knocked on the wall once (knock-tonight branch)"
+      outfit: housewife
+      last_seen: alice_apartment
+  flags_set: {alice_step: 1}
+  affection_delta: {alice: +2}
+  threads: ["alice +2 if he said he would knock tonight (default path), +1 for 'soon'", "knock-tonight branch: he knocked twice at midnight, she knocked twice back and put the kettle on; she did not come round ('that's all it is')", "a plate under a tea towel in 2B for tomorrow", "the second place mat; she has not said what it means", "the paintings face the wall: 'they're resting' (the route owns the reveal, s09)", "she hears him through the wall at two and three; the wall works both ways", "she is going to 'do him a box' of food for college"]
+- scene: alice_s02
+  summary: "Afternoon. He knocks on 2B and she is behind him on the stairs in the maid uniform (Bella's list; she does the whole building) with a bucket. She asks to open his boxes and he says yes or offers to do it himself; either way he sits on the bed because of his ribs and she unpacks: kettle, plates, clothes with the tags bitten off. At the bottom of the last box she finds a photograph, a woman in a doorway with a baby on her hip: his mother, whose face he has never seen; he did not know it was in there. She cries and tells him why: she wanted exactly that, a baby on her hip and somebody coming home to it; she had names picked; and then it was a thing that was not going to happen, and nobody tells you the day. He does not cry; she holds him on the floor for a long time and says she will hold it for him until he wants it. The photograph goes on the windowsill facing the river, or back on top of the open box in a tea towel. She mops, hums, and goes home."
+  characters:
+    alice:
+      knows: ["the photograph: his mother holding him as a baby; he has never seen her face; he did not know it was in the box", "he did not cry over it and said he was fine; she saw him check", "where the photograph is now (the sill or the box)", "his boxes are unpacked (kettle, plates, clothes); she did it; he is not to lift", "he said the uniform suits her"]
+      hiding: ["the names she had picked for the children she did not have ('I'm not telling you the names')", "that she keeps the wanting 'in a drawer' and it came out over his photograph", "how the photograph got into his boxes (she did not ask; neither did he)", "why the two engagements ended (s06)"]
+      address: "'honey', 'sweetheart'; 'Hush, me'; 'a teeny minute'; 'a little something'"
+      relationship: "she has cried on his floor and held him on it for a long time, and he let her; 'I've got it, I'll hold it for you until you want it'; still next door, still 'knock, honey'"
+      outfit: maid
+      last_seen: player_apartment
+  flags_set: {alice_step: 2}
+  affection_delta: {alice: +2}
+  threads: ["alice +1 for 'Okay. Open them.' and +1 for 'Put it where I can see it.' (default path: +2)", "the photograph of his mother holding him: on the windowsill of 2A facing the river (default) or wrapped in a tea towel on top of the open last box; nobody has asked how it got into his boxes", "he has never seen his mother's face before this; he waited to feel something and it did not come", "Alice wanted children, had names, watched the window close; the two men who nearly married her are not yet told (s06)", "the maid uniform: Bella's list, she does the whole building, 'it's a lot of frill'; he said it suits her", "his boxes are unpacked and the floor is mopped; 2A looks lived in; he has stopped locking the door", "she is holding his grief for him until he wants it"]
+- scene: alice_s03
+  summary: "Midnight. The floor has been going for an hour; he knocks twice on the wall and she is at his unlocked door in pajamas before he has the second shoe on. 2B is one lamp, the sofa and too many cushions; she arranges him against her and narrates the cuddle in a whisper, her hand in his hair, then asks what he calls her in his head. 'Alice.' 'You can call me whatever you like, honey.' He tries 'Mommy' and she kisses him for it, twice, says 'Good boy' and does not take it back; he says it again and she goes red to the collar. It should be strange and it is not, and they both say so. He stays on the sofa under two blankets (she kisses the top of his head and leaves her door open) or she walks him the four steps and tucks him into his own bed; two knocks means goodnight. He sleeps until it is light."
+  characters:
+    alice:
+      knows: ["he calls her 'Mommy' now; he said it twice; it was his word, she only offered 'whatever you like'", "he does not lock his door since she unpacked the boxes", "whether he stayed on her sofa or went back to 2A", "he said it should be strange and it is not", "he fell asleep against her"]
+      hiding: ["how long she has been waiting for that word (she stopped breathing)", "that 'baby' came out for the first time and she did not catch it", "that she cannot yet say the word of herself ('I'm just through there')"]
+      address: "'honey', 'sweetheart', and now 'baby' when it is just them; he calls her 'Mommy' (twice, kissed for it)"
+      relationship: "first intimate scene: cuddling on her sofa among the cushions, his head against her, her hand in his hair; two kisses on the mouth; he accepted the register and she kept 'good boy'; she tucked him in; her door stays open, or two knocks for goodnight"
+      outfit: pajamas
+      last_seen: alice_apartment
+  flags_set: {alice_step: 3}
+  affection_delta: {alice: +1}
+  threads: ["alice +1 only if he asked to stay on the sofa (default path); on the go-back branch she walked him to 2A and tucked him into his own bed, so last_seen is player_apartment there", "he accepted the register: 'Mommy', said twice; she has not yet called herself it (s04's 'let Mommy clean you up' is her first time)", "'that's a thing we're doing now, baby, and nobody has to know but the wall'", "two knocks means goodnight (go-back branch); her door stays open (stay branch)", "he slept until it was light; the scene does not call it his first whole night, so a later scene may still claim that", "the pajamas: loose top, shorts, fuzzy slippers, hair down; the first time he has seen her not dressed for the day", "next on this route is level 3 (s04 Flour); every scene after this one is explicit"]

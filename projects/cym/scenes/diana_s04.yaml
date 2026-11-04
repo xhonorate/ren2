@@ -1,0 +1,151 @@
+id: diana_s04
+title: The dress
+location: diner
+time: evening
+present: [diana]
+outfits: {diana: cocktail}
+rating: suggestive
+intimacy: 2
+steps:
+  - narr: "Diana is in the corner booth in a black dress, and the suit is nowhere. You have not seen her without the suit. The salt and pepper have been moved three times."
+  - say: diana
+    expr: smile
+    pose: hand_wave
+    text: "Sweetie. There. No, there, the light's better on that side. I've ordered. Twice, actually; the second one's a pudding and you're having it."
+  - say: player
+    text: "You're in a dress."
+  - say: diana
+    expr: embarrassed
+    pose: hands_clasped
+    text: "I own one dress. This is it. Don't get used to it, it's for weddings and funerals and, apparently, leases."
+  - narr: "The sugar is now in a line. She notices you noticing the sugar, and puts her hands in her lap, and they come straight back out."
+  - say: diana
+    expr: neutral
+    text: "Here's what's going to happen. We're celebrating the lease. It's in your name now, not the council's, and a lease isn't a placement. A placement ends."
+  - say: player
+    text: "And a lease doesn't?"
+  - say: diana
+    expr: smile
+    delivery: soft
+    text: "A lease you renew. So, that's the toast, and then we eat, and then I've got something to say and I'm going to need the pudding to have arrived first."
+  - narr: "The food comes. She eats a third of hers and watches the whole of yours. The man behind the counter calls her by name and looks at the dress twice."
+  - say: diana
+    expr: neutral
+    pose: idle
+    text: "Did you sleep?"
+  - say: player
+    text: "Most of it."
+  - say: diana
+    expr: smile
+    delivery: teasing
+    text: "Most of it. Honey, do you know how long it took us to get to 'most of it'?"
+  - narr: "The pudding arrives. She moves it to your side, and the spoon, and the spoon again, a quarter inch, and then she stops."
+  - say: diana
+    expr: serious
+    pose: hands_clasped
+    text: "Okay. I'm going to say something the way it'd be written down, because I can't say it the other way yet. Then you say whatever you say. Then you eat that."
+  - say: player
+    text: "Okay."
+  - say: diana
+    expr: serious
+    text: "'Worker has formed an attachment to the client which exceeds the professional relationship, and has not disclosed it.' That's the line. That's how they'd write it."
+  - say: player
+    text: "And how would you write it?"
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "I'd write that I crossed it in a hospital corridor on the first day, and that I've been pretending it was somewhere further along ever since."
+  - say: diana
+    expr: serious
+    delivery: soft
+    text: "I'm not supposed to be at your table. I shouldn't have been in your kitchen. I know exactly where the line is, sweetie. I'm a long way past it, and I did it with my eyes open."
+  - narr: "She stops moving the cutlery. Her hands are flat on the table, and still, and she waits, which she is not good at."
+  - cg:
+      id: diana_s04_cg1
+      shot: pov_medium
+      lighting: lamp_warm
+      characters:
+        - {id: diana, pose: sitting_table, expr: serious, outfit: cocktail, gaze: at_viewer}
+      note: "the one dress, across the booth, the diner lights behind her; she has just named the line and her hands are finally still"
+  - say: player
+    text: "I know where it is. I watched you cross it."
+  - say: diana
+    expr: surprised
+    text: "When."
+  - say: player
+    text: "'Sit down, my boy.'"
+  - say: diana
+    expr: blush
+    delivery: soft
+    text: "You didn't hear that."
+  - say: player
+    text: "I did."
+  - narr: "She looks at the pudding. She looks at the window. The diner clock says the wrong time, and she reads it anyway, twice."
+  - say: diana
+    expr: shy_smile
+    delivery: soft
+    text: "Okay. Then you heard it. Then that's said, and it's out, and I'm not taking it back. Eat your pudding, honey. I need a minute and I'm going to spend it watching you."
+  - cg_end: {transition: dissolve}
+  - narr: "You eat the pudding. She watches, and gets her minute, and somewhere in it the shoulders come down. You pay for the pudding. She lets you, and it costs her, and you both see it."
+  - stage: {location: building_hall, time: night, transition: fade}
+  - narr: "She walks you up. The second-floor landing, the window, the radiator; the light on its timer. At your door she stops, and does not say 'here's what's going to happen'."
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "I'm going to kiss you now, sweetie. If you don't want that, say so, and I go home, and nothing's different. I mean that. Nothing."
+  - say: player
+    text: "I want that."
+  - say: diana
+    expr: smile
+    delivery: whisper
+    text: "Good. Stand still."
+  - narr: "She kisses you slowly. There is no hurry in it anywhere. Her hand finds the back of your neck and stays, and this time nobody is counting."
+  - narr: "The landing light goes out on its timer. Neither of you reaches for it. She tastes of the coffee she held all evening and, this once, drank."
+  - narr: "When she stops, she does not go far. Her forehead against yours; the radiator knocks twice, and she laughs into it, quietly."
+  - say: diana
+    expr: shy_smile
+    delivery: whisper
+    text: "There. Now it's a thing that happened. I'm glad it happened. And I'm going home."
+  - choice:
+      prompt: "Her forehead on yours. The light still off."
+      options:
+        - text: "Stay."
+          effects: {affection: {diana: +2}}
+          steps:
+            - narr: "She breathes in. The 'no' takes a while to arrive, and you feel every second of the wait."
+            - say: diana
+              expr: neutral
+              delivery: soft
+              text: "Not tonight. Here's what's going to happen. I go home, I don't sleep, and tomorrow I'm still your social worker until I'm not."
+            - say: diana
+              expr: smile
+              delivery: whisper
+              text: "When I stay, honey, I'm staying. You'll know the difference. Not tonight."
+            - narr: "She kisses you again, once, quicker, the way you sign something. Then she finds the light switch without looking, because she made this landing too."
+            - say: diana
+              expr: smile
+              delivery: soft
+              text: "Look at you. Asking. Lock this behind me."
+        - text: "Go home. Text me when you're in."
+          effects: {affection: {diana: +1}}
+          steps:
+            - say: diana
+              expr: smile
+              delivery: soft
+              text: "Listen to you. 'Text me when you're in.' Who taught you that."
+            - say: player
+              text: "You did."
+            - say: diana
+              expr: laugh
+              delivery: laughing
+              text: "I did. Okay. I'll text from the car and from the door, and you'll be asleep by the second one."
+            - narr: "She finds the light switch without looking. Then two fingers in your collar, which is fine, and this time her hand does not stay. She lets go on purpose, and you both watch her do it."
+            - say: diana
+              expr: smile
+              delivery: soft
+              text: "Lock this behind me, sweetie."
+  - exit: diana
+  - narr: "The stairs, unhurried. The front door. The landing light clicks off again on its own, for nobody."
+  - narr: "The phone goes once, later. 'In. Lock your door. Eat breakfast. x' You lock your door. You lie awake a while, and for once it is not the bad kind of awake."
+  - set: {diana_step: 4}
+next: null

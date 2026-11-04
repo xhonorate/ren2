@@ -1,0 +1,142 @@
+id: diana_s03
+title: The interview
+location: police_carpark
+time: afternoon
+present: [diana]
+outfits: {diana: office}
+rating: suggestive
+intimacy: 1
+steps:
+  - narr: "She drives with one hand on the gearstick the whole way, even on the straight bits. The car park behind the station is a wire fence and a strip of grass."
+  - say: diana
+    expr: serious
+    pose: sitting
+    text: "Okay. Here's what's going to happen. You go in. You tell them what you remember, and when you don't remember, you say so. 'I don't remember' is an answer."
+  - say: player
+    text: "What if they ask about the complaint?"
+  - say: diana
+    expr: neutral
+    text: "Then you say your social worker told you, and you look at them like that's normal. Because it is."
+  - say: diana
+    expr: smile
+    delivery: soft
+    text: "Then you come out, and I'm here. Not in there. Here, in this seat, with the engine off. Did you eat?"
+  - say: player
+    text: "You watched me eat."
+  - say: diana
+    expr: smile
+    delivery: teasing
+    text: "I watched you move it round the plate. There's a banana in the door. Go on. I'll be here."
+  - narr: "The interview is an hour and ten minutes in a room with no window. Two of them, polite; a recorder; a glass of water you do not drink."
+  - narr: "You say 'I don't remember' nine times. It is true every time. They ask about the complaint, and you say your social worker told you, and they write that down."
+  - stage: {transition: fade}
+  - narr: "She is where she said. You get in. You get the door shut. Then your hands start, and you cannot make them stop."
+  - say: diana
+    expr: serious
+    delivery: soft
+    text: "Okay. Okay, sweetie. Come here."
+  - cg:
+      id: diana_s03_cg1
+      shot: pov_close
+      lighting: overcast
+      characters:
+        - {id: diana, pose: hug_viewer, expr: serious, outfit: office, gaze: at_viewer}
+      note: "across the handbrake, her arms round him, the wire fence through the windscreen; she holds on until he stops, and after"
+  - narr: "She comes across the handbrake like it is not there, and holds on. The gearstick is in your hip. She does not tell you to stop."
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "I've got you. It's done. You did it, and it's done, and I've got you."
+  - say: diana
+    expr: neutral
+    delivery: whisper
+    text: "Breathe out, honey. The in part does itself."
+  - narr: "It takes a while. She counts nothing; she just stays. When your hands stop, she does not let go, and you notice that, and you let her not."
+  - cg_end: {transition: dissolve}
+  - say: diana
+    expr: smile
+    delivery: soft
+    text: "There. Thermos. It's tea with sugar in it, and you're drinking it, and we're not discussing the sugar."
+  - say: player
+    text: "I said 'I don't remember' nine times."
+  - say: diana
+    expr: serious
+    text: "Then nine times is what's true. They're not after a story, sweetie. They've got her story. They wanted yours, and yours has holes in it, and that's allowed."
+  - say: player
+    text: "How do you know what to say? After."
+  - say: diana
+    expr: neutral
+    text: "Because somebody said it to me once. Not well. I've had a lot of years to fix the wording."
+  - stage: {location: river_path, transition: fade}
+  - narr: "She drives back the long way, along the river, and stops where the road runs out and the path starts. She does not turn the engine off."
+  - say: diana
+    expr: neutral
+    pose: sitting
+    text: "Here's a thing about me, and then we're done with it for today. I grew up in homes. Not a home. Homes. Six, and I could tell you the order, but I won't."
+  - say: diana
+    expr: serious
+    text: "Four were fine. Two weren't. Nobody came back to check on the two. You'd get a visit, and a form, and the form would say 'no concerns', and that was that."
+  - say: player
+    text: "Nobody?"
+  - say: diana
+    expr: neutral
+    text: "One. One woman. She came back on a day she wasn't due, and she didn't knock. She stood in the kitchen and looked at me and didn't ask me anything. She just didn't leave."
+  - narr: "She says it to the windscreen, flat, the voice from the diner. Her hand is on the gearstick. The engine idles under all of it."
+  - say: player
+    text: "What happened to her?"
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "She kept coming back. That's what happened to her. I had a worker who came back, so I got to be one. It isn't more complicated than that."
+  - say: diana
+    expr: smile
+    delivery: soft
+    text: "That's the job, sweetie. Not the forms. Turning up on a day you're not due. Now you know why I'm always in your kitchen."
+  - narr: "Then the sweetness comes back up, on its own, and she lets go of the gearstick to put the heater on for you."
+  - choice:
+      prompt: "The thin scar under her eye, in the light off the river."
+      options:
+        - text: "The scar. One of the two?"
+          effects: {affection: {diana: +1}}
+          steps:
+            - say: diana
+              expr: neutral
+              text: "The second one. Yes."
+            - narr: "She does not touch it. People who have had a scar a long time stop touching it."
+            - say: diana
+              expr: neutral
+              delivery: soft
+              text: "That's as much as it gets today, honey, and you're the only one who's got that much. I'll tell you the rest. Not in a car."
+            - say: player
+              text: "Okay."
+            - say: diana
+              expr: smile
+              delivery: soft
+              text: "Okay. Look at you, asking. Good."
+        - text: "Not today. Thank you for telling me."
+          effects: {affection: {diana: +1}}
+          steps:
+            - say: diana
+              expr: smile
+              delivery: soft
+              text: "You looked at it, though. You've been looking at it since the hospital."
+            - say: player
+              text: "Sorry."
+            - say: diana
+              expr: neutral
+              delivery: soft
+              text: "Don't be. It's a face, sweetie, it's for looking at. Ask me when you're ready, and I'll tell you then. Not before, and not after."
+            - narr: "She means the 'after'. You can hear that she means it."
+  - say: diana
+    expr: serious
+    pose: idle
+    text: "Phone on. Drink the rest of that tea upstairs. And sweetie: you did the hard one today. The rest of them are mine."
+  - say: player
+    text: "Which rest?"
+  - say: diana
+    expr: smile
+    delivery: teasing
+    text: "All of them. Go on. In."
+  - narr: "She waits until you are inside before she drives off. You know, because you stand at the window over the river and watch her do it."
+  - set: {diana_step: 3}
+next: null

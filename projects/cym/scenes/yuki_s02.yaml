@@ -1,0 +1,223 @@
+id: yuki_s02
+title: The dress form
+location: building_hall
+time: evening
+present: [yuki]
+outfits: {yuki: casual}
+rating: suggestive
+intimacy: 1
+steps:
+  - narr: "The third-floor stairs, which you have never had a reason to climb. Yuki is on the half-landing above you with her keys out, and she has stopped, because you have."
+  - say: yuki
+    expr: surprised
+    pose: idle
+    delivery: soft
+    text: "Oh. H-hi. You're— hi."
+  - say: player
+    text: "Hi."
+  - narr: "The keys go round her finger once. She looks at her door, and at you, and at the door."
+  - say: yuki
+    expr: worried
+    pose: shy_fidget
+    delivery: soft
+    text: "C-could you— the lights. In my room. The string. There's a hook, and I can't reach, and I thought— if you don't mind."
+  - say: player
+    text: "Sure. Show me."
+  - narr: "She gets the door open on the second key. Then she stops in it, with her back to you, and her shoulders go up."
+  - say: yuki
+    expr: embarrassed
+    pose: turned_away
+    delivery: soft
+    text: "That's a lie. Sorry. I can reach the hook. I stand on the bed."
+  - say: yuki
+    expr: blush
+    delivery: soft
+    text: "I wanted to— I have tea. That's all. I've been trying to say it since the library. Sorry. You can go. That's okay."
+  - choice:
+      prompt: "The door is open. The lie is on the floor between you."
+      options:
+        - text: "I'd have come for the tea."
+          effects: {affection: {yuki: +1}}
+          steps:
+            - say: yuki
+              expr: surprised
+              delivery: soft
+              text: "O-oh."
+            - say: yuki
+              expr: shy_smile
+              delivery: soft
+              text: "Okay. Then— tea. Come in. Mind the— just come in."
+        - text: "Is the hook really fine?"
+          steps:
+            - say: yuki
+              expr: shy_smile
+              delivery: soft
+              text: "It's fine. I'm— I'm quite good on the bed. Standing. On it. Sorry."
+            - narr: "She hears it a second after you do, and goes in ahead of you so that you cannot see her face."
+  - stage: {location: yuki_apartment, transition: dissolve}
+  - narr: "3C is 2A with the furniture decided. A bed made tight, a shelf of manga in order of height, a string of small lights over the window, hooked exactly where it should be."
+  - narr: "On the table, a sewing machine older than the building. By the window, something tall under a bedsheet."
+  - say: yuki
+    expr: neutral
+    pose: hands_behind
+    text: "Sit. The chair's— that's the only chair. I'll have the bed. Sorry, it's small. The room."
+  - narr: "The kettle lives in the corner where a kitchen would go. She fills it with her back to you and talks to it."
+  - say: yuki
+    expr: embarrassed
+    pose: turned_away
+    delivery: soft
+    text: "I don't have people. Up. I don't— I haven't worked out where they'd go. You're in the chair, so that's— that's solved."
+  - say: player
+    text: "It's a good chair."
+  - say: yuki
+    expr: shy_smile
+    pose: idle
+    text: "It came with the machine. They go together."
+  - say: player
+    text: "Where did the machine come from?"
+  - narr: "The kettle starts. She puts a hand flat on top of the machine, and it is a while before she answers."
+  - say: yuki
+    expr: neutral
+    delivery: soft
+    text: "The second house. It was in a cupboard and nobody used it, and I did. When I moved they let me take it. It's been in all of them since."
+  - say: player
+    text: "All of them?"
+  - say: yuki
+    expr: embarrassed
+    pose: shy_fidget
+    delivery: soft
+    text: "F-foster. Homes. There were four. Sorry, I should have— it's not a secret. I just don't say it."
+  - say: yuki
+    expr: neutral
+    delivery: soft
+    text: "It's heavier than it looks. I carried it anyway. Every time. The people change and the machine doesn't."
+  - say: player
+    text: "Is that where you learned?"
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "There's a lot of waiting. In those houses. You can wait, or you can make something. I made things."
+  - narr: "The kettle clicks off. Two cups, the same cups, and she carries them past the thing under the sheet, and her sleeve catches it."
+  - narr: "The sheet slides. Black satin, a white tuft, one long ear. You both reach for it. Your hand gets there under hers."
+  - narr: "She leaves it. One second, two. Then she takes the sheet and pulls it back over, and the second is over."
+  - say: yuki
+    expr: blush
+    pose: shy_fidget
+    delivery: soft
+    text: "S-sorry. That's— it's not finished. It's nothing. Sorry."
+  - say: player
+    text: "Okay."
+  - narr: "She looks at you to check that it is, and it is. The cups go on the sill. She sits on the edge of the bed with hers in both hands, and the gap between you has been measured."
+  - say: player
+    text: "You said Diana checks on the building."
+  - say: yuki
+    expr: embarrassed
+    pose: sitting
+    delivery: soft
+    text: "I said that. Sorry. That wasn't— it's not the building. It's me. She checks on me."
+  - say: yuki
+    expr: neutral
+    delivery: soft
+    text: "She was my— you have one too. A worker. She was mine. Until I aged out. That's the word they use. Out."
+  - say: yuki
+    expr: neutral
+    delivery: soft
+    text: "There's a birthday. Before it there's a bed and a worker and a file. After it there isn't. That's all it is. It's normal."
+  - say: player
+    text: "It doesn't sound normal."
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "No. But everybody's is. In the system. Sorry. I'm not sad about it. I was ready."
+  - say: yuki
+    expr: neutral
+    delivery: soft
+    text: "Diana wasn't. She found this room. She found the college. She still comes up. Not often. Often enough. She's not supposed to."
+  - say: yuki
+    expr: worried
+    pose: shy_fidget
+    delivery: soft
+    text: "She doesn't do that. For the others. When you're out, you're out. She told me that herself. She has a lot of us. Had."
+  - narr: "She gets up to put the cup down and there is nowhere, so it goes on the sill, and her hand goes to the thing under the sheet the way you would take a friend's shoulder."
+  - narr: "The sheet goes with the hand. An ear again. She pulls it back over, slower this time, and does not let go of it."
+  - cg:
+      id: yuki_s02_cg1
+      shot: pov_medium
+      lighting: lamp_warm
+      characters:
+        - {id: yuki, pose: standing_facing, expr: blush, outfit: casual, gaze: down}
+      note: "3C under the fairy lights: Yuki standing beside the dress form with one hand flat on the sheet that covers it, the other sleeve pulled over her hand, eyes on the sheet and not on him; the moment she says 'Except you.'"
+  - say: yuki
+    expr: blush
+    pose: turned_away
+    delivery: soft
+    text: "She doesn't check on anyone. Once they're out. Except— except you."
+  - say: yuki
+    expr: neutral
+    delivery: soft
+    text: "She told me someone was coming. She never tells me things. She told me that. And the chapter, she said. Nobody gets the chapter."
+  - say: player
+    text: "Why me?"
+  - say: yuki
+    expr: thinking
+    delivery: soft
+    text: "I don't know. I didn't ask. You don't ask her things. You've met her."
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "So it's two. Of us. That she didn't put down. I thought you should know. That's what the tea was for. Sorry it took the whole cup."
+  - cg_end: {transition: dissolve}
+  - narr: "Her hand is still on the sheet. Under it, the ear has worked its way back out, and she has not noticed, and you have."
+  - choice:
+      prompt: "The sheet, and what is under it."
+      options:
+        - text: "What's it for?"
+          steps:
+            - say: yuki
+              expr: embarrassed
+              pose: shy_fidget
+              delivery: soft
+              text: "I-it's— there are halls. Conventions. People go dressed as— as things. Nobody knows anybody. That's the point of it."
+            - say: yuki
+              expr: blush
+              delivery: soft
+              text: "I go. Sometimes. I'm somebody else there. For an afternoon. Then I'm this again. Sorry. It sounds strange."
+            - say: player
+              text: "It doesn't."
+            - say: yuki
+              expr: shy_smile
+              delivery: soft
+              text: "You keep saying things like that. You should be careful. I'll start believing you."
+            - narr: "She pushes the ear back under the sheet with one finger. It stays, this time."
+        - text: "It can stay under the sheet."
+          effects: {affection: {yuki: +1}}
+          steps:
+            - say: yuki
+              expr: surprised
+              delivery: soft
+              text: "You're not— you're not going to ask?"
+            - say: player
+              text: "Not until you want me to."
+            - say: yuki
+              expr: blush
+              pose: turned_away
+              delivery: soft
+              text: "Oh. That's— thank you. I'll tell you. Not tonight. Soon, I think. If that's okay."
+            - narr: "She tucks the ear under with one finger and smooths the sheet down over it, and pats it, once."
+  - narr: "The tea is gone. Neither of you has looked at the sheet for a while, which is its own kind of looking."
+  - say: yuki
+    expr: neutral
+    pose: hands_behind
+    text: "It's late. It isn't, but— you have the stairs. Sorry. I don't know how people end this part."
+  - say: player
+    text: "Like this. Thank you for the tea."
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "The tea was real. The hook wasn't. I want that— on the record."
+  - say: player
+    text: "Noted."
+  - exit: yuki
+  - narr: "Behind you the door does not close. You reach the turn of the stairs, and it still has not."
+  - set: {yuki_step: 2}
+next: null

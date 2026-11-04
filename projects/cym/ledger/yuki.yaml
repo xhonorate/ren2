@@ -1,0 +1,13 @@
+- scene: yuki_s01
+  summary: "The library's quiet floor, and the window seat past the end of the stacks that Yuki thinks nobody else knows about. She moves her bag (two tries) and lets him sit, which nobody has before. Her chapter is colour-coded: blue what the author says, green what he means, pink where she disagrees (a lot of pink; she would never say so in class), yellow for the questions she never asks. He borrows the pink or keeps to one pen; she hums three notes, catches herself once and not the second time. When the light reaches her she is reading a manga as a reward for finishing the chapter, sleeves pulled over her hands; he asks about the ribbon (old, it frays, she sews it back; 'Is it wrong?' 'It's not wrong.') or about the book. The floor closes at six; she says the seat is here most days if he wants it, and at the bottom of the stairs she holds the door for him."
+  characters:
+    yuki:
+      knows: ["he came looking for a desk and found her seat; he asked before he sat", "he did not mind the humming, twice", "he said the ribbon is not wrong (ribbon branch); he knows the one-chapter-for-one-chapter rule and will not tell (book branch)", "he said 'I'd like that' when she offered the seat for most days"]
+      hiding: ["the second sentence; it got as far as her mouth this time", "the pink: she thinks the author is wrong and will not say so in a room with people in it", "the yellow pen: the questions she wants to ask and never does", "that she sews (said only of the ribbon); nothing yet about the homes, aging out, Diana or the conventions"]
+      address: "'you' now, without flinching; 'sorry' still for things that are not hers; offers exits ('if you wanted it', 'you don't have to')"
+      relationship: "study partner by invitation; the window seat is his too, 'most days'; she held the door for him; nothing said, all of it visible"
+      outfit: casual
+      last_seen: college_library
+  flags_set: {yuki_step: 1}
+  affection_delta: {yuki: +2}
+  threads: ["yuki +1 for borrowing the pink pen, +1 for asking about the ribbon (default path: both)", "the window seat past the end of the stacks is theirs now, 'most days'; the quiet floor closes at six", "the pen system: blue says, green means, pink disagrees, yellow asks; the yellow questions have never been asked and the pink has never been said in class (s08's presentation pays this)", "she reads manga as a reward, one chapter for one chapter; 'please don't tell'", "the ribbon: old, frays, re-sewn, 'the same one'; she sews, and the sewing machine is still unmentioned (s02 owns it)", "the second sentence reached her mouth; she held the door at the bottom of the stairs", "nothing about Diana, the homes, aging out or the conventions yet; s02 owns the telling"]

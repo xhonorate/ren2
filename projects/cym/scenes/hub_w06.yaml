@@ -1,0 +1,28 @@
+id: hub_w06
+title: River fog
+location: river_path
+time: evening
+present: [natalie]
+outfits: {natalie: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week six. The fog came up off the river in the afternoon and has not gone back. From the back door you cannot see the bench."
+  - narr: "You walk anyway. Gravel, then the bench arriving out of nothing, then the place where the bridge should be. The bridge is gone. The river is under there somewhere, talking."
+  - narr: "The streetlight comes on above you and does not reach the ground. A halo, and under it, you. The fog tastes of the river and of cold metal."
+  - narr: "Footsteps, coming the other way. Quick, even, the step of someone who has been on her feet for twelve hours and has decided not to notice."
+  - enter: {char: natalie, pose: idle, expr: sleepy, at: right}
+  - narr: "Natalie, in a coat and not the uniform, hands in her pockets. Her eyes find you and file you, and she does not slow down."
+  - say: natalie
+    expr: sleepy
+    text: "Sleep."
+  - say: player
+    text: "Natalie—"
+  - say: natalie
+    expr: neutral
+    text: "Off shift. This isn't a visit. Fog, walk, bed. In that order."
+  - exit: natalie
+  - narr: "She is gone into it before the next streetlight. Her halo, and then not. You stand under yours a while longer, because she did not say how long."
+  - narr: "The building is a brown shape with two lit windows, and a third that comes on while you watch. The fog has the whole evening in it, and no bridge, and you."
+  - include: hub_choice
+next: hub_w07

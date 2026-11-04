@@ -1,0 +1,55 @@
+id: hub_w04
+title: Halloween
+location: building_hall
+time: evening
+present: [alice, claire]
+outfits: {alice: housewife, claire: witch}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week four. There is a pumpkin on every third stair, lit, and the stairwell smells of hot wax and the wet inside of a pumpkin."
+  - narr: "Alice has made the landing a party. Paper bats on the radiator, a bowl of something orange on the windowsill, music from 2B with the door wide."
+  - enter: {char: alice, pose: hand_wave, expr: grin, at: left}
+  - say: alice
+    expr: grin
+    delivery: excited
+    text: "Sweetheart! You came, you came. Don't lift that, I've got it, you hold this. Hold this. Mm."
+  - narr: "A paper cup, warm. She is wearing her apron over a costume. The costume has a tail. The apron is winning."
+  - say: alice
+    expr: smile
+    pose: hands_hips
+    text: "Bella won't dress up. She says she's come as the landlady. I said that's not a costume, honey, and she said watch her."
+  - narr: "Bella is at the top of the stairs in her own clothes, holding a drink like a doorstop. She has come as the landlady, and it is working."
+  - narr: "On the half-landing, something in a cloak with a sewn crest is being asked what it is, for the third time. Yuki explains it again. Nobody gets it. She does not seem to mind."
+  - say: alice
+    expr: smile
+    pose: pointing
+    delivery: soft
+    text: "The witch by the window has nothing in her hand. That's not allowed in my building. Back in a teeny second, sweetheart."
+  - exit: alice
+  - narr: "The witch by the window takes her hat off, looks at it, and puts it back on. The witch is Claire."
+  - enter: {char: claire, pose: idle, expr: neutral, at: right}
+  - say: claire
+    expr: neutral
+    text: "Good evening. I am off duty. I would like that noted."
+  - say: player
+    text: "The hat suits you."
+  - say: claire
+    expr: shy_smile
+    delivery: soft
+    text: "Everyone assumes I did not have to change. I did. The hat was the only part that took effort."
+  - say: player
+    text: "How did Alice get you here?"
+  - say: claire
+    expr: neutral
+    text: "She found me in the laundrette and invited me. She did not ask who I was. I think she invites everyone."
+  - say: claire
+    expr: smile
+    pose: hand_chin
+    delivery: soft
+    text: "She does not know what I do. I would prefer to keep it that way. Tonight I am a witch, and I am told I have nothing in my hand."
+  - narr: "Alice arrives at her elbow with a cup, and Claire is steered toward the pumpkins with a hand on her back, letting it happen. You have never seen her let anything happen."
+  - exit: claire
+  - narr: "The pumpkins burn down one by one. Doors open and close along the landing, the party thins to the people who live here, and the evening is still yours to take somewhere."
+  - include: hub_choice
+next: hub_w05

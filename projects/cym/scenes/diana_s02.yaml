@@ -1,0 +1,146 @@
+id: diana_s02
+title: The file
+location: diana_office
+time: afternoon
+present: [diana]
+outfits: {diana: office}
+rating: suggestive
+intimacy: 1
+steps:
+  - narr: "Her office is a kettle, two chairs and a window onto a car park. The file she is not supposed to leave on the desk is on the desk."
+  - say: diana
+    expr: smile
+    pose: hand_wave
+    text: "Sweetie. In. Sit in the good chair, the other one tips. Tea's happening whether you want it or not."
+  - say: player
+    text: "I'm fine."
+  - say: diana
+    expr: serious
+    pose: idle
+    text: "You're fine. What did you have for lunch."
+  - say: player
+    text: "A sandwich. Most of it."
+  - say: diana
+    expr: smile
+    delivery: teasing
+    text: "Most of it. We're getting there."
+  - narr: "The cupboard is in the corner, with a key in it. You do not look at it. Then you do."
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "It's still in there, honey. Nobody's touched it. Drink your tea."
+  - narr: "She does not sit behind the desk. She pulls the tipping chair round to your side of it and puts her hand flat on the file."
+  - say: diana
+    expr: serious
+    pose: sitting
+    text: "Okay. Here's what's going to happen. I'm not supposed to open this with you in the room. I'm going to open it, tell you one thing out of it, and shut it."
+  - say: player
+    text: "Why?"
+  - say: diana
+    expr: neutral
+    text: "Because the police have a copy, and they're going to ask you about it, and I want you to hear it from me first. Sitting down. With tea."
+  - narr: "She opens it. She does not read from it. She has read it already, more than once; you can tell by where her hand goes."
+  - say: diana
+    expr: serious
+    delivery: soft
+    text: "Years ago, your father rang this office. He made a complaint. About her, and about the house."
+  - say: player
+    text: "My father."
+  - say: diana
+    expr: serious
+    text: "Your father. And a fortnight later he rang again and withdrew it. There's one line under that, about why. I'm not going to read you the line."
+  - say: player
+    text: "Why not?"
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "Because it's his line, sweetie, and he's not here to say it better."
+  - narr: "She lets that sit. The kettle ticks as it cools. Outside, somebody fails to park."
+  - say: player
+    text: "He never said. Not once."
+  - say: diana
+    expr: serious
+    text: "No. People ring, and then they get talked round, and then they tell themselves that was the same as it being fine. I've seen the shape of it a hundred times."
+  - say: player
+    text: "Did he mean it?"
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "He rang. That's meaning it. Withdrawing it is something else, and I haven't got a word for it that's fair to him."
+  - say: diana
+    expr: neutral
+    text: "It's not a thing about you. It's a thing about him, and it's done. But it's in here, so now it's in you too, and I'd rather have put it there myself."
+  - narr: "She shuts the file. Her hand stays flat on it a moment, as if it might open again on its own."
+  - say: diana
+    expr: smile
+    text: "That's the one thing. Drink your tea. It's gone cold and you're drinking it anyway."
+  - narr: "You drink it. A card comes out of her bag. Not the folder: her bag. The same number, in the same handwriting."
+  - say: diana
+    expr: neutral
+    pose: idle
+    delivery: soft
+    text: "I'm not supposed to give you my personal number. Here's my personal number."
+  - say: player
+    text: "You gave me this already."
+  - say: diana
+    expr: smile
+    text: "I know."
+  - narr: "That is all she says about it. You put the second card behind the first one in your wallet, and she watches you do it."
+  - narr: "At the door she stops you with two fingers in your collar. It was fine. She fixes it anyway."
+  - cg:
+      id: diana_s02_cg1
+      shot: pov_close
+      lighting: day_soft
+      characters:
+        - {id: diana, pose: reaching_viewer, expr: neutral, outfit: office, gaze: at_viewer}
+      note: "her hands at his collar after it is already fixed; her eyes on his; the second too long, and she knows it"
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "There."
+  - narr: "Her hands stay. One second. Then the one after it, which is the one that counts. Her eyes are on yours, and she knows exactly how long it has been, and she does not move."
+  - narr: "Then she steps back and puts her hands in her pockets, where, apparently, they have been the whole time."
+  - cg_end: {transition: dissolve}
+  - choice:
+      prompt: "Two cards in your wallet. Her hands in her pockets."
+      options:
+        - text: "Thanks. For the second card."
+          effects: {affection: {diana: +1}}
+          steps:
+            - say: diana
+              expr: smile
+              delivery: soft
+              text: "You're welcome, honey. Use it this time. Not for anything. Just so I know it works."
+            - say: player
+              text: "It works."
+            - say: diana
+              expr: smile
+              delivery: teasing
+              text: "Then ring it from the stairs and prove it."
+            - narr: "You do, from the stairs. It rings once behind her door, and she picks up, and says 'Good,' and puts it down."
+        - text: "Why do you keep giving me this?"
+          effects: {affection: {diana: +1}}
+          steps:
+            - say: diana
+              expr: neutral
+              delivery: soft
+              text: "Because the first one came out of a folder, sweetie. This one came out of my bag."
+            - say: player
+              text: "That's not an answer."
+            - say: diana
+              expr: smile
+              text: "It's the whole answer. It's just not all of it out loud."
+            - narr: "She says it to your collar, not to you. Then she looks up, and the smile is back at full strength, and that is the end of the subject."
+  - say: diana
+    expr: smile
+    pose: hand_wave
+    text: "Go on. Phone on. And sweetie, the interview, when it comes: I'll be in the car. You don't walk into anywhere on your own."
+  - say: player
+    text: "Okay."
+  - say: diana
+    expr: serious
+    delivery: soft
+    text: "And eat something tonight that isn't most of a sandwich. I'll ask."
+  - narr: "The corridor outside her office smells of carpet and kettles. Your collar was fine. You leave it the way she left it."
+  - set: {diana_step: 2}
+next: null

@@ -1,0 +1,3 @@
+# Yuki's route — scene notes
+
+- yuki_s01 — 46 steps (61 incl. branch steps), 24 voiced lines; 0 voice fixes, 3 style fixes (a second simile cut; two adjacent 'sorry's trimmed; three narration pairs merged and one exchange added for the dialogue ratio, now ~65:35). Human: the book under the chapter is a manga (world.md's shelf) and she says she sews the ribbon back on, a hint only; the sewing machine, Diana, the homes and the conventions are all left for s02. 'Please don't tell' is about the professor without naming her. The window seat CG uses `sitting_chair` (nearest cg_pose; the note says window seat).

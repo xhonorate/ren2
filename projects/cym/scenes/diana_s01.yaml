@@ -1,0 +1,162 @@
+id: diana_s01
+title: Groceries
+location: player_apartment
+time: evening
+present: [diana]
+outfits: {diana: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Two bags on the step, and Diana behind them in a cardigan, with her hair down. You have not seen her hair down before."
+  - say: diana
+    expr: smile
+    pose: idle
+    text: "Hi, sweetie. Don't touch those."
+  - say: player
+    text: "I can carry a bag."
+  - say: diana
+    expr: serious
+    text: "You can carry a bag when your ribs say so, and they haven't said. Here's what's going to happen. You hold the door. I do the rest."
+  - narr: "You hold the door. She comes past sideways, bags first, and there are groceries on the counter before you have shut it."
+  - say: player
+    text: "Is this a home visit?"
+  - say: diana
+    expr: smile
+    delivery: teasing
+    text: "It's dinner, honey. Home visits come with a form. I didn't bring the form."
+  - narr: "She finds the pan on the first try. She bought the pan."
+  - say: diana
+    expr: neutral
+    text: "Sit. There's one chair and I want it out of my way, so the bed will do. What did you eat today."
+  - say: player
+    text: "Toast."
+  - say: diana
+    expr: serious
+    pose: hands_hips
+    text: "All of it?"
+  - say: player
+    text: "All of it."
+  - say: diana
+    expr: smile
+    delivery: teasing
+    text: "Look at that. A whole toast. We'll build on it."
+  - say: diana
+    expr: neutral
+    pose: idle
+    text: "And sleeping?"
+  - say: player
+    text: "Some."
+  - say: diana
+    expr: thinking
+    delivery: sigh
+    text: "Some. Okay. Toast and some. I've started from less."
+  - narr: "The cardigan sleeves go up to the elbow. Onions go in the pan. The window behind her is losing the river."
+  - cg:
+      id: diana_s01_cg1
+      shot: pov_medium
+      lighting: lamp_warm
+      characters:
+        - {id: diana, pose: walking_ahead, expr: smile, outfit: casual, gaze: at_viewer}
+      note: "her first time at his stove, sleeves up; she looks back over her shoulder to check he is still where she put him"
+  - say: diana
+    expr: smile
+    delivery: soft
+    text: "Still sitting? Good. This is twenty minutes. Then you eat. Then we see."
+  - narr: "She looks back more than the onions need. Each time she finds you where she left you, and goes back to the pan. It is not a bad place to be left."
+  - cg_end: {transition: dissolve}
+  - say: diana
+    expr: neutral
+    text: "There's a second lot for the fridge. You eat it tomorrow. Not the day after, and not cold out of the box standing up. Okay?"
+  - say: player
+    text: "Okay."
+  - say: diana
+    expr: smile
+    text: "And the plates are in the cupboard on the left, which I know because—"
+  - narr: "You are already up. The cupboard on the left; the plates she bought; two of them."
+  - say: diana
+    expr: smile
+    pose: pointing
+    text: "Sit down, my boy, I've got—"
+  - narr: "The pan spits. She turns back to it, and her ears, under the hair, go pink."
+  - say: diana
+    expr: neutral
+    pose: idle
+    text: "I've got it. Sit down."
+  - narr: "You sit down. You didn't hear anything. She didn't say anything. The onions take the whole of the silence, and you are both grateful to them."
+  - narr: "Two plates. Two forks. There were two of everything in the box she packed, and you had not thought about that until now."
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "Okay, honey. I've cooked for two, and I've got a box in the bag for one. You tell me which it is, and I do that. There's no wrong answer."
+  - choice:
+      prompt: "Two plates. One chair."
+      options:
+        - text: "Stay. The chair's yours."
+          effects: {affection: {diana: +2}}
+          steps:
+            - say: diana
+              expr: smile
+              delivery: soft
+              text: "The chair's mine. Then you're on the bed with a plate on your knees, and if you drop it, you're dropping it on a duvet I paid for."
+            - narr: "She takes the chair, which puts her between you and the door. You eat. It is good."
+            - say: player
+              text: "This is really good."
+            - say: diana
+              expr: smile
+              delivery: teasing
+              text: "Onions and patience, sweetie. And someone watching you eat it, which is the part that's hard to buy."
+            - narr: "She watches you eat it. She eats hers like she is late for something, and she is not late for anything."
+            - say: diana
+              expr: neutral
+              text: "Here's what's going to happen. You finish that. I wash up. Then I go, and you're in that bed by eleven."
+            - say: player
+              text: "You can't make me sleep."
+            - say: diana
+              expr: smug
+              delivery: teasing
+              text: "I can make the room very boring, honey. Watch me."
+            - narr: "She washes up with the sleeves still rolled, and talks the whole time. This time you remember all of it."
+        - text: "Take the rest home. You've got work."
+          effects: {affection: {diana: +1}}
+          steps:
+            - say: diana
+              expr: neutral
+              pose: idle
+              text: "I have got work. Okay. Then here's what's going to happen."
+            - say: diana
+              expr: serious
+              text: "Half goes in the box. Half stays in your fridge. If I come back and it's still in there, we're having a conversation about it."
+            - say: player
+              text: "You said one box. For one."
+            - say: diana
+              expr: smile
+              delivery: teasing
+              text: "I said there was a box in the bag. I didn't say how many were in the bag."
+            - narr: "There are three. She fills one and leaves two on the counter, lids on, waiting."
+            - narr: "She does not eat. She stands at the counter with her arms folded and watches you eat yours, and the second plate goes back in the cupboard clean."
+            - say: diana
+              expr: smile
+              delivery: soft
+              text: "Good. All of it. See, you can."
+  - narr: "At the door, the empty bags folded under her arm, she stops."
+  - say: diana
+    expr: serious
+    pose: hands_hips
+    text: "Phone."
+  - say: player
+    text: "Charged. Your number's at the top."
+  - say: diana
+    expr: smile
+    delivery: soft
+    text: "Good. Lock this behind me. And sweetie, tomorrow, the second lot. I'll know."
+  - say: player
+    text: "How will you know?"
+  - say: diana
+    expr: smile
+    delivery: teasing
+    text: "Honey. I'll know."
+  - exit: diana
+  - narr: "The lock. Her feet on the stairs, unhurried. Then the room, which smells of onions and of somebody else, and will for a while."
+  - narr: "You didn't hear what she said at the stove. You can still hear it."
+  - set: {diana_step: 1}
+next: null

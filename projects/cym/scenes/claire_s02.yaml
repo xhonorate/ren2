@@ -1,0 +1,196 @@
+id: claire_s02
+title: The laundrette
+location: laundrette
+time: night
+present: [claire]
+outfits: {claire: casual}
+rating: suggestive
+intimacy: 1
+steps:
+  - narr: "The laundrette on the corner is the only room on the main street still lit. The light hums. One dryer is going and the rest are not."
+  - narr: "Somebody is at the folding table with her back to the door. A band shirt, faded past reading, black skirt, fishnets, boots. A long green braid."
+  - narr: "It takes you a second. Then it takes you another, because her arms are bare, with snakes the whole length of one and something thorned up the other."
+  - enter: {char: claire, pose: idle, expr: surprised, at: center}
+  - say: claire
+    expr: surprised
+    text: "Good evening."
+  - say: player
+    text: "You do laundry."
+  - say: claire
+    expr: neutral
+    text: "I wear clothes. It follows."
+  - narr: "You load a machine. It takes the coins the second time. She watches you not look at her arms, and lets you."
+  - say: claire
+    expr: neutral
+    text: "You can look. They are not going anywhere, and neither am I for the next forty minutes."
+  - say: player
+    text: "Sorry."
+  - say: claire
+    expr: neutral
+    text: "You are apologising for having eyes. The snakes are older than my training. I will tell you about them another time, in order. Not tonight."
+  - narr: "Two plastic chairs under the light. She takes one. You take the other, and it is colder than the room."
+  - say: player
+    text: "What's the band?"
+  - say: claire
+    expr: neutral
+    text: "You would not have heard of them. I had, at fourteen, and nobody else in the school had. That was the point of them."
+  - say: player
+    text: "The point."
+  - say: claire
+    expr: thinking
+    text: "You are doing what I do. Repeating the last word back so that I keep going."
+  - say: player
+    text: "Is it working?"
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "It is working. That is the inconvenient part."
+  - choice:
+      prompt: "She has stopped. It is not a wall. It is a door she has not decided about."
+      options:
+        - text: "Tell me. If you want to."
+          effects: {affection: {claire: +1}}
+          steps:
+            - say: claire
+              expr: neutral
+              text: "If I want to. You are asking, and that is different from wanting to know. Most people want to know."
+            - say: player
+              text: "I do want to know."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "Then you are both, and I will tell you. I would not tell you this in the office. We are not in the office."
+        - text: "You don't have to."
+          steps:
+            - say: claire
+              expr: neutral
+              text: "I know that I do not have to. Nobody has ever told me that I had to."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "I would like to. That is rarer, and I would rather not waste it on the machines."
+  - narr: "She says it in order. She does not look at you while she does it, and she does not look away either. She looks at the dryer going round."
+  - say: claire
+    expr: neutral
+    text: "First, the school. I wore black at thirteen, before I knew why. They had a name for me by fourteen. It was not clever, and they used it for five years."
+  - say: claire
+    expr: neutral
+    text: "I stopped answering. Anything, to anyone. It is a skill. I was very good at it, and it is the only thing I have been good at that I would not recommend."
+  - say: player
+    text: "You shut it off."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "I shut it off. Then I could not find the switch again. That is the second part."
+  - say: claire
+    expr: neutral
+    text: "A year I do not remember well. I got up. I got through the day. I went to bed. I did that for a year and called it fine, and everybody let me."
+  - narr: "The dryer stops. Neither of you gets up. The quiet is the humming light and nothing else."
+  - say: player
+    text: "Grey."
+  - say: claire
+    expr: neutral
+    text: "Grey. That is the word. I have never found a better one, and I have looked."
+  - say: player
+    text: "What happened?"
+  - say: claire
+    expr: neutral
+    text: "Someone noticed. A woman in a cardigan, with a box of tissues I did not use. She sat with me for an hour a week and did not write anything down."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "I wanted to know what she had done. Then I wanted to know how. Then I wanted to be the person in the chair. That is the third part, and that is why."
+  - narr: "That is all of it, read out like a list, and she did not look away from the dryer once. Honoured. That is the word, and it is a strange one for a laundrette."
+  - say: player
+    text: "You got through a year. That's not nothing."
+  - say: claire
+    expr: surprised
+    text: "You got through a year. You are using my line."
+  - say: player
+    text: "Is it working?"
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "It is working. You may keep it. I have others."
+  - narr: "The wash, then the dryer. She stays for both, and nobody says so. When it stops she is at the table with your basket before you have stood up."
+  - say: player
+    text: "You don't have to—"
+  - say: claire
+    expr: neutral
+    text: "I know. You keep telling me what I do not have to do. I am going to fold these. You may help, or you may watch, and either is allowed."
+  - cg:
+      id: claire_s02_cg1
+      shot: pov_medium
+      lighting: neon
+      characters:
+        - {id: claire, pose: standing_facing, expr: neutral, outfit: casual, gaze: at_viewer}
+      note: "Folding at the laundrette table in the band shirt, one of your shirts in her hands, the machines behind her and the humming light on her bare arms; she has looked up from the fold, and she is not in the office."
+  - narr: "She folds the way she sits: exactly. Sleeve, sleeve, half, half. You reach into the basket for the next one, and her hand is already there."
+  - say: claire
+    expr: neutral
+    text: "Excuse me."
+  - narr: "Neither hand moves first. Then hers does, with the shirt."
+  - say: player
+    text: "You've got the sleeve wrong."
+  - say: claire
+    expr: neutral
+    text: "I have the sleeve exactly right. You have been folding them wrong, and now they will be folded right, and you will notice the difference."
+  - narr: "The second time your hands meet in the basket, hers stays a moment longer than the first time. Then it goes, with the shirt."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "This is not professional."
+  - say: player
+    text: "Folding?"
+  - say: claire
+    expr: neutral
+    text: "Folding. The laundrette. The band. None of it is going on the invoice."
+  - narr: "The third time, you both leave your hands there. The basket is nearly empty. Warm, and not from the dryer. Nobody mentions it."
+  - cg_end: {transition: dissolve}
+  - say: claire
+    expr: neutral
+    pose: idle
+    text: "That is the basket."
+  - narr: "Outside, the main street is dark the whole way down. She has her own basket on her hip and a look at the door, and then at you."
+  - say: claire
+    expr: neutral
+    text: "I will walk you back. It is on my way."
+  - say: player
+    text: "Which way is your way?"
+  - say: claire
+    expr: neutral
+    text: "Tonight, it is yours."
+  - choice:
+      prompt: "It is a short walk either way."
+      options:
+        - text: "Let me walk you home instead."
+          steps:
+            - say: claire
+              expr: thinking
+              text: "You would be walking the wrong way for twenty minutes, with a basket, and then back alone."
+            - say: player
+              text: "I know."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "Then yes. I am not going to argue with you in a doorway. I will tell you when we are there, and not before."
+            - narr: "Her building is the other way up the main street. She walks on the inside and lets you carry the basket, and tells you when you are there, and not before."
+            - narr: "At her door she takes the basket back and does not go in straight away. Then she does."
+        - text: "All right. Walk me back."
+          effects: {affection: {claire: +1}}
+          steps:
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "All right. Thank you. People do not usually let me."
+            - say: player
+              text: "Let you?"
+            - say: claire
+              expr: neutral
+              text: "Look after them once the hour is over. You are letting me. I noticed, and I am not going to make anything of it tonight."
+            - narr: "She walks on the road side the whole way. She does not say that it is deliberate. You let her."
+            - narr: "At the building's door she stops a step short of it and waits until you are inside before she turns."
+  - exit: claire
+  - narr: "Your shirts are folded smaller than you have ever managed. You put them away as they are, and do not unfold a single one."
+  - set: {claire_step: 2}
+next: null

@@ -1,0 +1,177 @@
+id: yuki_s01
+title: The window seat
+location: college_library
+time: afternoon
+present: [yuki]
+outfits: {yuki: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "The quiet floor is a long room of carrels and green lamps, and every carrel has somebody bent over it."
+  - narr: "You walk the length of it with the chapter under your arm. At the far end the stacks turn a corner, and past the corner there is a window with a seat in it."
+  - narr: "Yuki is in the seat, knees up, a tote bag beside her, four pens in a row on the sill. She sees you before you can pretend you were going somewhere else."
+  - say: yuki
+    expr: surprised
+    pose: sitting
+    delivery: soft
+    text: "Oh. H-hello."
+  - say: player
+    text: "Sorry. I didn't know anyone came back here."
+  - say: yuki
+    expr: embarrassed
+    text: "Nobody does. That's— that's why. Sorry."
+  - narr: "She looks at the bag. She looks at the window. The bag goes onto the floor, and it takes her two tries."
+  - say: yuki
+    expr: blush
+    pose: shy_fidget
+    delivery: soft
+    text: "Y-you can sit. Here. If you want. There's room, it's— there's room."
+  - say: player
+    text: "You're sure?"
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "Yes. No one else— yes."
+  - narr: "You sit. The seat is warm where the sun has been, and she makes space the way you would hand someone a key. It is a small thing, a seat. It does not feel like one."
+  - narr: "The chapter comes out. Hers is already open on her knees, and it is not the same colour as yours."
+  - say: player
+    text: "What happened to your chapter?"
+  - say: yuki
+    expr: embarrassed
+    pose: sitting
+    text: "I— sorry. It's a system. It's not a good system."
+  - say: player
+    text: "Show me."
+  - say: yuki
+    expr: neutral
+    pose: sitting_lean
+    text: "B-blue is what he says. Green is what he means. They're not always the same."
+  - say: yuki
+    expr: blush
+    text: "Pink is where I don't agree. Sorry. It's— there's a lot of pink."
+  - say: player
+    text: "There's a lot of pink."
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "He's wrong in the second half. I didn't say. In class. I wouldn't."
+  - say: player
+    text: "And the fourth pen?"
+  - say: yuki
+    expr: embarrassed
+    delivery: soft
+    text: "Yellow. For things I want to ask. I don't— I never ask them. It's mostly for show."
+  - choice:
+      prompt: "She holds the pink pen out, cap first, and then notices she has."
+      options:
+        - text: "Can I borrow the pink?"
+          effects: {affection: {yuki: +1}}
+          steps:
+            - say: yuki
+              expr: shy_smile
+              delivery: soft
+              text: "Y-yes. Yes. The cap sticks. Sorry."
+            - narr: "The cap sticks. You disagree with the author in her pink, in your margin, and she reads it upside down and says nothing, and her ears go the same colour."
+        - text: "I'll stick to one pen."
+          steps:
+            - say: yuki
+              expr: neutral
+              text: "O-okay. That's— one is fine. One is normal."
+            - narr: "She caps the pink and puts it at the end of the row. A minute later it is back in the middle, and she does not seem to have moved it."
+  - narr: "The room does what libraries do. Pages, a chair somewhere, her pen. Then three notes under her breath, and she hears them, because you are here, and stops."
+  - say: yuki
+    expr: embarrassed
+    pose: shy_fidget
+    delivery: soft
+    text: "S-sorry. I did it again."
+  - say: player
+    text: "I said I didn't mind."
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "You did. I'll— okay."
+  - narr: "She goes back to the page. For a while there is nothing. Then three notes, and this time she does not hear them, and you do not tell her."
+  - narr: "At some point the chapter has gone face down on the sill and something smaller has come out of the bag. It has pictures. The light comes down the stacks and ends on her."
+  - cg:
+      id: yuki_s01_cg1
+      shot: pov_medium
+      lighting: day_soft
+      characters:
+        - {id: yuki, pose: sitting_chair, expr: blush, outfit: casual, gaze: at_viewer}
+      note: "The window seat from the other end of it: Yuki with a small book open on her knees, the pink ribbon lit by the window, cardigan sleeves pulled down over both hands; she has just looked up and found him looking."
+  - narr: "She has pulled the sleeves down over her hands. The book is held in cardigan. She reads like that, and does not know it, until she looks up."
+  - say: yuki
+    expr: blush
+    pose: sitting
+    delivery: soft
+    text: "W-what? Is there— is something on my face?"
+  - say: player
+    text: "No."
+  - say: yuki
+    expr: embarrassed
+    delivery: soft
+    text: "Oh. Then— sorry. Okay."
+  - narr: "She does not go back to the page. The sleeves stay where they are. That's new."
+  - cg_end: {transition: dissolve}
+  - choice:
+      prompt: "The ribbon, or the book."
+      options:
+        - text: "Where's the ribbon from?"
+          effects: {affection: {yuki: +1}}
+          steps:
+            - say: yuki
+              expr: surprised
+              delivery: soft
+              text: "The— oh."
+            - narr: "Her hand goes up to it, sleeve and all, to check it is still there."
+            - say: yuki
+              expr: embarrassed
+              delivery: soft
+              text: "I-it's old. It frays and I sew it back. It's the same one. Nobody's— sorry. Is it wrong?"
+            - say: player
+              text: "It's not wrong."
+            - say: yuki
+              expr: blush
+              delivery: soft
+              text: "Oh. O-okay. Okay. I'll leave it, then."
+            - narr: "She leaves it. Her hand stays up by it a while longer, and she does not seem to know."
+        - text: "That's not the chapter."
+          steps:
+            - say: yuki
+              expr: embarrassed
+              text: "N-no. Sorry. It's— I finished. The chapter. So this is the— it's a reward."
+            - say: player
+              text: "A reward."
+            - say: yuki
+              expr: shy_smile
+              delivery: soft
+              text: "One chapter for one chapter. It's a rule. I'm good at rules. Sorry, it has pictures."
+            - say: player
+              text: "Which one's winning?"
+            - say: yuki
+              expr: blush
+              delivery: soft
+              text: "The one with pictures. Please don't tell."
+  - narr: "Somebody turns the green lamps on, and the window goes grey behind her, and neither of you has turned a page in a while."
+  - say: yuki
+    expr: neutral
+    pose: sitting
+    text: "They close the floor at six. I should have said. It goes quickly, up here."
+  - narr: "She packs the pens in their order. The cap of the pink one sticks, and she wins."
+  - say: yuki
+    expr: shy_smile
+    pose: hands_behind
+    delivery: soft
+    text: "I-it's here. The seat. Most days. If you wanted it. You don't have to."
+  - say: player
+    text: "I'd like that."
+  - say: yuki
+    expr: blush
+    pose: turned_away
+    delivery: soft
+    text: "O-okay. Okay. I'll— I'll move the bag."
+  - narr: "There is a second sentence. You can see it. It gets as far as her mouth this time, which is further than the corridor."
+  - exit: yuki
+  - narr: "You take the stairs together. At the bottom she goes through the door first and holds it, and it is the first door she has held for you."
+  - set: {yuki_step: 1}
+next: null

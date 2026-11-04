@@ -1,0 +1,39 @@
+id: hub_w09
+title: Exams
+location: college_library
+time: evening
+present: [yuki]
+outfits: {yuki: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week nine. Exams. The library at night is a whole floor holding its breath, and the green lamps make everyone look like they have been here since the building was built."
+  - narr: "Carrels, pencils, somebody's cough held in. The radiators here are warm for once. It smells of paper, and of the coffee nobody is allowed to have."
+  - narr: "The window seat at the end has Yuki in it, folded small, a timetable spread on her knees. Every hour of the week is a colour. Most of the colours are done."
+  - enter: {char: yuki, pose: sitting, expr: thinking, at: right}
+  - say: yuki
+    expr: surprised
+    delivery: soft
+    text: "Oh. H-hi. Sorry. I'm not in your— this isn't anyone's seat. Sorry."
+  - say: player
+    text: "That's a lot of colours."
+  - say: yuki
+    expr: embarrassed
+    text: "One per subject. And one for sleeping. Green is sleeping. I haven't— there isn't much green."
+  - narr: "There is one square near the bottom with nothing in it but a letter, in pencil, pressed hard and then half rubbed out. The letter is yours."
+  - say: yuki
+    expr: blush
+    pose: shy_fidget
+    delivery: soft
+    text: "That's— that's a space. In case. For revising, if you wanted. If you don't, it's a space. Sorry."
+  - say: player
+    text: "What colour would I be?"
+  - say: yuki
+    expr: shy_smile
+    delivery: soft
+    text: "I hadn't— I didn't decide. Sorry. Not green."
+  - narr: "She goes back to the timetable and hums three notes at it without knowing, and the floor goes on holding its breath around her."
+  - narr: "You leave her the window. On the stairs down, the cold comes up to meet you, and so does the evening, which is the one thing in the building not on anyone's timetable."
+  - exit: yuki
+  - include: hub_choice
+next: hub_w10

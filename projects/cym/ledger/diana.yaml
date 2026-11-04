@@ -1,0 +1,39 @@
+- scene: diana_s01
+  summary: "Diana turns up at 2A off the clock, in the cardigan with her hair down, with two bags of groceries, and will not let him carry one. She cooks at his stove with her sleeves up, asks what he ate (a whole toast) and how he slept (some), and sets out the plan: twenty minutes, then he eats, and a second lot in the fridge for tomorrow. When he gets up for the plates, 'Sit down, my boy' slips out; she turns back to the pan and says the sentence again without it, and he sits, and neither of them heard anything. He asks her to stay and she takes the chair between him and the door, eats, washes up and talks; or he sends her home with the leftovers and she boxes half, leaves two spare boxes on his counter, and watches him eat without eating herself. At the door she checks his phone is charged and tells him she will know whether he ate the second lot."
+  characters:
+    diana:
+      knows: ["he ate a whole toast today and slept 'some'", "whether he asked her to stay (default path) or sent her home with half", "his phone is charged and her number is at the top of it"]
+      hiding: ["that 'my boy' slipped out and that she heard herself (her ears went pink; she carried on)", "that she packed two of everything into the move-in boxes on purpose", "that she brought three boxes, not one (leftovers branch)"]
+      address: "'sweetie', 'honey'; 'my boy' once, by accident, taken back by repeating the sentence without it"
+      relationship: "social worker off the clock in his kitchen; she cooks, he sits where she puts him; both pretending the slip did not happen"
+      outfit: casual
+      last_seen: player_apartment
+  flags_set: {diana_step: 1}
+  affection_delta: {diana: +2}
+  threads: ["diana +2 if he asked her to stay (default path); +1 if he sent her home with the leftovers", "'my boy': said once at the stove, unheard by agreement; he can still hear it", "a second lot in the fridge for tomorrow; she says she will know whether he ate it", "leftovers branch: two empty boxes left on his counter, lids on", "she has still not told him the 'papers' in the box in her office are letters", "he had not seen her hair down before tonight; he has now"]
+- scene: diana_s02
+  summary: "Her office, afternoon; tea whether he wants it or not, and what he had for lunch (most of a sandwich). The box is still in the cupboard in the corner, untouched. She pulls her chair round to his side of the desk and opens the file she is not supposed to open in front of him, to tell him one thing before the police do: years ago his father rang this office with a complaint about the step-mother and the house, and a fortnight later withdrew it; there is one line under that about why, and she will not read it to him because it is his father's line. She lets it sit, shuts the file, and gives him her personal number a second time, on a card from her bag, in the same words as the first time. At the door she fixes a collar that was fine and her hands stay a second too long, her eyes on his, before they go into her pockets. He thanks her for the second card and rings it from the stairs to prove it works, or asks why she keeps giving it to him ('the first came out of a folder; this one came out of my bag'). She tells him she will be in the car for the interview; he does not walk into anywhere on his own."
+  characters:
+    diana:
+      knows: ["he had most of a sandwich for lunch", "he looked at the cupboard with the box in it", "he asked whether his father meant the complaint", "whether he thanked her for the second card (default path) or asked why she keeps giving it to him", "thank branch: he rang her personal number from the stairs and she picked up"]
+      hiding: ["the one line under the withdrawal and what it says", "that the hands at his collar stayed on purpose", "why the second card ('the whole answer, just not all of it out loud')", "that she has read the file more than once", "that the 'papers' in the box are letters"]
+      address: "'sweetie', 'honey'; 'Here's what's going to happen'; the personal-number line repeated word for word"
+      relationship: "social worker telling him more than she should, on purpose; the first touch that stayed too long, un-named by both"
+      outfit: office
+      last_seen: diana_office
+  flags_set: {diana_step: 2}
+  affection_delta: {diana: +1}
+  threads: ["diana +1 on either option", "the father's complaint: to Diana's office, years ago, about the step-mother and the house; withdrawn a fortnight later; one line under it that Diana will not read him", "the police have a copy and will ask him about it at the interview", "two cards with her personal number in his wallet, the second from her bag", "she will be in the car for the interview; he does not walk in anywhere alone", "the collar: a second too long, then hands in pockets; neither said anything"]
+- scene: diana_s03
+  summary: "She drives him to the police interview with one hand on the gearstick, lays out what will happen ('I don't remember' is an answer; if they ask about the complaint, his social worker told him), makes him take a banana, and waits in the car park with the engine off. The interview is an hour and ten minutes off-screen; he says 'I don't remember' nine times and it is true each time. Back in the car his hands start shaking; she comes across the handbrake and holds him until they stop, and does not let go when they do; then tea with sugar from a thermos. She drives back along the river, stops where the road runs out with the engine running, and tells him flat: six homes, four fine, two not, nobody came back to check on the two except one woman who turned up on a day she was not due and did not leave; she kept coming back, so Diana became one. He asks whether the scar under her eye was one of the two (the second; the rest not in a car), or says not today (ask when ready; she will tell him then, not before and not after). 'You did the hard one today. The rest of them are mine.' She waits until he is inside before driving off."
+  characters:
+    diana:
+      knows: ["he said 'I don't remember' nine times; the police wrote down that his social worker told him about the complaint", "his hands shook after, and she held him until they stopped and after", "he asked how she knows what to say, after", "whether he asked about the scar (default path) or said not today"]
+      hiding: ["the order of the six homes", "the rest of the scars (which is which; her back)", "that she did not let go when his hands stopped on purpose, and that he let her"]
+      address: "'sweetie', 'honey'; 'I've got you'; her own story told flat, to the windscreen"
+      relationship: "she has held him for the first time and told him the one thing about herself nobody at the college or in the building knows; 'the rest of them are mine'"
+      outfit: office
+      last_seen: river_path
+  flags_set: {diana_step: 3}
+  affection_delta: {diana: +1}
+  threads: ["diana +1 on either option", "about her: six foster homes, two bad, one worker who came back on a day she was not due; why she does the job; 'now you know why I'm always in your kitchen'", "scar branch: the cheek scar is from the second bad home; 'the rest' (her back) she will tell him, not in a car", "not-today branch: she will tell him when he asks, 'not before, and not after'", "the police have his statement with nine holes in it; the complaint is on the record as told to him by his social worker", "the thermos of sugared tea went upstairs with him"]

@@ -1,0 +1,30 @@
+id: hub_w05
+title: Week five
+location: college_corridor
+time: evening
+present: [victoria]
+outfits: {victoria: professor}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Week five. The old block at dusk, and the radiators ticking as they cool, which is the sound of the building telling everyone to go home."
+  - narr: "The noticeboards have grown a second layer. Somebody's cat. A room to let. Her reading list, with next week's chapter underlined, and you have not started it."
+  - narr: "You stand in front of it the way you stand in front of the fridge. The chapter does not get shorter."
+  - narr: "Heels on stone. You know the sound before you turn, and you turn anyway."
+  - enter: {char: victoria, pose: idle, expr: neutral, at: center}
+  - narr: "An armful of books, her coat buttoned to the throat. She does not slow down. She looks at you, and then at the board, and then at you."
+  - say: victoria
+    expr: neutral
+    text: "Boy."
+  - narr: "That is all. It is, somehow, a whole sentence. It has the chapter in it, and the seat, and the fact that she did not stop."
+  - say: player
+    text: "Professor."
+  - say: victoria
+    expr: smug
+    delivery: teasing
+    text: "Page sixty. Before the seminar. I shall know whether you have, and so, I think, will you."
+  - exit: victoria
+  - narr: "The doors at the end swing and settle. The radiators tick. The chapter is still on the board, underlined, and will still be there tomorrow, which is the kindest thing about paper."
+  - narr: "Outside, the stone steps are going blue. Down the hill, the building with its windows; across the street, the laundrette's light; somewhere, a kettle on. Evening."
+  - include: hub_choice
+next: hub_w06
