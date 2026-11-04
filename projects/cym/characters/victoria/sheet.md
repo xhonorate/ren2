@@ -30,7 +30,7 @@ Teaches the seminar he and Yuki share. He is a new face, quiet and late with the
 Wants him: to own, to tend, to direct. Fears being left, failing, losing her grip, going somewhere she cannot come back from.
 
 ## Route arc hooks
-(filled by /vn-arcs)
+Hub-calendar route, 5 spokes + ending (arcs.md). Her piece: she knew his mother; she finds her and arranges the meeting unasked. The arc is control admitting it can wait.
 
 ## Boundaries
 The yandere edge is possessiveness, never violence toward him. Rating notes: kinky, dominant femdom per `nsfw.txt`; anything non-consent-flavoured in her list is roleplay the two of them have agreed, and the brief says so.

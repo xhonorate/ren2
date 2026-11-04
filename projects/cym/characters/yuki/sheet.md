@@ -21,7 +21,7 @@ She sat next to him on his first day because the seat was empty, and has been wo
   3. "Could we walk the long way? I don't mind. If you don't."
 
 ## Backstory
-Aged out of foster care at eighteen; Diana was the one who got her the room in Bella's building and the college place, and still checks on her. The first year went by with excellent marks and no one to tell. Cosplays at conventions where nobody knows her, which is the point.
+Aged out of foster care this summer; Diana was the one who got her the room in Bella's building and the college place, and still checks on her. The first weeks of term have gone by with excellent marks and no one to tell. Cosplays at conventions where nobody knows her, which is the point.
 
 ## Relationship to the player at start
 Classmate in Victoria's seminar; lives in 3C, upstairs. One of the first people he met at college; they walk to class together, study together, and she has a crush she thinks is invisible.
@@ -30,7 +30,7 @@ Classmate in Victoria's seminar; lives in 3C, upstairs. One of the first people 
 Wants to get closer to him, to say what she means, to be loved; someday a house and children. Fears rejection, public speaking, being awkward, being judged for what she wants.
 
 ## Route arc hooks
-(filled by /vn-arcs)
+Hub-calendar route, 5 spokes + ending (arcs.md). Her piece: what Diana did for her. The arc is the second sentence, from the library to the seminar platform.
 
 ## Boundaries
 Never cruel. Rating notes: loving, inexperienced femdom that needs reassurance; explicit content per `nsfw.txt`; anything rough or non-consent-flavoured in her list is negotiated roleplay between the two of them, and the brief says so.

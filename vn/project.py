@@ -9,7 +9,7 @@ from typing import Any, Optional
 import yaml
 from pydantic import ValidationError
 
-from .schema import (CG, Affection, Appearance, CGEnd, Choice, Enter, Exit, If, Jump, Narr, Nsfw, Outline, Say,
+from .schema import (CG, Affection, Appearance, Call, CGEnd, Choice, Enter, Exit, If, Jump, Narr, Nsfw, Outline, Say,
                      Scene, SceneError, SetFlags, Stage, Step, compile_condition, condition_refs, parse_steps, walk)
 from .vocab import Vocab
 
@@ -118,15 +118,18 @@ class Project:
         return m.group(1) if m else "sfw"
 
     def ledger_for(self, scene_id: str) -> list[dict[str, Any]]:
-        """Ledger entries along the default path up to (not including) scene_id."""
+        """Ledger entries the writer of scene_id may rely on: every scene that
+        precedes it in outline order and is either common or on the same route.
+        Other routes' scenes are path-dependent (DESIGN.md §6) and left out."""
         by_id = self.outline.by_id()
+        target = by_id.get(scene_id)
+        route = target.route if target else "common"
         order: list[str] = []
-        seen = set()
-        cur: Optional[str] = self.outline.start
-        while cur and cur not in seen and cur != scene_id and cur in by_id:
-            seen.add(cur)
-            order.append(cur)
-            cur = by_id[cur].next
+        for o in self.outline.scenes:
+            if o.id == scene_id:
+                break
+            if o.route == "common" or o.route == route:
+                order.append(o.id)
         entries = {e["scene"]: e for e in self.ledger if isinstance(e, dict) and "scene" in e}
         return [entries[s] for s in order if s in entries]
 
@@ -427,6 +430,13 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
             elif isinstance(s, Jump):
                 if s.target not in by_id:
                     errs.append(f"{w}: jump target {s.target} does not exist")
+            elif isinstance(s, Call):
+                if s.target not in by_id:
+                    errs.append(f"{w}: call target {s.target} does not exist")
+                else:
+                    tgt = scenes.get(s.target)
+                    if (tgt.next if tgt else by_id[s.target].next):
+                        errs.append(f"{w}: called scene {s.target} has 'next'; a called scene must end with next: null so it returns")
         if open_cg:
             errs.append(f"{where}: scene ends with a cg still showing (missing cg_end)")
         if sc.next and sc.next not in by_id:
@@ -503,7 +513,7 @@ def _reachable(p: Project, scenes: dict[str, Scene]) -> set[str]:
             if sc.next:
                 stack.append(sc.next)
             for s in walk(sc.steps):
-                if isinstance(s, Jump):
+                if isinstance(s, (Jump, Call)):
                     stack.append(s.target)
                 elif isinstance(s, Choice):
                     stack += [o.goto for o in s.options if o.goto]

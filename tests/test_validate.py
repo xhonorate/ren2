@@ -182,3 +182,53 @@ next: c01_s02
     assert 'renpy.input("What is your name?", default="Kai"' in (tmp_path / "o" / "game" / "script.rpy").read_text()
     line = p.lines(p.load_scene("c01_s01"))[0]
     assert line["has_player_name"] and line["tts_text"] == "Hello. You came."
+
+
+def test_call_step_compiles_and_requires_returning_scene(tmp_path):
+    root = copy_demo(tmp_path)
+    o = yaml.safe_load((root / "outline.yaml").read_text())
+    o["flags"]["mira_step"] = 0
+    o["scenes"].append({"id": "mira_spoke", "route": "mira", "location": "mira_stall", "time": "night", "present": ["mira"]})
+    (root / "outline.yaml").write_text(yaml.safe_dump(o, sort_keys=False))
+    write_scene(root, "mira_spoke", """
+id: mira_spoke
+location: mira_stall
+time: night
+present: [mira]
+steps:
+  - say: mira
+    expr: smile
+    text: "Back again."
+  - set: {mira_step: 1}
+next: null
+""")
+    write_scene(root, "c01_s01", """
+id: c01_s01
+location: campus_gate
+time: evening
+present: []
+steps:
+  - choice:
+      prompt: "Tonight."
+      options:
+        - text: "The stall."
+          steps:
+            - if: "flags.mira_step == 0"
+              then: [{call: mira_spoke}]
+        - text: "Home."
+next: c01_s02
+""")
+    assert errors(root) == []
+    build(Project.load(root), tmp_path / "o")
+    rpy = (tmp_path / "o" / "game" / "scenes" / "c01_s01.rpy").read_text()
+    assert "call scene_mira_spoke" in rpy
+    # a called scene with next: is an error
+    write_scene(root, "mira_spoke", (root / "scenes" / "mira_spoke.yaml").read_text().replace("next: null", "next: c01_s02"))
+    assert any("must end with next: null" in e for e in errors(root))
+
+
+def test_ledger_follows_outline_order_and_route():
+    p = Project.load(DEMO)
+    # mira's route scene sees the common scenes, not ren's
+    ids = [e["scene"] for e in p.ledger_for("c02_mira_s01")]
+    assert ids == ["c01_s01"]

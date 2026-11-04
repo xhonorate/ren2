@@ -30,7 +30,7 @@ His assigned therapist, weekly sessions arranged by Diana. Professional and care
 Wants to help him, to be trusted, to feel something fully and give it. Fears breaking the rules, being found cold, and intimacy, which she wants more than anything.
 
 ## Route arc hooks
-(filled by /vn-arcs)
+Hub-calendar route, 5 spokes + ending (arcs.md). Her pieces: the memory of the letters (spoke 3) and the stairs (spoke 5); she refers him on so she can stay. Ending: the letter to his mother and its reply.
 
 ## Boundaries
 Never mocking; never pushes him to talk about the abuse before he chooses to. Rating notes: gentle, loving mommy-domme in the soothing register; explicit content per `nsfw.txt`; she asks, he answers.

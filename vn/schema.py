@@ -208,11 +208,18 @@ class Jump:
 
 
 @dataclass
+class Call:
+    """Run another scene and come back (Ren'Py `call`). The called scene must
+    end without `next`, so its `return` lands here. Hub calendars use this."""
+    target: str
+
+
+@dataclass
 class Pause:
     seconds: float = 0.5
 
 
-Step = Union[Narr, Say, Stage, Enter, Exit, SetFlags, Affection, CG, CGEnd, Choice, If, Nsfw, Jump, Pause]
+Step = Union[Narr, Say, Stage, Enter, Exit, SetFlags, Affection, CG, CGEnd, Choice, If, Nsfw, Jump, Call, Pause]
 
 
 class SceneError(ValueError):
@@ -220,7 +227,7 @@ class SceneError(ValueError):
 
 
 STEP_KINDS = {"narr", "say", "stage", "enter", "exit", "set", "affection", "cg", "cg_end",
-              "choice", "if", "nsfw", "jump", "pause"}
+              "choice", "if", "nsfw", "jump", "call", "pause"}
 
 
 def _delta(v: Any) -> int:
@@ -353,6 +360,9 @@ def parse_step(d: Any, where: str) -> Step:
     if kind == "jump":
         only(set())
         return Jump(target=str(v))
+    if kind == "call":
+        only(set())
+        return Call(target=str(v))
     if kind == "pause":
         only(set())
         return Pause(seconds=float(v or 0.5))

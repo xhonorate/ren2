@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Optional
 
 from .project import SPECIAL_SPEAKERS, Project
-from .schema import (CG, Affection, CGEnd, Choice, Enter, Exit, If, Jump, Narr, Nsfw, Pause, Say,
+from .schema import (CG, Affection, Call, CGEnd, Choice, Enter, Exit, If, Jump, Narr, Nsfw, Pause, Say,
                      Scene, SetFlags, Stage, Step, compile_condition)
 
 IND = "    "
@@ -316,6 +316,12 @@ class Compiler:
                 self._emit_steps(out, st, fill, sc)
         elif isinstance(s, Jump):
             out.append(f"jump scene_{ident(s.target)}")
+        elif isinstance(s, Call):
+            out.append(f"call scene_{ident(s.target)}")
+            # the called scene may have changed the stage; put ours back
+            self._emit_bg(out, st, "dissolve")
+            for cid, sp in list(st.sprites.items()):
+                self._show(out, st, cid, sp.pose, sp.expr, sp.at)
         elif isinstance(s, Pause):
             out.append(f"pause {s.seconds}")
         else:

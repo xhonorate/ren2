@@ -238,6 +238,7 @@ steps:
     else: [ ... ]
   - nsfw: {ref: c01_s03.1}       # §7: expands to the fill file's steps at build time
   - jump: c01_s04
+  - call: alice_s02      # run another scene and come back; it must have next: null
 next: c01_s04
 ```
 
@@ -280,8 +281,11 @@ story order, recording end-of-scene state so the next writer sees it.
   threads: ["the scar question is still open"]   # unresolved hooks
 ```
 
-For `branching` projects (§8) entries carry `branch:` and the context pack
-assembles the ledger along the path that reaches the scene.
+The pack for a scene includes the entries of every scene that precedes it
+in outline order and is common or on the same route; other routes' scenes
+are path-dependent and never assumed. Spokes therefore must not depend on
+another route's events. For `branching` projects (§8) entries may carry
+`branch:` and the pack follows the path that reaches the scene.
 
 ## 7. Explicit scenes
 
@@ -316,11 +320,18 @@ three; what changes is the outline shape and how the ledger is assembled.
 
 - **linear**: `next` chains; choices are flavour only (no `goto`, effects
   limited to `affection` which may colour lines but never gates scenes).
-- **routes** (default): a common route, then a route lock at a chosen scene
-  (`choice` whose options `goto` each character's first route scene,
-  gated by affection thresholds), then per-character chains with a few
-  affection-gated `if`s and 2–3 endings. Whether routes are exclusive is a
-  premise decision; the outline encodes it with `requires`.
+- **routes** (default): a common route, then either
+  - *exclusive*: a route lock (`choice` whose options `goto` each
+    character's first route scene, gated by affection), then per-character
+    chains with a few affection-gated `if`s and 2–3 endings; or
+  - *hub calendar* (the "middle ground"): a chain of hub scenes (one per
+    week), each ending in a `choice` of whose evening it is; each option
+    `call`s that route's next spoke (an `if` ladder on `flags.<id>_step`),
+    the spoke sets its step flag and ends with `next: null` so it returns
+    to the hub, and the hub's `next` is the next week. Routes progress in
+    parallel; a late lock scene offers an ending for each route whose step
+    flag reached the end. Spokes are written week-agnostic; the hubs carry
+    the season.
 - **branching**: `goto` and `requires` anywhere. To keep continuity
   tractable the rule is *bounded divergence*: a branch must rejoin the
   spine within N scenes (default 3) or end the game. The validator reports
