@@ -1,0 +1,18 @@
+id: bella
+display_name: Bella
+age: 32
+base_tags: "1girl, blonde hair, ponytail, amber eyes, sharp eyes, angular face, olive skin, tan, tanlines, tall, lean, athletic, toned, medium breasts"
+marks:
+  - {what: "black rose tattoo", where: "outer left thigh", tags: "rose tattoo on thigh"}
+  - {what: "mole", where: "below the left corner of the mouth", tags: "mole under mouth"}
+  - {what: "toe ring and white painted toenails", where: "right foot", tags: "toe ring, white nail polish"}
+outfits:
+  casual: {tags: "red tank top, short black skirt, white thigh-high socks, black sneakers", description: "around the building"}
+  gym: {tags: "white sports bra, black bike shorts, white ankle socks, white sneakers", description: "mornings"}
+  office: {tags: "black blouse, grey trousers, reading glasses on head, hair in ponytail", description: "doing the books"}
+default_outfit: casual
+style_tags: "anime screencap, flat color"
+negative_tags: "pubic hair"
+lora: null
+color: "#ffd27a"
+nsfw_source: nsfw.txt

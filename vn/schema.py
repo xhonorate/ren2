@@ -48,6 +48,7 @@ class Appearance(BaseModel):
     negative_tags: str = ""
     lora: Optional[LoraRef] = None
     color: Optional[str] = None          # name colour in the text box, "#rrggbb"
+    nsfw_source: Optional[str] = None    # file in the character dir with the human's own explicit notes/tags
 
     @field_validator("age")
     @classmethod

@@ -1,0 +1,18 @@
+id: diana
+display_name: Diana
+age: 45
+base_tags: "1girl, mature female, dark brown hair, hime cut, long hair, pale grey eyes, wide eyes, tall, curvy, thick thighs, fair skin, freckles"
+marks:
+  - {what: "thin scar", where: "left cheek, below the eye", tags: "scar on cheek"}
+  - {what: "freckles", where: "across both shoulders", tags: "freckled shoulders"}
+  - {what: "old scars", where: "across the back (visible only with the back bare)", tags: "scars on back"}
+outfits:
+  office: {tags: "charcoal business suit, black blazer, white collared shirt, black pencil skirt, sheer black pantyhose, black high heels", description: "work suit, heels"}
+  casual: {tags: "cream cardigan, dark jeans, flat shoes, hair down", description: "home visits, off the clock"}
+  cocktail: {tags: "black short-sleeve cocktail dress, knee-length dress, black heels", description: "the one dress she owns"}
+default_outfit: office
+style_tags: "anime screencap, flat color"
+negative_tags: "younger, teen"
+lora: null
+color: "#d8a6ff"
+nsfw_source: nsfw.txt

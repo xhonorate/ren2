@@ -1,0 +1,17 @@
+id: victoria
+display_name: Victoria
+age: 42
+base_tags: "1girl, mature female, purple hair, long hair, straight hair, violet eyes, rectangular glasses, elegant, refined, fair skin, tall, slender, medium breasts, earrings, necklace"
+marks:
+  - {what: "mole", where: "under the right eye", tags: "mole under eye"}
+  - {what: "rectangular glasses", where: "always, except the swimsuit", tags: "rectangular eyewear"}
+outfits:
+  professor: {tags: "black blazer, white collared shirt, black pencil skirt, knee-length skirt, black sheer pantyhose, black high heels", description: "lecturing"}
+  evening: {tags: "silk blouse, dark trousers, glasses, hair loose, bare feet", description: "at home, reading"}
+  swimsuit: {tags: "blue bikini, string bikini, side-tie bikini bottom, bare shoulders, sandals", description: "the one weekend"}
+default_outfit: professor
+style_tags: "anime screencap, flat color"
+negative_tags: "younger, teen, loli"
+lora: null
+color: "#c9a7ff"
+nsfw_source: nsfw.txt

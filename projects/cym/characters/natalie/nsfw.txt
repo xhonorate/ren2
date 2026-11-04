@@ -1,0 +1,41 @@
+# The human's own notes for this character, copied verbatim from the original CYM project.
+# Claude does not write or edit this file. The runner appends it to explicit-scene prompts
+# and merges its hidden/nude tags into explicit CG jobs (DESIGN.md §3.5).
+
+========================================================================
+Natalie  (id=natalie, age=34, gender=female, player=False)
+========================================================================
+APPEARANCE
+  hair_color: white
+  hair_style: short bob
+  eye_color: blue
+  eye_quality: sleepy
+  face: soft, gentle
+  skin_tone: brown
+  build: curvy
+  height: average (160-170cm)
+  bust: medium
+  butt: round
+  rest_expression: tired
+  posture: arms crossed
+  accessories: thigh garter
+  distinguishing: shaved vagina, custom 2, custom 3
+OUTFITS (default=nurse)
+  [none] None: nude
+      negative: clothes, clothing
+  [nurse] Nurse: nurse, white nurse cap, red cross print, white nurse dress, short sleeves, knee-length dress, white pantyhose, white nurse shoes, white medical gloves
+      hidden_marks: shaved vagina, custom 2, custom 3
+      hidden_accessories: thigh garter
+  [casual] Casual: blue denim short shorts, white crop-top, flip flops, g-string panties
+      hidden_marks: shaved vagina, custom 2, custom 3
+      hidden_accessories: thigh garter
+PERSONALITY
+  summary: Procedural. Clinical. Tired. Disinterested. Cares about patients, but is overworked.
+  speech_style: Lazy, blunt, clinical
+  speech_register: blunt / clipped
+  wants: To get through her job as quickly and efficiently as possible. Stress relief. Simple, casual love.
+  fears: Never having time to date. Losing her job. Failing to meet her patients’ needs.
+  relationship_to_player: {player}’s nurse, who took care of him at the hospital, and now makes house calls to his apartment to check on his recovery progress.
+  likes: Good patients
+  dislikes: Wasting time
+  nsfw: Very dominant/domineering, procedural/clinical. Femdom. She will talk very matter-of-factly, sometimes almost bored. Her goal is to make the Player cum as quickly and efficiently as possible, and will get annoyed if he is taking too long. She will use her body in various ways to accelerate the process by providing more stimulation. Will often use clinical terms like “penis” or “intercourse” over words like “cock” or “sex”. Likes to make the player call her “mommy” and lightly tease/humiliate them.

@@ -1,0 +1,314 @@
+========================================================================
+You  (id=you, age=21, gender=male, player=True)
+========================================================================
+APPEARANCE
+  hair_color: dark brown
+  hair_style: messy short
+  eye_color: blue
+  eye_quality: gentle
+  skin_tone: fair
+  build: average
+  height: average (160-170cm)
+  rest_expression: flat, unreadable
+PERSONALITY
+  summary: Average guy
+
+========================================================================
+Claire  (id=claire, age=26, gender=female, player=False)
+========================================================================
+APPEARANCE
+  hair_color: green
+  hair_style: braided
+  eye_color: brown
+  eye_quality: glasses
+  face: round
+  skin_tone: pale
+  build: curvy
+  height: average (160-170cm)
+  bust: large
+  butt: average
+  rest_expression: faint smile
+  posture: arms crossed
+  accessories: choker, glasses, earrings, navel piercing, lip ring, nose ring, silver bar nipple piercings, silver stud tongue piercing, nipple piercings
+  distinguishing: freckles, Goth makeup, succubus tattoo on stomach, medusa tattoo on left shoulder, snake tattoos on left arm, red rose tattoo on right shoulder, black spiky vines tattoo on right arm, gluteal fold, back tattoo
+  negatives: vines, ugly
+OUTFITS (default=goth)
+  [goth] Goth: gothic fashion, black gothic dress, long sleeves, lace trim, floor-length skirt, black choker, black fingerless gloves, dark red lipstick, black platform boots
+      hidden_marks: shaved vagina, stomach tattoo, succubus tattoo on stomach, medusa tattoo on left shoulder, red rose tattoo on right shoulder, Tattoo of bleeding with wings on back
+      hidden_accessories: navel piercing, nipple piercings, tongue piercing, silver stud tongue piercing, silver bar nipple piercings
+  [none] None: nude
+      negative: clothes, clothing
+      hidden_accessories: tongue piercing, silver stud tongue piercing, choker
+  [witch] Witch: wide-brim witch hat, black witch robe, long sleeves, floor-length robe, tattered cape, thigh-high boots
+      hidden_marks: shaved vagina
+      hidden_accessories: tongue piercing, nipple piercings, navel piercing, nose piercing, lip piercing, silver stud tongue piercing, silver bar nipple piercings
+PERSONALITY
+  summary: Kuudere. Intelligent. good listener. Empathetic. Goth. Cares deeply, but tries to stay professional. Deeply loving.
+  speech_style: Flat, but kind and understanding.
+  speech_register: formal / polite
+  wants: To help her patients. To share emotional connections. To feel deep emotions. To take care of people. 
+  fears: Failure. Getting in trouble or breaking the rules. Worries that she is too cold to people in order to keep her distance. Scared of intimacy, but deeply craves it.
+  relationship_to_player: {player}’s therapist who was assigned to help him deal with the trauma of his step-mom’s past abuse 
+  loves: Being trusted.
+  likes: Helping people
+  dislikes: Bullies
+  background: Just recently started as a therapist after college. Has a history of depression, which inspired her to study psychology and increased her empathy. Was always a goth in school and got bullied for it, making her more reserved and closed off with her feelings.
+  nsfw: Caring. Loving. Gentle. Understanding. Wants the player to feel as much love and intimacy as possible. Will always speak soothingly and lovingly, mixed with motherly/maternal feelings. Wants to fill the hole in the Player’s heart of missing his mother and repair his mommy issues and oedipus complex by taking on the surrogate motherly role during sexual encounters. Example dialog: “It’s okay, baby, let it all out for mama.”, “You can call me “Mommy”, baby. I know that gets you all excited.”, “Good boy. Now, I want you to think of your real mom while you suckle my breasts. Imagine you are drinking your mother’s milk like when you were a baby.”, “Mommy loves you SO MUCH, {player}. Fuck your love right into Mommy’s pussy!”
+Fetishes: breast sucking, breastfeeding, handjobs, ageplay, roleplay, incest, nursing handjobs, nursing sex.
+
+========================================================================
+Victoria  (id=ms_victoria, age=42, gender=female, player=False)
+========================================================================
+APPEARANCE
+  hair_color: purple
+  hair_style: long and straight
+  eye_color: violet
+  eye_quality: glasses
+  face: elegant, refined
+  skin_tone: fair
+  build: average
+  height: tall (175cm+)
+  bust: medium
+  butt: average
+  rest_expression: faint smile
+  posture: upright, formal
+  accessories: glasses, earrings, necklace
+  distinguishing: Labia, mole under eye, milf, cleavage, public hair
+  negatives: Loli, Younger
+OUTFITS (default=professor)
+  [professor] Professor: black blazer, white collared shirt, black pencil skirt, knee-length skirt, rectangular glasses, black sheer pantyhose, black high heels
+      hidden_marks: Outie vagina, Landing strip, public hair, Labia
+  [none] None: nude
+      negative: clothes, clothing
+  [swimsuit] Swimsuit: blue bikini, string bikini, side-tie bikini bottom, bare shoulders, sandals, camel toe
+      negative: one-piece swimsuit
+      hidden_marks: Outie vagina, Labia, public hair
+      hidden_accessories: glasses, earrings, necklace
+PERSONALITY
+  summary: Strict. Dominant. Intelligent. Flirty. Teasing. Instructional. Controlling. Secretly Yandere. Hard working. Potentially obsessive and crazy.
+  speech_style: Intelligent, flirtatious, knowing 
+  speech_register: archaic / literary
+  wants: {player}. secretly wants to own {player} in every way, take care of him and control him. 
+  fears: Someone stealing her lover. Failure. Going crazy. Losing {player}.
+  relationship_to_player: Woman’s studies professor at {player}’s school. Teaches {player} and Yuki in class. 
+  loves: {player}, control
+  likes: Good students
+  dislikes: Cheaters
+  background: Has been cheated on multiple times in the past, and has pretty much given up on men. Only wants to be with someone if she can fully own and control them.
+  hobbies: Reading
+  nsfw: Femdom. Crazy. Yandere. Will be extremely kinky with actions and words. Bites, scratches, licks, and sucks all different parts of Player’s body. Likes to dominate and control Player in every way during sex. Very possessive and dominant. Example dialog: “Your mine, all MINE, boy. This cock belongs to Mommy”, “You like that? You like when Mommy rapes your tight little asshole, slut? Take it all! Scream for me while I claim this ass!”, “Aww, poor baby. You want Mommy to make it all better?”, “Lick my asshole, baby! Put your tongue deep inside and taste Mommy’s deepest spots!”
+Fetishes: femdom, pegging, reverse rape, chastity, bdsm, binding/ropes/handcuffs, anal, face sitting 
+
+========================================================================
+Alice  (id=alice, age=36, gender=female, player=False)
+========================================================================
+APPEARANCE
+  hair_color: red
+  hair_style: wavy long
+  eye_color: green
+  eye_quality: gentle
+  face: soft, gentle
+  skin_tone: fair
+  build: plump
+  height: average (160-170cm)
+  bust: huge
+  butt: huge
+  rest_expression: open, warm
+  accessories: earrings, necklace
+  distinguishing: freckles, cellulite, milf, gluteal fold, stretch marks, cleavage, public hair
+  negatives: fat, overweight, younger
+OUTFITS (default=housewife)
+  [none] None: nude
+      negative: clothes, clothing
+      hidden_accessories: earrings, necklace
+  [housewife] Housewife: white lace trim apron, green floral print dress, knee-length dress, short sleeves, low heels, frilly white socks
+      hidden_marks: hairy vagina, stretch marks, subtle stretch marks on thighs and stomach , excess public hair
+  [pajamas] Pajamas: pajamas, loose short-sleeve top, pajama shorts, fuzzy slippers
+      hidden_marks: hairy vagina, stretch marks, subtle stretch marks on thighs and stomach , excess public hair
+      hidden_accessories: earrings, necklace
+  [maid] Maid: maid, white frilled headdress, black maid dress, long sleeves, knee-length dress, white frilled apron, white thighhighs, black mary janes
+      hidden_marks: hairy vagina, subtle stretch marks on thighs and stomach , excess public hair
+  [outfit5] Lingerie: Sheer lingerie, Filly black lace panties, black garter belt, exposed breasts 
+PERSONALITY
+  summary: Deredere. Bubbly, sweet, open, loving, maternal, empathetic. 
+  speech_style: Soft warm voice, gentle and inviting.
+  speech_register: casual
+  wants: To be close to {player}. To take care of {player} in every way. To have {player} move in with her. For {player} to treat her like a mother figure.
+  fears: Loneliness. Getting too old. Being unattractive. Being rejected.
+  relationship_to_player: Next door neighbor, met when Player first moved in. She often reaches out to help and take care of him.
+  loves: {player}. Spoiling {player}
+  likes: Cleaning, baking, hugs, cuddles
+  dislikes: Mean people
+  background: Never married, but always wanted children. Works part time as a maid, cleaning many of the apartments in the building.
+  hobbies: Cooking, art
+  nsfw: Gentle femdom / mommy domme. Will infantilize the player with lots of pet names and words of endearment. Uses baby talk. Will dote on and spoil the player, always prioritizing their pleasure over her own. Uses lots of dirty talk, but always with loving/motherly undertones: “That’s Mommy’s good boy, let it all out, sweetheart”, “Come on, baby, let Mommy take care of that aching little cock of yours”, “Spurt it all out while you suckle Mommy’s boobies, little boy~”, etc.
+Fetishes: Incest, Ageplay, Gentle Femdom, Nursing/breastfeeding, freeuse, small penises, anal
+
+========================================================================
+Bella  (id=bella, age=32, gender=female, player=False)
+========================================================================
+APPEARANCE
+  hair_color: blonde
+  hair_style: ponytail
+  eye_color: amber
+  eye_quality: sharp, guarded
+  face: sharp, angular
+  skin_tone: olive
+  build: lean, athletic
+  height: tall (175cm+)
+  bust: medium
+  butt: average
+  rest_expression: guarded
+  accessories: toe ring
+  distinguishing: White painted toenails, tattoo of black rose on left thigh, bikini tan, mole under mouth, tanlines, thigh tattoo
+  negatives: public hair
+OUTFITS (default=outfit3)
+  [none] None: nude
+      negative: clothes, clothing
+  [gym] Gym: gym uniform, white sports bra, black bike shorts, white ankle socks, white sneakers
+      hidden_marks: bald vagina, thigh tattoo, White painted toenails, beauty mark
+      hidden_accessories: toe ring
+  [outfit3] Casual: White Thigh high socks, short black skirt, red tank top, black sneakers
+      hidden_marks: bald vagina, White painted toenails
+      hidden_accessories: anklet, toe ring
+PERSONALITY
+  summary: Tsundere. Abrasive at first, but deep down is actually very caring. Serious. Often stressed. Sometimes mean/cruel. Dominant. Self-confident. Queenly. Sexy.
+  speech_style: Quick and to the point. Piercing. Direct.
+  speech_register: blunt / clipped
+  wants: Money. Good Tenants. To be less stressed. Control. Someone to tease and dominate. Luxuries.
+  fears:  Being poor. Dying alone. Never having children.
+  relationship_to_player: Landlord of the apartment complex. {player} must pay her rent.
+  loves: Sex, control
+  likes: Fitness, money
+  dislikes: Working, Tenants not paying rent
+  background: Inherited the apartment complex from her grandparents and now has to take care of it and collect rent from tenants, which she does not enjoy.
+  hobbies: Exercising
+  nsfw: Hard domme. Will use lots of degrading/humiliating language. Makes fun of the player for being weak, pathetic, having a small penis, wanting to call her Mommy. Likes to make the player do various humiliating acts and then make fun of him for them. Example language: “Look at what position you’re in. Licking my feet where you belong, you little perv.”, “Take your dick out RIGHT NOW, bitch.”, “You like calling me “Mommy”, don’t you? I bet you wish I was your real mom, you little freak. Think about it. Imagine you’re fucking your ACTUAL MOM instead of me.”
+Fetishes: humiliating Player, femdom, footjobs, clothed female nude male, public sex, bdsm, small penis humiliation, feminization.
+
+========================================================================
+Yuki  (id=yuki, age=18, gender=female, player=False)
+========================================================================
+APPEARANCE
+  hair_color: blue
+  hair_style: hime cut
+  eye_color: blue
+  eye_quality: gentle
+  face: cute, youthful
+  skin_tone: fair
+  build: slight
+  height: short (under 155cm)
+  bust: small
+  butt: cute
+  rest_expression: faint smile
+  posture: restless
+  accessories: choker, Pink hair ribbon
+  distinguishing: cleft of venus
+  negatives: public hair, old
+OUTFITS (default=schoolgirl)
+  [schoolgirl] Schoolgirl: school uniform, sailor collar, white sailor shirt, short sleeves, red neckerchief, blue skirt, pleated skirt, navy pleated skirt, knee-length skirt, white knee-high socks, brown loafers
+      hidden_marks: bald vagina, Innie vagina, cleft of venus
+  [none] None: nude
+      negative: clothes, clothing
+      hidden_accessories: Pink hair ribbon
+  [bunny] Bunny Girl: playboy bunny, black bunny suit, detached collar, wrist cuffs, fluffy bunny tail, black pantyhose, black high heels
+      hidden_marks: bald vagina, Innie vagina
+      hidden_accessories: Pink hair ribbon
+  [pajamas] Pajamas: Fluffy pink top, exposed navel, pink frilly pajama shorts, fuzzy white bunny slippers
+      hidden_marks: bald vagina, Innie vagina
+      hidden_accessories: Pink hair ribbon
+  [swimsuit] Swimsuit: Dark blue one-piece swimsuit, bare shoulders, sandals
+      negative: one-piece swimsuit
+      hidden_marks: bald vagina, Innie vagina
+      hidden_accessories: choker, Pink hair ribbon
+PERSONALITY
+  summary: Dandere. Beautiful, but doesn’t know it. Shy. Sweet. Good student. Lonely. Needy. Secretly horny. Submissive in public, but dominant in the bedroom.
+  speech_style: Quiet, soft, gentle. Stuttering. 
+  speech_register: formal / polite
+  wants: To get closer to {player}. To get over her shyness and speak honestly. To be loved and cared for. To do well in school. To be a housewife someday and have children. 
+  fears: Rejection. Public speaking. Being awkward. Bad grades.
+  relationship_to_player: Classmate of {player} who lives in the same apartment building. One of the first people {player} met at school, and they are now friends. They sometimes study together or walk to/from class together. Has a crush on {player} and wants to get closer with him.
+  loves: Sexual fantasies
+  likes: Studying, {player}, hanging out with {player}, playing games
+  dislikes: Bullies, masculine men, being judged
+  background: Nerd. Shy. Never been intimate with anyone. Secretly very perverted, and worried she will scare off a partner.
+  hobbies: Cosplay, masturbation, reading
+  nsfw: Loving femdom. Insecure and unsure about herself (and her body), but really wants to get into femdom. Tries to be dominant, but is inexperienced and often needs reassurance. Example dialog: “I know its weird, but… I’d really like it if you called me m-mommy. I-if thats okay with you!”, “Yes! Fuck me harder! Fuck your new Mommy!”, “I love you so much, {player}.”, “Let Mommy use your beautiful c-cock.”
+Fetishes: bdsm, mommy talk, incest, choking, rape, latex, 69, nipple play, pet play
+
+========================================================================
+Diana  (id=diana, age=45, gender=female, player=False)
+========================================================================
+APPEARANCE
+  hair_color: dark brown
+  hair_style: hime cut
+  eye_color: pale grey
+  eye_quality: wide, open
+  face: mature
+  skin_tone: fair
+  build: curvy
+  height: tall (175cm+)
+  bust: medium
+  butt: round
+  rest_expression: faint smile
+  posture: upright, formal
+  distinguishing: freckles across shoulders, scars all over, scar on cheek, milf, thick thighs, pubic stubble
+  negatives: younger
+OUTFITS (default=office)
+  [office] Office: charcoal business suit, black blazer, white collared shirt, black pencil skirt, knee-length skirt, sheer black pantyhose, black high heels
+      hidden_marks: shaved vagina, freckles across shoulders, many scars on back, many cuts and scars on back, trimmed vagina, scars all over, pubic stubble
+  [none] None: nude
+      negative: clothes, clothing
+      hidden_marks: shaved vagina
+  [waitress] Cocktail dress: black short-sleeve dress, knee-length dress, cocktail dress
+      hidden_marks: pubic stubble
+PERSONALITY
+  summary: Loving. Caring. Motherly. Maternal. Doting. Overprotective. Pampering. 
+  speech_style: Gentle and sweet. Sometimes uses pet names or infantilizes {player}.
+  speech_register: casual
+  wants: To take care of {player}. To spoil {player}. {player} to be happy and safe and loved.
+  fears: {player} getting hurt or being lonely.
+  relationship_to_player: {player}’s social worker, who as assigned to him in the hospital. It’s her job to make sure his life is set up an he is doing okay. She cares a little too much and sometimes oversteps what is required for her position.
+  loves: Children
+  dislikes: Abusers, bad parents
+  background: Grew up in foster care and suffered abuse growing up, leading her to become a social worker to protect young kids in similar situations. Has always been married to her work and never had time for a husband or children, instead she sees her cases like her children.
+  nsfw: Motherly. Mommy domme. Wants Player to think of her as his actual mother, especially during sexual acts. Will emphasize the mother/son roleplay with lots of dirty talk. Examples: “That’s my boy. You can use your Mommy however you like. I’m all yours, sweetie.”, “Fuck the hole you came from!”, “Your cock fits perfectly inside of Mommy, baby boy. I love you so much, my boy. Take your birthright - claim your own mother’s pussy!”
+Fetishes: Incest, breeding, ageplay, watersports, footjobs (w/ nylon stockings and/or high heels), analingus 
+
+========================================================================
+Natalie  (id=natalie, age=34, gender=female, player=False)
+========================================================================
+APPEARANCE
+  hair_color: white
+  hair_style: short bob
+  eye_color: blue
+  eye_quality: sleepy
+  face: soft, gentle
+  skin_tone: brown
+  build: curvy
+  height: average (160-170cm)
+  bust: medium
+  butt: round
+  rest_expression: tired
+  posture: arms crossed
+  accessories: thigh garter
+  distinguishing: shaved vagina, custom 2, custom 3
+OUTFITS (default=nurse)
+  [none] None: nude
+      negative: clothes, clothing
+  [nurse] Nurse: nurse, white nurse cap, red cross print, white nurse dress, short sleeves, knee-length dress, white pantyhose, white nurse shoes, white medical gloves
+      hidden_marks: shaved vagina, custom 2, custom 3
+      hidden_accessories: thigh garter
+  [casual] Casual: blue denim short shorts, white crop-top, flip flops, g-string panties
+      hidden_marks: shaved vagina, custom 2, custom 3
+      hidden_accessories: thigh garter
+PERSONALITY
+  summary: Procedural. Clinical. Tired. Disinterested. Cares about patients, but is overworked.
+  speech_style: Lazy, blunt, clinical
+  speech_register: blunt / clipped
+  wants: To get through her job as quickly and efficiently as possible. Stress relief. Simple, casual love.
+  fears: Never having time to date. Losing her job. Failing to meet her patients’ needs.
+  relationship_to_player: {player}’s nurse, who took care of him at the hospital, and now makes house calls to his apartment to check on his recovery progress.
+  likes: Good patients
+  dislikes: Wasting time
+  nsfw: Very dominant/domineering, procedural/clinical. Femdom. She will talk very matter-of-factly, sometimes almost bored. Her goal is to make the Player cum as quickly and efficiently as possible, and will get annoyed if he is taking too long. She will use her body in various ways to accelerate the process by providing more stimulation. Will often use clinical terms like “penis” or “intercourse” over words like “cock” or “sex”. Likes to make the player call her “mommy” and lightly tease/humiliate them.

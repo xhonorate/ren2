@@ -1,0 +1,15 @@
+id: natalie
+display_name: Natalie
+age: 34
+base_tags: "1girl, white hair, short hair, bob cut, blue eyes, half-closed eyes, sleepy, dark skin, brown skin, soft face, curvy, medium breasts"
+marks:
+  - {what: "thigh garter", where: "right thigh (visible with the nurse dress)", tags: "thigh garter"}
+outfits:
+  nurse: {tags: "nurse, white nurse cap, white nurse dress, short sleeves, knee-length dress, white pantyhose, white shoes, white medical gloves", description: "ward uniform"}
+  casual: {tags: "white crop top, blue denim shorts, flip-flops", description: "day off"}
+default_outfit: nurse
+style_tags: "anime screencap, flat color"
+negative_tags: ""
+lora: null
+color: "#bfe6ff"
+nsfw_source: nsfw.txt

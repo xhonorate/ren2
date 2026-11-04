@@ -113,6 +113,12 @@ negative_tags: ""
 After the canon art is approved, this file is corrected to match the art,
 not the other way round.
 
+`nsfw_source` names a file in the character directory (conventionally
+`nsfw.txt`) holding the human's own explicit notes: kinks, example dialogue,
+nude/hidden tag sets. Claude never writes or edits it; the runner appends
+it to the local model's prompt for explicit fills and to the tag set for
+explicit CG jobs.
+
 ### 3.6 characters/<id>/voice.yaml
 ```yaml
 engine: gptsovits            # per character; see docs/tts.md

@@ -1,0 +1,53 @@
+# The human's own notes for this character, copied verbatim from the original CYM project.
+# Claude does not write or edit this file. The runner appends it to explicit-scene prompts
+# and merges its hidden/nude tags into explicit CG jobs (DESIGN.md §3.5).
+
+========================================================================
+Yuki  (id=yuki, age=18, gender=female, player=False)
+========================================================================
+APPEARANCE
+  hair_color: blue
+  hair_style: hime cut
+  eye_color: blue
+  eye_quality: gentle
+  face: cute, youthful
+  skin_tone: fair
+  build: slight
+  height: short (under 155cm)
+  bust: small
+  butt: cute
+  rest_expression: faint smile
+  posture: restless
+  accessories: choker, Pink hair ribbon
+  distinguishing: cleft of venus
+  negatives: public hair, old
+OUTFITS (default=schoolgirl)
+  [schoolgirl] Schoolgirl: school uniform, sailor collar, white sailor shirt, short sleeves, red neckerchief, blue skirt, pleated skirt, navy pleated skirt, knee-length skirt, white knee-high socks, brown loafers
+      hidden_marks: bald vagina, Innie vagina, cleft of venus
+  [none] None: nude
+      negative: clothes, clothing
+      hidden_accessories: Pink hair ribbon
+  [bunny] Bunny Girl: playboy bunny, black bunny suit, detached collar, wrist cuffs, fluffy bunny tail, black pantyhose, black high heels
+      hidden_marks: bald vagina, Innie vagina
+      hidden_accessories: Pink hair ribbon
+  [pajamas] Pajamas: Fluffy pink top, exposed navel, pink frilly pajama shorts, fuzzy white bunny slippers
+      hidden_marks: bald vagina, Innie vagina
+      hidden_accessories: Pink hair ribbon
+  [swimsuit] Swimsuit: Dark blue one-piece swimsuit, bare shoulders, sandals
+      negative: one-piece swimsuit
+      hidden_marks: bald vagina, Innie vagina
+      hidden_accessories: choker, Pink hair ribbon
+PERSONALITY
+  summary: Dandere. Beautiful, but doesn’t know it. Shy. Sweet. Good student. Lonely. Needy. Secretly horny. Submissive in public, but dominant in the bedroom.
+  speech_style: Quiet, soft, gentle. Stuttering. 
+  speech_register: formal / polite
+  wants: To get closer to {player}. To get over her shyness and speak honestly. To be loved and cared for. To do well in school. To be a housewife someday and have children. 
+  fears: Rejection. Public speaking. Being awkward. Bad grades.
+  relationship_to_player: Classmate of {player} who lives in the same apartment building. One of the first people {player} met at school, and they are now friends. They sometimes study together or walk to/from class together. Has a crush on {player} and wants to get closer with him.
+  loves: Sexual fantasies
+  likes: Studying, {player}, hanging out with {player}, playing games
+  dislikes: Bullies, masculine men, being judged
+  background: Nerd. Shy. Never been intimate with anyone. Secretly very perverted, and worried she will scare off a partner.
+  hobbies: Cosplay, masturbation, reading
+  nsfw: Loving femdom. Insecure and unsure about herself (and her body), but really wants to get into femdom. Tries to be dominant, but is inexperienced and often needs reassurance. Example dialog: “I know its weird, but… I’d really like it if you called me m-mommy. I-if thats okay with you!”, “Yes! Fuck me harder! Fuck your new Mommy!”, “I love you so much, {player}.”, “Let Mommy use your beautiful c-cock.”
+Fetishes: bdsm, mommy talk, incest, choking, rape, latex, 69, nipple play, pet play

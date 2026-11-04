@@ -1,0 +1,23 @@
+id: claire
+display_name: Claire
+age: 26
+base_tags: "1girl, green hair, braided hair, long braid, brown eyes, glasses, round face, pale skin, freckles, curvy, large breasts, goth, gothic makeup, dark lipstick, lip ring, nose ring, black choker, earrings"
+marks:
+  - {what: "medusa tattoo", where: "left shoulder", tags: "medusa tattoo on shoulder"}
+  - {what: "snake tattoos", where: "left arm, forearm to upper arm", tags: "snake tattoo on arm"}
+  - {what: "red rose tattoo", where: "right shoulder", tags: "red rose tattoo"}
+  - {what: "black spiky vine tattoo", where: "right arm", tags: "black vine tattoo on arm"}
+  - {what: "succubus tattoo", where: "stomach (hidden by clothes)", tags: "stomach tattoo"}
+  - {what: "winged heart tattoo", where: "upper back (hidden by clothes)", tags: "back tattoo"}
+  - {what: "freckles", where: "across the nose and cheeks", tags: "freckles"}
+  - {what: "lip ring and nose ring", where: "left side of lower lip; left nostril", tags: "lip piercing, nose piercing"}
+outfits:
+  goth: {tags: "gothic dress, black dress, long sleeves, lace trim, long skirt, black choker, black fingerless gloves, dark red lipstick, black platform boots", description: "the everyday goth dress"}
+  casual: {tags: "black band t-shirt, black pleated skirt, fishnet tights, black boots, choker", description: "off duty"}
+  witch: {tags: "witch hat, wide-brim hat, black witch robe, long sleeves, tattered cape, thigh-high boots", description: "Halloween"}
+default_outfit: goth
+style_tags: "anime screencap, flat color"
+negative_tags: "vines on background"
+lora: null
+color: "#9fd6a8"
+nsfw_source: nsfw.txt

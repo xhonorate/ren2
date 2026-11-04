@@ -1,0 +1,42 @@
+# The human's own notes for this character, copied verbatim from the original CYM project.
+# Claude does not write or edit this file. The runner appends it to explicit-scene prompts
+# and merges its hidden/nude tags into explicit CG jobs (DESIGN.md §3.5).
+
+========================================================================
+Diana  (id=diana, age=45, gender=female, player=False)
+========================================================================
+APPEARANCE
+  hair_color: dark brown
+  hair_style: hime cut
+  eye_color: pale grey
+  eye_quality: wide, open
+  face: mature
+  skin_tone: fair
+  build: curvy
+  height: tall (175cm+)
+  bust: medium
+  butt: round
+  rest_expression: faint smile
+  posture: upright, formal
+  distinguishing: freckles across shoulders, scars all over, scar on cheek, milf, thick thighs, pubic stubble
+  negatives: younger
+OUTFITS (default=office)
+  [office] Office: charcoal business suit, black blazer, white collared shirt, black pencil skirt, knee-length skirt, sheer black pantyhose, black high heels
+      hidden_marks: shaved vagina, freckles across shoulders, many scars on back, many cuts and scars on back, trimmed vagina, scars all over, pubic stubble
+  [none] None: nude
+      negative: clothes, clothing
+      hidden_marks: shaved vagina
+  [waitress] Cocktail dress: black short-sleeve dress, knee-length dress, cocktail dress
+      hidden_marks: pubic stubble
+PERSONALITY
+  summary: Loving. Caring. Motherly. Maternal. Doting. Overprotective. Pampering. 
+  speech_style: Gentle and sweet. Sometimes uses pet names or infantilizes {player}.
+  speech_register: casual
+  wants: To take care of {player}. To spoil {player}. {player} to be happy and safe and loved.
+  fears: {player} getting hurt or being lonely.
+  relationship_to_player: {player}’s social worker, who as assigned to him in the hospital. It’s her job to make sure his life is set up an he is doing okay. She cares a little too much and sometimes oversteps what is required for her position.
+  loves: Children
+  dislikes: Abusers, bad parents
+  background: Grew up in foster care and suffered abuse growing up, leading her to become a social worker to protect young kids in similar situations. Has always been married to her work and never had time for a husband or children, instead she sees her cases like her children.
+  nsfw: Motherly. Mommy domme. Wants Player to think of her as his actual mother, especially during sexual acts. Will emphasize the mother/son roleplay with lots of dirty talk. Examples: “That’s my boy. You can use your Mommy however you like. I’m all yours, sweetie.”, “Fuck the hole you came from!”, “Your cock fits perfectly inside of Mommy, baby boy. I love you so much, my boy. Take your birthright - claim your own mother’s pussy!”
+Fetishes: Incest, breeding, ageplay, watersports, footjobs (w/ nylon stockings and/or high heels), analingus

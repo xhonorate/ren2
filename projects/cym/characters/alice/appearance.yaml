@@ -1,0 +1,18 @@
+id: alice
+display_name: Alice
+age: 36
+base_tags: "1girl, mature female, red hair, long hair, wavy hair, green eyes, soft face, fair skin, freckles, plump, curvy, huge breasts, wide hips, earrings, necklace"
+marks:
+  - {what: "freckles", where: "nose, cheeks and chest", tags: "freckles"}
+  - {what: "faint stretch marks", where: "thighs and stomach (hidden by clothes)", tags: "stretch marks"}
+outfits:
+  housewife: {tags: "green floral print dress, knee-length dress, short sleeves, white lace-trim apron, low heels, frilly white socks", description: "the house dress and apron"}
+  pajamas: {tags: "pajamas, loose short-sleeve top, pajama shorts, fuzzy slippers", description: "late night, next door"}
+  maid: {tags: "maid, white frilled headdress, black maid dress, long sleeves, knee-length dress, white frilled apron, white thighhighs, black mary janes", description: "work uniform for cleaning the building"}
+  lingerie: {tags: "black lace lingerie, black garter belt, stockings", description: "for him"}
+default_outfit: housewife
+style_tags: "anime screencap, flat color"
+negative_tags: "younger, teen"
+lora: null
+color: "#ffb3a7"
+nsfw_source: nsfw.txt

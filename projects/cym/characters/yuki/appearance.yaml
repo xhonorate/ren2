@@ -1,0 +1,18 @@
+id: yuki
+display_name: Yuki
+age: 19
+base_tags: "1girl, blue hair, hime cut, long hair, blue eyes, gentle eyes, fair skin, petite, slim, small breasts, black choker, pink hair ribbon"
+marks:
+  - {what: "pink hair ribbon", where: "left side of the head", tags: "pink hair ribbon"}
+  - {what: "black choker", where: "neck", tags: "black choker"}
+outfits:
+  casual: {tags: "oversized cream cardigan, blue pleated midi skirt, white sneakers, tote bag", description: "campus"}
+  pajamas: {tags: "fluffy pink top, exposed navel, pink frilly pajama shorts, fuzzy white bunny slippers", description: "upstairs, late"}
+  bunny: {tags: "playboy bunny, black bunny suit, detached collar, wrist cuffs, bunny ears, fluffy bunny tail, black pantyhose, black high heels", description: "cosplay"}
+  swimsuit: {tags: "dark blue one-piece swimsuit, bare shoulders, sandals", description: "the pool"}
+default_outfit: casual
+style_tags: "anime screencap, flat color"
+negative_tags: "school uniform, sailor collar, child"
+lora: null
+color: "#a7c8ff"
+nsfw_source: nsfw.txt
