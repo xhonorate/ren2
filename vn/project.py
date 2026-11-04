@@ -237,7 +237,10 @@ class Project:
         parts.append("## Affection going in\n" + ", ".join(f"{k}: {v}" for k, v in state.items()) + "\n")
         prev = self.ledger_for(scene_id)
         if prev:
-            parts.append("## Continuity ledger (previous scenes, oldest first)\n```yaml\n"
+            if len(prev) > 6:
+                parts.append("## Earlier scenes (summaries, oldest first)\n"
+                             + "\n".join(f"- **{e.get('scene')}**: {e.get('summary', '')}" for e in prev[:-6]) + "\n")
+            parts.append("## Continuity ledger (most recent scenes, oldest first)\n```yaml\n"
                          + yaml.safe_dump(prev[-6:], sort_keys=False, allow_unicode=True) + "```\n")
             last = prev[-1]
             parts.append("## Previous scene summary\n" + str(last.get("summary", "")) + "\n")
