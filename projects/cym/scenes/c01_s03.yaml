@@ -1,0 +1,147 @@
+id: c01_s03
+title: Fifty minutes
+location: hospital_room
+time: evening
+present: [claire]
+outfits: {claire: goth}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Evening comes in sideways through the blinds. Down the corridor somebody is watching a quiz show with the sound up."
+  - narr: "Two taps on the door, exact. Then the door opens exactly as far as it needs to."
+  - enter: {char: claire, pose: idle, expr: neutral, at: center}
+  - say: claire
+    expr: neutral
+    text: "Good evening. My name is Claire. I'm the therapist Diana arranged."
+  - say: claire
+    expr: neutral
+    text: "We will meet once a week. The first one is now, if that is acceptable to you."
+  - narr: "Black dress, a long green braid over one shoulder, a ring in her lip. Glasses. She looks at the chair, then at the distance between the chair and the bed."
+  - narr: "She moves the chair. Nobody has moved the chair."
+  - say: player
+    text: "Okay. Yes."
+  - say: claire
+    expr: neutral
+    pose: hands_clasped
+    text: "Thank you."
+  - cg:
+      id: c01_s03_cg1
+      shot: pov_medium
+      lighting: lamp_warm
+      characters:
+        - {id: claire, pose: sitting_chair, expr: neutral, outfit: goth, gaze: at_viewer}
+      note: "The chair pulled close for the first time: Claire sits with her hands folded on a shut notebook, the braid over one shoulder, and waits."
+  - narr: "She sits. A notebook goes on her knee and her hands go on the notebook. She does not open it."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "You don't have to talk today. I would like you to stay the full hour anyway."
+  - cg_end: {transition: dissolve}
+  - say: player
+    text: "I'm in a bed. I can't really go anywhere."
+  - say: claire
+    expr: neutral
+    text: "No. But you could stop listening, and I would rather you didn't. Either is allowed."
+  - narr: "The quiz show gets a wrong answer. Somebody groans at it."
+  - choice:
+      prompt: "An hour is a long time to not talk."
+      options:
+        - text: "What do we do for an hour, then?"
+          steps:
+            - say: claire
+              expr: neutral
+              text: "Whatever you like. Some people sleep. Some people tell me about the ceiling."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "I would not take either personally."
+            - say: player
+              text: "There's a stain. It's shaped like nothing."
+            - say: claire
+              expr: thinking
+              text: "Shaped like nothing. That is more than most people manage in a first session."
+        - text: "I don't know what to say."
+          effects: {affection: {claire: +1}}
+          steps:
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "You don't know what to say. That is a reasonable place to start. Most people start further back than that."
+            - say: player
+              text: "Further back."
+            - say: claire
+              expr: neutral
+              text: "Most people start by telling me they don't need to be here. You skipped that. I noticed."
+        - text: "Is this about the file?"
+          steps:
+            - say: claire
+              expr: serious
+              text: "No. The file is the police. This is about you, and only as much of you as you bring in."
+            - say: claire
+              expr: neutral
+              delivery: soft
+              text: "I know the shape of what happened. I do not know the details, and I will not ask for them."
+  - narr: "A silence, then. She lets it run. It is the first silence in two days that nobody has filled with a question."
+  - narr: "Your hand finds the blanket hem and folds it over. Unfolds it."
+  - say: player
+    text: "There was a box."
+  - narr: "You did not mean to say that."
+  - say: claire
+    expr: neutral
+    text: "A box."
+  - say: player
+    text: "In my father's study. At the back of a cupboard. Letters. My name on every envelope."
+  - say: player
+    text: "I didn't know the handwriting."
+  - narr: "The notebook stays shut on her knee. She has not looked at it once."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "Someone wrote to you for a long time, and you only found out now. That is a great deal to be handed at the back of a cupboard."
+  - say: player
+    text: "And then it stops. Not a gap. A wall."
+  - say: player
+    text: "I keep putting my hand on it."
+  - say: claire
+    expr: serious
+    pose: lean_forward
+    text: "You keep putting your hand on it, and it does not move. That is not a failure. That is what walls are for."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "You remember the box. You do not have to remember the rest tonight."
+  - narr: "Relief, and you are not sure where it came from. The quiz show goes to adverts."
+  - say: player
+    text: "Do I have to talk about the house?"
+  - say: claire
+    expr: neutral
+    pose: hands_clasped
+    text: "No. I am not going to ask you about the house. When you want to tell me, you will, and I will be in the room when you do."
+  - say: claire
+    expr: neutral
+    text: "When they discharge you, we meet at my office instead. Thursdays. Diana has the address."
+  - say: player
+    text: "Thursdays."
+  - say: claire
+    expr: neutral
+    text: "Thursdays. The chairs there are already close. Nobody has to move them."
+  - narr: "The rest of the hour is the ceiling, and the quiz show, and her not writing anything down. It is easier than it should be."
+  - narr: "At seven exactly she stands. She has not looked at a clock. She did not need to."
+  - say: claire
+    expr: neutral
+    pose: idle
+    text: "That is the hour. Thank you for staying it."
+  - say: player
+    text: "I didn't do anything."
+  - say: claire
+    expr: neutral
+    delivery: soft
+    text: "You stayed. That is the thing I asked for, and you did it."
+  - say: claire
+    expr: neutral
+    text: "I am not supposed to say that I looked forward to this. Thursday, then."
+  - narr: "She puts the chair back where it was. Then, after a second, she moves it closer again, and leaves it there."
+  - exit: claire
+  - narr: "The door closes all the way. Hers is the first one that has."
+  - narr: "Weeks later you see the invoice, on Diana's desk. Fifty minutes. The other ten were hers."
+next: c01_s04

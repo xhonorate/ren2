@@ -1,0 +1,166 @@
+id: c01_s05
+title: The empty seat
+location: college_classroom
+time: morning
+present: [yuki, victoria]
+outfits: {yuki: casual, victoria: professor}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "The old block smells of radiators and chalk. The seminar room is a long table under tall windows, and every seat at it is taken but one."
+  - narr: "The one is next to a girl with a pink ribbon in blue hair, who has already decided not to look at you. You can tell by how hard she is doing it."
+  - narr: "You sit. Your pen goes off the table on the way down."
+  - say: yuki
+    expr: embarrassed
+    pose: shy_fidget
+    delivery: soft
+    text: "U-um. You dropped— sorry. Your pen. It's your pen."
+  - say: player
+    text: "Thanks."
+  - narr: "There is a second sentence. You can see her holding it. It does not come."
+  - narr: "She goes back to the chapter and hums under her breath, three notes, and does not know she is doing it."
+  - narr: "The door. Heels, exact, and a silence that starts before she does."
+  - enter: {char: victoria, pose: idle, expr: neutral, at: center}
+  - say: victoria
+    expr: neutral
+    text: "Good morning. We shall begin. Those of you who read the chapter may look at me. The rest may look at the chapter."
+  - narr: "Purple hair, straight; rectangular glasses she looks over rather than through. Nobody looks at the chapter."
+  - cg:
+      id: c01_s05_cg1
+      shot: pov_wide
+      lighting: day_soft
+      characters:
+        - {id: victoria, pose: standing_facing, expr: serious, outfit: professor, gaze: at_viewer}
+      note: "The seminar table from his seat: tall windows, a dozen bent heads, and Victoria at the head of it, looking down its whole length at him."
+  - say: victoria
+    expr: serious
+    text: "Page forty. The author makes a claim. Someone will tell me what it is, and someone else will tell me why it is wrong."
+  - narr: "Silence. The radiator ticks. The chapter came to the ward in a folder with Diana's handwriting on it, and you read it twice because there was nothing else."
+  - cg_end: {transition: dissolve}
+  - choice:
+      prompt: "Page forty. You know the footnote."
+      options:
+        - text: "The footnote says the opposite."
+          effects: {affection: {victoria: +1}}
+          steps:
+            - say: victoria
+              expr: surprised
+              text: "Does it. It does."
+            - say: victoria
+              expr: smug
+              text: "A boy who reads the footnotes. How rare, and how very dangerous."
+        - text: "Let someone else answer."
+          steps:
+            - narr: "Nobody else does. She waits, and the wait gets longer, and it is you who breaks it."
+            - say: player
+              text: "The footnote says the opposite. Sort of."
+            - say: victoria
+              expr: smug
+              text: "Sort of. It says exactly the opposite, and you knew that before you spoke."
+            - say: victoria
+              expr: smug
+              text: "A boy who reads the footnotes. How rare, and how very dangerous."
+        - text: "I've only read this one chapter."
+          steps:
+            - say: victoria
+              expr: neutral
+              text: "Then you have read it better than those who have read six. Page forty. The footnote."
+            - say: player
+              text: "It says the opposite of the claim."
+            - say: victoria
+              expr: smug
+              text: "It does. A boy who reads the footnotes. How rare, and how very dangerous."
+  - say: victoria
+    expr: neutral
+    text: "Boy."
+  - narr: "Not a question. A title, handed down the table; it lands, and it stays."
+  - say: victoria
+    expr: serious
+    pose: pointing
+    text: "You have missed a week. You will not miss another. Why do I say so, when the term has barely begun? Because a week is how long it takes to become a habit."
+  - narr: "Beside you the ribbon dips. The girl under it has gone very still."
+  - say: victoria
+    expr: neutral
+    pose: idle
+    text: "Now. Page forty-one, somebody, and it had better not be him."
+  - narr: "The hour goes. She never touches the whiteboard. She quotes twice and names nobody, and nobody asks."
+  - say: victoria
+    expr: neutral
+    text: "Attention is the rarest and purest form of generosity. Write that down. Do not ask me who said it; find out."
+  - narr: "Chairs. Bags. The room empties in the direction of coffee, and she lets it."
+  - say: victoria
+    expr: smug
+    delivery: soft
+    text: "Boy. Next week, the next chapter. All of it. The footnotes I will take as read."
+  - narr: "At the door she looks back down the table once: at the seat, and then at you in it."
+  - exit: victoria
+  - stage: {location: college_corridor, time: afternoon, transition: dissolve}
+  - narr: "In the corridor the girl with the ribbon is standing by the noticeboards and reading none of them."
+  - say: yuki
+    expr: embarrassed
+    pose: shy_fidget
+    delivery: soft
+    text: "S-sorry. For before. I had a second— it doesn't matter. Sorry."
+  - say: player
+    text: "A second what?"
+  - say: yuki
+    expr: blush
+    text: "Sentence. I'm not good at this part. The talking part. I'm okay at the other parts."
+  - say: player
+    text: "You were humming. In there."
+  - say: yuki
+    expr: surprised
+    delivery: soft
+    text: "I— was I? Sorry. I do that. When I read. Sorry."
+  - say: player
+    text: "I didn't mind."
+  - say: yuki
+    expr: shy_smile
+    text: "Oh."
+  - narr: "She falls in beside you at the stairs, and then at the door, and then at the corner, and says nothing about it. Neither do you."
+  - say: yuki
+    expr: shy_smile
+    pose: hands_behind
+    delivery: soft
+    text: "Could we walk the long way? I don't mind. If you don't."
+  - choice:
+      prompt: "The long way, or the short one."
+      options:
+        - text: "The long way. Sure."
+          effects: {affection: {yuki: +1}}
+          steps:
+            - say: yuki
+              expr: shy_smile
+              delivery: soft
+              text: "O-okay. Okay. It goes past the diner. It smells better."
+            - narr: "The long way is ten minutes longer and she talks for none of them. They are the easiest ten minutes you have had this week."
+        - text: "I'm pretty worn out, actually."
+          steps:
+            - say: yuki
+              expr: worried
+              delivery: soft
+              text: "Oh— sorry. Sorry, of course. The short way. I'll show you, it's— it's shorter."
+            - narr: "She apologises twice more before the corner, for things that are not hers."
+  - stage: {location: building_hall, transition: dissolve}
+  - narr: "Both ways end at the same brick building with the sticking door. She stops on the step like she has been caught at something."
+  - say: player
+    text: "You live here?"
+  - say: yuki
+    expr: embarrassed
+    pose: shy_fidget
+    text: "3C. Upstairs. I'm— that's me. Sorry, I should have said. I heard the stairs yesterday. The boxes."
+  - say: yuki
+    expr: neutral
+    delivery: soft
+    text: "Diana said someone new was coming. She didn't say who. She wouldn't. Sorry."
+  - say: player
+    text: "You know Diana?"
+  - say: yuki
+    expr: blush
+    pose: turned_away
+    delivery: soft
+    text: "She— yes. A bit. She checks. On the building."
+  - narr: "She goes up the extra flight two steps at a time and does not look back until the turn. Then she does."
+  - exit: yuki
+  - narr: "Somewhere above you a door closes, carefully. Then a floorboard. Then three notes of a hum, and she does not know she is doing it."
+next: c01_s06

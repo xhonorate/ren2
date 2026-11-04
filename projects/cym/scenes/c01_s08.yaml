@@ -1,0 +1,147 @@
+id: c01_s08
+title: Two weeks
+location: building_hall
+time: evening
+present: [alice, yuki]
+outfits: {alice: housewife, yuki: casual}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Friday. Two weeks. You come up the stairs without counting them, which is new."
+  - narr: "You know the smells now: the laundrette on the corner, the diner at six, and under all of it the river."
+  - narr: "You know the sounds: the radiator twice, Bella's door, three notes through the ceiling. You have not slept a whole night. You have slept parts of several."
+  - cg:
+      id: c01_s08_cg1
+      shot: establishing
+      lighting: golden_hour
+      characters: []
+      note: "The second-floor landing at the end of the second week: two doors, the window gone gold over the river, a covered plate on the mat outside 2A."
+  - narr: "On the mat outside 2A, a plate under a tea towel. Under the plate, a note."
+  - narr: "The note says: Eat this warm. Knock when the plate's empty. Or don't. Knock. Then a heart, and an A."
+  - cg_end: {transition: dissolve}
+  - narr: "Steps on the stairs below, a pause, the steps again. Yuki comes up with a bag of groceries in each arm and stops on the half-landing."
+  - enter: {char: yuki, pose: idle, expr: surprised, at: right}
+  - say: yuki
+    expr: surprised
+    delivery: soft
+    text: "Oh. H-hello. I didn't— hello."
+  - say: player
+    text: "Let me take one of those."
+  - say: yuki
+    expr: worried
+    pose: shy_fidget
+    text: "N-no. Sorry. No lifting. Alice said. She said it to the whole building. There's a note on the board downstairs."
+  - say: player
+    text: "There's a note?"
+  - say: yuki
+    expr: embarrassed
+    text: "It has a drawing. Of a box. With a line through it. Sorry."
+  - say: player
+    text: "Does Bella know?"
+  - say: yuki
+    expr: embarrassed
+    delivery: soft
+    text: "She took it down. Alice put it back. Twice. Sorry."
+  - narr: "You laugh. It is the first time you have, in this building, and the radiator knocks twice at it."
+  - choice:
+      prompt: "Two bags, two flights, and a note on the board."
+      options:
+        - text: "It's groceries, not boxes."
+          steps:
+            - say: yuki
+              expr: worried
+              delivery: soft
+              text: "I know. I know, sorry. But if you dropped them, and she found out, she'd— I can't. Sorry."
+            - say: yuki
+              expr: shy_smile
+              text: "The door, though. You could get the door. If that's okay."
+            - narr: "You get the door. She goes past with both bags held high, as if the stairs might take them off her."
+        - text: "Okay. Door, then."
+          effects: {affection: {yuki: +1}}
+          steps:
+            - say: yuki
+              expr: shy_smile
+              delivery: soft
+              text: "Thank you. For— thank you."
+            - narr: "You hold the door to the third-floor stairs. She goes past close enough that one bag brushes your sleeve, and apologises to the bag."
+        - text: "Does Alice do this to everyone?"
+          steps:
+            - say: yuki
+              expr: shy_smile
+              text: "Yes. No. Not— not like this. Sorry. I should go up. The milk."
+            - narr: "She goes past with the bags held high, and from the turn she looks back once, and does not say the rest of that."
+  - say: yuki
+    expr: shy_smile
+    pose: hands_behind
+    delivery: soft
+    text: "G-good night. There's a pie on my mat too. She does the whole floor on Fridays. Good night."
+  - exit: yuki
+  - narr: "A door upstairs closes, carefully. The one beside you opens."
+  - enter: {char: alice, pose: hand_wave, expr: smile, at: left}
+  - say: alice
+    expr: smile
+    delivery: excited
+    text: "There he is. Did you find the plate? You found the plate, I can see the plate, you haven't eaten the plate."
+  - say: alice
+    expr: smile
+    pose: hands_clasped
+    text: "It's a pie. A little pie, a one-person pie, I made six. Eat it warm, sweetheart, and then—"
+  - narr: "She stops. Whatever came after then, she puts it away."
+  - say: alice
+    expr: shy_smile
+    delivery: soft
+    text: "Then nothing. Then whatever you like. Mm."
+  - say: player
+    text: "Then nothing?"
+  - say: alice
+    expr: smile
+    delivery: soft
+    text: "Nothing's required, honey. It's Friday. Nobody's coming. No clipboard, no— nobody. Just you and a pie."
+  - say: player
+    text: "What kind?"
+  - say: alice
+    expr: smile
+    text: "Chicken. With the little— yes. The noodles. I know. It's a teeny bit strange and it works, I promise."
+  - narr: "Nothing is required. You wait for the feeling that goes with that. It takes a while, and when it arrives it is lighter than you expected."
+  - choice:
+      prompt: "The note said knock."
+      options:
+        - text: "I'll knock when it's empty."
+          effects: {affection: {alice: +1}}
+          steps:
+            - say: alice
+              expr: grin
+              delivery: excited
+              text: "You'll knock. Okay. Okay! I'll be— I'm just here. I'm always just here. Mm."
+            - say: alice
+              expr: blush
+              pose: shy_fidget
+              text: "That sounded— ignore that. Eat your pie."
+        - text: "I'll just leave it on the mat."
+          steps:
+            - say: alice
+              expr: smile
+              delivery: soft
+              text: "That's fine. That's fine too, sweetheart. The mat's good. The mat's— I'll find it."
+            - narr: "She means it, and she is a little sad, and she does not know the second one shows."
+  - say: alice
+    expr: smile
+    pose: hand_wave
+    text: "If you want company, you know where the wall is. If you don't, I'll be very, very quiet. I'll try."
+  - say: player
+    text: "Alice."
+  - say: alice
+    expr: smile
+    text: "Mm?"
+  - say: player
+    text: "Thank you. For the whole floor."
+  - say: alice
+    expr: blush
+    pose: shy_fidget
+    delivery: soft
+    text: "Oh, hush. Go on. Warm, I said."
+  - exit: alice
+  - narr: "The plate is warm through the towel. The window is gold over the river, and the radiator knocks twice and stops."
+  - narr: "Upstairs, a cupboard. Next door, through a door not quite shut, the hum. Downstairs, Bella's radio, and the front door sticking for somebody else."
+  - narr: "Nothing is required of you. You stand on the landing with a warm plate, and for the first time since the ward, the next hour is nobody's idea but yours."
+next: hub_w03

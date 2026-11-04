@@ -1,0 +1,99 @@
+- scene: c01_s03
+  summary: "Claire's first session, on the ward at six. She moves the chair closer (nobody had), sits with the notebook shut and tells him he does not have to talk but she would like him to stay the hour. He tells her about the box of letters without meaning to, and the wall after it; she restates it back kinder, says he need not remember the rest tonight, and that she will not ask about the house. After discharge the sessions move to her office on Thursdays. She leaves on the hour exactly; weeks later he sees she billed fifty minutes."
+  characters:
+    claire:
+      knows: ["the box of letters in his father's study, his name on every envelope, handwriting he did not know", "after the box there is a wall he keeps putting his hand on", "he did not try to skip therapy; he asked whether he must talk about the house (no)", "the shape of the file from Diana, not the details"]
+      hiding: ["that she billed fifty minutes for the hour", "that she is already invested (she said she looked forward to this, and that she was not supposed to say so)"]
+      address: "no name; 'you'; full even sentences; restates what he said back, kinder"
+      relationship: "his therapist from tonight; weekly, Thursdays at her office after discharge; careful, and already a little past careful (the chair moved closer twice)"
+      outfit: goth
+      last_seen: hospital_room
+  flags_set: {}
+  affection_delta: {}
+  threads: ["claire +1 only if he said 'I don't know what to say'", "Thursdays at her office; Diana has the address; the chairs there are already close", "she will not ask about the house; he will tell her when he wants to", "the chair by the bed now sits closer than it did; she left it there", "the invoice says fifty minutes; the other ten were hers (he learns this weeks later, on Diana's desk)", "he told her about the letters before he told anyone else"]
+- scene: c01_s04
+  summary: "Discharge day; Diana drives him to the building. Bella meets him on the second-floor landing with keys and the lease: rent on the first, forty off the deposit for lost keys, quiet after ten, the radiator is not a fault. Downstairs Diana argues the deposit down to half while he carries her boxes (kettle, plates, duvet, clothes with tags) up; Bella brings the heaviest one up herself, calls it insurance, and asks if he has eaten. Alice bursts out of 2B with chicken soup in a mug because she could not find a bowl ('In. Sit.'); he eats at hers or alone with the door open, and she tells him he can knock on the wall any time. He lies on the bed Diana made and does not sleep."
+  characters:
+    bella:
+      knows: ["he had not eaten since breakfast", "he signed the lease without arguing", "he carried boxes up two flights straight out of hospital", "Diana got the deposit halved"]
+      hiding: ["that carrying the heaviest box up was checking on him (she called it insurance)", "that she looked at 2B's door before telling him to go in (she expected Alice)"]
+      address: "'kid', '2A'; orders, not requests; ends conversations by leaving"
+      relationship: "his landlady; sharp, quick, and already sore about losing half the deposit to Diana; has told him twice to go in"
+      outfit: casual
+      last_seen: building_hall
+    alice:
+      knows: ["he moved in today, straight from the hospital", "he ate her soup (at her table, or on his bed with the door open)", "he asked whether knocking on the wall would wake her"]
+      hiding: ["that she was listening at her door for the stairs", "that 'good boy' slipped out and she meant it (eat-at-hers branch)", "that she nearly came across the landing twice and went back (door-open branch)"]
+      address: "'sweetheart', 'honey' from the first minute; diminutives; trails into a hum"
+      relationship: "next-door neighbour, 2B; fed him within ten minutes of his arrival; said she will be up whenever he knocks"
+      outfit: housewife
+      last_seen: alice_apartment
+  flags_set: {}
+  affection_delta: {alice: +1}
+  threads: ["alice +1 only if he went in to eat at hers (default path); on the door-open branch she stayed at her side of the landing", "a second mug of soup is in 2A for later (eat-at-hers branch only)", "the wall between 2A and 2B is one brick thick; she hums through it; 'knock any time, I'll be up'", "the deposit is half; Bella: 'the last thing she wins in this building'", "Bella's 'kid'; the radiator knocks twice and stops", "the bed Diana made, with hospital corners; he lay on it and did not sleep", "Diana was heard arguing downstairs, never seen; she still holds his belongings"]
+- scene: c01_s05
+  summary: "First day at college, the morning after move-in. The only empty seat in Victoria's seminar is next to Yuki, who picks up his dropped pen and cannot get a second sentence out. Victoria asks about page forty; he has read the one chapter Diana brought to the ward, twice, footnotes included, and she says 'A boy who reads the footnotes. How rare, and how very dangerous', then 'Boy' as a title, and tells him he has missed a week and will not miss another; next week's chapter, all of it, the footnotes taken as read. At the door she looks back at the seat and at him in it. Yuki waits in the corridor, walks him home the long way or the short one, and turns out to live in 3C; Diana told her someone new was coming and did not say who."
+  characters:
+    yuki:
+      knows: ["he lives in 2A; she heard the boxes yesterday", "he noticed her humming and did not mind", "he is the new face Diana mentioned", "Victoria looked back at the seat beside her, and at him in it"]
+      hiding: ["that Diana was her social worker (she said 'she checks, on the building')", "the second sentence she has been holding since the pen", "that she waited by the noticeboards for him"]
+      address: "no name, no 'you' yet if she can help it; 'sorry' for things that are not hers; offers exits ('if you don't')"
+      relationship: "seat-neighbour in the seminar and upstairs neighbour; walked home together once; she looked back at the turn of the stairs"
+      outfit: casual
+      last_seen: building_hall
+    victoria:
+      knows: ["he read the footnotes of the only chapter he had", "he has missed a week of term", "where he sat: the seat that had been empty since term began"]
+      hiding: ["that she has already decided what to do about him", "who she was quoting"]
+      address: "'boy', said as a title; never his name in class"
+      relationship: "his seminar professor; 'you will not miss another'; the footnotes taken as read; nothing assigned yet"
+      outfit: professor
+      last_seen: college_classroom
+  flags_set: {}
+  affection_delta: {victoria: +1, yuki: +1}
+  threads: ["victoria +1 only if he answered about the footnote unprompted; yuki +1 only if he took the long way (default path: both)", "next week's chapter, all of it; Victoria has not yet kept him after class, assigned a seat or given a reading list (victoria_s01 does)", "the chapter reached the ward in a folder in Diana's handwriting; Diana is doing more than the job", "Yuki is 3C, upstairs; she hums three notes when she reads and does not know it", "Yuki knows Diana and deflected the question", "the seat beside Yuki was empty since term began; he sat in it; Victoria noticed", "'Attention is the rarest and purest form of generosity': she told him to find out who said it"]
+- scene: c01_s06
+  summary: "Natalie's first community visit to 2A, in uniform with the clipboard: blood pressure, the dressing (clean; sutures out Friday; keep it dry), ribs (he lifted boxes; six weeks, no lifting), then the concussion list. On 'Sleeping?' he says fine, or not much, or asks if she wants the real answer; whichever, she looks at the made bed with the duvet still in its bag on the chair and writes nothing down. She reports Alice asked on the stairs whether he had eaten ('not my department'; Alice said it was hers and gave her a biscuit), confirms there is still more she cannot tell him, looks in his fridge, and leaves after twelve minutes with 'Tuesday. Eat. Don't lift.' and a fourth word unsaid. At one in the morning he finds the door at the back of the hall and the river path; the streetlights come on one at a time ahead of him; he walks to the bridge and back until he is tired, and sleeps in the bed for the first time."
+  characters:
+    natalie:
+      knows: ["he is not sleeping (seen: the made bed, the duvet in its bag; and, on two branches, he said so)", "he carried boxes up with cracked ribs", "what is in his fridge", "he remembers her warning that there is more she cannot say, and asked again"]
+      hiding: ["that she flagged his injuries as hours old and called it in ('There is. Still can't.')", "that she noticed the bed and chose not to say the fourth word", "that she gave him twelve minutes and frowned at the watch for it"]
+      address: "no name; 'you'; instructions; counts the minutes down"
+      relationship: "his community nurse now; Tuesdays, same time, weekly until she says; clinical, and already one minute over"
+      outfit: nurse
+      last_seen: player_apartment
+  flags_set: {}
+  affection_delta: {natalie: +1}
+  threads: ["natalie +1 only if he answered 'Not much' or asked whether she wanted the real answer (default path: +1); on 'Fine' she said nothing and wrote nothing", "sutures out Friday; no lifting for six weeks; next visit Tuesday", "Natalie still has something she cannot tell him", "Alice gave Natalie a biscuit and claimed feeding him as her department", "a line of light under Alice's door at one in the morning: she was up", "the river path behind the building: the back door, gravel, the bench, the bridge, lights that come on one at a time; he knows the way now", "he slept, in the bed, after the walk; the first time since the hospital"]
+- scene: c01_s07
+  summary: "Breakfast at the diner at seven; Diana has ordered eggs and toast before he sits and holds her coffee without drinking it. The status: the police have the step-mother's statement and the hospital's report ('the report is longer; that's all I'll say'); his belongings are in a box with his name on it in a cupboard in Diana's office, and only she has the key. The step-mother does not accept the no-contact order and has rung the station twice and Diana once; her voice goes flat: if she tries, she gets to Diana first; 'this is my problem, not yours; say it back.' He asks what is in the box (clothes, a dead phone, the bag he packed, 'some papers the police want a bit longer'), or lets it go, or asks whether the step-mother can get at any of it (not a sock). She asks what he ate (soup twice, and the nurse got the biscuit), gives him her personal number, pays, and sends him to his seminar with the other half of breakfast wrapped in his bag."
+  characters:
+    diana:
+      knows: ["which he chose about the box: asked, let it go, or asked about the step-mother (she filed it)", "he remembers packing the bag, and nothing after its weight (ask branch)", "he ate soup twice yesterday; Alice is feeding him; Natalie visited", "he asked whether her personal number was allowed"]
+      hiding: ["that the 'papers' are the letters, and that the police have them", "what the step-mother said on the phone", "that the hospital report flags the hours before the call (she said only that it is longer)", "how far past her remit this already is ('allowed is a thing that happens to other people')"]
+      address: "'sweetie', 'honey'; 'Here's what's going to happen'; makes him say things back"
+      relationship: "social worker and already more; she carries the step-mother; he has her personal number and an instruction not to answer unknown calls"
+      outfit: office
+      last_seen: diner
+  flags_set: {}
+  affection_delta: {diana: +1}
+  threads: ["diana +1 only if he asked what was in the box (default path)", "the box: clothes, dead phone (Diana has a charger), the bag he packed, 'papers' the police are keeping; it is in Diana's office cupboard and only she has the key", "ask branch: he remembers the weight of the bag; he was leaving", "the step-mother has rung the station twice and Diana once; she does not accept the order; Diana says she gets to Diana first", "Diana's personal number on a card in the folder handwriting; do not answer unknown numbers, ring her", "the other half of breakfast is wrapped in his bag", "the diner clock is wrong by hours; the man at the counter knows Diana by name"]
+- scene: c01_s08
+  summary: "Friday at the end of the second week. He knows the building's smells and sounds now and has slept parts of nights, not a whole one. A covered plate waits on his mat with a note from Alice (eat this warm; knock when the plate's empty; or don't; knock). Yuki comes up with two bags of groceries and will not let him carry one: Alice has put a no-lifting note on the board downstairs, with a drawing of a box crossed out, which Bella took down and Alice put back twice. He gets the door for her; Alice does pies for the whole floor on Fridays. Alice comes out: a one-person pie, eat it warm, and then nothing; nothing is required of him tonight; he says he will knock when the plate is empty, or that he will leave it on the mat; he thanks her for the whole floor. The evening is his, and the next hour is nobody's idea but his."
+  characters:
+    alice:
+      knows: ["he laughed for the first time in the building (she heard it through the door)", "whether he said he would knock or leave the plate on the mat", "he thanked her for feeding the floor", "nothing is scheduled for him tonight"]
+      hiding: ["what came after 'and then—' (she put it away)", "that she is a little sad when he says the mat, and that it showed", "'I'm always just here' came out and she heard it"]
+      address: "'sweetheart', 'honey'; 'Oh, hush'; trails into a hum"
+      relationship: "neighbour who feeds the floor on Fridays and him every day; he has told her he will knock (default path); her door is left not quite shut"
+      outfit: housewife
+      last_seen: building_hall
+    yuki:
+      knows: ["Alice has told the whole building he must not lift; Bella and Alice are fighting over the note", "he laughed at the note; he got the door for her", "Alice leaves pies on her mat too"]
+      hiding: ["the rest of 'not like this' (what Alice does for him is different, and she has noticed)", "that she enforces Alice's rule because she cannot bear him hurt"]
+      address: "'you', barely; 'sorry' for the bags, the stairs, the milk; stutters on the first word of goodnight"
+      relationship: "upstairs neighbour and seat-neighbour; a bag brushed his sleeve on the stairs and she apologised to the bag; said goodnight twice"
+      outfit: casual
+      last_seen: building_hall
+  flags_set: {}
+  affection_delta: {yuki: +1, alice: +1}
+  threads: ["yuki +1 only if he said 'Okay. Door, then.'; alice +1 only if he said he would knock when the plate was empty (default path: both)", "a plate under a tea towel, a one-person pie, warm; he has not eaten it yet; the note says knock", "Alice's no-lifting note on the ground-floor board: Bella takes it down, Alice puts it back", "Alice does the whole floor on Fridays; Yuki gets a pie too", "the end of the second week: smells known (laundrette, diner at six, river), sounds known (radiator twice, Bella's door, Yuki's three notes through the ceiling); he has slept parts of several nights, never a whole one", "the first free evening; nothing is required; ends into hub_w03 (whose evening)", "Alice's door left not quite shut, the hum through it; 2B's paintings still face the wall"]

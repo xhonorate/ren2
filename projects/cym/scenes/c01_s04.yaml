@@ -1,0 +1,176 @@
+id: c01_s04
+title: 2A
+location: building_hall
+time: afternoon
+present: [bella, alice]
+outfits: {bella: casual, alice: housewife}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "The building is three storeys of brick by the river, and the front door sticks. Diana puts a shoulder to it. She has done this before."
+  - narr: "Second floor. Two doors, a window, a radiator that knocks twice and stops. On the landing, a woman with keys in one fist and a clipboard in the other."
+  - say: bella
+    expr: neutral
+    pose: arms_crossed
+    text: "2A. You're 2A."
+  - say: player
+    text: "Yes. Hi. I'm—"
+  - say: bella
+    expr: serious
+    text: "I know who you are. I'm Bella. I own the building, which means I own the problems. Don't be one."
+  - narr: "Blonde ponytail, red tank top, a mole at the corner of her mouth that moves when she talks. She talks fast."
+  - say: bella
+    expr: serious
+    pose: pointing
+    text: "Rent's the first. Not the second. The first."
+  - say: player
+    text: "The first. Okay."
+  - say: bella
+    expr: neutral
+    pose: idle
+    text: "Keys. Front door, your door. Lose them, that's forty off the deposit. Forty."
+  - narr: "Keys, warm from her hand. The clipboard turns round and a pen comes with it."
+  - say: bella
+    expr: neutral
+    text: "Sign there. And there. Quiet after ten. The radiator knocks, that's not a fault, that's a radiator."
+  - say: player
+    text: "Does it stop?"
+  - say: bella
+    expr: smug
+    text: "No. You stop hearing it. Everyone does. Kid, sign."
+  - narr: "You sign. Your own name, for the third time today; the first two were the discharge."
+  - say: bella
+    expr: neutral
+    pose: hands_hips
+    text: "Your social worker's downstairs. She's going to try and talk me down on the deposit."
+  - say: player
+    text: "Will she?"
+  - say: bella
+    expr: serious
+    text: "No."
+  - narr: "She is halfway down the stairs before the word has finished. That seems to be how she ends things."
+  - exit: bella
+  - narr: "Voices come up the stairwell. Diana's, reasonable, and getting more reasonable. Bella's, not."
+  - narr: "You go down for the boxes. Diana's boxes: a kettle, two plates, a duvet still in its bag, clothes with the tags on."
+  - narr: "The second flight is long. At the top you breathe, and behind you the heaviest box comes up the stairs on its own. Bella is under it."
+  - enter: {char: bella, pose: idle, expr: angry, at: center}
+  - say: bella
+    expr: angry
+    text: "Put that down. Not there. There."
+  - say: bella
+    expr: neutral
+    pose: arms_crossed
+    text: "You drop dead on my stairs, that's my insurance. That's not me being nice. That's insurance."
+  - say: player
+    text: "Thank you."
+  - say: bella
+    expr: serious
+    text: "Don't. Your social worker's got a mouth on her. Deposit's half. Half. Tell her that's the last thing she wins in this building."
+  - say: bella
+    expr: neutral
+    text: "You eaten?"
+  - say: player
+    text: "I'm fine."
+  - say: bella
+    expr: serious
+    pose: hands_hips
+    text: "I didn't ask if you were fine. I asked if you'd eaten."
+  - say: player
+    text: "Not since breakfast."
+  - say: bella
+    expr: thinking
+    text: "Hm."
+  - narr: "She looks at the door of 2B. Then at you."
+  - say: bella
+    expr: serious
+    pose: idle
+    text: "Don't look at me like that. Go in."
+  - exit: bella
+  - narr: "You get as far as the doorway of 2A. One room, a bed somebody has made with hospital corners, and a window full of river."
+  - narr: "Then the door of 2B opens so fast it hits the wall."
+  - enter: {char: alice, pose: hand_wave, expr: surprised, at: left}
+  - say: alice
+    expr: surprised
+    delivery: excited
+    text: "Oh! Oh, you're here. You're here, hi, hello. I'm Alice, I'm 2B, I heard the stairs and I thought— hang on."
+  - narr: "Red hair, an apron with flour on it, and she is already gone back inside. A cupboard bangs. Two cupboards."
+  - cg:
+      id: c01_s04_cg1
+      shot: pov_medium
+      lighting: day_soft
+      characters:
+        - {id: alice, pose: reaching_viewer, expr: smile, outfit: housewife, gaze: at_viewer}
+      note: "Alice in the doorway of 2B, holding out a mug of soup with both hands, apron dusted with flour, already certain of him."
+  - narr: "She comes back holding a mug in both hands, the way you would hold something alive."
+  - say: alice
+    expr: embarrassed
+    delivery: excited
+    text: "I couldn't find a bowl. I have bowls, I have so many bowls, I just— it's a mug. It's soup in a mug. That's a thing people do."
+  - say: alice
+    expr: smile
+    delivery: soft
+    text: "Chicken. With the little noodles. Careful, honey, it's hot. It's a teeny bit hot."
+  - cg_end: {transition: dissolve}
+  - say: player
+    text: "You didn't have to—"
+  - say: alice
+    expr: smile
+    pose: hands_clasped
+    text: "Oh, sweetheart, look at you. In. Sit. There's a whole pot and you're not allowed to argue."
+  - narr: "The mug is hot through your hands. The smell is a kitchen you have never been in."
+  - choice:
+      prompt: "Her door. Your door. One wall between them."
+      options:
+        - text: "Okay. I'll come in."
+          effects: {affection: {alice: +1}}
+          steps:
+            - say: alice
+              expr: grin
+              delivery: excited
+              text: "Good boy. See? That wasn't so hard."
+            - say: alice
+              expr: blush
+              pose: shy_fidget
+              text: "Oh— that came out. Ignore that. Come in, come in, mind the cushions."
+            - stage: {location: alice_apartment, transition: dissolve}
+            - narr: "2B smells of baking and has more cushions than sofa. Every painting on the wall faces the wall."
+            - say: alice
+              expr: smile
+              pose: idle
+              delivery: soft
+              text: "Eat, honey. Eat and then tell me about yourself, or don't, or just eat. Mm."
+            - narr: "You eat. She watches you do it, and does not pretend not to."
+            - say: alice
+              expr: smile
+              delivery: soft
+              text: "You can knock on that wall any time, honey. I mean it. Any time."
+            - say: player
+              text: "Won't that wake you?"
+            - say: alice
+              expr: shy_smile
+              text: "Sweetheart. I'll be up."
+            - narr: "She sends you back across the landing at nine with the mug washed and a second one, full, for later."
+            - stage: {location: player_apartment, time: evening, transition: dissolve}
+        - text: "I'll eat at mine. Door open, though."
+          steps:
+            - say: alice
+              expr: smile
+              delivery: soft
+              text: "Door open. Okay. Okay, that's— that's good, honey, that's a start. Mm."
+            - say: alice
+              expr: smile
+              pose: hands_clasped
+              text: "You can knock on that wall any time, honey. I mean it. Any time."
+            - say: player
+              text: "Won't that wake you?"
+            - say: alice
+              expr: shy_smile
+              text: "Sweetheart. I'll be up."
+            - stage: {location: player_apartment, transition: dissolve}
+            - narr: "You eat on the edge of the made bed with the door open. Across the landing hers is open too, and something is baking in it."
+            - narr: "She does not come over. Twice she nearly does; you hear the floorboard, and then you hear it go back."
+            - stage: {time: evening, transition: dissolve}
+  - narr: "Night. The river does what rivers do under the window, and the radiator knocks twice and stops."
+  - narr: "Through the wall: a hum, a cupboard, the hum again. The wall is one brick thick."
+  - narr: "You lie on the made bed with your shoes off and do not sleep. The hum keeps going until it doesn't."
+next: c01_s05

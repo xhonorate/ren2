@@ -1,0 +1,138 @@
+id: c01_s06
+title: The clipboard
+location: player_apartment
+time: evening
+present: [natalie]
+outfits: {natalie: nurse}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Two knocks and the door opens before you reach it. White uniform, a clipboard, the same watch."
+  - enter: {char: natalie, pose: idle, expr: sleepy, at: center}
+  - say: natalie
+    expr: sleepy
+    text: "Community visit. Natalie. You remember. Sit."
+  - say: player
+    text: "I remember."
+  - say: natalie
+    expr: neutral
+    text: "Good. Concussion patients mostly don't. Arm."
+  - narr: "The cuff, the squeeze, the number written down. Her gloves are cold through your sleeve."
+  - say: natalie
+    expr: neutral
+    text: "Thank you. Dressing."
+  - narr: "The dressing comes off, gets looked at, goes back on. She does it the way she does everything: in order, and once."
+  - say: natalie
+    expr: neutral
+    text: "Clean. Sutures out Friday. Don't get it wet before then. Wet is a bath, or a shower you stand under too long."
+  - say: natalie
+    expr: serious
+    pose: arms_crossed
+    text: "Ribs. You lifted something."
+  - say: player
+    text: "Boxes. Moving in."
+  - say: natalie
+    expr: serious
+    text: "Boxes. Don't. Costal fractures want six weeks and nothing from you. Nine minutes."
+  - narr: "She says the time without looking at the watch. Then the clipboard comes up, and the list on it."
+  - say: natalie
+    expr: neutral
+    pose: idle
+    text: "Concussion list. Headache?"
+  - say: player
+    text: "Some. Evenings."
+  - say: natalie
+    expr: neutral
+    text: "Photophobia?"
+  - say: player
+    text: "Light? No."
+  - say: natalie
+    expr: neutral
+    text: "Nausea?"
+  - say: player
+    text: "No."
+  - say: natalie
+    expr: neutral
+    text: "Sleeping?"
+  - choice:
+      prompt: "The fourth question on the list."
+      options:
+        - text: "Fine."
+          steps:
+            - say: natalie
+              expr: sleepy
+              text: "Fine."
+            - narr: "She does not write it down. She does not write anything down."
+        - text: "Not much."
+          effects: {affection: {natalie: +1}}
+          steps:
+            - say: natalie
+              expr: neutral
+              text: "Not much."
+            - narr: "The pen stays where it is. For a second she looks at you instead of the list, and then she is back on it."
+        - text: "Do you want the real answer?"
+          effects: {affection: {natalie: +1}}
+          steps:
+            - say: natalie
+              expr: serious
+              text: "I've got nine minutes. Tell me the real thing."
+            - say: player
+              text: "Not much. Not really at all."
+            - say: natalie
+              expr: neutral
+              text: "Okay."
+            - narr: "The pen stays where it is. Okay is the whole of what she says about it."
+  - narr: "She looks at the bed. The bed is made; it has been made since Diana made it, and the duvet is still in its bag on the chair."
+  - narr: "She looks at it a second longer than the list needs. The pen does not move."
+  - say: natalie
+    expr: neutral
+    text: "Next. Any double vision."
+  - say: player
+    text: "No."
+  - say: natalie
+    expr: neutral
+    text: "Then you're healing fine. Six minutes."
+  - say: natalie
+    expr: sleepy
+    text: "Your neighbour stopped me on the stairs to ask if you'd eaten. I said that wasn't my department."
+  - say: player
+    text: "What did she say?"
+  - say: natalie
+    expr: neutral
+    text: "She said it was hers. Then she gave me a biscuit. Four minutes. Questions."
+  - say: player
+    text: "When do you come back?"
+  - say: natalie
+    expr: neutral
+    text: "Tuesday. Same time. Then weekly until I say."
+  - say: player
+    text: "In the hospital you said there was more you couldn't tell me."
+  - say: natalie
+    expr: serious
+    pose: arms_crossed
+    text: "There is. Still can't. Two minutes."
+  - narr: "She uses them on the kitchenette: opens the fridge, looks at the inside of it, closes it. Writes nothing down about that either."
+  - say: natalie
+    expr: neutral
+    pose: idle
+    text: "Tuesday. Eat. Don't lift."
+  - narr: "There is a fourth word. She looks at the bed again and does not say it."
+  - narr: "At the door she checks the watch. Twelve minutes. She frowns at it, and goes."
+  - exit: natalie
+  - stage: {time: night, transition: fade}
+  - narr: "One in the morning. The ceiling here has no stain; you have looked."
+  - narr: "Coat. Keys. The stairs, quietly: a line of light under Alice's door, Bella's office dark, and a door at the back of the hall you have not tried. It opens onto gravel."
+  - stage: {location: river_path, transition: dissolve}
+  - cg:
+      id: c01_s06_cg1
+      shot: establishing
+      lighting: moonlight
+      characters: []
+      note: "The river path at one in the morning: gravel, the bench, the bridge ahead; the nearest streetlight just come on, the next ones still dark."
+  - narr: "A path behind the building, and the river on your left, louder than it is from the window."
+  - narr: "The first streetlight comes on as you reach it. Then the next. They come on one at a time, ahead of you, as if the path had been waiting."
+  - cg_end: {transition: dissolve}
+  - narr: "You walk to the bridge. You walk back. You walk to the bridge again, and the lights go out behind you one at a time, in order."
+  - narr: "Somewhere past the bench you are tired. Properly tired, the kind with weight. That's new."
+  - narr: "The last light goes out as you reach the door. Upstairs, the made bed. You get into it."
+next: c01_s07

@@ -1,0 +1,137 @@
+id: c01_s07
+title: Breakfast
+location: diner
+time: morning
+present: [diana]
+outfits: {diana: office}
+rating: sfw
+intimacy: 0
+steps:
+  - narr: "Seven in the morning and the diner is already full of people who never left. The clock over the counter says ten past four."
+  - narr: "Diana is in the corner booth in the charcoal suit, with two plates in front of her. Both of them are yours."
+  - say: diana
+    expr: smile
+    pose: hand_wave
+    text: "Sweetie. Over here. Sit, eat, I ordered. Eggs, and the other one is toast, and you're going to finish one of them."
+  - say: player
+    text: "It's seven."
+  - say: diana
+    expr: smile
+    pose: idle
+    text: "It is. I've got the hospital at eight and I want this done before you've had a chance to worry about it."
+  - cg:
+      id: c01_s07_cg1
+      shot: pov_medium
+      lighting: day_soft
+      characters:
+        - {id: diana, pose: sitting_chair, expr: neutral, outfit: office, gaze: at_viewer}
+      note: "Diana across the diner booth at seven in the morning, coffee held in both hands and not drunk, the window going grey behind her."
+  - narr: "She wraps both hands round her coffee and does not drink it. It is there to hold."
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "Okay. Here's what's going to happen. I tell you where everything is. Then you tell me what you ate yesterday. Then I pay."
+  - cg_end: {transition: dissolve}
+  - say: diana
+    expr: serious
+    text: "The police have two things. Her statement, and the hospital's report. The report is longer than her statement, and that's all I'm going to say about the report."
+  - say: diana
+    expr: neutral
+    text: "And they've got your things. Not the police. Me. There's a box with your name on it in a cupboard in my office, and I've got the key, and nobody else does."
+  - say: player
+    text: "Okay."
+  - say: diana
+    expr: serious
+    pose: hands_clasped
+    text: "She doesn't accept the order. She's rung the station twice to say so. She's rung me once."
+  - say: player
+    text: "What did she—"
+  - say: diana
+    expr: serious
+    text: "It doesn't matter what she said. Here's the part that matters: she can't come near you, and if she tries, she gets to me first."
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "That's not me being brave, honey. That's just the order of the doors."
+  - narr: "Her voice has gone flat, the sweetness turned down to nothing. It is the first time you have heard her do that."
+  - say: diana
+    expr: serious
+    text: "This is my problem. Not yours. You don't carry it. I carry it. Say it back to me."
+  - say: player
+    text: "It's your problem."
+  - say: diana
+    expr: smile
+    text: "Good. Eat the toast."
+  - narr: "You eat the toast. The eggs, half. She watches the half and lets it go, today."
+  - choice:
+      prompt: "A box, in a cupboard, with her name on the key."
+      options:
+        - text: "What's in the box?"
+          effects: {affection: {diana: +1}}
+          steps:
+            - say: diana
+              expr: neutral
+              text: "Clothes. Your phone, which is dead; I've got a charger for it. The bag you packed."
+            - say: player
+              text: "I packed a bag."
+            - narr: "You did. You remember the weight of it, and nothing after the weight."
+            - say: diana
+              expr: neutral
+              delivery: soft
+              text: "You packed a bag, sweetie. That's one of the things the file is about, and it's a good thing. It means you were leaving."
+            - say: diana
+              expr: neutral
+              text: "And some papers the police want a bit longer. When they're done, they come to you through me, and nobody else gets a look. That's a promise, not a policy."
+            - narr: "She says 'papers' very evenly, and then she looks at her coffee."
+        - text: "Keep it. I don't want it yet."
+          steps:
+            - say: diana
+              expr: smile
+              delivery: soft
+              text: "Okay. Then it stays where it is until you ask, and when you ask, you get it the same day. Not a form. The same day."
+            - narr: "She does not write that down. She does not need to; you can see her file it."
+        - text: "Can she get at any of it?"
+          steps:
+            - say: diana
+              expr: serious
+              text: "No. Not a sock. She asked. She got told what you're getting told: it's in my cupboard, and my cupboard's mine."
+            - narr: "Flat again, for one sentence. Then the coffee goes down and the warmth comes back up."
+  - say: diana
+    expr: neutral
+    pose: idle
+    text: "Now. What did you eat yesterday."
+  - say: player
+    text: "Soup. Twice."
+  - say: diana
+    expr: smile
+    delivery: teasing
+    text: "Soup twice. That's the neighbour. Good. I've met her once, on the stairs, and I like her already."
+  - say: player
+    text: "And a biscuit. The nurse got the biscuit, actually."
+  - say: diana
+    expr: laugh
+    delivery: laughing
+    text: "Of course she did."
+  - narr: "A card comes across the table. On the back, a number, in the handwriting from the folder."
+  - say: diana
+    expr: neutral
+    delivery: soft
+    text: "I'm not supposed to give you my personal number. Here's my personal number."
+  - say: diana
+    expr: serious
+    text: "Any time. Not office hours, sweetie, any time. And if a number you don't know rings, you don't answer it. You ring me."
+  - say: player
+    text: "Is that allowed?"
+  - say: diana
+    expr: smile
+    delivery: teasing
+    text: "Honey. I did the deposit. Allowed is a thing that happens to other people."
+  - narr: "She pays at the counter. The man behind it calls her by name, and she calls him by his, and nothing on the bill is yours."
+  - say: diana
+    expr: smile
+    pose: hand_wave
+    text: "Eight o'clock. Go to your seminar. The other half's at lunch; it's wrapped, it's in your bag, don't look."
+  - narr: "It is wrapped. It is in your bag. You did not see her do it."
+  - exit: diana
+  - narr: "The clock over the counter says twenty past four. Outside it is a quarter to eight, and for a while you sit in the wrong time and let her carry the right one."
+next: c01_s08

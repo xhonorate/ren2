@@ -34,6 +34,8 @@ poses:          # sprite poses; full body, plain background, facing the viewer
   shy_fidget:    {tags: "standing, fidgeting, hands together, looking down"}
   lean_forward:  {tags: "standing, leaning forward, hands on own knees"}
   turned_away:   {tags: "standing, from behind, looking back"}
+  sitting:       {tags: "sitting, chair, hands on lap"}
+  sitting_lean:  {tags: "sitting, chair, leaning forward, elbows on knees"}
 
 cg_poses:       # CG body poses, framed for first-person POV; ref = ControlNet image (added by /vn-art)
   standing_facing:         {tags: "standing, facing viewer"}
@@ -48,6 +50,9 @@ cg_poses:       # CG body poses, framed for first-person POV; ref = ControlNet i
   leaning_rail:            {tags: "leaning on railing, looking at viewer"}
   holding_hand:            {tags: "holding hands, pov hands, looking at viewer"}
   head_on_shoulder:        {tags: "head on another's shoulder, pov, close-up"}
+  sitting_table:           {tags: "sitting, at table, booth, facing viewer, hands on table"}
+  doorway_offering:        {tags: "standing in doorway, holding out object, offering to viewer, looking at viewer"}
+  lying_bed_above:         {tags: "lying on bed, from above, looking up at viewer"}
 
 shots:
   pov_close:     "pov, close-up, face focus, looking at viewer"
