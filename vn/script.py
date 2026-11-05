@@ -75,3 +75,56 @@ def _steps(p: Project, steps: list[Step], out: list[str], depth: int) -> None:
             out.append(f"{ind}`[call {s.target}]`"); out.append("")
         elif isinstance(s, Pause):
             out.append(f"{ind}`[pause]`"); out.append("")
+
+
+def render_items(p: Project, sc: Scene) -> list[dict]:
+    """The scene as flat display items for the console: one dict per step, with depth."""
+    items: list[dict] = []
+    n = [0]
+
+    def walk_(steps, depth):
+        for s in steps:
+            d = {"depth": depth, "kind": type(s).__name__.lower()}
+            if isinstance(s, Narr):
+                d.update(text=s.text)
+            elif isinstance(s, Say):
+                if s.speaker not in ("player", "narrator"):
+                    n[0] += 1; d["line"] = n[0]
+                d.update(speaker=s.speaker, text=s.text, expr=s.expr, pose=s.pose, delivery=s.delivery)
+            elif isinstance(s, Stage):
+                d.update(location=s.location, time=s.time, present=s.present, outfits=s.outfits)
+            elif isinstance(s, (Enter, Exit)):
+                d.update(char=s.char)
+            elif isinstance(s, CG):
+                d.update(id=s.id, shot=s.shot, lighting=s.lighting, note=s.note,
+                         characters=[c.__dict__ for c in s.characters])
+            elif isinstance(s, Choice):
+                d.update(prompt=s.prompt)
+                items.append(d)
+                for o in s.options:
+                    items.append({"depth": depth + 1, "kind": "option", "text": o.text, "effects": o.effects,
+                                  "goto": o.goto, "requires": o.requires})
+                    walk_(o.steps, depth + 2)
+                continue
+            elif isinstance(s, If):
+                d.update(cond=s.cond)
+                items.append(d)
+                walk_(s.then, depth + 1)
+                if s.else_:
+                    items.append({"depth": depth, "kind": "else"})
+                    walk_(s.else_, depth + 1)
+                continue
+            elif isinstance(s, SetFlags):
+                d.update(values=s.values)
+            elif isinstance(s, Affection):
+                d.update(deltas=s.deltas)
+            elif isinstance(s, Nsfw):
+                d.update(ref=s.ref)
+            elif isinstance(s, (Jump, Call)):
+                d.update(target=s.target)
+            items.append(d)
+
+    walk_(p.expand(sc.steps), 0)
+    for i, d in enumerate(items):
+        d["i"] = i
+    return items

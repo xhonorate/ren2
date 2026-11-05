@@ -18,9 +18,11 @@ and are the repeatable process (`/vn-new-project` → … → `/vn-build`).
   first two scenes. Do not ask for approval elsewhere; leave notes in
   `projects/<slug>/NOTES.md` instead.
 - Ren'Py output is generated; never hand-edit `build/`.
-- The job runner (`runner/`, phase 2) is the only code that talks to ComfyUI,
-  TTS or trainers. It runs on the GPU machine; cloud sessions never try to
-  reach it.
+- The job runner (`runner/`) is the only code that talks to ComfyUI, TTS or
+  trainers. It runs on the GPU machine; cloud sessions never try to reach
+  it. The console (`ui/`, no build step, vendored Preact) is served by it.
+- The human's review notes live in `review/notes/<scene>.yaml`; `/vn-revise`
+  applies them. Never edit `applied` notes' scenes without a new note.
 
 ## Commands
 ```
@@ -34,4 +36,5 @@ python -m vn lines projects/<slug> [scene ...]     # TTS job list
 python -m vn cgs projects/<slug> [scene ...]       # CG job list
 python -m vn build projects/<slug> [--template <renpy project>]
 python -m pytest -q
+python -m runner [--lan --pin 1234]            # the review console, DESIGN.md §12
 ```

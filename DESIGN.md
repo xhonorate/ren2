@@ -433,3 +433,48 @@ conditions are compiled from `affection.mira >= 3` / `flags.met_mira` to
 Python. Voice lines emit `voice "audio/voice/<scene>/<n>.ogg"` when the file
 exists. Missing sprites/CGs/backgrounds compile to `Placeholder` so a
 project is playable at every stage.
+
+## 12. The review console (`runner/` + `ui/`)
+
+A review and asset console, not an editor: it reads `projects/<slug>/`
+and the job runner, and everything a human does in it lands as a file
+Claude can read. It never owns state.
+
+```
+python -m runner                 # http://localhost:8000
+python -m runner --lan --pin 4821   # also on the Wi-Fi, PIN exchanged once for a cookie
+```
+
+**Screens.** Board (every outline scene: written, ledgered, notes, missing
+sprites/backgrounds/CGs/voice; validate, build, launch, "queue missing" as
+one overnight batch) · Scene (the script as prose with per-line notes,
+inline audio and takes, CG cards, the explicit-section briefs, the YAML,
+"Revise with Claude") · Cast (sheet; candidates culled into canon with
+one tap; sprite grid with pass/redo; LoRA wizard; voice references,
+emotion mining, fine-tune checklist) · CGs (to review / not rendered /
+done; pick a candidate; Claude's review verdicts; explicit CGs flagged for
+human eyes) · Voice (lines without audio; queue all) · Jobs (progress,
+logs, cancel, retry) · Setup (service checks, config, model checklist).
+
+**Files the console writes.**
+- `review/notes/<scene>.yaml`: `[{id, step, kind, quote, note, created, applied, reply?}]`;
+  `/vn-revise` consumes them and sets `applied`.
+- `review/backup/<scene>.<ts>.yaml` before any YAML save from the console.
+- `characters/<id>/art/{candidates,canon,rejected,sprites,lora}/`,
+  `characters/<id>/voice/{source,ref,mining}/`, `voice.yaml: reference`.
+- `review/cg/<id>/{NN.png, spec.json, review.json}` then `images/cg/<id>.png` on pick.
+- `audio/takes/<scene>/<nnn>/{take_k.wav, scores.json}` then `audio/voice/<scene>/<nnn>.ogg` (or `.wav`).
+
+**Jobs** (`runner/handlers/`): `validate`, `build`, `launch`, `revise`,
+`review_images` (local lane); `char_candidates`, `sprite_sheet`,
+`bg_plate`, `cg` (images lane, ComfyUI API-format workflow templates in
+`runner/workflows/`); `lora_train` (train lane, kohya); `tts_line`,
+`emotion_mine`, `voice_finetune` (audio lane, GPT-SoVITS api_v2;
+best-of-N scoring with faster-whisper and resemblyzer when installed). One
+job at a time per lane; `runner/config.yaml` maps lanes to GPUs. Jobs
+persist in `runner/data/jobs.json` and resume after a restart.
+
+The ComfyUI, kohya and GPT-SoVITS handlers were written against their
+documented HTTP/CLI interfaces and have not been run against live
+services in this repository; the first run on the GPU machine is where
+they get verified, one job kind at a time, from the Setup and Jobs pages.

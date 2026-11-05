@@ -509,8 +509,15 @@ def validate(project: Project, scene_ids: Optional[list[str]] = None) -> list[st
         if sid in by_id and by_id[sid].intimacy != sc.intimacy:
             errs.append(f"{where}: intimacy {sc.intimacy} differs from the outline's {by_id[sid].intimacy}")
 
-    # reachability over the outline + written scenes
-    reach = _reachable(p, scenes)
+    # reachability over the outline + every written scene (even when validating a subset)
+    all_scenes = dict(scenes)
+    for sid in p.scene_ids_written():
+        if sid not in all_scenes:
+            try:
+                all_scenes[sid] = p.load_scene(sid)
+            except Exception:
+                pass
+    reach = _reachable(p, all_scenes)
     for o in p.outline.scenes:
         if o.id not in reach:
             errs.append(f"outline {o.id}: unreachable from {p.outline.start}")

@@ -29,3 +29,16 @@ directory) and it plays with placeholder art. Pass `--template <path to a
 launcher-created project>` to borrow real `gui/` and `screens.rpy`.
 
 Then, in Claude Code: `/vn-new-project` and follow the skills in order.
+
+## The review console
+
+```bash
+python -m runner                   # http://localhost:8000
+python -m runner --lan --pin 4821  # also reachable from your phone on the same Wi-Fi
+```
+
+Board, script reader with per-line notes and "Revise with Claude", cast and
+art review, CG review, voice takes, jobs, setup and training wizards. Copy
+`runner/config.example.yaml` to `runner/config.yaml` and point it at
+ComfyUI, GPT-SoVITS, kohya and your checkpoints (the Setup page edits it
+too). See DESIGN.md §12.

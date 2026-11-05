@@ -60,7 +60,9 @@ class Compiler:
 
     # ---- entry ---------------------------------------------------------------
 
-    def build(self, out: Path, scene_ids: Optional[list[str]] = None, template: Optional[Path] = None) -> list[Path]:
+    def build(self, out: Path, scene_ids: Optional[list[str]] = None, template: Optional[Path] = None,
+              start: Optional[str] = None) -> list[Path]:
+        self.start = start
         game = out / "game"
         if game.exists():
             shutil.rmtree(game)
@@ -101,7 +103,8 @@ class Compiler:
         if self._player_name_entry():
             default = self._player_name()
             lines.append(f'{IND}$ player_name = renpy.input("What is your name?", default={rpy_str(default)}, length=20).strip() or {rpy_str(default)}')
-        lines += [f"{IND}jump scene_{ident(p.outline.start)}", ""]
+        start = getattr(self, "start", None) or p.outline.start
+        lines += [f"{IND}jump scene_{ident(start)}", ""]
         return "\n".join(lines)
 
     def _player_name_entry(self) -> bool:
@@ -215,9 +218,11 @@ class Compiler:
                 elif (s.pose and s.pose != cur.pose) or (s.expr and s.expr != cur.expr):
                     self._show(out, st, s.speaker, s.pose or cur.pose, s.expr or cur.expr, cur.at)
             st.line_no += 1
-            voice = f"audio/voice/{sc.id}/{st.line_no:03d}.ogg"
-            if (self.p.root / voice).exists():
-                out.append(f'voice "{voice}"')
+            for ext in (".ogg", ".wav"):
+                voice = f"audio/voice/{sc.id}/{st.line_no:03d}{ext}"
+                if (self.p.root / voice).exists():
+                    out.append(f'voice "{voice}"')
+                    break
             out.append(f"{ident(s.speaker)} {rpy_str(s.text)}")
         elif isinstance(s, Stage):
             if s.outfits:
@@ -345,9 +350,10 @@ class Compiler:
         out.append(f"show {tag} at {at}" + (f" with {transition}" if transition else ""))
 
 
-def build(project: Project, out: Path, scene_ids: Optional[list[str]] = None, template: Optional[Path] = None) -> list[Path]:
+def build(project: Project, out: Path, scene_ids: Optional[list[str]] = None, template: Optional[Path] = None,
+          start: Optional[str] = None) -> list[Path]:
     c = Compiler(project)
-    written = c.build(out, scene_ids, template)
+    written = c.build(out, scene_ids, template, start)
     # sprites live under characters/<id>/art/sprites in the project; copy to images/sprites/<id>
     for cid, ch in project.characters.items():
         src = ch.dir / "art" / "sprites"

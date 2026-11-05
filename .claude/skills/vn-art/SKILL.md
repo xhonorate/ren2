@@ -1,25 +1,28 @@
 ---
 name: vn-art
-description: (phase 2, GPU machine) Produce canon character art, train the character LoRA and render the sprite sheet for one character, with Claude reviewing contact sheets. Needs the job runner and ComfyUI.
+description: (GPU machine) Produce canon character art, train the character LoRA and render the sprite sheet for one character, reviewing contact sheets; drives the runner's jobs and the console's cull/verdict files.
 ---
 
 # /vn-art <project> <character id>
 
-Not implemented yet: the job runner (`runner/`) is built in phase 2 on the GPU
-machine. The procedure it will follow (DESIGN.md §10, docs/images.md):
+Runs on the GPU machine with the runner up (`python -m runner`). The console
+(DESIGN.md §12) is where the human culls; this skill does the rest.
 
-1. From `appearance.yaml`, render 24 candidates at a locked style and seed
-   set (`char_candidates` job). Review the contact sheet against the spec:
-   one person, plain background, facing the viewer, marks present and placed
-   right. Mark pass/fail with a reason each; re-render the fails with the
-   adjusted prompt. Repeat until 12–16 pass.
-2. **Checkpoint**: the human culls to the canon set. Correct
-   `appearance.yaml` to match the chosen art (not the other way round).
-3. Queue `lora_train` (overnight batch). Write `lora:` into
-   `appearance.yaml` when done.
-4. Render the sprite sheet: every outfit × pose × the expressions the
-   outline's scenes need (`vn lines`/scene files tell you which). Review
-   each against the vocab entry; re-render fails. Save to
-   `characters/<id>/art/sprites/<outfit>_<pose>_<expr>.png` (transparent).
-5. Render each location's background plates (`bg_plate`) for the times it
-   lists; save to `images/bg/<loc>_<time>.png`.
+1. Queue `char_candidates` (24) via the API: `POST /api/jobs {kind, payload:
+   {project, char, count}}` (or the character page's button). When done,
+   review `characters/<id>/art/candidates/*.png` against `appearance.yaml`
+   with the Read tool: one person, plain background, facing the viewer,
+   marks present and placed right, outfit correct. Move passes to
+   `art/canon/` and fails to `art/rejected/` with a one-line reason in
+   `notes/<id>.md`; re-queue candidates with an adjusted `extra` prompt
+   until 12–16 pass. Explicit renders never happen here.
+2. **Checkpoint**: the human culls on the console's cast page. Then correct
+   `appearance.yaml` to match the canon art (not the other way round).
+3. Queue `lora_train` (the LoRA wizard, or the API). The job writes `lora:`
+   into `appearance.yaml` and copies the file into ComfyUI's folder.
+4. Queue `sprite_sheet`; review each sprite in `art/sprites/` against its
+   vocab entry (pose tags, expression) and the outfit; fail with
+   `sprite-verdict` (`POST /api/projects/<slug>/characters/<id>/sprite-verdict`
+   with `regenerate: true`) and re-review.
+5. Queue `bg_plate` for every location/time the written scenes need (the
+   board's "queue missing" with only backgrounds ticked); review the plates.

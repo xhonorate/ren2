@@ -1,0 +1,11 @@
+# Copy to runner/config.yaml and edit. Anything omitted falls back to runner/config.py DEFAULTS.
+comfyui_url: http://127.0.0.1:8188
+comfyui_lora_dir: C:/ComfyUI/models/loras
+tts_url: http://127.0.0.1:9880
+claude_cmd: claude
+checkpoint: waiILLUSTRIOUS_v140.safetensors
+train_checkpoint: C:/models/sd_xl_base_1.0.safetensors
+kohya_path: C:/sd-scripts
+kohya_python: C:/sd-scripts/venv/Scripts/python.exe
+whisper_model: base
+lanes: {images: "cuda:0", audio: "cuda:1", train: "cuda:0", local: cpu}

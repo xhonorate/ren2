@@ -92,7 +92,7 @@ def cmd_build(a):
             print("ERROR", e)
         sys.exit("fix validation errors before building")
     out = Path(a.out) if a.out else p.root / "build"
-    written = build(p, out, None, Path(a.template) if a.template else None)
+    written = build(p, out, None, Path(a.template) if a.template else None, a.start)
     print(f"built {len(written)} scene(s) into {out / 'game'}")
 
 
@@ -107,7 +107,7 @@ def main(argv=None):
     s = sub.add_parser("lines", help="voiced lines as JSON (TTS job list)"); s.add_argument("project"); s.add_argument("scene", nargs="*"); s.set_defaults(f=cmd_lines)
     s = sub.add_parser("cgs", help="CG shot specs as JSON (image job list)"); s.add_argument("project"); s.add_argument("scene", nargs="*"); s.set_defaults(f=cmd_cgs)
     s = sub.add_parser("script", help="render scenes as a readable markdown script"); s.add_argument("project"); s.add_argument("scene", nargs="*"); s.set_defaults(f=cmd_script)
-    s = sub.add_parser("build", help="compile to a Ren'Py game/ directory"); s.add_argument("project"); s.add_argument("--out"); s.add_argument("--template", help="a launcher-made Ren'Py project to take gui/screens from"); s.set_defaults(f=cmd_build)
+    s = sub.add_parser("build", help="compile to a Ren'Py game/ directory"); s.add_argument("project"); s.add_argument("--out"); s.add_argument("--template", help="a launcher-made Ren'Py project to take gui/screens from"); s.add_argument("--start", help="scene id to start at (preview)"); s.set_defaults(f=cmd_build)
     a = ap.parse_args(argv)
     a.f(a)
 

@@ -8,3 +8,11 @@ projects/*/characters/*/art/candidates/
 projects/*/audio/takes/
 *.safetensors
 *.ckpt
+runner/config.yaml
+runner/data/
+projects/*/review/cg/
+projects/*/review/backup/
+projects/*/characters/*/art/rejected/
+projects/*/characters/*/voice/mining/
+projects/*/characters/*/voice/source/
+projects/*/audio/takes/
